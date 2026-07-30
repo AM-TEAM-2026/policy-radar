@@ -27,14 +27,45 @@
         <summary class="active">时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">4</span></a><a href="/policy-radar/ua/"><span>买量</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a class="active" aria-current="page" href="/policy-radar/thirdpayment/"><span>三方支付</span></a><a href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">1</span></a><a href="/policy-radar/regulatory/"><span>监管</span><span class="nav-badge">1</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">3</span></a><a href="/policy-radar/ua/"><span>买量</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a class="active" aria-current="page" href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">1</span></a><a href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">1</span></a><a href="/policy-radar/regulatory/"><span>监管</span><span class="nav-badge">1</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
     </nav>
   </header>
 <div class="breadcrumb"><a href="/policy-radar/">首页</a> › <a href="/policy-radar/timeline/">时间线</a> › 三方支付</div>
 <header class="page-heading"><h1>三方支付</h1><p>PayPal、Stripe、Adyen、Checkout.com、Paddle 等</p></header>
-<div class="empty">当前监控窗口暂无该领域事件。</div><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
+<div class="card-stack">
+<article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://www.stripestatus.com/incidents/xj57xp9h64wr" target="_blank" rel="noopener noreferrer">Stripe Status — Scheduled maintenance for TWINT</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-07-29</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P2</span><span class="tag domain">三方支付</span><span class="tag lifecycle">2026-07-29 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_4e9efb089e3f6fa20aa2bc12/">Stripe TWINT 计划维护（7 月 29 日）</a></h3>
+<p class="event-summary">Stripe 官方状态页公告，TWINT 将于 2026-07-29 12:00–13:00 UTC（北京时间 20:00–21:00）进行计划维护。Stripe 同时提示，其从支付方式合作方获取的计划维护信息可能不完整、不准确或不是最新状态。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>仅使用 TWINT 的支付链路可能在维护窗口内受到短时影响；官方公告未说明其他 Stripe 支付方式或核心收款服务受影响。</p></section>
+    <section><h4>需要行动</h4><p>使用 TWINT 的业务在维护窗口前确认支付重试和失败兜底，窗口内监控成功率与用户报错，并以 Stripe 事件页后续状态为准。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付运营 / 技术值班</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://www.stripestatus.com/incidents/xj57xp9h64wr" target="_blank" rel="noopener noreferrer"><span>Stripe Status — Scheduled maintenance for TWINT</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">PayPal</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://www.paypal-status.com/history/eventdetails/107852" target="_blank" rel="noopener noreferrer">PayPal Status — Impact to Withdrawals</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-07-28</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P2</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_abe9d0464fa91c247308b097/">PayPal EMEA 提现服务降级已恢复</a></h3>
+<p class="event-summary">PayPal 官方状态页显示，生产环境的 Withdrawals 服务在 EMEA 地区出现性能降级；事件自 2026-07-27 10:44 UTC 持续至 2026-07-28 06:45 UTC，随后影响已缓解并关闭。PayPal 表示技术团队仍在确保完全恢复。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>受影响时段内，EMEA 地区的 PayPal 余额提现可能延迟或失败，进而影响商户或收款方的资金可用性与结算节奏；官方未说明在线收款或结账服务受到影响。</p></section>
+    <section><h4>需要行动</h4><p>核对受影响时段内的提现记录与到账状态，重试失败提现，并持续观察 PayPal 状态页是否出现复发或后续说明。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付运营 / 财务资金</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://www.paypal-status.com/history/eventdetails/107852" target="_blank" rel="noopener noreferrer"><span>PayPal Status — Impact to Withdrawals</span><span aria-hidden="true">↗</span></a>  </div>
+</article></div><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 </body>
 </html>
