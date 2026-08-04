@@ -34,13 +34,13 @@
   </header>
 <div class="breadcrumb"><a href="/policy-radar/">首页</a> › <a href="/policy-radar/timeline/">时间线</a></div>
 <header class="page-heading"><h1>重要平台时间线</h1><p>按发布时间从近到远；发布时间缺失时使用首次发现时间。</p></header>
-<style>[hidden]{display:none!important}.timeline-filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:var(--space-2);margin-bottom:var(--space-2);padding:var(--space-2);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}.timeline-filters label{display:block;margin-bottom:4px;color:var(--muted);font-size:var(--font-caption);font-weight:500}.timeline-filters input,.timeline-filters select{width:100%;min-height:44px;padding:0 var(--space-1);border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit}.timeline-filters input:focus-visible,.timeline-filters select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.timeline-filter-status{display:flex;align-items:center;justify-content:space-between;gap:var(--space-2);margin-bottom:var(--space-2);color:var(--muted)}.timeline-filter-status button{min-height:44px;padding:0 var(--space-2);border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--accent);font:inherit;font-weight:500;cursor:pointer}.timeline-filter-status button:hover{background:var(--accent-soft)}</style>
+<style>[hidden]{display:none!important}.timeline-filters{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--space-2);margin-bottom:var(--space-2);padding:var(--space-2);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}.timeline-filter-field,.timeline-filter-group{min-width:0;margin:0;padding:0;border:0}.timeline-filter-field>label,.timeline-filter-group>legend{display:block;margin-bottom:4px;color:var(--muted);font-size:var(--font-caption);font-weight:500}.timeline-filter-field input[type="search"],.timeline-filter-field select{width:100%;min-height:44px;padding:0 var(--space-1);border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit}.timeline-filters input:focus-visible,.timeline-filters select:focus-visible,.timeline-filters summary:focus-visible,.timeline-filter-toolbar button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.timeline-checkbox-grid{display:flex;flex-wrap:wrap;gap:4px}.timeline-checkbox-option{display:flex;flex:1 1 88px;align-items:center;gap:4px;min-width:max-content;min-height:44px;margin:0;padding:0 var(--space-1);border-radius:8px;color:var(--ink);font-size:var(--font-caption);font-weight:400;cursor:pointer}.timeline-checkbox-option:hover{background:var(--accent-soft)}.timeline-checkbox-option:has(input:disabled){color:var(--muted);cursor:not-allowed}.timeline-checkbox-option input[type="checkbox"]{flex:0 0 auto;width:20px;height:20px;margin:0;accent-color:var(--accent)}.timeline-checkbox-option>span{white-space:nowrap}.timeline-checkbox-option .facet-count{color:var(--muted)}.timeline-filter-panel,.timeline-year{border:1px solid var(--border);border-radius:8px;background:var(--surface)}.timeline-filter-panel{position:relative}.timeline-filter-panel>summary,.timeline-year>summary{display:flex;align-items:center;gap:var(--space-1);min-height:44px;padding:0 var(--space-1);list-style:none;cursor:pointer}.timeline-filter-panel>summary::-webkit-details-marker,.timeline-year>summary::-webkit-details-marker{display:none}.timeline-filter-panel>summary::after,.timeline-year>summary::after{content:"▾";flex:0 0 auto;line-height:1}.timeline-filter-panel>summary::after{margin-left:auto}.timeline-year-state{margin-left:auto}.timeline-filter-panel[open]>summary::after,.timeline-year[open]>summary::after{transform:rotate(180deg)}.timeline-year[open]>summary{border-bottom:1px solid var(--border)}.timeline-filter-options{position:absolute;z-index:20;top:calc(100% + 4px);left:0;width:max-content;min-width:100%;max-width:min(560px,calc(100vw - 48px));padding:4px;background:var(--surface);border:1px solid var(--border);border-radius:8px;box-shadow:var(--shadow)}.timeline-month-group .timeline-filter-options{right:0;left:auto;min-width:320px}.timeline-year-options{padding:4px}.timeline-year>summary>span{white-space:nowrap}.timeline-year+.timeline-year{margin-top:4px}.timeline-year-options .timeline-checkbox-option:not(:first-child){padding-left:calc(var(--space-2) + 20px)}.timeline-year.unavailable>summary{color:var(--muted)}.timeline-selection-state,.timeline-year-state{color:var(--muted);font-size:var(--font-caption)}.timeline-filter-toolbar{display:flex;justify-content:flex-end;padding:4px 4px 8px}.timeline-filter-toolbar button{min-height:32px;padding:0 var(--space-1);border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--accent);font:inherit;font-size:var(--font-caption);font-weight:500;cursor:pointer}.timeline-filter-toolbar button:hover{background:var(--accent-soft)}.timeline-filter-status{display:flex;align-items:center;justify-content:space-between;gap:var(--space-2);margin-bottom:var(--space-2);color:var(--muted)}.timeline-filter-status button{min-height:44px;padding:0 var(--space-2);border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--accent);font:inherit;font-weight:500;cursor:pointer}.timeline-filter-status button:hover{background:var(--accent-soft)}@media(max-width:650px){.timeline-filters{grid-template-columns:1fr}.timeline-filter-options{position:static;width:100%;min-width:0;max-width:none;margin-top:4px;box-shadow:none}.timeline-checkbox-option{flex-basis:96px;padding:0 3px}}</style>
 <form class="timeline-filters" id="timeline-filters" hidden>
-  <div><label for="timeline-query">关键词</label><input id="timeline-query" name="q" type="search" placeholder="标题、摘要或平台"></div>
-  <div><label for="timeline-priority">风控等级</label><select id="timeline-priority" name="priority"><option value="">全部</option></select></div>
-  <div><label for="timeline-platform">平台</label><select id="timeline-platform" name="platform"><option value="">全部</option></select></div>
-  <div><label for="timeline-month">年 / 年月</label><select id="timeline-month" name="month"><option value="">全部</option></select></div>
-  <div><label for="timeline-marker">时间节点</label><select id="timeline-marker" name="marker"><option value="">全部</option></select></div>
+  <div class="timeline-filter-field"><label for="timeline-query">关键词</label><input id="timeline-query" name="q" type="search" placeholder="标题、摘要或平台"></div>
+  <fieldset class="timeline-filter-group timeline-priority-group"><legend>风控等级</legend><details class="timeline-filter-panel" id="timeline-priority-panel"><summary><span class="timeline-selection-state" id="timeline-priority-state">全部</span></summary><div class="timeline-filter-options timeline-checkbox-grid" id="timeline-priority"></div></details></fieldset>
+  <fieldset class="timeline-filter-group"><legend>平台</legend><details class="timeline-filter-panel" id="timeline-platform"><summary><span class="timeline-selection-state" id="timeline-platform-state">全部</span></summary><div class="timeline-filter-options" id="timeline-platform-options"></div></details></fieldset>
+  <fieldset class="timeline-filter-group timeline-month-group"><legend>时间</legend><details class="timeline-filter-panel" id="timeline-month"><summary><span class="timeline-selection-state" id="timeline-month-state">全部</span></summary><div class="timeline-filter-options" id="timeline-month-options"><div class="timeline-filter-toolbar"><button type="button" id="timeline-month-invert" aria-label="反选：只保留当前未选中的月份">反选</button></div></div></details></fieldset>
+  <div class="timeline-filter-field"><label for="timeline-marker">时间节点</label><select id="timeline-marker" name="marker"><option value="">全部</option></select></div>
 </form>
 <div class="timeline-filter-status" id="timeline-filter-status" hidden aria-live="polite"><span></span><button type="button" id="timeline-filter-clear">清除筛选</button></div>
 <div id="timeline-server-results">
@@ -262,13 +262,41 @@
   const status = document.querySelector("#timeline-filter-status");
   const statusText = status.querySelector("span");
   const clearButton = document.querySelector("#timeline-filter-clear");
+  const invertMonthButton = document.querySelector("#timeline-month-invert");
   const controls = {
     q: document.querySelector("#timeline-query"),
     priority: document.querySelector("#timeline-priority"),
-    platform: document.querySelector("#timeline-platform"),
-    month: document.querySelector("#timeline-month"),
+    platform: document.querySelector("#timeline-platform-options"),
+    month: document.querySelector("#timeline-month-options"),
     marker: document.querySelector("#timeline-marker")
   };
+  const selectionStates = {
+    priority: document.querySelector("#timeline-priority-state"),
+    platform: document.querySelector("#timeline-platform-state"),
+    month: document.querySelector("#timeline-month-state")
+  };
+  const filterPanels = Array.from(form.querySelectorAll(".timeline-filter-panel"));
+
+  filterPanels.forEach((panel) => {
+    panel.addEventListener("toggle", () => {
+      if (!panel.open) return;
+      filterPanels.forEach((other) => {
+        if (other !== panel) other.open = false;
+      });
+    });
+  });
+  document.addEventListener("click", (event) => {
+    const panel = filterPanels.find((item) => item.open);
+    if (panel && !panel.contains(event.target)) panel.open = false;
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    const panel = filterPanels.find((item) => item.open);
+    if (!panel) return;
+    event.preventDefault();
+    panel.open = false;
+    panel.querySelector(":scope > summary").focus();
+  });
 
   const option = (value, label, facetLabel = label) => {
     const item = document.createElement("option");
@@ -279,29 +307,121 @@
     return item;
   };
 
-  const addFacetOptions = (select, items) => {
-    items.forEach((item) => select.append(option(item.value, `${item.value} (${item.count})`, item.value)));
+  const checkbox = (axis, item, id, labelText = item.value, kind = "option") => {
+    const label = document.createElement("label");
+    label.className = "timeline-checkbox-option";
+    label.htmlFor = id;
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.id = id;
+    input.name = axis;
+    input.value = item.value;
+    input.dataset.axis = axis;
+    input.dataset.kind = kind;
+    input.dataset.initialCount = String(item.count);
+    input.dataset.currentCount = String(item.count);
+    const text = document.createElement("span");
+    text.textContent = labelText;
+    const count = document.createElement("span");
+    count.className = "facet-count";
+    count.textContent = `(${item.count})`;
+    label.append(input, text, count);
+    return { label, input };
   };
 
-  const addMonthOptions = (facets) => {
+  const addFacetCheckboxes = (container, axis, items) => {
+    items.forEach((item, index) => {
+      const row = checkbox(axis, item, `timeline-${axis}-${index}`);
+      container.append(row.label);
+    });
+  };
+
+  const addMonthTree = (facets) => {
     facets.years.forEach((year) => {
-      const group = document.createElement("optgroup");
-      group.label = `${year.value} 年`;
-      group.append(option(year.value, `${year.value} 全年 (${year.count})`, `${year.value} 全年`));
+      const group = document.createElement("details");
+      group.className = "timeline-year";
+      group.dataset.year = year.value;
+      const summary = document.createElement("summary");
+      const title = document.createElement("span");
+      title.textContent = `${year.value} 年`;
+      const yearState = document.createElement("span");
+      yearState.className = "timeline-year-state";
+      yearState.textContent = `全部 · (${year.count})`;
+      summary.append(title, yearState);
+      const options = document.createElement("div");
+      options.className = "timeline-year-options";
+      const allYear = checkbox("month", year, `timeline-month-${year.value}`, `${year.value} 全年`, "year");
+      allYear.input.dataset.year = year.value;
+      options.append(allYear.label);
       facets.months
         .filter((month) => month.value.startsWith(`${year.value}-`))
-        .forEach((month) => group.append(option(month.value, `${month.value} (${month.count})`, month.value)));
+        .forEach((month) => {
+          const row = checkbox("month", month, `timeline-month-${month.value}`, month.value.slice(5), "month");
+          row.input.dataset.year = year.value;
+          options.append(row.label);
+        });
+      group.append(summary, options);
       controls.month.append(group);
     });
   };
 
+  const checkedValues = (container, selector = 'input[type="checkbox"]:checked') =>
+    Array.from(container.querySelectorAll(selector), (item) => item.value);
+
+  const selectedMonthTokens = () => Array.from(controls.month.querySelectorAll(".timeline-year"))
+    .flatMap((group) => {
+      const months = Array.from(group.querySelectorAll('input[data-kind="month"]'));
+      const selected = months.filter((item) => item.checked);
+      return selected.length === months.length
+        ? [group.dataset.year]
+        : selected.map((item) => item.value);
+    });
+
   const currentFilters = () => ({
     q: controls.q.value.trim(),
-    priority: controls.priority.value,
-    platform: controls.platform.value,
-    month: controls.month.value,
+    priority: checkedValues(controls.priority),
+    platform: checkedValues(controls.platform),
+    month: selectedMonthTokens(),
     marker: controls.marker.value
   });
+
+  const syncYearSelection = (group) => {
+    const year = group.querySelector('input[data-kind="year"]');
+    const months = Array.from(group.querySelectorAll('input[data-kind="month"]'));
+    const selected = months.filter((item) => item.checked).length;
+    year.checked = selected === months.length;
+    year.indeterminate = selected > 0 && selected < months.length;
+    const count = Number(year.dataset.currentCount);
+    group.classList.toggle("unavailable", count === 0 && selected === 0);
+    year.disabled = count === 0 && !year.checked && !year.indeterminate;
+  };
+
+  const syncAllYears = () => {
+    controls.month.querySelectorAll(".timeline-year").forEach(syncYearSelection);
+  };
+
+  const updateYearStates = () => {
+    const anySelected = controls.month.querySelector('input[data-kind="month"]:checked') !== null;
+    controls.month.querySelectorAll(".timeline-year").forEach((group) => {
+      const year = group.querySelector('input[data-kind="year"]');
+      const months = Array.from(group.querySelectorAll('input[data-kind="month"]'));
+      const selected = months.filter((item) => item.checked).length;
+      const selection = !anySelected
+        ? "全部"
+        : selected === 0 ? "未选" : selected === months.length ? "全年" : `已选 ${selected}/${months.length} 月`;
+      group.querySelector(".timeline-year-state").textContent = `${selection} · (${year.dataset.currentCount})`;
+    });
+  };
+
+  const updateSelectionStates = () => {
+    const priorities = checkedValues(controls.priority).length;
+    const platforms = checkedValues(controls.platform).length;
+    const months = checkedValues(controls.month, 'input[data-kind="month"]:checked').length;
+    selectionStates.priority.textContent = priorities ? `已选 ${priorities} 项` : "全部";
+    selectionStates.platform.textContent = platforms ? `已选 ${platforms} 项` : "全部";
+    selectionStates.month.textContent = months ? `已选 ${months} 个月` : "全部";
+    updateYearStates();
+  };
 
   const normalizeEnglishPlurals = (text) => text.replace(/[a-z]+/g, (word) => {
     if (word.length > 4 && word.endsWith("ies")) return `${word.slice(0, -3)}y`;
@@ -318,9 +438,11 @@
     const normalizedKeyword = normalizeEnglishPlurals(keyword);
     const normalizedHaystack = normalizeEnglishPlurals(haystack);
     return (!keyword || haystack.includes(keyword) || normalizedHaystack.includes(normalizedKeyword))
-      && (!filters.priority || event.businessPriority === filters.priority)
-      && (!filters.platform || (event.platforms || []).includes(filters.platform))
-      && (!filters.month || (event.publishedAt || "").startsWith(filters.month))
+      && (!filters.priority.length || filters.priority.includes(event.businessPriority))
+      && (!filters.platform.length
+        || filters.platform.some((platform) => (event.platforms || []).includes(platform)))
+      && (!filters.month.length
+        || filters.month.some((month) => (event.publishedAt || "").startsWith(month)))
       && (!filters.marker
         || (filters.marker === "deadline" && Boolean(event.deadlineAt))
         || (filters.marker === "effective" && Boolean(event.effectiveAt)));
@@ -338,28 +460,57 @@
   };
 
   const updateFacetCounts = (events, filters) => {
-    Object.entries(controls).forEach(([axis, select]) => {
-      if (axis === "q") return;
-      const otherFilters = { ...filters, [axis]: "" };
+    for (const axis of ["priority", "platform"]) {
+      const otherFilters = { ...filters, [axis]: [] };
       const candidates = events.filter((event) => matchesEvent(event, otherFilters));
-      Array.from(select.options).forEach((item) => {
-        const count = item.value
-          ? candidates.filter((event) => matchesFacetValue(event, axis, item.value)).length
-          : candidates.length;
-        item.textContent = `${item.dataset.facetLabel} (${count})`;
-        item.disabled = count === 0 && item.value !== select.value;
+      controls[axis].querySelectorAll('input[type="checkbox"]').forEach((item) => {
+        const count = candidates.filter((event) => matchesFacetValue(event, axis, item.value)).length;
+        item.dataset.currentCount = String(count);
+        item.closest("label").querySelector(".facet-count").textContent = `(${count})`;
+        item.disabled = count === 0 && !item.checked;
       });
+    }
+
+    const monthCandidates = events.filter((event) => matchesEvent(event, { ...filters, month: [] }));
+    controls.month.querySelectorAll('input[data-kind="month"]').forEach((item) => {
+      const count = monthCandidates.filter((event) => matchesFacetValue(event, "month", item.value)).length;
+      item.dataset.currentCount = String(count);
+      item.closest("label").querySelector(".facet-count").textContent = `(${count})`;
+      item.disabled = count === 0 && !item.checked;
+    });
+    controls.month.querySelectorAll(".timeline-year").forEach((group) => {
+      const year = group.querySelector('input[data-kind="year"]');
+      const count = Array.from(group.querySelectorAll('input[data-kind="month"]'))
+        .reduce((total, item) => total + Number(item.dataset.currentCount), 0);
+      year.dataset.currentCount = String(count);
+      year.closest("label").querySelector(".facet-count").textContent = `(${count})`;
+      syncYearSelection(group);
+    });
+    updateYearStates();
+
+    const markerCandidates = events.filter((event) => matchesEvent(event, { ...filters, marker: "" }));
+    Array.from(controls.marker.options).forEach((item) => {
+      const count = item.value
+        ? markerCandidates.filter((event) => matchesFacetValue(event, "marker", item.value)).length
+        : markerCandidates.length;
+      item.textContent = `${item.dataset.facetLabel} (${count})`;
+      item.disabled = count === 0 && item.value !== controls.marker.value;
     });
   };
 
   const resetFacetCounts = () => {
-    Object.entries(controls).forEach(([axis, select]) => {
-      if (axis === "q") return;
-      Array.from(select.options).forEach((item) => {
-        item.textContent = item.dataset.initialLabel;
-        item.disabled = false;
-      });
+    form.querySelectorAll('input[type="checkbox"]').forEach((item) => {
+      const count = item.dataset.initialCount;
+      item.dataset.currentCount = count;
+      item.closest("label").querySelector(".facet-count").textContent = `(${count})`;
+      item.disabled = false;
     });
+    Array.from(controls.marker.options).forEach((item) => {
+      item.textContent = item.dataset.initialLabel;
+      item.disabled = false;
+    });
+    syncAllYears();
+    updateYearStates();
   };
 
   const dateText = (value) => {
@@ -441,11 +592,41 @@
 
   const updateUrl = (filters) => {
     const url = new URL(window.location.href);
-    Object.entries(filters).forEach(([key, value]) => {
-      if (value) url.searchParams.set(key, value);
-      else url.searchParams.delete(key);
+    const managedKeys = new Set(Object.keys(filters));
+    const parts = [];
+    url.searchParams.forEach((value, key) => {
+      if (!managedKeys.has(key)) parts.push(`${encodeURIComponent(key)}=${encodeURIComponent(value)}`);
     });
-    history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+    Object.entries(filters).forEach(([key, value]) => {
+      if (Array.isArray(value) && value.length) {
+        parts.push(`${encodeURIComponent(key)}=${value.map((token) => encodeURIComponent(token)).join(",")}`);
+      } else if (!Array.isArray(value) && value) {
+        parts.push(`${encodeURIComponent(key)}=${encodeURIComponent(value)}`);
+      }
+    });
+    const query = parts.length ? `?${parts.join("&")}` : "";
+    history.replaceState(null, "", `${url.pathname}${query}${url.hash}`);
+  };
+
+  const parseTokenParam = (params, name) => {
+    // Commas delimit tokens; platform names therefore must not contain commas.
+    return (params.get(name) || "").split(",").map((token) => token.trim()).filter(Boolean);
+  };
+
+  const restoreChecked = (container, values) => {
+    const selected = new Set(values);
+    container.querySelectorAll('input[type="checkbox"]').forEach((item) => {
+      item.checked = selected.has(item.value);
+    });
+  };
+
+  const restoreMonthSelection = (tokens) => {
+    const years = new Set(tokens.filter((token) => /^\d{4}$/.test(token)));
+    const months = new Set(tokens.filter((token) => /^\d{4}-\d{2}$/.test(token)));
+    controls.month.querySelectorAll('input[data-kind="month"]').forEach((item) => {
+      item.checked = years.has(item.dataset.year) || months.has(item.value);
+    });
+    syncAllYears();
   };
 
   fetch("/policy-radar/timeline/filter-index.json")
@@ -454,27 +635,30 @@
       return response.json();
     })
     .then((index) => {
-      addFacetOptions(controls.priority, index.facets.businessPriority);
-      addFacetOptions(controls.platform, index.facets.platforms);
-      addMonthOptions(index.facets);
+      const priorityOrder = ["P0-A", "P0-B", "P1", "P2", "P3", "P4"];
+      const priorities = [...index.facets.businessPriority]
+        .sort((left, right) => priorityOrder.indexOf(left.value) - priorityOrder.indexOf(right.value));
+      addFacetCheckboxes(controls.priority, "priority", priorities);
+      addFacetCheckboxes(controls.platform, "platform", index.facets.platforms);
+      addMonthTree(index.facets);
       const markers = Object.fromEntries(index.facets.marker.map((item) => [item.value, item.count]));
       controls.marker.append(option("deadline", `有截止日期 (${markers.deadline || 0})`, "有截止日期"));
       controls.marker.append(option("effective", `有生效日期 (${markers.effective || 0})`, "有生效日期"));
-      Object.values(controls).forEach((control) => {
-        if (control.tagName === "SELECT") {
-          control.options[0].dataset.facetLabel = "全部";
-          control.options[0].dataset.initialLabel = "全部";
-        }
-      });
+      controls.marker.options[0].dataset.facetLabel = "全部";
+      controls.marker.options[0].dataset.initialLabel = "全部";
 
       const params = new URLSearchParams(window.location.search);
-      Object.entries(controls).forEach(([name, control]) => {
-        control.value = params.get(name) || "";
-      });
+      controls.q.value = params.get("q") || "";
+      controls.marker.value = params.get("marker") || "";
+      restoreChecked(controls.priority, parseTokenParam(params, "priority"));
+      restoreChecked(controls.platform, parseTokenParam(params, "platform"));
+      restoreMonthSelection(parseTokenParam(params, "month"));
 
       const applyFilters = () => {
+        syncAllYears();
+        updateSelectionStates();
         const filters = currentFilters();
-        const active = Object.values(filters).some(Boolean);
+        const active = Object.values(filters).some((value) => Array.isArray(value) ? value.length : Boolean(value));
         updateUrl(filters);
         serverResults.hidden = active;
         filterResults.hidden = !active;
@@ -487,10 +671,23 @@
         }
       };
 
-      form.addEventListener("input", applyFilters);
-      form.addEventListener("change", applyFilters);
+      form.addEventListener("input", (event) => {
+        const target = event.target;
+        if (target.matches('input[data-kind="year"]')) {
+          target.closest(".timeline-year").querySelectorAll('input[data-kind="month"]')
+            .forEach((month) => { month.checked = target.checked; });
+        }
+        applyFilters();
+      });
+      invertMonthButton.addEventListener("click", () => {
+        controls.month.querySelectorAll('input[data-kind="month"]').forEach((month) => {
+          month.checked = !month.checked;
+        });
+        applyFilters();
+      });
       clearButton.addEventListener("click", () => {
         form.reset();
+        syncAllYears();
         applyFilters();
         controls.q.focus();
       });
