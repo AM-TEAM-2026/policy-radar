@@ -34,8 +34,27 @@
   </header>
 <div class="breadcrumb"><a href="/policy-radar/">首页</a> › <a href="/policy-radar/timeline/">时间线</a></div>
 <header class="page-heading"><h1>重要平台时间线</h1><p>按发布时间从近到远；发布时间缺失时使用首次发现时间。</p></header>
+<style>[hidden]{display:none!important}.timeline-filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:var(--space-2);margin-bottom:var(--space-2);padding:var(--space-2);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}.timeline-filters label{display:block;margin-bottom:4px;color:var(--muted);font-size:var(--font-caption);font-weight:500}.timeline-filters input,.timeline-filters select{width:100%;min-height:44px;padding:0 var(--space-1);border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit}.timeline-filters input:focus-visible,.timeline-filters select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.timeline-filter-status{display:flex;align-items:center;justify-content:space-between;gap:var(--space-2);margin-bottom:var(--space-2);color:var(--muted)}.timeline-filter-status button{min-height:44px;padding:0 var(--space-2);border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--accent);font:inherit;font-weight:500;cursor:pointer}.timeline-filter-status button:hover{background:var(--accent-soft)}</style>
+<form class="timeline-filters" id="timeline-filters" hidden>
+  <div><label for="timeline-query">关键词</label><input id="timeline-query" name="q" type="search" placeholder="标题、摘要或平台"></div>
+  <div><label for="timeline-priority">风控等级</label><select id="timeline-priority" name="priority"><option value="">全部</option></select></div>
+  <div><label for="timeline-platform">平台</label><select id="timeline-platform" name="platform"><option value="">全部</option></select></div>
+  <div><label for="timeline-month">年 / 年月</label><select id="timeline-month" name="month"><option value="">全部</option></select></div>
+  <div><label for="timeline-marker">时间节点</label><select id="timeline-marker" name="marker"><option value="">全部</option></select></div>
+</form>
+<div class="timeline-filter-status" id="timeline-filter-status" hidden aria-live="polite"><span></span><button type="button" id="timeline-filter-clear">清除筛选</button></div>
+<div id="timeline-server-results">
 <div class="timeline">
 <article class="timeline-row compact-card">
+  <div class="timeline-date">
+<span>发布 2025-07-25</span>  </div>
+  <div class="timeline-content">
+    <div class="card-platforms"><span class="platform-badge">Meta</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P0-B</span><span class="tag lifecycle">2025-10-06 已生效</span></div>
+    <h2><a href="/policy-radar/events/evt_legacy-meta-eu-political-ads-stop-2025-07-25/">Meta 停止在欧盟投放政治、选举和社会议题广告</a></h2>
+    <p>Meta 因欧盟 TTPA 要求，自 2025-10-06 起不再允许政治、选举和社会议题广告在欧盟投放。</p>
+  </div>
+</article><article class="timeline-row compact-card">
   <div class="timeline-date">
 <span>发布 2025-07-15</span>  </div>
   <div class="timeline-content">
@@ -233,7 +252,255 @@
     <h2><a href="/policy-radar/events/evt_legacy-google-play-call-log-permission-2026-07-15/">Google Play 短信与通话记录权限使用要求</a></h2>
 <span class="tag">3 次更新</span>    <p>SMS and Call Log Permissions 政策把 READ_SMS / READ_CALL_LOG 等权限限定在默认短信、默认电话或 Assistant 处理程序，以及少数经 Google Play 审核批准的例外核心用途。2026-07-15 公告移除了「来电账号验证」这一例外，自 2027-01-27 起该用途不再允许申请 READ_CALL_LOG。完整演进见下方版本历史。</p>
   </div>
-</article></div><nav class="pagination" aria-label="时间线分页"><a href="/policy-radar/timeline/">1</a><a href="/policy-radar/timeline/page/2/">2</a><span class="current" aria-current="page">3</span></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
+</article></div><nav class="pagination" aria-label="时间线分页"><a href="/policy-radar/timeline/">1</a><a href="/policy-radar/timeline/page/2/">2</a><span class="current" aria-current="page">3</span></nav></div>
+<div class="timeline" id="timeline-filter-results" hidden></div>
+<nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav><script>
+(() => {
+  const form = document.querySelector("#timeline-filters");
+  const serverResults = document.querySelector("#timeline-server-results");
+  const filterResults = document.querySelector("#timeline-filter-results");
+  const status = document.querySelector("#timeline-filter-status");
+  const statusText = status.querySelector("span");
+  const clearButton = document.querySelector("#timeline-filter-clear");
+  const controls = {
+    q: document.querySelector("#timeline-query"),
+    priority: document.querySelector("#timeline-priority"),
+    platform: document.querySelector("#timeline-platform"),
+    month: document.querySelector("#timeline-month"),
+    marker: document.querySelector("#timeline-marker")
+  };
+
+  const option = (value, label, facetLabel = label) => {
+    const item = document.createElement("option");
+    item.value = value;
+    item.textContent = label;
+    item.dataset.facetLabel = facetLabel;
+    item.dataset.initialLabel = label;
+    return item;
+  };
+
+  const addFacetOptions = (select, items) => {
+    items.forEach((item) => select.append(option(item.value, `${item.value} (${item.count})`, item.value)));
+  };
+
+  const addMonthOptions = (facets) => {
+    facets.years.forEach((year) => {
+      const group = document.createElement("optgroup");
+      group.label = `${year.value} 年`;
+      group.append(option(year.value, `${year.value} 全年 (${year.count})`, `${year.value} 全年`));
+      facets.months
+        .filter((month) => month.value.startsWith(`${year.value}-`))
+        .forEach((month) => group.append(option(month.value, `${month.value} (${month.count})`, month.value)));
+      controls.month.append(group);
+    });
+  };
+
+  const currentFilters = () => ({
+    q: controls.q.value.trim(),
+    priority: controls.priority.value,
+    platform: controls.platform.value,
+    month: controls.month.value,
+    marker: controls.marker.value
+  });
+
+  const normalizeEnglishPlurals = (text) => text.replace(/[a-z]+/g, (word) => {
+    if (word.length > 4 && word.endsWith("ies")) return `${word.slice(0, -3)}y`;
+    if (word.length > 4 && /(?:ses|xes|zes|ches|shes)$/.test(word)) return word.slice(0, -2);
+    if (word.length > 3 && word.endsWith("s") && !/(?:ss|us|is)$/.test(word)) return word.slice(0, -1);
+    return word;
+  });
+
+  const matchesEvent = (event, filters) => {
+    const keyword = filters.q.toLocaleLowerCase("zh-CN");
+    const haystack = [event.title, event.summary, ...(event.platforms || [])]
+      .join(" ")
+      .toLocaleLowerCase("zh-CN");
+    const normalizedKeyword = normalizeEnglishPlurals(keyword);
+    const normalizedHaystack = normalizeEnglishPlurals(haystack);
+    return (!keyword || haystack.includes(keyword) || normalizedHaystack.includes(normalizedKeyword))
+      && (!filters.priority || event.businessPriority === filters.priority)
+      && (!filters.platform || (event.platforms || []).includes(filters.platform))
+      && (!filters.month || (event.publishedAt || "").startsWith(filters.month))
+      && (!filters.marker
+        || (filters.marker === "deadline" && Boolean(event.deadlineAt))
+        || (filters.marker === "effective" && Boolean(event.effectiveAt)));
+  };
+
+  const matchesFacetValue = (event, axis, value) => {
+    if (axis === "priority") return event.businessPriority === value;
+    if (axis === "platform") return (event.platforms || []).includes(value);
+    if (axis === "month") return (event.publishedAt || "").startsWith(value);
+    if (axis === "marker") {
+      return (value === "deadline" && Boolean(event.deadlineAt))
+        || (value === "effective" && Boolean(event.effectiveAt));
+    }
+    return false;
+  };
+
+  const updateFacetCounts = (events, filters) => {
+    Object.entries(controls).forEach(([axis, select]) => {
+      if (axis === "q") return;
+      const otherFilters = { ...filters, [axis]: "" };
+      const candidates = events.filter((event) => matchesEvent(event, otherFilters));
+      Array.from(select.options).forEach((item) => {
+        const count = item.value
+          ? candidates.filter((event) => matchesFacetValue(event, axis, item.value)).length
+          : candidates.length;
+        item.textContent = `${item.dataset.facetLabel} (${count})`;
+        item.disabled = count === 0 && item.value !== select.value;
+      });
+    });
+  };
+
+  const resetFacetCounts = () => {
+    Object.entries(controls).forEach(([axis, select]) => {
+      if (axis === "q") return;
+      Array.from(select.options).forEach((item) => {
+        item.textContent = item.dataset.initialLabel;
+        item.disabled = false;
+      });
+    });
+  };
+
+  const dateText = (value) => {
+    if (!value) return "日期未明确";
+    if (/^\d{4}-\d{2}$/.test(value)) {
+      const [year, month] = value.split("-");
+      return `${year} 年 ${Number(month)} 月`;
+    }
+    return value;
+  };
+
+  const renderedDate = (event) => {
+    if (!event.publishedAt) return "发布时间未明确";
+    const prefix = event.dateConfidence === "not_later_than"
+      ? "≤"
+      : event.dateConfidence === "not_earlier_than" ? "≥" : "";
+    return `发布 ${prefix}${dateText(event.publishedAt)}`;
+  };
+
+  const renderEvent = (event) => {
+    const article = document.createElement("article");
+    article.className = "timeline-row compact-card";
+    const date = document.createElement("div");
+    date.className = "timeline-date";
+    const published = document.createElement("span");
+    published.textContent = renderedDate(event);
+    date.append(published);
+    if (event.deadlineAt) {
+      const deadline = document.createElement("strong");
+      deadline.textContent = `截止 ${dateText(event.deadlineAt)}`;
+      date.append(deadline);
+    }
+
+    const content = document.createElement("div");
+    content.className = "timeline-content";
+    const platforms = document.createElement("div");
+    platforms.className = "card-platforms";
+    (event.platforms || []).forEach((platform) => {
+      const badge = document.createElement("span");
+      badge.className = "platform-badge";
+      badge.textContent = platform;
+      platforms.append(badge);
+    });
+    content.append(platforms);
+    const tags = document.createElement("div");
+    tags.className = "tags";
+    const priority = document.createElement("span");
+    priority.className = "tag priority";
+    priority.textContent = event.businessPriority;
+    tags.append(priority);
+    content.append(tags);
+    const heading = document.createElement("h2");
+    const link = document.createElement("a");
+    link.href = event.permalink;
+    link.textContent = event.title;
+    heading.append(link);
+    content.append(heading);
+    const summary = document.createElement("p");
+    summary.textContent = event.summary;
+    content.append(summary);
+    article.append(date, content);
+    return article;
+  };
+
+  const renderResults = (events, total) => {
+    filterResults.replaceChildren();
+    if (!events.length) {
+      const empty = document.createElement("div");
+      empty.className = "empty";
+      empty.textContent = "没有符合当前筛选条件的事件。";
+      filterResults.append(empty);
+    } else {
+      const fragment = document.createDocumentFragment();
+      events.forEach((event) => fragment.append(renderEvent(event)));
+      filterResults.append(fragment);
+    }
+    statusText.textContent = `命中 ${events.length} 条 / 共 ${total} 条`;
+  };
+
+  const updateUrl = (filters) => {
+    const url = new URL(window.location.href);
+    Object.entries(filters).forEach(([key, value]) => {
+      if (value) url.searchParams.set(key, value);
+      else url.searchParams.delete(key);
+    });
+    history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+  };
+
+  fetch("/policy-radar/timeline/filter-index.json")
+    .then((response) => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    })
+    .then((index) => {
+      addFacetOptions(controls.priority, index.facets.businessPriority);
+      addFacetOptions(controls.platform, index.facets.platforms);
+      addMonthOptions(index.facets);
+      const markers = Object.fromEntries(index.facets.marker.map((item) => [item.value, item.count]));
+      controls.marker.append(option("deadline", `有截止日期 (${markers.deadline || 0})`, "有截止日期"));
+      controls.marker.append(option("effective", `有生效日期 (${markers.effective || 0})`, "有生效日期"));
+      Object.values(controls).forEach((control) => {
+        if (control.tagName === "SELECT") {
+          control.options[0].dataset.facetLabel = "全部";
+          control.options[0].dataset.initialLabel = "全部";
+        }
+      });
+
+      const params = new URLSearchParams(window.location.search);
+      Object.entries(controls).forEach(([name, control]) => {
+        control.value = params.get(name) || "";
+      });
+
+      const applyFilters = () => {
+        const filters = currentFilters();
+        const active = Object.values(filters).some(Boolean);
+        updateUrl(filters);
+        serverResults.hidden = active;
+        filterResults.hidden = !active;
+        status.hidden = !active;
+        if (active) {
+          updateFacetCounts(index.events, filters);
+          renderResults(index.events.filter((event) => matchesEvent(event, filters)), index.totalEvents);
+        } else {
+          resetFacetCounts();
+        }
+      };
+
+      form.addEventListener("input", applyFilters);
+      form.addEventListener("change", applyFilters);
+      clearButton.addEventListener("click", () => {
+        form.reset();
+        applyFilters();
+        controls.q.focus();
+      });
+      form.hidden = false;
+      applyFilters();
+    })
+    .catch((error) => console.warn("Timeline filters unavailable", error));
+})();
+</script>
+  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 </body>
 </html>
