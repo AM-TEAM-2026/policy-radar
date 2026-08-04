@@ -33,7 +33,7 @@
     </nav>
   </header>
 <div class="breadcrumb"><a href="/policy-radar/">首页</a> › <a href="/policy-radar/ua/">买量</a> › 事件详情</div>
-<div class="tags"><span class="tag priority">P0-B</span><span class="tag lifecycle">已正式发布</span><a class="tag domain" href="/policy-radar/ua/">买量</a></div>
+<div class="tags"><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><a class="tag domain" href="/policy-radar/ua/">买量</a></div>
 <h1 class="event-title">TikTok Spark Ads 新建广告默认开启 Show through ads only 模式</h1>
 <div class="detail-grid"><div><h2>事实摘要</h2><p>TikTok Ads Manager 帮助页（最后更新 2026 年 1 月）说明新建的 Spark Ads 默认开启 Show through ads only 模式，即素材只通过广告展示、不出现在 TikTok 个人主页。TikTok API for Business 文档确认该模式对应 dark_post_status=ON（doc_id 1739593083610113）。团队内部记录称「2026-01-27 起 API 创建接口的 dark_post_status 默认值由 OFF 改为 ON」，但这两个官方页面都没有证明默认值发生过变更，也没有该日期，故本条只记录当前默认状态，不记录变更时点。</p></div><div><h2>业务影响</h2><p>默认不在个人主页展示，意味着授权账号的自然流量与粉丝沉淀拿不到广告曝光的溢出；靠 Spark Ads 同时做投放和账号增长的打法会失效，而这个变化在后台是静默的。</p></div><div><h2>需要行动</h2><p>检查现有 Spark Ads 的 Show through ads only 设置是否符合预期；需要兼顾账号增长的活动手动关闭该模式；通过 API 创建广告的，显式传 dark_post_status 而不要依赖默认值。</p></div><div><h2>建议责任方</h2><p>买量投放 / 内容运营</p></div></div>
 <section class="event-section"><h2>生命周期</h2><div class="milestones version-history"><div class="milestone"><strong>2026 年 1 月 · 公告</strong><a href="https://ads.tiktok.com/help/article/how-to-turn-on-dont-show-on-tiktok-profile-option-in-tiktok-ads-manager" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div></div></section>
