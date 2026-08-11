@@ -27,7 +27,7 @@
         <summary class="active">时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">4</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">10</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">2</span></a><a class="active" aria-current="page" href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">2</span></a><a href="/policy-radar/regulatory/"><span>监管</span><span class="nav-badge">2</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">4</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">10</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">1</span></a><a class="active" aria-current="page" href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">4</span></a><a href="/policy-radar/regulatory/"><span>监管</span><span class="nav-badge">2</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
     </nav>
@@ -36,6 +36,36 @@
 <header class="page-heading"><h1>AI</h1><p>重大模型、API、云服务及安全变化</p></header>
 <div class="card-stack">
 <article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer">Anthropic API Release Notes</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-08-11</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">2026-08-11 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_973cb0a9fd3c85ffe18be206/">Compliance API 新增本地 Cowork/Claude Code 会话转录接口（Beta）</a></h3>
+<p class="event-summary">Anthropic 于 2026-08-11 发布 Compliance API 更新，面向 Claude Enterprise 组织（Beta）新增本地会话合规查询能力：GET /v1/compliance/apps/sessions/local 列出组织内本地会话，GET /v1/compliance/apps/sessions/local/{session_id} 获取单个会话元数据，GET /v1/compliance/apps/sessions/local/{session_id}/messages 获取会话转录。使用现有 Compliance Access Key 及 read:compliance_user_data scope。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>企业合规/安全团队可对用户机器上运行的 Cowork 与 Claude Code 会话进行审计与取证，提升对本地端点数据可见性；需评估隐私与数据留存策略，并确认 Enterprise 订阅下的合规范围与用户告知义务。</p></section>
+    <section><h4>需要行动</h4><p>1) 评估是否启用该 Beta 能力并更新内部合规审计流程；2) 在 IAM/密钥管理中确认 Compliance Access Key 与 read:compliance_user_data scope 的发放与最小权限；3) 更新隐私声明与员工/用户告知，明确本地会话转录的采集范围；4) 对接 SIEM/DLP，制定会话转录的存储、访问与保留策略。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 合规与安全团队 / 平台工程</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer"><span>Anthropic API Release Notes</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer">Anthropic API Release Notes</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-08-10</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">2026-08-10 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_0062c7bf1aef190fb249fc1d/">Claude Sonnet 5  introductory pricing 转为标准定价，取消 9 月涨价</a></h3>
+<p class="event-summary">Anthropic 于 2026-08-10 宣布 Claude Sonnet 5 的 introductory pricing（输入 $2 / 输出 $10 每 MTok）即日起成为标准价格，原计划于 2026-09-01 上调至 $3 / $15 每 MTok 的涨价不再执行。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>使用 Claude Sonnet 5 的订阅与调用成本可预期地维持在较低水平，有利于预算与定价模型稳定；原基于 9 月涨价的成本优化或迁移计划不再必要。</p></section>
+    <section><h4>需要行动</h4><p>1) 更新内部成本模型与产品定价测算，采用 $2/$10 每 MTok 作为长期基准；2) 取消或调整原计划于 9 月前完成的模型迁移/缓存/批处理等降本措施；3) 通知财务与产品团队同步预算与对外报价。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 财务 / 产品与平台工程</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer"><span>Anthropic API Release Notes</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
     <span aria-hidden="true">·</span>

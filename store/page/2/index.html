@@ -27,7 +27,7 @@
         <summary class="active">时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a class="active" aria-current="page" href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">4</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">10</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">2</span></a><a href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">2</span></a><a href="/policy-radar/regulatory/"><span>监管</span><span class="nav-badge">2</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a class="active" aria-current="page" href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">4</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">10</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">1</span></a><a href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">4</span></a><a href="/policy-radar/regulatory/"><span>监管</span><span class="nav-badge">2</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
     </nav>
@@ -36,6 +36,21 @@
 <header class="page-heading"><h1>开发者平台</h1><p>Apple Developer、Google Play Console、应用商店审核与政策</p></header>
 <div class="card-stack">
 <article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/16706838?hl=en" target="_blank" rel="noopener noreferrer">Google Play Console Announcements</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2025-11-19</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-01-01 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-age-signals-data-use-2025-11-19/">Google Play 明确年龄信号使用要求</a></h3>
+<p class="event-summary">API 数据仅可用于履行年龄合规义务和在接收数据的应用内提供适龄体验，不得用于广告、分析、画像或向第三方共享。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>Play Age Signals API 的数据被明确限制在合规用途，禁止用于广告、分析、画像和第三方共享——把年龄信号回流到买量或变现链路会直接违规。</p></section>
+    <section><h4>需要行动</h4><p>确认年龄信号的数据流向，切断向广告 SDK、分析平台和数据仓库的传输；在数据治理文档中标注该字段的使用边界。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 产品 / 合规</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/answer/16706838?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Console Announcements</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
     <span aria-hidden="true">·</span>
