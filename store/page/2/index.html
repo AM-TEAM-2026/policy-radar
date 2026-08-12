@@ -27,7 +27,7 @@
         <summary class="active">时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a class="active" aria-current="page" href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">4</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">10</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">1</span></a><a href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">4</span></a><a href="/policy-radar/regulatory/"><span>监管</span><span class="nav-badge">2</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a class="active" aria-current="page" href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">7</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">9</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">1</span></a><a href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">4</span></a><a href="/policy-radar/regulatory/"><span>监管</span><span class="nav-badge">2</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
     </nav>
@@ -36,6 +36,54 @@
 <header class="page-heading"><h1>开发者平台</h1><p>Apple Developer、Google Play Console、应用商店审核与政策</p></header>
 <div class="card-stack">
 <article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/16797260?hl=en" target="_blank" rel="noopener noreferrer">Google Play Console Announcements</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-01-28</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-dating-restricted-content-link-2026-01-28/">Google Play 约会/匹配应用受限内容澄清</a></h3>
+<p class="event-summary">Google 在 Age-Restricted Content and Functionality 政策中增加 matchmaking and dating 链接，但当次公告不改变执法标准。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>只是在受限内容政策里补了指向约会/匹配的链接，公告明确不改变执法标准，属于文档层面的澄清。</p></section>
+    <section><h4>需要行动</h4><p>更新内部政策对照表中该条的引用路径；无需产品改动。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 商店运营</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/answer/16797260?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Console Announcements</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.apple.com/news/?id=074b3wzz" target="_blank" rel="noopener noreferrer">Apple Developer News</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2025-12-17</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <div class="date-strip">
+    <strong><small>截止</small>2026-03-17</strong>
+  </div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-apple-japan-alternative-distribution-payment-2025-12-17/">日本 iOS 替代分发与替代支付</a></h3>
+<p class="event-summary">为符合日本 Mobile Software Competition Act，iOS 26.2 起支持替代应用市场、替代支付、外链交易及其他系统选择。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>日本市场首次出现替代分发与替代支付通道，既是绕开 IAP 抽成的机会，也意味着日本区的分发链路、结算与合规口径要单独维护一套。</p></section>
+    <section><h4>需要行动</h4><p>评估日本区是否接入替代支付或替代市场并测算佣金差；如接入，单独设计日本区的支付流程、退款与税务处理；不接入也要确认 iOS 26.2 后现有链路无回归。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> iOS 商店运营 / 财务 / 法务</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.apple.com/news/?id=074b3wzz" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.apple.com/news/?id=y1bckxf8" target="_blank" rel="noopener noreferrer">Apple Developer News</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2025-12-08</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2025-12-10 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-apple-australia-under16-social-media-2025-12-08/">Apple 澳大利亚社交媒体 App 的16岁以下账号限制</a></h3>
+<p class="event-summary">澳大利亚新法要求受影响社交媒体平台阻止16岁以下用户拥有社交媒体账号；Apple 提供年龄范围 API、商店描述、应用内控制、提高最低分级和 Age Suitability URL 等工具。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>有社交属性的产品在澳大利亚可能被直接认定为受限平台；未接入年龄工具会同时面临澳洲法律责任与 App Store 下架风险，且会切掉澳区 16 岁以下的全部新增。</p></section>
+    <section><h4>需要行动</h4><p>先判定自家产品是否落入澳洲法律定义的社交媒体平台；若落入，接入 Declared Age Range API、调整商店描述与最低分级、配置 Age Suitability URL；并评估澳区收入与新增的损失。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> iOS 研发 / 产品 / 合规</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.apple.com/news/?id=y1bckxf8" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
     <span aria-hidden="true">·</span>
