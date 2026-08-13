@@ -27,7 +27,7 @@
         <summary class="active">时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a class="active" aria-current="page" href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">7</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">9</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">1</span></a><a href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">4</span></a><a href="/policy-radar/regulatory/"><span>监管</span><span class="nav-badge">2</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a class="active" aria-current="page" href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">8</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">9</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">1</span></a><a href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">4</span></a><a href="/policy-radar/regulatory/"><span>监管</span><span class="nav-badge">2</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
     </nav>
@@ -36,6 +36,21 @@
 <header class="page-heading"><h1>开发者平台</h1><p>Apple Developer、Google Play Console、应用商店审核与政策</p></header>
 <div class="card-stack">
 <article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.android.com/google/play/billing/migrate-gpblv8" target="_blank" rel="noopener noreferrer">Migrate to Google Play Billing Library 8</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-08-13</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-08-13 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_1f5b26e0b5903e211b09d979/">Google Play Billing Library 8 迁移指南更新</a></h3>
+<p class="event-summary">Google 开发者文档页面《Migrate to Google Play Billing Library 8》于 2026-08-13 更新，release notes 中新增/调整了 Show buy、Enable reconnection、Handle Transactions、Installment Integration 等章节内容，涉及 Google Play Billing Library 8 的迁移指引。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>该迁移指南直接影响应用内购买与订阅的接入实现，涉及购买展示、断线重连、交易处理及分期付款集成等核心支付流程；若应用尚未完成 GPBLv8 迁移或需适配新增/变更行为，可能影响支付成功率、订阅续订及合规上架。</p></section>
+    <section><h4>需要行动</h4><p>1) 对照 GPBLv8 迁移指南逐项核查现有支付/订阅接入代码，重点关注 Show buy、Enable reconnection、Handle Transactions、Installment Integration 相关变更；2) 评估分期付款集成需求与产品规划；3) 在测试环境完成回归测试，确保购买、重连与交易处理行为符合最新指引；4) 关注后续官方对 GPBLv8 的强制生效/截止要求并纳入排期。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付与订阅研发/移动端研发/产品</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.android.com/google/play/billing/migrate-gpblv8" target="_blank" rel="noopener noreferrer"><span>Migrate to Google Play Billing Library 8</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
     <span aria-hidden="true">·</span>
@@ -61,9 +76,11 @@
   <h3><a class="card-title-link" href="/policy-radar/events/evt_3361dbe6b9831bfe568c4761/">韩国App Store年龄分级规则更新：支持GRAC官方评级覆盖及内容描述符调整</a></h3>
 <p class="event-summary">Apple宣布对韩国App Store的年龄分级规则进行两项更新：1）即日起，若应用已获得韩国游戏评级与管理委员会（GRAC）的官方评级，开发者可在下次版本提交时通过提供GRAC评级分类号（RCN）覆盖现有年龄分级为韩国地区特定分级（All、12+、15+或19+）；2）自2026年10月起，两项内容描述符（&#39;Infrequent profanity and crude humor&#39;和&#39;Infrequent mature or suggestive themes&#39;）的年龄分级将从All调整为12+。</p>  <div class="impact-action">
     <section><h4>业务影响</h4><p>对于已获得GRAC官方评级的游戏和娱乐类应用，开发者现可主动对齐官方分级与App Store分级，提升合规一致性；2026年10月的调整将导致部分包含轻微粗俗幽默或暗示性主题的应用年龄分级自动上调至12+，可能影响用户覆盖面和下载量。</p></section>
-    <section><h4>需要行动</h4><p>1）已获GRAC评级的应用应在下次版本提交时提供RCN以覆盖年龄分级；2）评估应用内容是否包含&#39;Infrequent profanity and crude humor&#39;或&#39;Infrequent mature or suggestive themes&#39;描述符，提前准备应对10月分级上调的影响；3）更新App Store Connect中的年龄分级问卷答案以反映最新内容描述符规则。</p></section>
+    <section><h4>需要行动</h4><p>1）若应用已获得GRAC官方评级，在下次版本提交时提供RCN以覆盖韩国地区年龄分级；2）评估应用是否包含&#39;Infrequent profanity and crude humor&#39;或&#39;Infrequent mature or suggestive themes&#39;内容描述符，提前准备应对2026年10月分级调整；3）更新App Store Connect中的年龄分级问卷回答以确保准确性。</p></section>
   </div>
-<p class="event-owner"><strong>建议责任方</strong> 合规团队/产品团队</p>  <div class="card-source-links" aria-label="来源原文">
+<p class="event-owner"><strong>建议责任方</strong> 应用运营/合规团队</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（2 次更新）▾</summary><div class="milestones">
+<div class="milestone"><strong>2026-08-12 · 公告</strong><span>首次收录：生效日 2026-08-12</span><a href="https://developer.apple.com/news/" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-12 · 公告</strong><span>本次无实质变化，仅来源与措辞不同</span><a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
+  <div class="card-source-links" aria-label="来源原文">
 <a href="https://developer.apple.com/news/" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
 </article><article class="card event-card">
   <div class="event-meta">
@@ -192,6 +209,21 @@
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
     <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">Google Play Policy Center — Google Play Families Policies</a>
+    <span aria-hidden="true">·</span>
+<span class="date-fallback">发布时间未明确 / 首次发现 2026-07-23</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-08-26 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_6b433e9f825362f6698f373b/">Google Play Families Policies 将禁止匿名聊天应用针对儿童</a></h3>
+<p class="event-summary">Google Play 宣布将扩展 Families Policy Requirements 政策，明确禁止匿名聊天应用（anonymous chat apps）的开发者将儿童作为目标用户。该变更将于 2026 年 8 月 26 日生效。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>面向儿童或混合受众的匿名聊天类应用将面临下架或暂停风险；开发者需重新评估应用的目标受众声明及社交功能设计，确保不向儿童开放匿名聊天功能，否则可能违反政策导致应用被移除。</p></section>
+    <section><h4>需要行动</h4><p>1. 排查旗下应用是否包含匿名聊天功能且目标受众包含儿童；2. 若存在此类情况，需在 2026-08-26 前调整目标受众设置或移除/限制匿名聊天功能对儿童的可用性；3. 更新 Play Console 中的目标受众和内容声明，确保合规。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 产品合规团队 / 应用开发团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Center — Google Play Families Policies</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://developer.android.com/google/play/age-signals/request-age-signals" target="_blank" rel="noopener noreferrer">Request Age Signals from Google Play</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-07-23</span><span class="confirmed-badge">官方确认</span>  </div>
@@ -255,19 +287,19 @@
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
     <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">Google Play Policy Center — Google Play Families Policies</a>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">Google Play Policy Center — Preview: Google Play Families Policies</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-07-21</span><span class="confirmed-badge">官方确认</span>  </div>
   <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-08-26 待生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_6b433e9f825362f6698f373b/">Google Play Families Policies 将禁止匿名聊天应用针对儿童</a></h3>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_725bc9695a02a0360e3b815c/">Google Play Families 政策更新：禁止匿名聊天应用面向儿童</a></h3>
 <p class="event-summary">Google Play 在 2026 年 7 月政策更新预览中宣布，将扩展其《家庭政策要求》（Families Policy Requirements），明确禁止以匿名聊天或陌生人聊天为主要功能的应用（如聊天轮盘、约会应用、儿童开放式聊天室、匿名应用、“盲聊”应用等）将儿童列为目标受众。该变更将于 2026 年 8 月 26 日生效。</p>  <div class="impact-action">
     <section><h4>业务影响</h4><p>若应用包含匿名聊天或陌生人聊天功能且目标受众包含儿童，将在生效后面临下架或暂停风险；涉及儿童隐私与内容安全合规，属 P0 级儿童保护政策，影响所有面向家庭/儿童市场的社交或含社交功能应用。</p></section>
     <section><h4>需要行动</h4><p>1) 排查应用是否包含匿名聊天、陌生人匹配、开放式聊天室等功能；2) 若存在且目标受众含儿童，需在 2026-08-26 前移除相关功能或调整目标受众排除儿童；3) 更新 Play Console 中目标受众与内容分级问卷；4) 确保社交功能具备成人验证机制及在线安全提示；5) 同步法务与合规团队评估 COPPA/GDPR-K 合规。</p></section>
   </div>
-<p class="event-owner"><strong>建议责任方</strong> 产品合规团队 / 应用开发团队</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（3 次更新）▾</summary><div class="milestones">
-<div class="milestone"><strong>2026-07-21 · Google Play 家庭政策预览：禁止匿名聊天应用针对儿童 · 公告</strong><span>首次收录：生效日 2026-08-26</span><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-07-23 · 公告</strong><span>本次无实质变化，仅措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-07-23 · 公告</strong><span>本次无实质变化，仅来源与措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
+<p class="event-owner"><strong>建议责任方</strong> 产品合规团队 / 开发者</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（2 次更新）▾</summary><div class="milestones">
+<div class="milestone"><strong>2026-07-21 · Google Play 家庭政策预览：禁止匿名聊天应用针对儿童 · 公告</strong><span>首次收录：生效日 2026-08-26</span><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-07-23 · 公告</strong><span>本次无实质变化，仅措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
   <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Center — Google Play Families Policies</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Center — Preview: Google Play Families Policies</span><span aria-hidden="true">↗</span></a>  </div>
+<a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Center — Preview: Google Play Families Policies</span><span aria-hidden="true">↗</span></a>  </div>
 </article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
@@ -768,36 +800,6 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> iOS 研发 / 隐私与儿童合规 / 法务</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://developer.apple.com/news/?id=f5zj08ey" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://android-developers.googleblog.com/2026/02/the-second-beta-of-android-17.html" target="_blank" rel="noopener noreferrer">Android Developers Blog</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-02-26</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026 年 3 月 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-android-17-beta-2-2026-02-26/">Android 17 Beta 2</a></h3>
-<p class="event-summary">Android 17 Beta 2 引入 Contacts Picker、ACCESS_LOCAL_NETWORK、OTP 三小时延迟保护和 Handoff，并公布 Platform Stability 与季度版本节奏。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>Android 17 的 ACCESS_LOCAL_NETWORK 与 OTP 三小时延迟保护会影响局域网发现和短信验证码类功能；Platform Stability 时间点决定适配窗口。</p></section>
-    <section><h4>需要行动</h4><p>在 Beta 上验证局域网发现、OTP 读取和 Contacts Picker 相关功能；按公布的 Platform Stability 日期倒排适配排期。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 商店运营</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://android-developers.googleblog.com/2026/02/the-second-beta-of-android-17.html" target="_blank" rel="noopener noreferrer"><span>Android Developers Blog</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.apple.com/news/?id=gvnljl3f" target="_blank" rel="noopener noreferrer">Apple Developer News</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-02-13</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-app-store-multi-country-tax-mauritius-pricing-2026-02-13/">App Store 调整多国税率与毛里求斯价格</a></h3>
-<p class="event-summary">9 个国家/地区的税率自 2026-01-29 起调整；非毛里求斯基准商店的价格自 2026-02-16 起自动更新。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>影响多个市场的税后收入、价格表与财务对账。</p></section>
-    <section><h4>需要行动</h4><p>分别核对税率变化与毛里求斯价格更新，验证结算结果。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> App Store 定价 / 财务税务 / 区域运营</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.apple.com/news/?id=gvnljl3f" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="开发者平台分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/store/page/2/">2</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 </body>
