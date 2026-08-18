@@ -27,13 +27,13 @@
         <summary>时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">6</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">9</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">1</span></a><a href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">4</span></a><a href="/policy-radar/regulatory/"><span>监管</span><span class="nav-badge">3</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">8</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">10</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">1</span></a><a href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">4</span></a><a href="/policy-radar/regulatory/"><span>监管</span><span class="nav-badge">3</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
     </nav>
   </header>
 <div class="breadcrumb"><a href="/policy-radar/">首页</a> › <a href="/policy-radar/store/">开发者平台</a> › 事件详情</div>
-<div class="tags"><span class="tag priority">P0-A</span><span class="tag lifecycle">2024-10-31 已生效</span><a class="tag domain" href="/policy-radar/store/">开发者平台</a></div>
+<div class="tags"><span class="tag priority">P1</span><span class="tag lifecycle">2024-10-31 已生效</span><a class="tag domain" href="/policy-radar/store/">开发者平台</a></div>
 <h1 class="event-title">Google Play 明确全屏通知使用要求</h1>
 <div class="detail-grid"><div><h2>事实摘要</h2><p>自 2023-10-25 公告起，面向 Android 14（API 34）及以上的应用，USE_FULL_SCREEN_INTENT 改为特殊应用访问权限，仅闹钟与电话/视频通话类核心功能可自动获得。2024-07-17 公告追加要求：使用该权限并面向 Android 14+ 的应用必须在 Play Console 完成声明；自 2024-10-31 起，未获批准的应用需在新安装时向用户申请授权，被拒时要优雅降级。</p></div><div><h2>业务影响</h2><p>Target Android 14+ 后，非闹钟与通话类应用的全屏通知不再自动获得，需要用户授权，会直接影响关键提醒和召回的触达。</p></div><div><h2>需要行动</h2><p>盘点使用全屏 Intent 的通知场景；对非核心场景改为普通高优先级通知，并设计引导用户授权的流程；监控升级 target API 后的通知到达率。</p></div><div><h2>建议责任方</h2><p>Android 研发 / 商店运营</p></div></div>
 <section class="event-section"><h2>版本历史</h2><div class="milestones version-history"><div class="milestone"><strong>2023-10-25 · Google Play 收紧全屏通知权限 · 公告</strong><span>首次收录：未标注生效日 · 面向 Android 14（API 34）及以上的应用，USE_FULL_SCREEN_INTENT 改为特殊应用访问权限</span><a href="https://support.google.com/googleplay/android-developer/answer/14016515?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2024-07-17 · 公告</strong><span>追加 Play Console 声明要求；未获批准的应用需在新安装时向用户申请授权，被拒时优雅降级 · 生效日：未标注 → 2024-10-31</span><a href="https://support.google.com/googleplay/android-developer/answer/14993590?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div></div></section>
