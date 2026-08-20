@@ -500,7 +500,7 @@
       return response.json();
     })
     .then((index) => {
-      const priorityOrder = ["P0-A", "P0-B", "P1", "P2", "P3", "P4"];
+      const priorityOrder = ["P0-A", "P1", "P2", "P3", "P4"];
       const priorities = [...index.facets.businessPriority]
         .sort((left, right) => priorityOrder.indexOf(left.value) - priorityOrder.indexOf(right.value));
       addFacetCheckboxes(controls.priority, "priority", priorities);
