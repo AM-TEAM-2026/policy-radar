@@ -44,7 +44,7 @@
     <a class="meta-source" href="https://ads-developers.googleblog.com/2026/08/google-ads-language-targeting-changes.html" target="_blank" rel="noopener noreferrer">Google Ads Developer Blog</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-08-13</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">买量</span><span class="tag lifecycle">2026 年 9 月 待生效</span></div>
+  <div class="card-meta"><span class="tag priority">P2</span><span class="tag domain">买量</span><span class="tag lifecycle">2026 年 9 月 待生效</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-ads-language-targeting-2026-08-13/">Google Ads 取消 Search 与 AI Max for Search 的广告系列级语言定向，PMax 仅在非搜索渠道保留</a></h3>
 <p class="event-summary">Google Ads 开发者博客公告：自 2026 年 9 月下旬起，Search 与 AI Max for Search 广告系列的广告系列级语言定向设置将被移除，搜索广告改为按广告本身的语言自动匹配。Performance Max 广告系列分渠道处理——Google 搜索渠道不再使用广告系列级语言设置（与 Search 一致，按广告语言匹配），YouTube、Display、Discover、Gmail 等其他渠道继续沿用该设置。账户内存在多个符合条件的广告系列时，由 AI 驱动的广告组优先级机制选择最相关的广告语言。API 侧：language criterion 在查询时仍会返回但不再用于定向；对 Search 广告系列新增或更新 CampaignCriterion.language 的 mutate 将返回 ContextError.OPERATION_NOT_PERMITTED_FOR_CONTEXT，Performance Max 广告系列不报错。既有 Search 与 AI Max for Search 广告系列继续投放，只是语言设置不再生效。公告只写 late September 2026，未给出具体日期，故生效时间按月精度记为 2026-09。</p>  <div class="impact-action">
     <section><h4>业务影响</h4><p>语言定向不再由广告系列设置控制，改由广告创意语言、落地页语言和用户语言偏好共同决定匹配，依赖语言定向做流量隔离、分语言分预算或分语言核算的账户结构会失去这一控制维度。技术侧影响更硬：任何在建投或批量运维流程中对 Search 广告系列写入 CampaignCriterion.language 的 API 请求和 Google Ads Scripts，从 9 月下旬起会直接报错失败，而不是被静默忽略。查询侧仍能读到 language criterion，用它判断实际定向状态会得到错误结论。</p></section>
@@ -287,7 +287,7 @@
     <a class="meta-source" href="https://www.facebook.com/business/help/1238737454289085" target="_blank" rel="noopener noreferrer">Meta for Business News</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-03-10</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">买量</span><span class="tag lifecycle">2026-07-01 已生效</span></div>
+  <div class="card-meta"><span class="tag priority">P2</span><span class="tag domain">买量</span><span class="tag lifecycle">2026-07-01 已生效</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-meta-ads-location-fees-2026-03-10/">Meta 广告新增地区服务费</a></h3>
 <p class="event-summary">Meta 对投放到特定地区受众的广告加收地区服务费以覆盖当地数字服务税：奥地利与土耳其 5%，法国、意大利与西班牙 3%，英国 2%；按广告受众所在地和展示量计费。费率与计费口径由 Meta 官方帮助页确认，但该页不标日期；公布日 2026-03-10 与生效日 2026-07-01 来自 Reuters、Bloomberg 等三家通讯社同日报道，报道均引述 Meta 官网帖子。</p>  <div class="impact-action">
     <section><h4>业务影响</h4><p>这六个市场的实际投放成本直接上浮 2%–5%，且按受众所在地而非账户所在地计费——用同一账户跨区投放时，成本会随受众构成变化而漂移，现有 CPA/ROAS 目标和出价上限如果不调，会表现为莫名其妙的效果下滑。</p></section>
@@ -302,7 +302,7 @@
     <a class="meta-source" href="https://searchads.apple.com/help" target="_blank" rel="noopener noreferrer">Apple Ads Help 官方公告入口</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-03-04</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">买量</span><span class="tag lifecycle">2026-04-01 已生效</span></div>
+  <div class="card-meta"><span class="tag priority">P2</span><span class="tag domain">买量</span><span class="tag lifecycle">2026-04-01 已生效</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-apple-ads-singapore-gst-2026-03-04/">Apple Ads 新加坡账户新增 9% GST</a></h3>
 <p class="event-summary">自 2026-04-01 起，新加坡注册的 Apple Ads 账户在柬埔寨、韩国、澳门、蒙古、尼泊尔和斯里兰卡产生的广告费用征收 9% GST。原始通知为 Apple Ads 账户内公告或邮件，无公开永久链接，此处引用平台公告入口。</p>  <div class="impact-action">
     <section><h4>业务影响</h4><p>影响新加坡 Apple Ads 账户在六个市场的投放成本、税务处理和账单对账。</p></section>
@@ -332,7 +332,7 @@
     <a class="meta-source" href="https://www.facebook.com/business/news/ads-on-threads-one-year-in" target="_blank" rel="noopener noreferrer">Meta for Business News</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-01-21</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">买量</span><span class="tag lifecycle">2026-01-26 已生效</span></div>
+  <div class="card-meta"><span class="tag priority">P2</span><span class="tag domain">买量</span><span class="tag lifecycle">2026-01-26 已生效</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-threads-ads-global-expansion-2026-01-21/">Threads Ads 向全球用户和市场扩展</a></h3>
 <p class="event-summary">Meta 宣布 Threads 广告向全球所有用户和市场逐步扩展，广告主可通过 Advantage+ 或手动活动使用 Threads placement。</p>  <div class="impact-action">
     <section><h4>业务影响</h4><p>Threads 成为新的可投版位，Advantage+ 会自动纳入；对已有 Meta 投放的账户，版位构成和单价结构会在无感知的情况下发生变化。</p></section>
@@ -392,7 +392,7 @@
     <a class="meta-source" href="https://support.appsflyer.com/hc/en-us/articles/39686956300433-Bulletin-Consolidated-Web-App-reporting-for-Meta-Ads-and-Google-Ads" target="_blank" rel="noopener noreferrer">AppsFlyer What&#39;s New</a>
     <span aria-hidden="true">·</span>
 <span>发布 2025-10-23</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">买量</span><span class="tag lifecycle">2025-11-02 已生效</span></div>
+  <div class="card-meta"><span class="tag priority">P2</span><span class="tag domain">买量</span><span class="tag lifecycle">2025-11-02 已生效</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-appsflyer-meta-google-web-report-consolidation-2025-10-23/">AppsFlyer Meta Web 与 Google Web 报告合并</a></h3>
 <p class="event-summary">自 2025-11-02 起，metaweb_int 归因报告为 Facebook Ads，googleads_int 报告为 googleadwords_int，并影响面板与原始数据。</p>  <div class="impact-action">
     <section><h4>业务影响</h4><p>报告标识变更（metaweb_int 归为 Facebook Ads，googleads_int 归为 googleadwords_int）会打断依赖这些字段的看板和原始数据管道，表现为数据缺口而非报错。</p></section>
@@ -422,7 +422,7 @@
     <a class="meta-source" href="https://support.appsflyer.com/hc/zh-cn/articles/207033826-Meta-ads%E5%AF%B9%E6%8E%A5%E8%AE%BE%E7%BD%AE%E6%8C%87%E5%8D%97" target="_blank" rel="noopener noreferrer">AppsFlyer What&#39;s New</a>
     <span aria-hidden="true">·</span>
 <span>发布 ≤2025-09-04</span>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">买量</span><span class="tag lifecycle">2025-10-27 已生效</span></div>
+  <div class="card-meta"><span class="tag priority">P2</span><span class="tag domain">买量</span><span class="tag lifecycle">2025-10-27 已生效</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-appsflyer-meta-aem-view-through-2025-10-27/">AppsFlyer 对 Meta AEM 浏览型与点击型归因的支持</a></h3>
 <p class="event-summary">自 2025-10-27 起，在完成高级数据共享、浏览型归因和概率模型浏览归因配置后，AppsFlyer 自动支持 Meta AEM 的浏览型与点击型归因。该条来自团队内部整理记录，官方帮助中心页面未见同样表述。</p>  <div class="impact-action">
     <section><h4>业务影响</h4><p>AEM 浏览型归因被纳入后，Meta 侧的归因量可能上升并稀释其他渠道的归因份额，跨渠道预算分配的基准会漂移。</p></section>
@@ -437,7 +437,7 @@
     <a class="meta-source" href="https://about.fb.com/news/2025/07/ending-political-electoral-and-social-issue-advertising-in-the-eu/" target="_blank" rel="noopener noreferrer">Meta for Business News</a>
     <span aria-hidden="true">·</span>
 <span>发布 2025-07-25</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">买量</span><span class="tag lifecycle">2025-10-06 已生效</span></div>
+  <div class="card-meta"><span class="tag priority">P2</span><span class="tag domain">买量</span><span class="tag lifecycle">2025-10-06 已生效</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-meta-eu-political-ads-stop-2025-07-25/">Meta 停止在欧盟投放政治、选举和社会议题广告</a></h3>
 <p class="event-summary">Meta 因欧盟 TTPA 要求，自 2025-10-06 起不再允许政治、选举和社会议题广告在欧盟投放。</p>  <div class="impact-action">
     <section><h4>业务影响</h4><p>欧盟区不再允许政治、选举和社会议题广告；如果产品的素材涉及社会议题表达（含公益、环保、社会话题类创意），可能被误判为该类广告而拒审。</p></section>
