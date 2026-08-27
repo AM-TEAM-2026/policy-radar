@@ -39,6 +39,69 @@
 <div class="card-stack">
 <article class="card event-card">
   <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer">Google Play Games Level Up Guidelines</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-08-26</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2027 年 2 月 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_b7f4352386ca74ca4aec9528/">Google Play Level Up 内存指南更新：2027年2月起强制执行内存不良行为阈值</a></h3>
+<p class="event-summary">Google Play 更新了 Level Up 内存指南（LU-MM-GAA），明确自2027年2月起，游戏必须满足动态内存使用（anonymous RSS + swap）、位图使用和代码优化的既定不良行为阈值，方可获得或维持 Level Up 资格。开发者现可在 Android vitals 中监控相关内存指标和不良行为阈值。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>未达标的游戏将失去 Level Up 资格，影响游戏在 Google Play 的曝光、推荐及潜在收入。涉及所有 Android 版本的内存优化要求，需全面排查游戏内存表现。</p></section>
+    <section><h4>需要行动</h4><p>1. 立即在 Android vitals 中监控游戏的动态内存使用、位图使用和代码优化指标；2. 对照公布的内存阈值和不良行为标准进行优化；3. 制定内存优化计划，确保在2027年2月前达标；4. 关注官方发布的内存阈值和执行时间表。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 游戏开发团队/性能优化团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer"><span>Google Play Games Level Up Guidelines</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://android-developers.googleblog.com/2026/08/app-quality-memory-optimization-secure-onboarding.html" target="_blank" rel="noopener noreferrer">Android Developers Blog</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-08-26</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <div class="date-strip">
+    <strong><small>截止</small>2027 年 2 月</strong>
+  </div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_9074866f267e520c2fb71a4c/">Google Play 新增应用内存使用与设备迁移登录体验质量要求</a></h3>
+<p class="event-summary">Google Play 宣布两项新质量要求：1) 针对动态内存使用（Anonymous RSS + Swap）、Bitmap 内存使用及 DEX 代码优化（需至少 25% 的优化、缩减和混淆覆盖率）设定性能阈值；2) 引入 Zero-Tap Sign-In 标准，要求支持登录的应用使用 Android Restore Credentials API 在设备迁移时自动恢复登录状态。2027 年 2 月起执行内存相关阈值，2027 年 4 月起执行 Zero-Tap Sign-In 要求（游戏暂豁免但鼓励使用）。不合规将导致应用可见性和发布能力受限。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>应用若未优化内存使用或未实现 Zero-Tap Sign-In，将在 Google Play 面临可见性降低和发布能力受限的风险；需调整应用架构以满足内存阈值并集成 Restore Credentials API。</p></section>
+    <section><h4>需要行动</h4><p>1) 使用 Play Console 中的 Android vitals 新工具监控动态内存、Bitmap 内存及 DEX 优化指标；2) 确保 DEX 代码优化覆盖率达 25% 以上；3) 集成 Android Restore Credentials API 实现设备迁移时的零点击登录；4) 关注后续诊断工具更新并规划合规时间表。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> Android 开发团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://android-developers.googleblog.com/2026/08/app-quality-memory-optimization-secure-onboarding.html" target="_blank" rel="noopener noreferrer"><span>Android Developers Blog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer">Google Play Games Level Up Guidelines</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-08-26</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_d446b9730bb2d08de4535133/">Google Play Level Up 游戏统计指南更新：Native PC Early Access 豁免</a></h3>
+<p class="event-summary">Google Play 更新了游戏统计指南（LU-GS-GAA）及豁免条款（LU-GS-EAC），新增 Native PC Early Access Program (EAP) 的豁免说明，因 SDK 暂不支持该功能，此豁免仅适用于 Native PC 版本。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>参与 Native PC Early Access 的游戏在 PC 版本上可豁免提交游戏统计，但移动端仍需遵守原有统计要求。</p></section>
+    <section><h4>需要行动</h4><p>1. 确认游戏是否参与 Native PC Early Access Program；2. 如参与，了解 PC 版本的统计豁免范围；3. 确保移动端仍满足至少5项重复性统计的提交要求。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 游戏开发团队/产品团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer"><span>Google Play Games Level Up Guidelines</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer">Google Play Games Level Up Guidelines</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-08-26</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_288d448baa8986947b713b72/">Google Play Level Up 设备形态分布指南更新：XR/TV/Auto 指南延期发布</a></h3>
+<p class="event-summary">Google Play 更新了设备形态分布指南（LU-FF-GAA），说明 XR、TV 和 Auto 的指南和豁免条款将于2026年晚些时候发布。在详情发布前，Google Play 无法审核相关豁免请求。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>计划适配 XR、TV 或 Auto 设备形态的游戏暂时无法获得相关指南和豁免审批，可能影响多端发布计划。</p></section>
+    <section><h4>需要行动</h4><p>1. 关注 Google Play 后续发布的 XR、TV、Auto 指南；2. 在指南发布前暂缓提交相关豁免请求；3. 提前准备多端适配方案，待指南发布后快速响应。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 游戏开发团队/多端适配团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer"><span>Google Play Games Level Up Guidelines</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer">Apple Developer News — App Review</a>
@@ -357,12 +420,14 @@
     <span aria-hidden="true">·</span>
 <span>发布 2026-07-15</span><span class="confirmed-badge">官方确认</span>  </div>
   <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-08-26 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_b4c6fac08c7a970148d430ef/">Google Play 年龄限制内容政策扩展至匿名聊天和随机聊天应用</a></h3>
-<p class="event-summary">Google Play 宣布将年龄限制内容和功能政策扩展至匿名聊天和随机聊天应用，要求此类应用遵守年龄限制相关规定。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>匿名聊天和随机聊天应用开发者需要确保其应用符合年龄限制内容政策要求，否则可能面临下架风险。</p></section>
-    <section><h4>需要行动</h4><p>检查应用是否属于匿名聊天或随机聊天类型，确保符合年龄限制内容政策要求，必要时进行合规调整。</p></section>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_b4c6fac08c7a970148d430ef/">Google Play 扩展年龄限制内容与功能政策至匿名聊天和随机聊天应用</a></h3>
+<p class="event-summary">Google Play 宣布将年龄限制内容与功能（Age-Restricted Content and Functionality）政策的适用范围扩展至匿名聊天（anonymous chat）和随机聊天（random chat）类应用。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>涉及匿名聊天或随机聊天功能的应用将面临更严格的年龄限制合规要求，可能需要增加年龄验证机制、内容分级或功能限制，否则可能面临下架或分发受限风险。</p></section>
+    <section><h4>需要行动</h4><p>排查旗下应用是否包含匿名聊天或随机聊天功能；如有，需评估当前年龄限制与内容管控措施是否满足新政策要求，并规划接入年龄验证或内容分级方案。</p></section>
   </div>
-<p class="event-owner"><strong>建议责任方</strong> 应用开发团队</p>  <div class="card-source-links" aria-label="来源原文">
+<p class="event-owner"><strong>建议责任方</strong> 合规/产品/研发</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（2 次更新）▾</summary><div class="milestones">
+<div class="milestone"><strong>2026-07-15 · Google Play 年龄限制内容政策扩展至匿名聊天和随机聊天应用 · 公告</strong><span>首次收录：生效日 2026-08-26</span><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-26 · 公告</strong><span>生效日：2026-08-26 → 未标注</span><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
+  <div class="card-source-links" aria-label="来源原文">
 <a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a>  </div>
 </article><article class="card event-card">
   <div class="event-meta">
@@ -745,66 +810,6 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> ASO / 本地化 / 区域运营</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://developer.apple.com/news/?id=97t4mt64" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/announcements/13412212?hl=en" target="_blank" rel="noopener noreferrer">Google Play 官方公告入口</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-04-03</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-01-24 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-indonesia-igrs-rating-2026-04-03/">Google Play 印尼游戏须获取并展示 IGRS 分级</a></h3>
-<p class="event-summary">自 2026-01-24 起，在印尼上线的游戏须获取并展示 IGRS 官方分级；过渡期间可在完整描述中标注分级。原始通知为 Play Console 站内通知，无公开永久链接，此处引用平台公告入口。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>影响在印度尼西亚分发游戏的内容分级申请、商店展示和上线合规。</p></section>
-    <section><h4>需要行动</h4><p>确认印尼在架游戏已取得 IGRS 分级并正确展示；过渡期间在完整描述中标注。原始站内通知无公开永久链接，此处引用 Google Play 官方公告入口。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> Google Play 发行运营 / 游戏合规 / 法务</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/announcements/13412212?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play 官方公告入口</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/9859152?hl=en" target="_blank" rel="noopener noreferrer">Google Play Console Announcements</a>
-    <span aria-hidden="true">·</span>
-<span>发布 ≤2026-03-31</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-03-31 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-store-icon-corner-radius-2026-03-31/">Google Play 商店应用图标圆角调整</a></h3>
-<p class="event-summary">商店应用图标圆角半径由 20% 调整为 30%，2026-03-31 生效。该条来自团队内部整理记录，尚未在 Google 官方页面找到对应表述。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>仅影响商店展示的视觉呈现，圆角变大可能让贴边设计的图标元素被裁掉。</p></section>
-    <section><h4>需要行动</h4><p>用 30% 圆角预览现有图标，确认没有关键元素被裁；需要时重出一版图标资源。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 商店运营</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/9859152?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Console Announcements</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.apple.com/news/" target="_blank" rel="noopener noreferrer">Apple Developer News 官方公告入口</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-03-31</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-03-30 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-app-store-brazil-a6-a12-age-rating-2026-03-31/">App Store 巴西区自动调整 A6 与 A12 年龄分级</a></h3>
-<p class="event-summary">自 2026-03-30 起，巴西区自动调整应用年龄分级：含 UGC、偶发暴力或竞赛内容的应用适用 A6，广告及消息聊天类应用适用 A12；仅影响巴西地区。原始通知为 Apple 开发者邮件，无公开永久链接，此处引用平台公告入口。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>影响巴西 App Store 的年龄分级展示、受众触达与未成年人合规，不影响其他地区。</p></section>
-    <section><h4>需要行动</h4><p>复核巴西区分级结果与应用实际内容是否一致，必要时更新年龄分级问卷。原始邮件无公开永久链接，此处引用 Apple Developer News 官方入口。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> App Store 运营 / 儿童合规 / 法务</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.apple.com/news/" target="_blank" rel="noopener noreferrer"><span>Apple Developer News 官方公告入口</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.apple.com/news/?id=nyqbfz1y" target="_blank" rel="noopener noreferrer">Apple Developer News</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-03-26</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-03-26 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-apple-regulated-medical-device-declaration-2026-03-26/">Apple 受监管医疗设备 App 状态声明</a></h3>
-<p class="event-summary">在 EEA、英国或美国分发，且医疗/健康分类或年龄问卷中频繁含医疗治疗信息的 App，需要声明是否属于受监管医疗设备。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>医疗健康类 App 在 EEA/英国/美国分发时多出一道申报义务；漏报或错报可能导致审核被卡，且与各地医疗器械法规的举证责任挂钩。</p></section>
-    <section><h4>需要行动</h4><p>盘点在这三地分发、且分类或年龄问卷涉及医疗治疗信息的 App；由法务确认是否构成受监管医疗设备；在 App Store Connect 完成声明后再提交下一版。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> iOS 研发 / 产品 / 合规</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.apple.com/news/?id=nyqbfz1y" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="开发者平台分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/store/page/2/">2</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 </body>
