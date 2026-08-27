@@ -29,7 +29,7 @@
         <summary class="active">时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a class="active" aria-current="page" href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">8</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">8</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">1</span></a><a href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">2</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a class="active" aria-current="page" href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">7</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">8</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">1</span></a><a href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">2</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
     </nav>
@@ -38,51 +38,6 @@
 <header class="page-heading"><h1>开发者平台</h1><p>Apple Developer、Google Play Console、应用商店审核与政策</p></header>
 <div class="card-stack">
 <article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/16569691" target="_blank" rel="noopener noreferrer">Google Play US State App Store Bills</a>
-    <span aria-hidden="true">·</span>
-<span class="date-fallback">发布时间未明确 / 首次发现 2026-08-26 12:54</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_9b2dc2a98c96271be187c8c9/">Google Play 针对美国多州应用商店法案推出 Play Age Signals API 及相关合规工具</a></h3>
-<p class="event-summary">Google Play 发布帮助页面，说明美国部分州（如德州 SB 2420）已通过要求应用商店验证用户年龄、获取家长同意并向开发者提供用户年龄信息的法律。德州法案在联邦上诉法院暂停2025年12月初步禁令后已生效。Google Play 计划推出 Play Age Signals API（beta，建议版本 0.0.4）、Play Console 中无需发版即可通知“重大变更”的功能、家长撤销同意的报告，以及为 Play Billing Library 的购买 SKU 添加年龄评级的功能（未来数周内上线）。Google Play 不强制开发者使用该 API，但开发者需自行评估法律适用性并合规。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>在适用州分发应用的开发者需处理用户年龄信号、家长审批状态及“重大变更”通知义务；涉及未成年人保护、隐私数据处理、应用内购买年龄评级及 Play Billing 流程改造；不合规可能面临州法律层面的风险。</p></section>
-    <section><h4>需要行动</h4><p>1) 评估应用是否面向或分发至德州及其他即将生效的适用州用户；2) 集成 Play Age Signals API（beta v0.0.4）获取年龄区间与监管状态；3) 在 Play Console 的 Age Signals 页面配置“重大变更”通知机制；4) 为应用内购买 SKU 设置年龄评级并通过 Publishing API 或 Console 更新；5) 确保 API 数据使用符合 Google Play 信任与安全要求及隐私政策；6) 关注未来数周内 Play Billing 年龄评级及 Play Console 报告功能的正式上线。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 开发者合规/产品/法务/支付团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/16569691" target="_blank" rel="noopener noreferrer"><span>Google Play US State App Store Bills</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer">Google Play Contacts and Location Permissions Policy</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-08-25</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2027-01-27 待生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_d21faa53b402c6ecc8ef4c0a/">Google Play 更新位置权限政策：引入位置按钮作为精确位置推荐最小范围</a></h3>
-<p class="event-summary">Google Play 发布政策预览，宣布更新位置权限政策，引入 Android 位置按钮（location button）作为精确位置（ACCESS_FINE_LOCATION）的推荐最小范围。针对目标为 Android 17（API 37+）的应用，若精确位置仅用于一次性用户发起的操作，必须实现位置按钮并使用 onlyForLocationButton 权限标志。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>依赖精确位置权限的应用需评估是否可改用位置按钮或粗略位置；若仍需 ACCESS_FINE_LOCATION 且不符合最小范围要求，将无法通过审核。影响所有使用精确位置权限的应用，尤其是仅用于单次用户操作场景的应用。</p></section>
-    <section><h4>需要行动</h4><p>1. 评估应用中精确位置的使用场景，判断是否可改用位置按钮或 ACCESS_COARSE_LOCATION；2. 若应用目标为 Android 17+，对一次性用户发起的位置请求实现位置按钮并设置 onlyForLocationButton 标志；3. 准备 Play Console 声明材料，说明为何位置按钮或粗略位置不足以满足核心功能需求；4. 在 2027-01-27 前完成合规改造。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 移动端开发团队 / 合规团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer"><span>Google Play Contacts and Location Permissions Policy</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer">Google Play Contacts and Location Permissions Policy</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-08-25</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2027-01-27 待生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_211c76fc368e82bc5d4582ca/">Google Play 新增联系人权限政策：限制广泛访问用户联系人</a></h3>
-<p class="event-summary">Google Play 发布全新联系人权限政策，规定目标为 Android 17（API 37+）的应用仅在 Android Contact Picker 不足以满足核心功能时才可请求 READ_CONTACTS 权限。仍需请求该权限的应用必须提交 Play Console 声明，说明访问联系人的必要性及为何 Contact Picker 不够用。应用不得披露或发布非公开的联系人数据，除非获得数据主体本人授权。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>使用 READ_CONTACTS 权限的应用需重新评估是否可改用 Android Contact Picker；若仍需广泛访问联系人，需准备声明材料并通过审核。影响所有读取用户联系人列表的应用，尤其是社交、通讯、通讯录备份类应用。</p></section>
-    <section><h4>需要行动</h4><p>1. 评估应用是否可改用 Android Contact Picker 替代 READ_CONTACTS；2. 若仍需 READ_CONTACTS，准备 Play Console 声明，说明核心功能需求及 Contact Picker 不足的原因；3. 审查联系人数据的披露和发布行为，确保获得数据主体授权；4. 在 2027-01-27 前完成合规改造。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 移动端开发团队 / 合规团队 / 法务团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer"><span>Google Play Contacts and Location Permissions Policy</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
     <span aria-hidden="true">·</span>
@@ -398,23 +353,6 @@
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
     <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">Google Play Policy Center — Google Play Families Policies</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-07-21</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-08-26 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_6b433e9f825362f6698f373b/">Google Play Families Policies 将禁止匿名聊天应用针对儿童</a></h3>
-<p class="event-summary">Google Play 在 2026 年 7 月政策更新预览中宣布，将扩展其《家庭政策要求》（Families Policy Requirements），明确禁止以匿名聊天或陌生人聊天为主要功能的应用（如聊天轮盘、约会应用、儿童开放式聊天室、匿名应用、“盲聊”应用等）将儿童列为目标受众。该变更将于 2026 年 8 月 26 日生效。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>若应用包含匿名聊天或陌生人聊天功能且目标受众包含儿童，将在生效后面临下架或暂停风险；涉及儿童隐私与内容安全合规，属 P0 级儿童保护政策，影响所有面向家庭/儿童市场的社交或含社交功能应用。</p></section>
-    <section><h4>需要行动</h4><p>1) 排查应用是否包含匿名聊天、陌生人匹配、开放式聊天室等功能；2) 若存在且目标受众含儿童，需在 2026-08-26 前移除相关功能或调整目标受众排除儿童；3) 更新 Play Console 中目标受众与内容分级问卷；4) 确保社交功能具备成人验证机制及在线安全提示；5) 同步法务与合规团队评估 COPPA/GDPR-K 合规。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 产品合规团队 / 应用开发团队</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（2 次更新）▾</summary><div class="milestones">
-<div class="milestone"><strong>2026-07-21 · Google Play 家庭政策预览：禁止匿名聊天应用针对儿童 · 公告</strong><span>首次收录：生效日 2026-08-26</span><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-07-23 · 公告</strong><span>本次无实质变化，仅来源与措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
-  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Center — Google Play Families Policies</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Center — Preview: Google Play Families Policies</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">Google Play Policy Deadlines</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-07-15</span><span class="confirmed-badge">官方确认</span>  </div>
@@ -430,17 +368,19 @@
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
     <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">Google Play Policy Deadlines</a>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">Google Play Policy Center — Google Play Families Policies</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-07-15</span><span class="confirmed-badge">官方确认</span>  </div>
   <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-08-26 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_20b6f11454911c9048a90870/">Google Play Families 政策禁止匿名聊天应用针对儿童</a></h3>
-<p class="event-summary">Google Play 扩展 Families 政策要求，禁止匿名聊天应用开发者将儿童作为目标用户群体。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>开发匿名聊天应用的开发者必须确保应用不针对儿童用户，否则将违反 Families 政策。</p></section>
-    <section><h4>需要行动</h4><p>审查应用的目标用户群体设定，确保匿名聊天应用不针对儿童，必要时调整应用定位和内容。</p></section>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_6b433e9f825362f6698f373b/">Google Play Families Policies 将禁止匿名聊天应用针对儿童</a></h3>
+<p class="event-summary">Google Play 在 2026 年 7 月政策更新预览中宣布，将扩展其《家庭政策要求》（Families Policy Requirements），明确禁止以匿名聊天或陌生人聊天为主要功能的应用（如聊天轮盘、约会应用、儿童开放式聊天室、匿名应用、“盲聊”应用等）将儿童列为目标受众。该变更将于 2026 年 8 月 26 日生效。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>若应用包含匿名聊天或陌生人聊天功能且目标受众包含儿童，将在生效后面临下架或暂停风险；涉及儿童隐私与内容安全合规，属 P0 级儿童保护政策，影响所有面向家庭/儿童市场的社交或含社交功能应用。</p></section>
+    <section><h4>需要行动</h4><p>1) 排查应用是否包含匿名聊天、陌生人匹配、开放式聊天室等功能；2) 若存在且目标受众含儿童，需在 2026-08-26 前移除相关功能或调整目标受众排除儿童；3) 更新 Play Console 中目标受众与内容分级问卷；4) 确保社交功能具备成人验证机制及在线安全提示；5) 同步法务与合规团队评估 COPPA/GDPR-K 合规。</p></section>
   </div>
-<p class="event-owner"><strong>建议责任方</strong> 应用开发团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a>  </div>
+<p class="event-owner"><strong>建议责任方</strong> 产品合规团队 / 应用开发团队</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（3 次更新）▾</summary><div class="milestones">
+<div class="milestone"><strong>2026-07-15 · Google Play Families 政策禁止匿名聊天应用针对儿童 · 公告</strong><span>首次收录：生效日 2026-08-26</span><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-07-21 · 公告</strong><span>本次无实质变化，仅来源与措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-07-23 · 公告</strong><span>本次无实质变化，仅来源与措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
+  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Center — Google Play Families Policies</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Center — Preview: Google Play Families Policies</span><span aria-hidden="true">↗</span></a>  </div>
 </article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
@@ -539,12 +479,14 @@
     <span aria-hidden="true">·</span>
 <span>发布 2026-06-03</span><span class="confirmed-badge">官方确认</span>  </div>
   <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-texas-app-store-accountability-2026-06-03/">Google Play 德州 App Store Accountability Act 年龄验证要求生效</a></h3>
-<p class="event-summary">德州 App Store Accountability Act（SB 2420）相关禁令被联邦上诉法院中止后已生效。Google Play 已为 2026-05-28 后创建账号的德州新用户上线 Play Store 年龄验证流程，并通过 Age Signals API 向开发者传递年龄验证与监护状态。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>德州用户的年龄验证与监护人同意状态会进入 Google Play 分发和应用内体验链路；开发者需要按 Google Play 的平台机制单独完成适配，不能以 Apple 侧对接替代。</p></section>
-    <section><h4>需要行动</h4><p>接入并验证 Google Play Age Signals API；建立 Play Console 重大变更通知流程（无需发布新版本）；为应用内商品配置并复核年龄分级。</p></section>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-texas-app-store-accountability-2026-06-03/">Google Play 针对美国多州应用商店法案推出 Play Age Signals API 及相关合规工具</a></h3>
+<p class="event-summary">Google Play 发布帮助页面，说明美国部分州（如德州 SB 2420）已通过要求应用商店验证用户年龄、获取家长同意并向开发者提供用户年龄信息的法律。德州法案在联邦上诉法院暂停2025年12月初步禁令后已生效。Google Play 计划推出 Play Age Signals API（beta，建议版本 0.0.4）、Play Console 中无需发版即可通知“重大变更”的功能、家长撤销同意的报告，以及为 Play Billing Library 的购买 SKU 添加年龄评级的功能（未来数周内上线）。Google Play 不强制开发者使用该 API，但开发者需自行评估法律适用性并合规。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>在适用州分发应用的开发者需处理用户年龄信号、家长审批状态及“重大变更”通知义务；涉及未成年人保护、隐私数据处理、应用内购买年龄评级及 Play Billing 流程改造；不合规可能面临州法律层面的风险。</p></section>
+    <section><h4>需要行动</h4><p>1) 评估应用是否面向或分发至德州及其他即将生效的适用州用户；2) 集成 Play Age Signals API（beta v0.0.4）获取年龄区间与监管状态；3) 在 Play Console 的 Age Signals 页面配置“重大变更”通知机制；4) 为应用内购买 SKU 设置年龄评级并通过 Publishing API 或 Console 更新；5) 确保 API 数据使用符合 Google Play 信任与安全要求及隐私政策；6) 关注未来数周内 Play Billing 年龄评级及 Play Console 报告功能的正式上线。</p></section>
   </div>
-<p class="event-owner"><strong>建议责任方</strong> Android 研发 / Google Play 运营 / 儿童与年龄合规 / 法务</p>  <div class="card-source-links" aria-label="来源原文">
+<p class="event-owner"><strong>建议责任方</strong> Android 研发 / Google Play 运营 / 儿童与年龄合规 / 法务</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（2 次更新）▾</summary><div class="milestones">
+<div class="milestone"><strong>2026-06-03 · Google Play 德州 App Store Accountability Act 年龄验证要求生效 · 公告</strong><span>首次收录：未标注生效日</span><a href="https://support.google.com/googleplay/android-developer/answer/16569691" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-26 · 公告</strong><span>本次无实质变化，仅措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/16569691" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
+  <div class="card-source-links" aria-label="来源原文">
 <a href="https://support.google.com/googleplay/android-developer/answer/16569691" target="_blank" rel="noopener noreferrer"><span>Google Play US State App Store Bills</span><span aria-hidden="true">↗</span></a>  </div>
 </article><article class="card event-card">
   <div class="event-meta">
@@ -703,13 +645,15 @@
     <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer">Google Play Contacts and Location Permissions Policy</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-04-16</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-permissions-account-transfer-2026-04-16/">Google Play 更新通讯录、位置、账号转移及媒体权限要求</a></h3>
-<p class="event-summary">通讯录访问转向 Contact Picker；账号转移须走官方流程；位置权限推荐位置按钮并调整地理围栏用途；同时更新照片和视频权限细则。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>影响权限申请、前台服务、账号迁移和提审合规。</p></section>
-    <section><h4>需要行动</h4><p>分模块审查通讯录、位置、媒体权限和账号转移实现，更新权限声明与审核材料。</p></section>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-permissions-account-transfer-2026-04-16/">Google Play 更新位置权限政策：引入位置按钮作为精确位置推荐最小范围</a></h3>
+<p class="event-summary">Google Play 发布全新联系人权限政策，规定目标为 Android 17（API 37+）的应用仅在 Android Contact Picker 不足以满足核心功能时才可请求 READ_CONTACTS 权限。仍需请求该权限的应用必须提交 Play Console 声明，说明访问联系人的必要性及为何 Contact Picker 不够用。应用不得披露或发布非公开的联系人数据，除非获得数据主体本人授权。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>使用 READ_CONTACTS 权限的应用需重新评估是否可改用 Android Contact Picker；若仍需广泛访问联系人，需准备声明材料并通过审核。影响所有读取用户联系人列表的应用，尤其是社交、通讯、通讯录备份类应用。</p></section>
+    <section><h4>需要行动</h4><p>1. 评估应用中精确位置的使用场景，判断是否可改用位置按钮或 ACCESS_COARSE_LOCATION；2. 若应用目标为 Android 17+，对一次性用户发起的位置请求实现位置按钮并设置 onlyForLocationButton 标志；3. 准备 Play Console 声明材料，说明为何位置按钮或粗略位置不足以满足核心功能需求；4. 在 2027-01-27 前完成合规改造。</p></section>
   </div>
-<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 隐私合规 / 账号平台 / 审核对接</p>  <div class="card-source-links" aria-label="来源原文">
+<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 隐私合规 / 账号平台 / 审核对接</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（3 次更新）▾</summary><div class="milestones">
+<div class="milestone"><strong>2026-04-16 · Google Play 更新通讯录、位置、账号转移及媒体权限要求 · 公告</strong><span>首次收录：未标注生效日</span><a href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-25 · 公告</strong><span>生效日：未标注 → 2027-01-27</span><a href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-25 · 公告</strong><span>本次无实质变化，仅措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
+  <div class="card-source-links" aria-label="来源原文">
 <a href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer"><span>Google Play Contacts and Location Permissions Policy</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/answer/16911971" target="_blank" rel="noopener noreferrer"><span>Google Play Account Transfer Policy</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/answer/16558241" target="_blank" rel="noopener noreferrer"><span>Google Play Photo and Video Permissions Policy</span><span aria-hidden="true">↗</span></a>  </div>
 </article><article class="card event-card">
   <div class="event-meta">
@@ -801,6 +745,66 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> ASO / 本地化 / 区域运营</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://developer.apple.com/news/?id=97t4mt64" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/announcements/13412212?hl=en" target="_blank" rel="noopener noreferrer">Google Play 官方公告入口</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-04-03</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-01-24 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-indonesia-igrs-rating-2026-04-03/">Google Play 印尼游戏须获取并展示 IGRS 分级</a></h3>
+<p class="event-summary">自 2026-01-24 起，在印尼上线的游戏须获取并展示 IGRS 官方分级；过渡期间可在完整描述中标注分级。原始通知为 Play Console 站内通知，无公开永久链接，此处引用平台公告入口。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>影响在印度尼西亚分发游戏的内容分级申请、商店展示和上线合规。</p></section>
+    <section><h4>需要行动</h4><p>确认印尼在架游戏已取得 IGRS 分级并正确展示；过渡期间在完整描述中标注。原始站内通知无公开永久链接，此处引用 Google Play 官方公告入口。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> Google Play 发行运营 / 游戏合规 / 法务</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/announcements/13412212?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play 官方公告入口</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/9859152?hl=en" target="_blank" rel="noopener noreferrer">Google Play Console Announcements</a>
+    <span aria-hidden="true">·</span>
+<span>发布 ≤2026-03-31</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-03-31 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-store-icon-corner-radius-2026-03-31/">Google Play 商店应用图标圆角调整</a></h3>
+<p class="event-summary">商店应用图标圆角半径由 20% 调整为 30%，2026-03-31 生效。该条来自团队内部整理记录，尚未在 Google 官方页面找到对应表述。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>仅影响商店展示的视觉呈现，圆角变大可能让贴边设计的图标元素被裁掉。</p></section>
+    <section><h4>需要行动</h4><p>用 30% 圆角预览现有图标，确认没有关键元素被裁；需要时重出一版图标资源。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 商店运营</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/answer/9859152?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Console Announcements</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.apple.com/news/" target="_blank" rel="noopener noreferrer">Apple Developer News 官方公告入口</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-03-31</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-03-30 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-app-store-brazil-a6-a12-age-rating-2026-03-31/">App Store 巴西区自动调整 A6 与 A12 年龄分级</a></h3>
+<p class="event-summary">自 2026-03-30 起，巴西区自动调整应用年龄分级：含 UGC、偶发暴力或竞赛内容的应用适用 A6，广告及消息聊天类应用适用 A12；仅影响巴西地区。原始通知为 Apple 开发者邮件，无公开永久链接，此处引用平台公告入口。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>影响巴西 App Store 的年龄分级展示、受众触达与未成年人合规，不影响其他地区。</p></section>
+    <section><h4>需要行动</h4><p>复核巴西区分级结果与应用实际内容是否一致，必要时更新年龄分级问卷。原始邮件无公开永久链接，此处引用 Apple Developer News 官方入口。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> App Store 运营 / 儿童合规 / 法务</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.apple.com/news/" target="_blank" rel="noopener noreferrer"><span>Apple Developer News 官方公告入口</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.apple.com/news/?id=nyqbfz1y" target="_blank" rel="noopener noreferrer">Apple Developer News</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-03-26</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-03-26 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-apple-regulated-medical-device-declaration-2026-03-26/">Apple 受监管医疗设备 App 状态声明</a></h3>
+<p class="event-summary">在 EEA、英国或美国分发，且医疗/健康分类或年龄问卷中频繁含医疗治疗信息的 App，需要声明是否属于受监管医疗设备。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>医疗健康类 App 在 EEA/英国/美国分发时多出一道申报义务；漏报或错报可能导致审核被卡，且与各地医疗器械法规的举证责任挂钩。</p></section>
+    <section><h4>需要行动</h4><p>盘点在这三地分发、且分类或年龄问卷涉及医疗治疗信息的 App；由法务确认是否构成受监管医疗设备；在 App Store Connect 完成声明后再提交下一版。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> iOS 研发 / 产品 / 合规</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.apple.com/news/?id=nyqbfz1y" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="开发者平台分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/store/page/2/">2</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 </body>
