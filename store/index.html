@@ -29,7 +29,7 @@
         <summary class="active">时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a class="active" aria-current="page" href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">7</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">8</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">1</span></a><a href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">2</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a class="active" aria-current="page" href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">3</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">3</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
     </nav>
@@ -38,6 +38,51 @@
 <header class="page-heading"><h1>开发者平台</h1><p>Apple Developer、Google Play Console、应用商店审核与政策</p></header>
 <div class="card-stack">
 <article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://status.play.google.com/incidents.json" target="_blank" rel="noopener noreferrer">Google Play Status Dashboard</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-01</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_73d1e4f2020a659cb257abc9/">Google Play Integrity API 故障（已解决）</a></h3>
+<p class="event-summary">2026-09-01 08:00 UTC 至 12:22 UTC，Play Integrity API 出现故障，官方正在调查并后续更新。严重度 medium，故障编号 orkXYGChgBs8XkzJ6Pyy，状态已解决。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>影响依赖 Play Integrity 的设备与应用完整性校验，可能导致合法用户被误拦截、风控策略失效或安全校验失败。</p></section>
+    <section><h4>需要行动</h4><p>检查故障窗口内 Integrity 校验失败日志，评估误拦截与风控影响；必要时临时放宽校验或回滚拦截；与 Google 确认根因并完善降级与重试策略。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 安全与风控/后端研发</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://status.play.google.com/incidents.json" target="_blank" rel="noopener noreferrer"><span>Google Play Status Dashboard</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://status.play.google.com/incidents.json" target="_blank" rel="noopener noreferrer">Google Play Status Dashboard</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-01</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_4517e2309c3736d62fca7d30/">Google Play 计费与订阅相关服务故障（已解决）</a></h3>
+<p class="event-summary">2026-09-01 08:54 UTC 至 11:43 UTC，Google Play Billing Purchases、Play Developer Subscriptions and In-App Purchases API、Play Subscriptions Renewal and Management 出现故障，用户可访问但出现错误信息、高延迟或其他异常行为。严重度 medium，故障编号 n5md7YLZQsKV6rFXFXDG，状态已解决。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>影响应用内购买、开发者订阅及订阅续订与管理功能，可能导致交易失败、订阅状态异常、用户投诉及收入损失。</p></section>
+    <section><h4>需要行动</h4><p>核查故障窗口内的交易与订阅状态，补发或回滚异常订单；检查日志与错误码；向受影响用户发布说明；复盘并完善计费链路监控与告警。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付与订阅业务方/后端研发/客服</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://status.play.google.com/incidents.json" target="_blank" rel="noopener noreferrer"><span>Google Play Status Dashboard</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.apple.com/news/" target="_blank" rel="noopener noreferrer">Apple Developer News</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-01</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_46d7f66ee8bc80a1b7a62297/">Apple 宣布 Rosetta 支持即将结束，要求 macOS 应用迁移至 Apple silicon</a></h3>
+<p class="event-summary">Apple 发布通知称将结束 Rosetta 过渡期。macOS 26.4 起，启动依赖 Rosetta 的应用时用户将收到系统通知提示更新；macOS 27 将是最后一个支持 Rosetta 的版本，此后 Intel-only 应用将无法在 Apple silicon Mac 上运行（依赖 Intel 框架的旧游戏除外）。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>未适配 Apple silicon 的 macOS 应用在 macOS 26.4 起会触发用户端系统通知，影响用户体验与留存；在 macOS 27 发布后将完全无法在 Apple silicon Mac 上运行，导致应用不可用。</p></section>
+    <section><h4>需要行动</h4><p>尽快为 macOS 应用添加 Apple silicon 原生支持，构建并分发 Universal Binary；优化和移植应用到 Apple silicon；对已有原生版本的应用主动联系用户引导下载更新以避免系统通知。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> macOS 应用开发团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.apple.com/news/" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
     <span aria-hidden="true">·</span>
@@ -528,7 +573,7 @@
     <a class="meta-source" href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer">Apple Developer News — App Review</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-07-09</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026 年 9 月 待生效</span></div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026 年 9 月 已生效</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_525a34d31c86e19d4c16a8cd/">App Store Connect 年龄分级问卷新增社交媒体能力问题</a></h3>
 <p class="event-summary">Apple 在 App Store Connect 的年龄分级问卷中新增关于应用是否具备社交媒体能力的问题。社交媒体能力定义为通过社交信息流或类似发现方式重新分发、放大或互动用户生成内容的能力。该分类与 App Store Connect 中选择的应用类别无关。具备该能力的应用将在 App Store 产品页显示新的“社交媒体”内容描述符；若该能力对 13 岁以下用户禁用，则不会纳入 13 岁以下用户的社交媒体时间限额分类。开发者即日起可填写问卷，自 2026 年 9 月起，提交新应用、更新或进行替代分发公证时必须回答这些问题。</p>  <div class="impact-action">
     <section><h4>业务影响</h4><p>涉及儿童与内容治理、应用审核及年龄分级合规。所有含社交信息流/UGC 分发能力的应用需重新评估并更新年龄分级问卷，否则 2026 年 9 月起将无法提交新应用或更新。产品页将新增社交媒体描述符，影响用户与家长感知及 iOS 27/iPadOS 27/macOS 27 的时间限额分类。</p></section>
@@ -765,52 +810,7 @@
 <div class="milestone"><strong>2026-04-16 · Google Play 更新通讯录、位置、账号转移及媒体权限要求 · 公告</strong><span>首次收录：未标注生效日</span><a href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-25 · 公告</strong><span>生效日：未标注 → 2027-01-27</span><a href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-25 · 公告</strong><span>本次无实质变化，仅措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
   <div class="card-source-links" aria-label="来源原文">
 <a href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer"><span>Google Play Contacts and Location Permissions Policy</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/answer/16911971" target="_blank" rel="noopener noreferrer"><span>Google Play Account Transfer Policy</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/answer/16558241" target="_blank" rel="noopener noreferrer"><span>Google Play Photo and Video Permissions Policy</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/16902027?hl=en" target="_blank" rel="noopener noreferrer">Google Play Console Announcements</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-04-15</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-06-01 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-prediction-markets-pilot-2026-04-15/">Google Play 预测市场真钱交易全球试点</a></h3>
-<p class="event-summary">包含真钱预测市场功能的应用须加入全球试点并满足要求。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>真钱预测市场功能必须加入全球试点才能继续分发，未加入的应用面临下架；同时试点条件本身可能限制可运营地区。</p></section>
-    <section><h4>需要行动</h4><p>确认产品是否包含真钱预测市场功能；如有，在 2026-06-01 前完成试点申请并满足要求，同时准备不通过时的功能降级方案。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 商店运营</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/16902027?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Console Announcements</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/16926792?hl=en" target="_blank" rel="noopener noreferrer">Google Play Console Announcements</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-04-15</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-android16-health-fitness-data-2026-04-15/">Android 16 健康与健身数据</a></h3>
-<p class="event-summary">支持 Android 16 精细化健康权限和新的 Health Connect 高敏感数据类型，并禁止敏感健康数据用于就业、保险资格或未授权社交分享。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>Android 16 的精细化健康权限与新的高敏感数据类型带来改造量，同时明确禁止把敏感健康数据用于就业、保险资格判断或未授权社交分享。</p></section>
-    <section><h4>需要行动</h4><p>适配 Android 16 的精细化健康权限；核查是否存在把健康数据用于禁止用途的功能或数据出口；更新隐私政策中的健康数据条款。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 产品 / 合规</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/16926792?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Console Announcements</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/16838200?hl=en" target="_blank" rel="noopener noreferrer">Google Play Console Announcements</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-04-15</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-secondary-dating-feature-2026-04-15/">Google Play 次要约会/匹配功能</a></h3>
-<p class="event-summary">约会/匹配只是次要功能的应用，可使用合理且有效的年龄门槛保护相关成熟功能，不一定要求整个应用阻止未成年人。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>放宽口径：约会/匹配只是次要功能的应用不必整体阻止未成年人，只需对相关成熟功能设年龄门槛，可以避免不必要的整体分级上调。</p></section>
-    <section><h4>需要行动</h4><p>判断约会/匹配是否为次要功能；是则在该功能入口加合理有效的年龄门槛，并保留门槛有效性的说明材料备查。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 产品 / 合规</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/16838200?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Console Announcements</span><span aria-hidden="true">↗</span></a>  </div>
-</article></div><nav class="pagination" aria-label="开发者平台分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/store/page/2/">2</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
+</article></div><nav class="pagination" aria-label="开发者平台分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/store/page/2/">2</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 </body>
 </html>

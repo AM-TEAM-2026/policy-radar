@@ -29,7 +29,7 @@
         <summary class="active">时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">7</span></a><a class="active" aria-current="page" href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">8</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">1</span></a><a href="/policy-radar/ai/"><span>AI</span><span class="nav-badge">2</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">3</span></a><a class="active" aria-current="page" href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">3</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
     </nav>
@@ -39,12 +39,27 @@
 <div class="card-stack">
 <article class="card event-card">
   <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://ads-developers.googleblog.com/2026/08/making-google-ads-more-secure-with.html" target="_blank" rel="noopener noreferrer">Google Ads Developer Blog</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-08-31</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P2</span><span class="tag domain">买量</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_c703adc6fcb08a5134d0872e/">Google Ads 开发者政策更新：禁止使用程序化代理，要求直连 Google Ads 服务</a></h3>
+<p class="event-summary">Google Ads 将原“Google Ads API Policy”更新为“Google Ads Developer Policies”，明确禁止通过未审计的程序化代理（programmatic proxies）访问 Google Ads 服务，要求所有集成必须使用专属 Google Cloud 项目直连 Google Ads 服务，以防范账户未授权访问、跨租户数据泄露及性能瓶颈等安全与稳定性风险。Ads API 合规团队正在审查现有集成，并将直接联系需要迁移的开发者提供指导。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>依赖程序化代理或共享代理访问 Google Ads API 的第三方应用、广告管理工具及数据集成平台将面临合规风险，可能出现账户访问受限、数据泄露隐患及性能问题；需重构集成架构以使用独立 Google Cloud 项目直连，涉及开发、安全审计及合规沟通成本。</p></section>
+    <section><h4>需要行动</h4><p>1. 审查现有 Google Ads API 集成是否使用程序化代理或共享代理；2. 迁移至专属 Google Cloud 项目直连 Google Ads 服务；3. 在 API Center 更新联系邮箱以确保接收合规团队通知；4. 关注来自 google.com 域名的合规沟通并按指引完成迁移。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 广告技术/集成开发团队、安全与合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://ads-developers.googleblog.com/2026/08/making-google-ads-more-secure-with.html" target="_blank" rel="noopener noreferrer"><span>Google Ads Developer Blog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Unity</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://status.unity.com/" target="_blank" rel="noopener noreferrer">Unity Status</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-08-28</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P3</span><span class="tag domain">买量</span><span class="tag lifecycle">2026-09-01 待生效</span></div>
+  <div class="card-meta"><span class="tag priority">P3</span><span class="tag domain">买量</span><span class="tag lifecycle">2026-09-01 已生效</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_b83e96dab2ca112f56db179c/">Unity DevOps 与 UGS 计费平台升级：近实时用量与成本追踪</a></h3>
 <p class="event-summary">Unity 将于 2026-09-01 13:00 UTC 至 19:00 UTC 升级计费平台，提供近实时用量与成本追踪、预算提醒和支出上限功能。升级期间可能出现用量数据的间歇性延迟或不一致。</p>  <div class="impact-action">
     <section><h4>业务影响</h4><p>涉及 Billing、Metered Billing Reporting、Cost &amp; Usage Reporting 等计费与用量相关服务，可能影响开发者对用量和成本的实时查看与对账，但官方声明无需开发者采取行动。</p></section>
@@ -74,7 +89,7 @@
     <a class="meta-source" href="https://ads-developers.googleblog.com/2026/08/google-ads-language-targeting-changes.html" target="_blank" rel="noopener noreferrer">Google Ads Developer Blog</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-08-13</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P2</span><span class="tag domain">买量</span><span class="tag lifecycle">2026 年 9 月 待生效</span></div>
+  <div class="card-meta"><span class="tag priority">P2</span><span class="tag domain">买量</span><span class="tag lifecycle">2026 年 9 月 已生效</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-ads-language-targeting-2026-08-13/">Google Ads 取消 Search 与 AI Max for Search 的广告系列级语言定向，PMax 仅在非搜索渠道保留</a></h3>
 <p class="event-summary">Google Ads 开发者博客公告：自 2026 年 9 月下旬起，Search 与 AI Max for Search 广告系列的广告系列级语言定向设置将被移除，搜索广告改为按广告本身的语言自动匹配。Performance Max 广告系列分渠道处理——Google 搜索渠道不再使用广告系列级语言设置（与 Search 一致，按广告语言匹配），YouTube、Display、Discover、Gmail 等其他渠道继续沿用该设置。账户内存在多个符合条件的广告系列时，由 AI 驱动的广告组优先级机制选择最相关的广告语言。API 侧：language criterion 在查询时仍会返回但不再用于定向；对 Search 广告系列新增或更新 CampaignCriterion.language 的 mutate 将返回 ContextError.OPERATION_NOT_PERMITTED_FOR_CONTEXT，Performance Max 广告系列不报错。既有 Search 与 AI Max for Search 广告系列继续投放，只是语言设置不再生效。公告只写 late September 2026，未给出具体日期，故生效时间按月精度记为 2026-09。</p>  <div class="impact-action">
     <section><h4>业务影响</h4><p>语言定向不再由广告系列设置控制，改由广告创意语言、落地页语言和用户语言偏好共同决定匹配，依赖语言定向做流量隔离、分语言分预算或分语言核算的账户结构会失去这一控制维度。技术侧影响更硬：任何在建投或批量运维流程中对 Search 广告系列写入 CampaignCriterion.language 的 API 请求和 Google Ads Scripts，从 9 月下旬起会直接报错失败，而不是被静默忽略。查询侧仍能读到 language criterion，用它判断实际定向状态会得到错误结论。</p></section>
@@ -490,7 +505,7 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 买量投放 / 合规</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://ads.tiktok.com/help/article/check-for-failed-payments" target="_blank" rel="noopener noreferrer"><span>TikTok Ads Help Center</span><span aria-hidden="true">↗</span></a>  </div>
-</article></div><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
+</article></div><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 </body>
 </html>
