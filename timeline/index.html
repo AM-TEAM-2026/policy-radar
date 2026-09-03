@@ -58,6 +58,15 @@
   </div>
 </article><article class="timeline-row compact-card">
   <div class="timeline-date">
+<span>发布 2026-09-02</span>  </div>
+  <div class="timeline-content">
+    <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
+    <div class="tags"><span class="tag domain">AI</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span></div>
+    <h2><a href="/policy-radar/events/evt_384b14505fe0de9fe7cd63a4/">OpenAI API 更新 429/503 错误码以区分流量激增与模型过载</a></h2>
+    <p>OpenAI 于 2026-09-02 更新 API 错误处理：流量增长过快返回 429 错误并附带 slow_down 代码；临时模型过载返回 503 错误并附带 server_is_overloaded 代码。两种响应均可能包含 Retry-After 头，存在时需至少等待该时长再重试，缺失时应使用指数退避。</p>
+  </div>
+</article><article class="timeline-row compact-card">
+  <div class="timeline-date">
 <span>发布 2026-09-01</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
@@ -487,15 +496,6 @@
     <div class="tags"><span class="tag domain">AI</span><span class="tag priority">P4</span><span class="tag lifecycle">2026-08-11 已生效</span></div>
     <h2><a href="/policy-radar/events/evt_973cb0a9fd3c85ffe18be206/">Compliance API 新增本地 Cowork/Claude Code 会话转录接口（Beta）</a></h2>
     <p>Anthropic 于 2026-08-11 发布 Compliance API 更新，面向 Claude Enterprise 组织（Beta）新增本地会话合规查询能力：GET /v1/compliance/apps/sessions/local 列出组织内本地会话，GET /v1/compliance/apps/sessions/local/{session_id} 获取单个会话元数据，GET /v1/compliance/apps/sessions/local/{session_id}/messages 获取会话转录。使用现有 Compliance Access Key 及 read:compliance_user_data scope。</p>
-  </div>
-</article><article class="timeline-row compact-card">
-  <div class="timeline-date">
-<span>发布 2026-08-10</span>  </div>
-  <div class="timeline-content">
-    <div class="card-platforms"><span class="platform-badge">Federal Trade Commission</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P2</span><span class="tag lifecycle">已正式发布</span></div>
-    <h2><a href="/policy-radar/events/evt_86e5f46b5200ad82a8489da6/">FTC 打击涉及近 2 亿美元的信用修复骗局</a></h2>
-    <p>FTC 于 2026-08-10 宣布采取行动，制止一项大规模的信用修复欺诈计划，该计划骗取消费者近 2 亿美元。FTC 提起永久禁令及其他衡平与金钱救济的诉讼。</p>
   </div>
 </article></div><nav class="pagination" aria-label="时间线分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/timeline/page/2/">2</a><a href="/policy-radar/timeline/page/3/">3</a><a href="/policy-radar/timeline/page/4/">4</a><a href="/policy-radar/timeline/page/5/">5</a></nav></div>
 <div class="timeline" id="timeline-filter-results" hidden></div>

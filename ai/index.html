@@ -41,6 +41,21 @@
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
     <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener noreferrer">OpenAI API Changelog</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-02</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_384b14505fe0de9fe7cd63a4/">OpenAI API 更新 429/503 错误码以区分流量激增与模型过载</a></h3>
+<p class="event-summary">OpenAI 于 2026-09-02 更新 API 错误处理：流量增长过快返回 429 错误并附带 slow_down 代码；临时模型过载返回 503 错误并附带 server_is_overloaded 代码。两种响应均可能包含 Retry-After 头，存在时需至少等待该时长再重试，缺失时应使用指数退避。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>应用需区分 429/slow_down 与 503/server_is_overloaded 以采取不同重试策略，避免在模型过载时持续请求导致资源浪费或进一步限流；需解析 Retry-After 头并实现指数退避逻辑。</p></section>
+    <section><h4>需要行动</h4><p>1. 更新 API 客户端错误处理逻辑，识别 429+slow_down 与 503+server_is_overloaded 错误码；2. 实现 Retry-After 头解析，缺失时采用指数退避重试策略；3. 监控相关错误率以评估流量模式与模型可用性。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 后端开发团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener noreferrer"><span>OpenAI API Changelog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
+    <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://openai.com/news/" target="_blank" rel="noopener noreferrer">OpenAI News</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-08-18</span><span class="confirmed-badge">官方确认</span>  </div>
