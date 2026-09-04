@@ -41,6 +41,21 @@
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
     <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer">Google Play Games Level Up Guidelines</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-03</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_23b5642694751378b624d4bc/">Google Play Games Level Up Guidelines 更新大屏优化、PC分发、Vulkan及形态分发要求</a></h3>
+<p class="event-summary">Google Play Games Level Up Guidelines 于 2026-09-03 更新，主要变更包括：1) 大屏优化（LU-LS-GAA/GAB/GAC/GAD）：明确使用 insets 避免遮挡系统栏和刘海/挖孔，支持旋转、折叠、多窗口、自由窗口等配置变化且不崩溃/ANR/伪影/触控偏移，保留游戏状态；横屏/竖屏在参考设备及锚点比例（4:3/16:10/21:9 或 3:4/10:16/9:21）需全屏无 letterbox/pillarbox，仅单方向布局游戏在另一方向可 letterbox/pillarbox。2) PC 分发（LU-GPGC-GAA）：新增“作为 Native PC 游戏发布并集成 PC SDK”作为满足分发要求的第二种方式；Native PC 游戏在相关功能上线前暂不要求支持 Sidekick、Cloud Save、Achievements、Game Stats API。3) 精准输入（K&amp;M）：明确键盘或鼠标任一可玩即视为满足 K&amp;M 要求。4) 形态分发（LU-FF-GAA）：2026-09 覆盖 Mobile/Foldables/Tablets；2027-09 覆盖 Android XR/Android TV/Googlebook/Android Auto（不要求在 Play 上分发）。5) Vulkan（LU-VK-GAA）：Unity 2021+ 或 Unreal 4.25+ 必须将 Vulkan 作为主图形 API；使用旧版 Unity/Unreal 或其他引擎也必须使用 Vulkan 或启用 ANGLE；Unity Built-in Render Pipeline 可 opt-in ANGLE，截止 2027-09-30 切换到 Vulkan。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>涉及所有在 Google Play Games 上发布的游戏开发者：需按新的大屏适配要求调整 UI/输入/状态保持；PC 端需评估是否走 Native PC 路径并集成 PC SDK；图形 API 需确保 Vulkan 为主或启用 ANGLE；形态分发节奏调整影响后续 XR/TV/Googlebook/Auto 的覆盖计划。不合规将影响 Level Up 项目加入与在 Google Play Games（含 PC）上的分发与展示。</p></section>
+    <section><h4>需要行动</h4><p>1) 按新 LU-LS 系列要求适配大屏：使用 insets、支持旋转/折叠/多窗口/自由窗口，保持状态；在参考设备及锚点比例全屏渲染。2) 评估并选择 Native PC 路径，集成 Google Play Games on PC SDK（暂不强制 Sidekick/Cloud Save/Achievements/Game Stats）。3) 确认 K&amp;M 输入至少一种可玩。4) 图形 API：Unity 2021+/Unreal 4.25+ 将 Vulkan 设为主 API；旧版或其他引擎使用 Vulkan 或在 manifest 中启用 ANGLE；Unity Built-in RP 使用 ANGLE 的需在 2027-09-30 前完成 Vulkan 切换。5) 关注 2026-09 起的 Mobile/Foldables/Tablets 分发要求，以及 2027-09 的 XR/TV/Googlebook/Auto 覆盖。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 游戏客户端/引擎团队、PC 移植团队、QA/兼容性测试团队、产品与发行团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer"><span>Google Play Games Level Up Guidelines</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://status.play.google.com/incidents.json" target="_blank" rel="noopener noreferrer">Google Play Status Dashboard</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-09-01</span><span class="confirmed-badge">官方确认</span>  </div>
@@ -793,23 +808,6 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 订阅业务负责人 / 产品 / 研发</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer"><span>Apple Developer News — App Review</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer">Google Play Contacts and Location Permissions Policy</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-04-16</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-permissions-account-transfer-2026-04-16/">Google Play 更新位置权限政策：引入位置按钮作为精确位置推荐最小范围</a></h3>
-<p class="event-summary">Google Play 发布全新联系人权限政策，规定目标为 Android 17（API 37+）的应用仅在 Android Contact Picker 不足以满足核心功能时才可请求 READ_CONTACTS 权限。仍需请求该权限的应用必须提交 Play Console 声明，说明访问联系人的必要性及为何 Contact Picker 不够用。应用不得披露或发布非公开的联系人数据，除非获得数据主体本人授权。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>使用 READ_CONTACTS 权限的应用需重新评估是否可改用 Android Contact Picker；若仍需广泛访问联系人，需准备声明材料并通过审核。影响所有读取用户联系人列表的应用，尤其是社交、通讯、通讯录备份类应用。</p></section>
-    <section><h4>需要行动</h4><p>1. 评估应用中精确位置的使用场景，判断是否可改用位置按钮或 ACCESS_COARSE_LOCATION；2. 若应用目标为 Android 17+，对一次性用户发起的位置请求实现位置按钮并设置 onlyForLocationButton 标志；3. 准备 Play Console 声明材料，说明为何位置按钮或粗略位置不足以满足核心功能需求；4. 在 2027-01-27 前完成合规改造。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 隐私合规 / 账号平台 / 审核对接</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（3 次更新）▾</summary><div class="milestones">
-<div class="milestone"><strong>2026-04-16 · Google Play 更新通讯录、位置、账号转移及媒体权限要求 · 公告</strong><span>首次收录：未标注生效日</span><a href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-25 · 公告</strong><span>生效日：未标注 → 2027-01-27</span><a href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-25 · 公告</strong><span>本次无实质变化，仅措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
-  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/16909972" target="_blank" rel="noopener noreferrer"><span>Google Play Contacts and Location Permissions Policy</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/answer/16911971" target="_blank" rel="noopener noreferrer"><span>Google Play Account Transfer Policy</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/answer/16558241" target="_blank" rel="noopener noreferrer"><span>Google Play Photo and Video Permissions Policy</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="开发者平台分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/store/page/2/">2</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 </body>
