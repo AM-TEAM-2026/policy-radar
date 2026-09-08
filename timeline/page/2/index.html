@@ -49,6 +49,24 @@
 <div class="timeline">
 <article class="timeline-row compact-card">
   <div class="timeline-date">
+<span>发布 2026-08-17</span>  </div>
+  <div class="timeline-content">
+    <div class="card-platforms"><span class="platform-badge">InMobi</span></div>
+    <div class="tags"><span class="tag domain">广告变现</span><span class="tag priority">P3</span><span class="tag lifecycle">已正式发布</span></div>
+    <h2><a href="/policy-radar/events/evt_89bbc811509d33ab923975b1/">InMobi Exchange 发布拍卖生命周期与客户端信号新文档</a></h2>
+    <p>新文档为 DSP 提供拍卖生命周期事件、通知 URL、支持宏及 BURL 客户端信号（如 IP 和 User-Agent）的更高可见性。</p>
+  </div>
+</article><article class="timeline-row compact-card">
+  <div class="timeline-date">
+<span>发布 2026-08-16</span>  </div>
+  <div class="timeline-content">
+    <div class="card-platforms"><span class="platform-badge">InMobi</span></div>
+    <div class="tags"><span class="tag domain">广告变现</span><span class="tag priority">P3</span><span class="tag lifecycle">已正式发布</span></div>
+    <h2><a href="/policy-radar/events/evt_f90d538a68c43ea250d4dff8/">InMobi Publisher Platform 支持简体中文文档</a></h2>
+    <p>InMobi Support Portal 上的 Publisher Platform 内容现提供简体中文（Beta）版本，方便中国用户获取产品信息和集成指导。</p>
+  </div>
+</article><article class="timeline-row compact-card">
+  <div class="timeline-date">
 <span>发布 2026-08-13</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
@@ -385,7 +403,7 @@
 <span>发布 2026-07-24</span><strong>截止 2026-08-31</strong>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-08-13 已生效</span></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-billing-library-8-upgrade-2026-07-24/">Google Play Billing Library 8 迁移指南更新</a></h2>
 <span class="tag">2 次更新</span>    <p>Google 开发者文档页面《Migrate to Google Play Billing Library 8》于 2026-08-13 更新，release notes 中新增/调整了 Show buy、Enable reconnection、Handle Transactions、Installment Integration 等章节内容，涉及 Google Play Billing Library 8 的迁移指引。</p>
   </div>
@@ -478,24 +496,6 @@
     <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026 年 8 月 已生效</span></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-ads-cryptocurrencies-eea-expansion-2026-07-22/">Google Ads 在冰岛、列支敦士登与挪威开放加密货币广告</a></h2>
     <p>Google 在冰岛、列支敦士登与挪威三个欧洲经济区国家开放加密货币交易所、软件钱包与硬件钱包的广告推广。广告主须取得 MiCA 法规下的加密资产服务提供商（CASP）许可、满足所在国全部法律要求并通过 Google 认证。页面注明违规不会在无预警情况下立即停号，停号前至少提前 7 天发出警告。公告只写生效于 August 2026，未给出具体日期，故生效时间按月精度记为 2026-08。</p>
-  </div>
-</article><article class="timeline-row compact-card">
-  <div class="timeline-date">
-<span>发布 2026-07-22</span>  </div>
-  <div class="timeline-content">
-    <div class="card-platforms"><span class="platform-badge">Federal Trade Commission</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P2</span><span class="tag lifecycle">已预告</span></div>
-    <h2><a href="/policy-radar/events/evt_2545a50831da37d188f887ee/">FTC 对 Trend Deploy 欺骗性营销行为向消费者退款</a></h2>
-    <p>FTC 宣布将向因 Trend Deploy 的欺骗性营销行为而受到损害的消费者退还资金。</p>
-  </div>
-</article><article class="timeline-row compact-card">
-  <div class="timeline-date">
-<span>发布 2026-07-22</span>  </div>
-  <div class="timeline-content">
-    <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
-    <div class="tags"><span class="tag domain">AI</span><span class="tag priority">P4</span><span class="tag lifecycle">2026-07-22 已生效</span></div>
-    <h2><a href="/policy-radar/events/evt_f72f2b4e3b680f14f6e7affa/">OpenAI API 平台新增组织和项目硬性消费限额功能</a></h2>
-    <p>OpenAI API 平台为组织和项目新增硬性消费限额（hard spend limits）功能，允许设置月度消费上限。当追踪到的消费达到限额时，受影响的 API 请求将返回 429 错误。同时提供消费提醒功能，在流量中断前进行通知。</p>
   </div>
 </article></div><nav class="pagination" aria-label="时间线分页"><a href="/policy-radar/timeline/">1</a><span class="current" aria-current="page">2</span><a href="/policy-radar/timeline/page/3/">3</a><a href="/policy-radar/timeline/page/4/">4</a><a href="/policy-radar/timeline/page/5/">5</a></nav></div>
 <div class="timeline" id="timeline-filter-results" hidden></div>
@@ -677,12 +677,16 @@
 
   const matchesEvent = (event, filters) => {
     const keyword = filters.q.toLocaleLowerCase("zh-CN");
+    const keywordTokens = keyword.split(/\s+/).filter(Boolean);
     const haystack = [event.title, event.summary, ...(event.platforms || [])]
       .join(" ")
       .toLocaleLowerCase("zh-CN");
-    const normalizedKeyword = normalizeEnglishPlurals(keyword);
     const normalizedHaystack = normalizeEnglishPlurals(haystack);
-    return (!keyword || haystack.includes(keyword) || normalizedHaystack.includes(normalizedKeyword))
+    const matchesKeyword = keywordTokens.every((token) => (
+      haystack.includes(token)
+      || normalizedHaystack.includes(normalizeEnglishPlurals(token))
+    ));
+    return matchesKeyword
       && (!filters.priority.length || filters.priority.includes(event.businessPriority))
       && (!filters.platform.length
         || filters.platform.some((platform) => (event.platforms || []).includes(platform)))

@@ -52,6 +52,24 @@
 <span>发布 2022-07-27</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span></div>
+    <h2><a href="/policy-radar/events/evt_legacy-google-play-eu-health-medical-features-2025-10-30/">Google Play 面向欧盟的健康与医疗功能说明</a></h2>
+<span class="tag">3 次更新</span>    <p>Google Play 更新健康与医疗功能政策，纳入面向 EU 用户的医疗器械指导和 Medical Device 标签。</p>
+  </div>
+</article><article class="timeline-row compact-card">
+  <div class="timeline-date">
+<span>发布 2022-07-27</span>  </div>
+  <div class="timeline-content">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <h2><a href="/policy-radar/events/evt_legacy-google-play-vpn-service-2022-07-27/">Google Play 明确VPN使用要求</a></h2>
+<span class="tag">2 次更新</span>    <p>仅 VPN 核心功能或家长控制、企业管理、安全、网络工具、浏览器、运营商服务等批准场景可用。2022-07-27 公告要求所有应用必须具备可接受的核心功能才能使用 VpnService；2023-07-12 公告补充禁止利用 VpnService 实施广告欺诈。</p>
+  </div>
+</article><article class="timeline-row compact-card">
+  <div class="timeline-date">
+<span>发布 2022-07-27</span>  </div>
+  <div class="timeline-content">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
     <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-exact-alarm-2022-07-27/">Google Play 明确精确闹钟使用要求</a></h2>
     <p>仅核心功能必须精确定时的闹钟、计时器或日历类应用可自动使用；其他场景应评估是否真的需要 SCHEDULE_EXACT_ALARM。2022-07-27 公告将精确闹钟列为受限权限。</p>
@@ -308,12 +326,16 @@
 
   const matchesEvent = (event, filters) => {
     const keyword = filters.q.toLocaleLowerCase("zh-CN");
+    const keywordTokens = keyword.split(/\s+/).filter(Boolean);
     const haystack = [event.title, event.summary, ...(event.platforms || [])]
       .join(" ")
       .toLocaleLowerCase("zh-CN");
-    const normalizedKeyword = normalizeEnglishPlurals(keyword);
     const normalizedHaystack = normalizeEnglishPlurals(haystack);
-    return (!keyword || haystack.includes(keyword) || normalizedHaystack.includes(normalizedKeyword))
+    const matchesKeyword = keywordTokens.every((token) => (
+      haystack.includes(token)
+      || normalizedHaystack.includes(normalizeEnglishPlurals(token))
+    ));
+    return matchesKeyword
       && (!filters.priority.length || filters.priority.includes(event.businessPriority))
       && (!filters.platform.length
         || filters.platform.some((platform) => (event.platforms || []).includes(platform)))
