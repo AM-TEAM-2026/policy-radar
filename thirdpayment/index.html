@@ -39,6 +39,21 @@
 <div class="card-stack">
 <article class="card event-card">
   <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">FunnelFox</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://status.funnelfox.com/" target="_blank" rel="noopener noreferrer">FunnelFox Status</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-08</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_c87b969117c7f1689f020dd8/">FunnelFox 计费与订阅处理短暂不可用事件（已恢复）</a></h3>
+<p class="event-summary">FunnelFox Status 页面在 2026-09-08 报告无新增事件，并回顾 2026-09-06 09:37–11:28 UTC 期间 Billing 购买与订阅处理不可用。根因为 PostgreSQL 连接饱和导致 Billing 应用进程重启；503 响应于 09:44 UTC 停止，被阻塞的订阅自 11:08 UTC 起手动恢复，11:28 UTC 遥测确认生产健康恢复正常。已将数据库连接上限从 100 提升至 150，并补充连接饱和监控与 5xx 告警审查。Funnel 与 Dashboard 未受影响，无需客户操作。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>订阅与计费处理在约 1 小时 51 分钟窗口内受影响，可能导致部分购买失败或订阅阻塞；已手动恢复，未波及 Funnel 与 Dashboard。对依赖 FunnelFox 计费通道的业务存在短时中断风险。</p></section>
+    <section><h4>需要行动</h4><p>持续观察 FunnelFox 后续状态页更新；核对自身在 2026-09-06 09:37–11:28 UTC 期间的计费与订阅日志，确认是否存在未到账或失败订单；必要时与 FunnelFox 支持核对被阻塞订阅的恢复情况。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付与订阅运营/平台工程</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://status.funnelfox.com/" target="_blank" rel="noopener noreferrer"><span>FunnelFox Status</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Checkout.com</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://www.checkout.com/newsroom" target="_blank" rel="noopener noreferrer">Checkout.com Newsroom</a>
@@ -66,7 +81,7 @@
     <section><h4>需要行动</h4><p>评估是否需要在巴西市场启用 Pix Automático 订阅支付，更新结账流程与订阅管理逻辑以支持该支付方式。</p></section>
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 支付/产品团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.paddle.com/changelog" target="_blank" rel="noopener noreferrer"><span>Paddle Developer Changelog</span><span aria-hidden="true">↗</span></a>  </div>
+<a href="https://developer.paddle.com/changelog" target="_blank" rel="noopener noreferrer"><span>Paddle Developer Changelog</span><span aria-hidden="true">↗</span></a><a href="https://app.getbeamer.com/loadMoreNews?app_id=RvynHFzq63519&amp;language=EN" target="_blank" rel="noopener noreferrer"><span>Paddle Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
 </article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Adapty</span></div>
