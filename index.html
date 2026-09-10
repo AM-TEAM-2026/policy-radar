@@ -34,7 +34,7 @@
       <a href="/policy-radar/sources/">来源状态</a>
     </nav>
   </header>
-<div class="sync">已核实 101/104 个来源 · 最后更新 2026-09-09 16:56 · 新加坡时间</div>
+<div class="sync">已核实 103/104 个来源 · 最后更新 2026-09-10 09:03 · 新加坡时间</div>
 <section><h1 class="section-title">今日必须处理</h1>
 <div class="card-stack"><article class="card event-card danger">
   <div class="event-meta">
@@ -140,6 +140,21 @@
 <section><h1 class="section-title">重大更新</h1>
 <div class="card-stack"><article class="card event-card">
   <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer">Apple Developer News — App Review</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-09</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2027 年 4 月 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_bdb853f570f97acb2d849979/">App Store 提交最低 SDK 版本要求将于 2027 年 4 月起升级至各平台 27 版本</a></h3>
+<p class="event-summary">Apple 宣布自 2027 年 4 月起，上传至 App Store Connect 的应用和游戏必须满足新的最低 SDK 要求：iOS/iPadOS 应用须使用 iOS 27 与 iPadOS 27 SDK 或更高版本构建；tvOS 应用须使用 tvOS 27 SDK 或更高版本；visionOS 应用须使用 visionOS 27 SDK 或更高版本；watchOS 应用须使用 watchOS 27 SDK 或更高版本。同时，macOS 27 将仅支持 Apple silicon，不再支持 Intel Mac 和 Rosetta，开发者需将 Xcode 构建架构设置为仅 arm64 并重新构建提交。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>所有在 App Store 上架或更新的应用必须在 2027 年 4 月前完成 SDK 升级和（针对 Mac 应用）架构迁移，否则将无法提交或更新。涉及 iOS、iPadOS、tvOS、visionOS、watchOS 及 macOS 全平台开发者，影响范围广，合规要求明确且具有强制性。此外，新增的年龄分级问题（社交功能标识）和 App Store 素材规范也要求开发者在提交前完成相应配置。</p></section>
+    <section><h4>需要行动</h4><p>1. 评估现有应用所使用的 SDK 版本，制定升级至各平台 27 SDK 的计划；2. macOS 应用将构建架构切换为 arm64 only，移除 Intel/Rosetta 支持并重新测试；3. 在 App Store Connect 中补充年龄分级问卷中的社交功能标识；4. 按新设计规范更新产品页头图、搜索结果素材、截图、预览视频等 App Store 资产；5. 使用新的产品页预览工具检查页面展示效果；6. 在 2027 年 4 月前完成所有应用的重新构建与提交。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> iOS/macOS/tvOS/visionOS/watchOS 开发团队、App Store 运营团队、合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer"><span>Apple Developer News — App Review</span><span aria-hidden="true">↗</span></a><a href="https://developer.apple.com/news/" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer">Google Play Games Level Up Guidelines</a>
@@ -201,24 +216,9 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> Android 开发团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://android-developers.googleblog.com/2026/08/app-quality-memory-optimization-secure-onboarding.html" target="_blank" rel="noopener noreferrer"><span>Android Developers Blog</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer">Google Play Games Level Up Guidelines</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-08-26</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2027 年 2 月 待生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_b7f4352386ca74ca4aec9528/">Google Play Level Up 内存指南更新：2027年2月起强制执行内存不良行为阈值</a></h3>
-<p class="event-summary">Google Play 更新了 Level Up 内存指南（LU-MM-GAA），明确自2027年2月起，游戏必须满足动态内存使用（anonymous RSS + swap）、位图使用和代码优化的既定不良行为阈值，方可获得或维持 Level Up 资格。开发者现可在 Android vitals 中监控相关内存指标和不良行为阈值。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>未达标的游戏将失去 Level Up 资格，影响游戏在 Google Play 的曝光、推荐及潜在收入。涉及所有 Android 版本的内存优化要求，需全面排查游戏内存表现。</p></section>
-    <section><h4>需要行动</h4><p>1. 立即在 Android vitals 中监控游戏的动态内存使用、位图使用和代码优化指标；2. 对照公布的内存阈值和不良行为标准进行优化；3. 制定内存优化计划，确保在2027年2月前达标；4. 关注官方发布的内存阈值和执行时间表。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 游戏开发团队/性能优化团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer"><span>Google Play Games Level Up Guidelines</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div></section>
 <section><h2 class="section-title">本月风险预览</h2><div class="risk-grid">
-<a class="metric" href="/policy-radar/store/"><span>开发者平台</span><strong class="risk-high">高风险</strong><span>本月发布 5 · 需行动 3</span></a>
+<a class="metric" href="/policy-radar/store/"><span>开发者平台</span><strong class="risk-high">高风险</strong><span>本月发布 10 · 需行动 3</span></a>
 <a class="metric" href="/policy-radar/ua/"><span>买量</span><strong class="risk-high">高风险</strong><span>本月发布 1 · 需行动 4</span></a>
 <a class="metric" href="/policy-radar/iaa/"><span>广告变现</span><strong class="risk-medium">中风险</strong><span>本月发布 0 · 需行动 1</span></a>
 <a class="metric" href="/policy-radar/thirdpayment/"><span>三方支付</span><strong class="risk-low">低风险</strong><span>本月发布 4 · 需行动 0</span></a>
@@ -226,8 +226,10 @@
 <a class="metric" href="/policy-radar/regulatory/"><span>监管</span><strong class="risk-low">低风险</strong><span>本月发布 4 · 需行动 0</span></a>
 <a class="metric" href="/policy-radar/others/"><span>其他</span><strong class="risk-low">低风险</strong><span>本月发布 0 · 需行动 0</span></a>
 </div></section>
-<section><h2 class="section-title">近 7 天新增（共 12 条）</h2>
-<details class="new-day" open><summary><span class="new-day-date">2026-09-09</span><span class="new-day-count">本班 · 2 条</span><span class="new-day-chips"><span class="tag hot">P1 1</span><span class="tag">P4 1</span></span></summary>
+<section><h2 class="section-title">近 7 天新增（共 16 条）</h2>
+<details class="new-day" open><summary><span class="new-day-date">2026-09-10</span><span class="new-day-count">本班 · 5 条</span><span class="new-day-chips"><span class="tag hot">P0-A 3</span><span class="tag">P2 2</span></span></summary>
+<div class="new-list"><a class="new-row" href="/policy-radar/events/evt_bdb853f570f97acb2d849979/"><span class="tag domain">开发者平台</span><span class="title">App Store 提交最低 SDK 版本要求将于 2027 年 4 月起升级至各平台 27 版本</span><span class="new-date">发布 2026-09-09</span><span class="priority">P0-A</span></a><a class="new-row" href="/policy-radar/events/evt_1a49b83b1bc770d3d9b89ce7/"><span class="tag domain">开发者平台</span><span class="title">App Store Connect 支持上传基于 Xcode 27 RC 及 iOS/iPadOS/macOS/tvOS/visionOS/watchOS 27.0 RC SDK 构建的应用</span><span class="new-date">发布 2026-09-09</span><span class="priority">P0-A</span></a><a class="new-row" href="/policy-radar/events/evt_42c6e17717e2353c6349daca/"><span class="tag domain">开发者平台</span><span class="title">App Store Connect 新增 iPhone Duo、iPhone 18 Pro Max、iPhone 18 Pro、Apple Watch Ultra 4、Apple Watch Series 12 的预览与截图规格</span><span class="new-date">发布 2026-09-09</span><span class="priority">P0-A</span></a><a class="new-row" href="/policy-radar/events/evt_f50b9666acb7d8ecc7ace0a4/"><span class="tag domain">开发者平台</span><span class="title">新增社交媒体功能需在 App Store Connect 中标注</span><span class="new-date">发布 2026-09-09</span><span class="priority">P2</span></a><a class="new-row" href="/policy-radar/events/evt_42665a81178c02928a7dfa00/"><span class="tag domain">开发者平台</span><span class="title">macOS 27 将仅支持 Apple Silicon，不再支持 Intel Mac</span><span class="new-date">发布 2026-09-09</span><span class="priority">P2</span></a></div>
+</details><details class="new-day"><summary><span class="new-day-date">2026-09-09</span><span class="new-day-count">2 条</span><span class="new-day-chips"><span class="tag hot">P1 1</span><span class="tag">P4 1</span></span></summary>
 <div class="new-list"><a class="new-row" href="/policy-radar/events/evt_0e2b60001d89aa75321d9a6a/"><span class="tag domain">监管</span><span class="title">FTC 对支付处理商 Humboldt Merchant Services 采取行动，指控其明知故犯地为虚假商户提供支付处理服务</span><span class="new-date">发布 2026-09-08</span><span class="priority">P1</span></a><a class="new-row" href="/policy-radar/events/evt_c87b969117c7f1689f020dd8/"><span class="tag domain">三方支付</span><span class="title">FunnelFox 计费与订阅处理短暂不可用事件（已恢复）</span><span class="new-date">发布 2026-09-08</span><span class="priority">P4</span></a></div>
 </details><details class="new-day"><summary><span class="new-day-date">2026-09-08</span><span class="new-day-count">2 条</span><span class="new-day-chips"><span class="tag hot">P1 1</span><span class="tag">P2 1</span></span></summary>
 <div class="new-list"><a class="new-row" href="/policy-radar/events/evt_5cd2cf063b1f7cc2f057bb42/"><span class="tag domain">监管</span><span class="title">澳大利亚eSafety发布易读版社交媒体限制指南</span><span class="new-date">发布 2026-09-07</span><span class="priority">P1</span></a><a class="new-row" href="/policy-radar/events/evt_a7d00ebc5ee0fb19e710e601/"><span class="tag domain">监管</span><span class="title">eSafety发布情境保护手册（2026年8月24日版）</span><span class="new-date">发布 2026-09-07</span><span class="priority">P2</span></a></div>
@@ -235,8 +237,6 @@
 <div class="new-list"><a class="new-row" href="/policy-radar/events/evt_f3353088976380c53a2adc3f/"><span class="tag domain">监管</span><span class="title">FTC要求支付处理商Nuvei支付485万美元和解金并加强商户审查</span><span class="new-date">发布 2026-09-04</span><span class="priority">P1</span></a></div>
 </details><details class="new-day"><summary><span class="new-day-date">2026-09-04</span><span class="new-day-count">6 条</span><span class="new-day-chips"><span class="tag hot">P0-A 2</span><span class="tag hot">P1 1</span><span class="tag">P4 3</span></span></summary>
 <div class="new-list"><a class="new-row" href="/policy-radar/events/evt_c193fd890910a424613b12d6/"><span class="tag domain">开发者平台</span><span class="title">Google Play Billing Library 弃用常见问题页面更新</span><span class="new-date">发布 2026-09-04</span><span class="priority">P0-A</span></a><a class="new-row" href="/policy-radar/events/evt_23b5642694751378b624d4bc/"><span class="tag domain">开发者平台</span><span class="title">Google Play Games Level Up Guidelines 更新大屏优化、PC分发、Vulkan及形态分发要求</span><span class="new-date">发布 2026-09-03</span><span class="priority">P0-A</span></a><a class="new-row" href="/policy-radar/events/evt_94ce6436f0c356947a2ba140/"><span class="tag domain">三方支付</span><span class="title">Minor Hotels 与 Checkout.com 合作提升全球酒店支付性能</span><span class="new-date">发布 2026-09-03</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_37e52d04ce2779a44d5b6119/"><span class="tag domain">AI</span><span class="title">OpenAI 发布 GPT-6 Astra 模型及 Responses API 新控制能力</span><span class="new-date">发布 2026-09-03</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_01807bb4841e7b50ba87e06b/"><span class="tag domain">三方支付</span><span class="title">Paddle 支持巴西 Pix Automático 订阅支付</span><span class="new-date">发布 2026-09-03</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_cb42535a1815f421c1a4aaf3/"><span class="tag domain">买量</span><span class="title">TikTok Ads Manager 新应用强制使用 MMP-SAN 集成并停用旧版 MMP 集成</span><span class="new-date">发布 2025 年 7 月</span><span class="priority">P1</span></a></div>
-</details><details class="new-day"><summary><span class="new-day-date">2026-09-03</span><span class="new-day-count">1 条</span><span class="new-day-chips"><span class="tag">P4 1</span></span></summary>
-<div class="new-list"><a class="new-row" href="/policy-radar/events/evt_384b14505fe0de9fe7cd63a4/"><span class="tag domain">AI</span><span class="title">OpenAI API 更新 429/503 错误码以区分流量激增与模型过载</span><span class="new-date">发布 2026-09-02</span><span class="priority">P4</span></a></div>
 </details></section>
   <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
