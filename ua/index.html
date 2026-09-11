@@ -41,6 +41,21 @@
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
     <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://ads-developers.googleblog.com/2026/09/new-onboarding-experience-for-google-ads-api.html" target="_blank" rel="noopener noreferrer">Google Ads Developer Blog</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-10</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P2</span><span class="tag domain">买量</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_51eeb442ca93541de2406350/">Google Ads API 开发者入驻体验及 API 访问管理重大变更</a></h3>
+<p class="event-summary">Google Ads API 推出全新入驻体验，将 API 注册和访问管理从 Google Ads 管理中心 API Center 迁移至 Google Cloud Console 的 Google Ads API Overview 页面。主要变更包括：1) 废弃开发者令牌（developer tokens），API 访问级别改为与 Google Cloud 项目关联；2) 新申请 Basic 和 Standard 访问需完成品牌验证（brand verification）；3) Basic 访问申请实现自动化审批；4) 所有待处理的 Basic 访问申请将被一次性关闭，需重新申请；5) API v25 新增 CLOUD_PROJECT_NOT_APPROVED_FOR_PRODUCTION 错误码，阻止测试级别项目访问生产账号。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>1) 开发者需迁移至 Google Cloud Console 管理 API 访问，原有 API Center 页面将完全下线；2) 开发者令牌虽暂时可发送但将被忽略，未来主要版本将拒绝接受；3) 待处理的 Basic 访问申请被强制关闭，相关开发者需重新申请；4) 使用测试级别 Cloud 项目调用生产账号将触发新错误码导致调用失败；5) 服务公告（MSA）将改发至 Cloud 项目 IAM 中 owner/editor 角色的邮箱，若邮箱过时可能错过重要通知。</p></section>
+    <section><h4>需要行动</h4><p>1) 核实 Google Cloud 项目的 API 访问级别是否与原开发者令牌一致，不一致则重新申请；2) 更新 Cloud 项目 IAM 页面中 owner/editor 角色的用户列表以确保收到 MSA；3) 更新应用代码停止在 API 调用中发送开发者令牌；4) 若 Basic 访问申请被关闭，从 Google Ads API Overview 页面重新申请；5) 若使用测试级别项目调用生产账号，需申请 Explorer Access。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> Google Ads API 开发团队/集成方技术团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://ads-developers.googleblog.com/2026/09/new-onboarding-experience-for-google-ads-api.html" target="_blank" rel="noopener noreferrer"><span>Google Ads Developer Blog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
+    <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://support.google.com/adspolicy/answer/6018017" target="_blank" rel="noopener noreferrer">Google Ads Policies — Gambling and games</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026 年 9 月</span><span class="confirmed-badge">官方确认</span>  </div>
