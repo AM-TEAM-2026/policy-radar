@@ -408,7 +408,7 @@
     content.append(tags);
     const heading = document.createElement("h2");
     const link = document.createElement("a");
-    link.href = event.permalink;
+    link.href = `/policy-radar/events/${event.eventId}/`;
     link.textContent = event.title;
     heading.append(link);
     content.append(heading);
