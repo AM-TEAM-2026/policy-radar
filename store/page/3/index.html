@@ -39,6 +39,38 @@
 <div class="card-stack">
 <article class="card event-card">
   <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.apple.com/news/?id=9s0rgdy9" target="_blank" rel="noopener noreferrer">Apple Developer News</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2025-02-21</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2025-04-24 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-apple-xcode-16-minimum-upload-2025-02-21/">App Store Connect 上传的 Xcode 16 最低要求</a></h3>
+<p class="event-summary">自2025年4月24日起，上传到 App Store Connect 的 App 必须使用 Xcode 16 或更高版本及相应新 SDK 构建。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>构建工具链的硬门槛：仍用 Xcode 16 以下版本构建的包会被 App Store Connect 直接拒收，卡住整条发版通道。</p></section>
+    <section><h4>需要行动</h4><p>确认 CI 与本地构建环境均已升级到 Xcode 16 及以上；升级后跑一次完整回归，重点看新 SDK 下的废弃 API 与权限行为变化。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> iOS 研发 / 商店运营</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.apple.com/news/?id=9s0rgdy9" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/9888380?hl=en#riskware" target="_blank" rel="noopener noreferrer">Google Play Console Announcements</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2024-04-03</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-maskware-renamed-riskware-2025-10-30/">Google Play Malware 分类 Maskware 更名为 Riskware</a></h3>
+<p class="event-summary">Google Play 将 Malware 政策中的 Maskware 分类名称改为 Riskware，以对齐行业术语。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>仅术语更名，Maskware 改称 Riskware，判定标准未变。</p></section>
+    <section><h4>需要行动</h4><p>更新内部政策对照表与风控规则里的分类名称，避免后续检索政策文档时漏命中。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 商店运营</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（2 次更新）▾</summary><div class="milestones">
+<div class="milestone"><strong>2024-04-03 · Google Play 恶意软件政策新增 Maskware 分类 · 公告</strong><span>首次收录：未标注生效日 · 在恶意软件政策中明确 Maskware 属于恶意软件的一个子类</span><a href="https://support.google.com/googleplay/android-developer/answer/14594990?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2025-10-30 · 公告</strong><span>为对齐行业术语，Maskware 分类更名为 Riskware，判定标准不变</span><a href="https://support.google.com/googleplay/android-developer/answer/16550159?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
+  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/answer/9888380?hl=en#riskware" target="_blank" rel="noopener noreferrer"><span>Google Play Console Announcements</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/14115180?hl=en" target="_blank" rel="noopener noreferrer">Google Play Console Announcements</a>
