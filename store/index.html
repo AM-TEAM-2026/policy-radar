@@ -41,6 +41,21 @@
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google</span></div>
     <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://android-developers.googleblog.com/2026/09/bring-android-game-to-car-screen.html" target="_blank" rel="noopener noreferrer">Android Developers Blog</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-21</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_a94c4a2fcc031fcdcb3d721b/">Android Auto与Android Automotive OS游戏类别正式GA并开放发布</a></h3>
+<p class="event-summary">Android Auto和Android Automotive OS的游戏类别正式从Beta阶段转为全面可用（GA）。开发者现可通过Google Play的公开测试和生产轨道发布游戏。文章详细说明了适配车机屏幕的技术要求，包括在Manifest中声明游戏类别、支持Android Auto和Automotive OS、处理车辆停放状态（Parked state）以避免驾驶分心，以及支持手柄和自适应屏幕尺寸等。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>为游戏开发者提供了新的分发渠道，允许在车辆停放时向用户分发游戏。同时，车机平台对游戏内容有严格的驾驶安全限制（如行驶中禁止运行和暂停），开发者需确保合规。</p></section>
+    <section><h4>需要行动</h4><p>游戏开发者需按照指南修改应用Manifest，声明游戏类别及车机支持，实现车辆停放状态的处理逻辑（如行驶中停止音频），适配不同屏幕尺寸，并在Google Play Console中启用相关表单因素，通过车机应用质量指南审核后发布。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 游戏开发团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://android-developers.googleblog.com/2026/09/bring-android-game-to-car-screen.html" target="_blank" rel="noopener noreferrer"><span>Android Developers Blog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google</span></div>
+    <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://android-developers.googleblog.com/" target="_blank" rel="noopener noreferrer">Android Developers Blog</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-09-18</span><span class="confirmed-badge">官方确认</span>  </div>
@@ -792,23 +807,6 @@
 <div class="milestone"><strong>2026-07-15 · Google Play 年龄限制内容政策扩展至匿名聊天和随机聊天应用 · 公告</strong><span>首次收录：生效日 2026-08-26</span><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-26 · 公告</strong><span>生效日：2026-08-26 → 未标注</span><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
   <div class="card-source-links" aria-label="来源原文">
 <a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">Google Play Policy Center — Google Play Families Policies</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-07-15</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-08-26 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_6b433e9f825362f6698f373b/">Google Play Families Policies 将禁止匿名聊天应用针对儿童</a></h3>
-<p class="event-summary">Google Play 在 2026 年 7 月政策更新预览中宣布，将扩展其《家庭政策要求》（Families Policy Requirements），明确禁止以匿名聊天或陌生人聊天为主要功能的应用（如聊天轮盘、约会应用、儿童开放式聊天室、匿名应用、“盲聊”应用等）将儿童列为目标受众。该变更将于 2026 年 8 月 26 日生效。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>若应用包含匿名聊天或陌生人聊天功能且目标受众包含儿童，将在生效后面临下架或暂停风险；涉及儿童隐私与内容安全合规，属 P0 级儿童保护政策，影响所有面向家庭/儿童市场的社交或含社交功能应用。</p></section>
-    <section><h4>需要行动</h4><p>1) 排查应用是否包含匿名聊天、陌生人匹配、开放式聊天室等功能；2) 若存在且目标受众含儿童，需在 2026-08-26 前移除相关功能或调整目标受众排除儿童；3) 更新 Play Console 中目标受众与内容分级问卷；4) 确保社交功能具备成人验证机制及在线安全提示；5) 同步法务与合规团队评估 COPPA/GDPR-K 合规。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 产品合规团队 / 应用开发团队</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（3 次更新）▾</summary><div class="milestones">
-<div class="milestone"><strong>2026-07-15 · Google Play Families 政策禁止匿名聊天应用针对儿童 · 公告</strong><span>首次收录：生效日 2026-08-26</span><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-07-21 · 公告</strong><span>本次无实质变化，仅来源与措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-07-23 · 公告</strong><span>本次无实质变化，仅来源与措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
-  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Center — Google Play Families Policies</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Center — Preview: Google Play Families Policies</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="开发者平台分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/store/page/2/">2</a><a href="/policy-radar/store/page/3/">3</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 </body>

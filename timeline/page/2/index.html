@@ -49,6 +49,42 @@
 <div class="timeline">
 <article class="timeline-row compact-card">
   <div class="timeline-date">
+<span>发布 2026-09-03</span>  </div>
+  <div class="timeline-content">
+    <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
+    <div class="tags"><span class="tag domain">AI</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span></div>
+    <h2><a href="/policy-radar/events/evt_37e52d04ce2779a44d5b6119/">OpenAI 发布 GPT-6 Astra 模型及 Responses API 新控制能力</a></h2>
+    <p>OpenAI 于 2026-09-03 发布 GPT-6 Astra 模型，支持推理、编码、计算机使用、研究和文档创建。关键迁移变化：不支持 none 推理努力级别；不支持自定义 temperature、top_p 或 logprobs；工具调用需使用 Responses API。同时新增 Responses API 的异步工具调用、中途转向（Mid-turn steering，通过 WebSocket 在响应进行中发送额外指令）以及对话中动态调整推理努力等控制能力。此外，Misalignment monitoring 异步检查代理工作中的潜在问题，可触发安全警报或停止对话以供审查。2026-09-01 起 api.openai.com 连接支持 IPv6。</p>
+  </div>
+</article><article class="timeline-row compact-card">
+  <div class="timeline-date">
+<span>发布 2026-09-03</span>  </div>
+  <div class="timeline-content">
+    <div class="card-platforms"><span class="platform-badge">Paddle</span></div>
+    <div class="tags"><span class="tag domain">三方支付</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span></div>
+    <h2><a href="/policy-radar/events/evt_01807bb4841e7b50ba87e06b/">Paddle 支持巴西 Pix Automático 订阅支付</a></h2>
+    <p>Paddle 宣布支持在巴西通过 Pix Automático 接受订阅付款，客户可在结账时设置循环 Pix 授权。</p>
+  </div>
+</article><article class="timeline-row compact-card">
+  <div class="timeline-date">
+<span>发布 2026-09-02</span>  </div>
+  <div class="timeline-content">
+    <div class="card-platforms"><span class="platform-badge">Adapty</span></div>
+    <div class="tags"><span class="tag domain">三方支付</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span></div>
+    <h2><a href="/policy-radar/events/evt_561c64d4fc9533c083a0448f/">Adapty 报告并解决 Apple 购买数据处理延迟事件</a></h2>
+    <p>Adapty 状态页显示，2026-09-01 14:07 UTC 识别到 App Store 购买数据处理延迟，可能导致报表工具出现临时不准确；无购买数据丢失。2026-09-01 16:51 UTC 进入监控阶段，2026-09-01 17:23 UTC 宣布事件已解决。</p>
+  </div>
+</article><article class="timeline-row compact-card">
+  <div class="timeline-date">
+<span>发布 2026-09-02</span>  </div>
+  <div class="timeline-content">
+    <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
+    <div class="tags"><span class="tag domain">AI</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span></div>
+    <h2><a href="/policy-radar/events/evt_384b14505fe0de9fe7cd63a4/">OpenAI API 更新 429/503 错误码以区分流量激增与模型过载</a></h2>
+    <p>OpenAI 于 2026-09-02 更新 API 错误处理：流量增长过快返回 429 错误并附带 slow_down 代码；临时模型过载返回 503 错误并附带 server_is_overloaded 代码。两种响应均可能包含 Retry-After 头，存在时需至少等待该时长再重试，缺失时应使用指数退避。</p>
+  </div>
+</article><article class="timeline-row compact-card">
+  <div class="timeline-date">
 <span>发布 2026-09-01</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
@@ -460,42 +496,6 @@
     <div class="tags"><span class="tag domain">AI</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span></div>
     <h2><a href="/policy-radar/events/evt_376121b349977a6c315015df/">在 cyber-critical 能力时代推进模型开发节奏</a></h2>
     <p>OpenAI News 页面于 2026-08-18 发布文章《Pacing model development in an era of cyber-critical capabilities》，讨论在网络关键能力时代的模型开发节奏与安全考量。</p>
-  </div>
-</article><article class="timeline-row compact-card">
-  <div class="timeline-date">
-<span>发布 2026-08-17</span>  </div>
-  <div class="timeline-content">
-    <div class="card-platforms"><span class="platform-badge">Federal Trade Commission</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P2</span><span class="tag lifecycle">已正式发布</span></div>
-    <h2><a href="/policy-radar/events/evt_90067d9dd1d506168f8fcd6c/">FTC就Doxo欺骗消费者及收取附加费行为达成210万美元和解</a></h2>
-    <p>FTC宣布账单支付公司Doxo同意支付210万美元，以和解FTC指控其欺骗消费者并向其收取附加费用的指控。</p>
-  </div>
-</article><article class="timeline-row compact-card">
-  <div class="timeline-date">
-<span>发布 2026-08-17</span>  </div>
-  <div class="timeline-content">
-    <div class="card-platforms"><span class="platform-badge">InMobi</span></div>
-    <div class="tags"><span class="tag domain">广告变现</span><span class="tag priority">P3</span><span class="tag lifecycle">已正式发布</span></div>
-    <h2><a href="/policy-radar/events/evt_89bbc811509d33ab923975b1/">InMobi Exchange 发布拍卖生命周期与客户端信号新文档</a></h2>
-    <p>新文档为 DSP 提供拍卖生命周期事件、通知 URL、支持宏及 BURL 客户端信号（如 IP 和 User-Agent）的更高可见性。</p>
-  </div>
-</article><article class="timeline-row compact-card">
-  <div class="timeline-date">
-<span>发布 2026-08-16</span>  </div>
-  <div class="timeline-content">
-    <div class="card-platforms"><span class="platform-badge">InMobi</span></div>
-    <div class="tags"><span class="tag domain">广告变现</span><span class="tag priority">P3</span><span class="tag lifecycle">已正式发布</span></div>
-    <h2><a href="/policy-radar/events/evt_f90d538a68c43ea250d4dff8/">InMobi Publisher Platform 支持简体中文文档</a></h2>
-    <p>InMobi Support Portal 上的 Publisher Platform 内容现提供简体中文（Beta）版本，方便中国用户获取产品信息和集成指导。</p>
-  </div>
-</article><article class="timeline-row compact-card">
-  <div class="timeline-date">
-<span>发布 2026-08-13</span>  </div>
-  <div class="timeline-content">
-    <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P2</span><span class="tag lifecycle">2026 年 9 月 已生效</span></div>
-    <h2><a href="/policy-radar/events/evt_legacy-google-ads-language-targeting-2026-08-13/">Google Ads 取消 Search 与 AI Max for Search 的广告系列级语言定向，PMax 仅在非搜索渠道保留</a></h2>
-    <p>Google Ads 开发者博客公告：自 2026 年 9 月下旬起，Search 与 AI Max for Search 广告系列的广告系列级语言定向设置将被移除，搜索广告改为按广告本身的语言自动匹配。Performance Max 广告系列分渠道处理——Google 搜索渠道不再使用广告系列级语言设置（与 Search 一致，按广告语言匹配），YouTube、Display、Discover、Gmail 等其他渠道继续沿用该设置。账户内存在多个符合条件的广告系列时，由 AI 驱动的广告组优先级机制选择最相关的广告语言。API 侧：language criterion 在查询时仍会返回但不再用于定向；对 Search 广告系列新增或更新 CampaignCriterion.language 的 mutate 将返回 ContextError.OPERATION_NOT_PERMITTED_FOR_CONTEXT，Performance Max 广告系列不报错。既有 Search 与 AI Max for Search 广告系列继续投放，只是语言设置不再生效。公告只写 late September 2026，未给出具体日期，故生效时间按月精度记为 2026-09。</p>
   </div>
 </article></div><nav class="pagination" aria-label="时间线分页"><a href="/policy-radar/timeline/">1</a><span class="current" aria-current="page">2</span><a href="/policy-radar/timeline/page/3/">3</a><a href="/policy-radar/timeline/page/4/">4</a><a href="/policy-radar/timeline/page/5/">5</a><a href="/policy-radar/timeline/page/6/">6</a></nav></div>
 <div class="timeline" id="timeline-filter-results" hidden></div>
