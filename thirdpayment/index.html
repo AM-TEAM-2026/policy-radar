@@ -39,6 +39,81 @@
 <div class="card-stack">
 <article class="card event-card">
   <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Adapty</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://changelog.adapty.io/" target="_blank" rel="noopener noreferrer">Adapty Product Updates</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-23</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_610c48ab9df8a20d98e5dcc0/">Adapty新增trial_active和subscription_active事件</a></h3>
+<p class="event-summary">Adapty新增trial_active和subscription_active两个事件，支持发送至集成和webhook。trial_active在试用开始后N小时或天触发（前提是用户未取消），以便为MMP和广告网络提供更准确的用户留存信号。各集成可独立设置时间窗口。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>提升订阅和试用用户的追踪精度，优化广告归因和用户留存分析，为MMP和广告网络提供更准确的用户留存信号。</p></section>
+    <section><h4>需要行动</h4><p>在Integrations中为相关集成（如AppsFlyer、webhook）配置trial_active和subscription_active事件的触发时间窗口。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 产品/数据分析团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://changelog.adapty.io/" target="_blank" rel="noopener noreferrer"><span>Adapty Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-23</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_fa1aac7ccd6f24c56c671c4a/">Stripe API 错误率升高并已解决</a></h3>
+<p class="event-summary">2026年9月23日15:53至16:07 UTC，Stripe API出现错误率和响应时间升高的问题，已于16:26 UTC解决。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>可能导致在此期间使用Stripe API的支付、订阅等请求失败或延迟。</p></section>
+    <section><h4>需要行动</h4><p>检查该时间段内的支付和API调用日志，确认是否有失败的交易并进行重试或补偿。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付技术团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Paddle</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.paddle.com/changelog" target="_blank" rel="noopener noreferrer">Paddle Developer Changelog</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-23</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_e96ddc2cf3f3206247498751/">Paddle 支持通过 ID、邮箱或部分值过滤事件与通知日志</a></h3>
+<p class="event-summary">Paddle 更新了 API 和 Webhooks 功能，支持通过 Paddle ID、邮箱地址或部分值来搜索和过滤事件及通知日志，并新增按日期过滤的功能。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>提升了开发者在支付和订阅业务中排查问题、监控事件和通知日志的效率，便于更精准地追踪特定用户或交易的状态。</p></section>
+    <section><h4>需要行动</h4><p>开发者可根据业务需求，在现有的事件和通知监控流程中应用新的过滤条件，优化日志检索和问题排查机制。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 研发/技术团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.paddle.com/changelog" target="_blank" rel="noopener noreferrer"><span>Paddle Developer Changelog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-23</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_e1eb83ccdf4405e959eabe47/">TWINT 与 Bancontact 支付渠道计划维护</a></h3>
+<p class="event-summary">Stripe发布TWINT与Bancontact计划维护通知。TWINT将于9月26日18:00至9月27日02:00 UTC维护，Bancontact将于9月26日18:00至9月27日02:00 UTC维护。此外，TWINT于9月24日01:00 UTC完成了一次维护。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>维护期间相关支付渠道将不可用，影响使用TWINT和Bancontact进行支付的用户。</p></section>
+    <section><h4>需要行动</h4><p>在维护窗口期前通过应用内公告提示用户，并准备或引导用户使用备用支付方式。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付运营团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">PayPal</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://www.paypal-status.com/history/eventdetails/109944" target="_blank" rel="noopener noreferrer">PayPal Status</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-23</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_5dded4f22f99977de418d2fe/">Braintree Apple Pay 令牌化服务影响已解决</a></h3>
+<p class="event-summary">PayPal 状态页面通报 Braintree Apple Pay 令牌化服务（PP-LIVE-109944）受到影响的事件已被检测并解决。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>该事件曾导致 Braintree 的 Apple Pay 令牌化功能异常，可能影响部分用户的 Apple Pay 支付体验，目前服务已恢复正常。</p></section>
+    <section><h4>需要行动</h4><p>确认 Apple Pay 支付链路已恢复正常，持续监控相关支付指标，无需采取额外修复行动。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付业务团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://www.paypal-status.com/history/eventdetails/109944" target="_blank" rel="noopener noreferrer"><span>PayPal Status</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
