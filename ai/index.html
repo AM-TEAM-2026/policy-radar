@@ -39,6 +39,21 @@
 <div class="card-stack">
 <article class="card event-card">
   <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer">Anthropic API Release Notes</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-24</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_eefc20426960970539394ee7/">Anthropic API 扩大部分模型拒绝请求的计费范围</a></h3>
+<p class="event-summary">Anthropic 宣布扩大 API 拒绝请求的计费范围。对于 stop_details.category 为 &#34;bio&#34;、&#34;frontier_llm&#34; 或 &#34;reasoning_extraction&#34; 的请求，如果在产生任何输出前被拒绝，现在也将按照对应模型的费率进行计费。其他类别的拒绝前输出仍不计费，且备用积分（fallback credit）保持不变。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>使用相关类别（bio, frontier_llm, reasoning_extraction）模型的开发者可能会因为请求在输出前被拒绝而面临额外的 API 调用成本增加。</p></section>
+    <section><h4>需要行动</h4><p>开发者需检查其应用中调用这些类别模型的频率和拒绝率，评估成本影响，并考虑优化提示词或增加重试与降级机制以降低不必要的计费拒绝。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 研发/财务</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer"><span>Anthropic API Release Notes</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://openai.com/news/" target="_blank" rel="noopener noreferrer">OpenAI News</a>
