@@ -34,7 +34,7 @@
       <a href="/policy-radar/sources/">来源状态</a>
     </nav>
   </header>
-<div class="sync">已核实 118/119 个来源 · 最后更新 2026-09-25 17:35 · 新加坡时间</div>
+<div class="sync">已核实 103/104 个来源 · 最后更新 2026-09-26 09:32 · 新加坡时间</div>
 <section><h1 class="section-title">今日必须处理</h1>
 <div class="card-stack"><article class="card event-card danger">
   <div class="event-meta">
@@ -55,36 +55,39 @@
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
     <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">Google Play Policy Center — Google Play Families Policies</a>
+    <a class="meta-source" href="https://developer.android.com/google/play/billing/deprecation-faq" target="_blank" rel="noopener noreferrer">Google Play Billing Library Deprecation FAQ</a>
     <span aria-hidden="true">·</span>
-<span>发布 2026-07-15</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-08-26 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_6b433e9f825362f6698f373b/">Google Play Families Policies 将禁止匿名聊天应用针对儿童</a></h3>
-<p class="event-summary">Google Play 在 2026 年 7 月政策更新预览中宣布，将扩展其《家庭政策要求》（Families Policy Requirements），明确禁止以匿名聊天或陌生人聊天为主要功能的应用（如聊天轮盘、约会应用、儿童开放式聊天室、匿名应用、“盲聊”应用等）将儿童列为目标受众。该变更将于 2026 年 8 月 26 日生效。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>若应用包含匿名聊天或陌生人聊天功能且目标受众包含儿童，将在生效后面临下架或暂停风险；涉及儿童隐私与内容安全合规，属 P0 级儿童保护政策，影响所有面向家庭/儿童市场的社交或含社交功能应用。</p></section>
-    <section><h4>需要行动</h4><p>1) 排查应用是否包含匿名聊天、陌生人匹配、开放式聊天室等功能；2) 若存在且目标受众含儿童，需在 2026-08-26 前移除相关功能或调整目标受众排除儿童；3) 更新 Play Console 中目标受众与内容分级问卷；4) 确保社交功能具备成人验证机制及在线安全提示；5) 同步法务与合规团队评估 COPPA/GDPR-K 合规。</p></section>
+<span>发布 2026-07-24</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-08-13 已生效</span></div>
+  <div class="date-strip">
+    <strong><small>截止</small>2026-08-31</strong>
   </div>
-<p class="event-owner"><strong>建议责任方</strong> 产品合规团队 / 应用开发团队</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（3 次更新）▾</summary><div class="milestones">
-<div class="milestone"><strong>2026-07-15 · Google Play Families 政策禁止匿名聊天应用针对儿童 · 公告</strong><span>首次收录：生效日 2026-08-26</span><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-07-21 · 公告</strong><span>本次无实质变化，仅来源与措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-07-23 · 公告</strong><span>本次无实质变化，仅来源与措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-billing-library-8-upgrade-2026-07-24/">Google Play Billing Library 8 迁移指南更新</a></h3>
+<p class="event-summary">Google 开发者文档页面《Migrate to Google Play Billing Library 8》于 2026-08-13 更新，release notes 中新增/调整了 Show buy、Enable reconnection、Handle Transactions、Installment Integration 等章节内容，涉及 Google Play Billing Library 8 的迁移指引。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>该迁移指南直接影响应用内购买与订阅的接入实现，涉及购买展示、断线重连、交易处理及分期付款集成等核心支付流程；若应用尚未完成 GPBLv8 迁移或需适配新增/变更行为，可能影响支付成功率、订阅续订及合规上架。</p></section>
+    <section><h4>需要行动</h4><p>1) 对照 GPBLv8 迁移指南逐项核查现有支付/订阅接入代码，重点关注 Show buy、Enable reconnection、Handle Transactions、Installment Integration 相关变更；2) 评估分期付款集成需求与产品规划；3) 在测试环境完成回归测试，确保购买、重连与交易处理行为符合最新指引；4) 关注后续官方对 GPBLv8 的强制生效/截止要求并纳入排期。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 支付订阅产品 / 发布负责人</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（2 次更新）▾</summary><div class="milestones">
+<div class="milestone"><strong>2026-07-24 · Google Play Billing Library 8 升级截止要求 · 公告</strong><span>首次收录：截止日 2026-08-31</span><a href="https://developer.android.com/google/play/billing/deprecation-faq" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-13 · 公告</strong><span>生效日：未标注 → 2026-08-13 · 截止日：2026-08-31 → 未标注 · 来源页面已更新</span><a href="https://developer.android.com/google/play/billing/migrate-gpblv8" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
   <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Center — Google Play Families Policies</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Center — Preview: Google Play Families Policies</span><span aria-hidden="true">↗</span></a>  </div>
+<a href="https://developer.android.com/google/play/billing/deprecation-faq" target="_blank" rel="noopener noreferrer"><span>Google Play Billing Library Deprecation FAQ</span><span aria-hidden="true">↗</span></a><a href="https://developer.android.com/google/play/billing/migrate-gpblv8" target="_blank" rel="noopener noreferrer"><span>Migrate to Google Play Billing Library 8</span><span aria-hidden="true">↗</span></a>  </div>
 </article><article class="card event-card danger">
   <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
     <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">Google Play Policy Deadlines</a>
+    <a class="meta-source" href="https://developer.apple.com/help/app-store-connect/release-notes/" target="_blank" rel="noopener noreferrer">App Store Connect Release Notes</a>
     <span aria-hidden="true">·</span>
-<span>发布 2026-07-15</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-08-26 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_b4c6fac08c7a970148d430ef/">Google Play 扩展年龄限制内容与功能政策至匿名聊天和随机聊天应用</a></h3>
-<p class="event-summary">Google Play 宣布将年龄限制内容与功能（Age-Restricted Content and Functionality）政策的适用范围扩展至匿名聊天（anonymous chat）和随机聊天（random chat）类应用。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>涉及匿名聊天或随机聊天功能的应用将面临更严格的年龄限制合规要求，可能需要增加年龄验证机制、内容分级或功能限制，否则可能面临下架或分发受限风险。</p></section>
-    <section><h4>需要行动</h4><p>排查旗下应用是否包含匿名聊天或随机聊天功能；如有，需评估当前年龄限制与内容管控措施是否满足新政策要求，并规划接入年龄验证或内容分级方案。</p></section>
+<span>发布 2026-08-18</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-10-01 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_52467bf4ff3d4e6bb36a5c07/">Apple 调整欧盟地区应用商业条款：取消核心技术费，引入核心技术佣金，并更新 App Store 佣金与替代支付规则</a></h3>
+<p class="event-summary">Apple 宣布自2026年10月1日起对欧盟地区应用实施新的商业条款：将面向所有在欧盟分发应用的开发者统一为一套商业条款；对数字商品和服务销售收取佣金；以5%的核心技术佣金（Core Technology Commission）取代按安装计费的核心技术费（Core Technology Fee），适用于通过 App Store 以外渠道分发的应用；同时取消初始获取费（Initial Acquisition Fee）和商店服务费（Store Services Fee）。关键更新包括：调整 App Store、替代支付及替代分发应用的佣金率；允许应用在 Apple 应用内购买之外提供替代支付选项；为 App Store 上的替代支付新增儿童安全保护措施；扩大开发者运营替代应用商店及通过网页分发应用的资质。Apple Developer Program License Agreement 新增 Attachment 14 明确欧盟相关条款，开发者可于当日在协议中查看并同意。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>对在欧盟市场分发应用或提供数字商品/服务的开发者产生直接财务与合规影响：佣金结构变化将改变成本模型；替代支付与替代分发渠道的开放带来新的支付接入、儿童安全合规及资质申请需求；需重新评估定价、分成、支付路由与欧盟用户旅程；涉及儿童或家庭类应用需额外满足替代支付的儿童安全保护要求。</p></section>
+    <section><h4>需要行动</h4><p>1) 在 Apple Developer 账户中审阅并签署更新后的 Apple Developer Program License Agreement（含 Attachment 14）；2) 评估欧盟市场的佣金与费用变化，更新财务模型与定价策略；3) 若计划使用替代支付或替代分发/网页分发，评估技术接入、合规流程与资质申请；4) 对涉及儿童或可能面向未成年人的应用，落实替代支付的儿童安全保护措施；5) 预约 Apple 提供的30分钟线上咨询以澄清细节。</p></section>
   </div>
-<p class="event-owner"><strong>建议责任方</strong> 合规/产品/研发</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（2 次更新）▾</summary><div class="milestones">
-<div class="milestone"><strong>2026-07-15 · Google Play 年龄限制内容政策扩展至匿名聊天和随机聊天应用 · 公告</strong><span>首次收录：生效日 2026-08-26</span><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-26 · 公告</strong><span>生效日：2026-08-26 → 未标注</span><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
+<p class="event-owner"><strong>建议责任方</strong> 法务合规/财务/产品与支付/欧盟区域业务负责人</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（2 次更新）▾</summary><div class="milestones">
+<div class="milestone"><strong>2026-08-18 · 欧盟替代分发、替代应用市场及替代支付选项相关更新 · 公告</strong><span>首次收录：生效日 2026-10-01</span><a href="https://developer.apple.com/help/app-store-connect/release-notes/" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-18 · 公告</strong><span>本次无实质变化，仅来源与措辞不同</span><a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
   <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a>  </div>
+<a href="https://developer.apple.com/help/app-store-connect/release-notes/" target="_blank" rel="noopener noreferrer"><span>App Store Connect Release Notes</span><span aria-hidden="true">↗</span></a><a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer"><span>Apple Developer News — App Review</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div></section>
 <section><h1 class="section-title">临近截止（30天内）</h1>
 <div class="empty">暂无事项</div></section>
@@ -136,21 +139,6 @@
 <a href="https://www.ftc.gov/legal-library/browse/cases-proceedings" target="_blank" rel="noopener noreferrer"><span>FTC Cases and Proceedings</span><span aria-hidden="true">↗</span></a>  </div>
 </article><article class="card event-card">
   <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">California Department of Justice</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://oag.ca.gov/media/news" target="_blank" rel="noopener noreferrer">California Attorney General Press Releases</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-08-26</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">监管</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_3e25f0a3d13f93e06135f0e5/">加州总检察长与 Meta 达成 170 亿美元和解，涉及 Instagram 和 Facebook 根本性变更</a></h3>
-<p class="event-summary">加州总检察长 Bonta 宣布与 Meta 达成 170 亿美元变革性和解协议，该协议包括对 Instagram 和 Facebook 的根本性变更。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>该和解协议涉及对 Instagram 和 Facebook 的根本性变更，可能影响应用商店内相关应用的合规要求、隐私政策、内容治理及儿童保护措施，对平台生态和开发者合规产生重大影响。</p></section>
-    <section><h4>需要行动</h4><p>1. 跟踪和解协议具体条款，评估对应用商店内 Meta 系应用及类似社交应用的合规要求；2. 审查现有隐私、儿童保护、内容治理政策是否需要相应调整；3. 与法务团队评估该和解对平台责任及开发者政策的潜在影响。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 法务合规部、产品政策部、信任与安全团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://oag.ca.gov/media/news" target="_blank" rel="noopener noreferrer"><span>California Attorney General Press Releases</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://android-developers.googleblog.com/2026/08/app-quality-memory-optimization-secure-onboarding.html" target="_blank" rel="noopener noreferrer">Android Developers Blog</a>
@@ -167,6 +155,21 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> Android 开发团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://android-developers.googleblog.com/2026/08/app-quality-memory-optimization-secure-onboarding.html" target="_blank" rel="noopener noreferrer"><span>Android Developers Blog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer">Google Play Games Level Up Guidelines</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-08-26</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2027 年 2 月 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_b7f4352386ca74ca4aec9528/">Google Play Level Up 内存指南更新：2027年2月起强制执行内存不良行为阈值</a></h3>
+<p class="event-summary">Google Play 更新了 Level Up 内存指南（LU-MM-GAA），明确自2027年2月起，游戏必须满足动态内存使用（anonymous RSS + swap）、位图使用和代码优化的既定不良行为阈值，方可获得或维持 Level Up 资格。开发者现可在 Android vitals 中监控相关内存指标和不良行为阈值。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>未达标的游戏将失去 Level Up 资格，影响游戏在 Google Play 的曝光、推荐及潜在收入。涉及所有 Android 版本的内存优化要求，需全面排查游戏内存表现。</p></section>
+    <section><h4>需要行动</h4><p>1. 立即在 Android vitals 中监控游戏的动态内存使用、位图使用和代码优化指标；2. 对照公布的内存阈值和不良行为标准进行优化；3. 制定内存优化计划，确保在2027年2月前达标；4. 关注官方发布的内存阈值和执行时间表。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 游戏开发团队/性能优化团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer"><span>Google Play Games Level Up Guidelines</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div></section>
 <section><h2 class="section-title">本月风险预览</h2><div class="risk-grid">
 <a class="metric" href="/policy-radar/store/"><span>开发者平台</span><strong class="risk-critical">极高风险</strong><span>本月发布 21 · 需行动 6</span></a>
@@ -174,11 +177,13 @@
 <a class="metric" href="/policy-radar/iaa/"><span>广告变现</span><strong class="risk-medium">中风险</strong><span>本月发布 1 · 需行动 1</span></a>
 <a class="metric" href="/policy-radar/thirdpayment/"><span>三方支付</span><strong class="risk-medium">中风险</strong><span>本月发布 26 · 需行动 2</span></a>
 <a class="metric" href="/policy-radar/ai/"><span>AI</span><strong class="risk-low">低风险</strong><span>本月发布 11 · 需行动 0</span></a>
-<a class="metric" href="/policy-radar/regulatory/"><span>监管</span><strong class="risk-low">低风险</strong><span>本月发布 12 · 需行动 0</span></a>
+<a class="metric" href="/policy-radar/regulatory/"><span>监管</span><strong class="risk-low">低风险</strong><span>本月发布 13 · 需行动 0</span></a>
 <a class="metric" href="/policy-radar/others/"><span>其他</span><strong class="risk-low">低风险</strong><span>本月发布 0 · 需行动 0</span></a>
 </div></section>
-<section><h2 class="section-title">近 7 天新增（共 22 条）</h2>
-<details class="new-day" open><summary><span class="new-day-date">2026-09-25</span><span class="new-day-count">本班 · 4 条</span><span class="new-day-chips"><span class="tag">P4 4</span></span></summary>
+<section><h2 class="section-title">近 7 天新增（共 23 条）</h2>
+<details class="new-day" open><summary><span class="new-day-date">2026-09-26</span><span class="new-day-count">本班 · 1 条</span><span class="new-day-chips"><span class="tag">P2 1</span></span></summary>
+<div class="new-list"><a class="new-row" href="/policy-radar/events/evt_3454c8fdbd2c64c7d004880a/"><span class="tag domain">监管</span><span class="title">澳大利亚eSafety Commissioner发布社交媒体限制易读版指南</span><span class="new-date">发布 2026-09-25</span><span class="priority">P2</span></a></div>
+</details><details class="new-day"><summary><span class="new-day-date">2026-09-25</span><span class="new-day-count">4 条</span><span class="new-day-chips"><span class="tag">P4 4</span></span></summary>
 <div class="new-list"><a class="new-row" href="/policy-radar/events/evt_59492ced50902c6edeb1848b/"><span class="tag domain">三方支付</span><span class="title">Stripe 监测到 Klarna 支付错误率升高并已解决</span><span class="new-date">发布 2026-09-25</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_dd1379efb80af6cd4e05fedb/"><span class="tag domain">三方支付</span><span class="title">PayPal发布现场站点维护初始通知</span><span class="new-date">发布 2026-09-25</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_eefc20426960970539394ee7/"><span class="tag domain">AI</span><span class="title">Anthropic API 扩大部分模型拒绝请求的计费范围</span><span class="new-date">发布 2026-09-24</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_8bd74e6686bf3a195ace6e2e/"><span class="tag domain">监管</span><span class="title">澳大利亚eSafety专员发布在线社区隐藏风险教育资源</span><span class="new-date">发布 2026-09-24</span><span class="priority">P4</span></a></div>
 </details><details class="new-day"><summary><span class="new-day-date">2026-09-24</span><span class="new-day-count">6 条</span><span class="new-day-chips"><span class="tag hot">P0-A 1</span><span class="tag">P4 5</span></span></summary>
 <div class="new-list"><a class="new-row" href="/policy-radar/events/evt_5664131febeed44e25653bb6/"><span class="tag domain">开发者平台</span><span class="title">Apple发布watchOS 27.0.1安全更新</span><span class="new-date">发布 2026-09-23</span><span class="priority">P0-A</span></a><a class="new-row" href="/policy-radar/events/evt_610c48ab9df8a20d98e5dcc0/"><span class="tag domain">三方支付</span><span class="title">Adapty新增trial_active和subscription_active事件</span><span class="new-date">发布 2026-09-23</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_fa1aac7ccd6f24c56c671c4a/"><span class="tag domain">三方支付</span><span class="title">Stripe API 错误率升高并已解决</span><span class="new-date">发布 2026-09-23</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_e96ddc2cf3f3206247498751/"><span class="tag domain">三方支付</span><span class="title">Paddle 支持通过 ID、邮箱或部分值过滤事件与通知日志</span><span class="new-date">发布 2026-09-23</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_e1eb83ccdf4405e959eabe47/"><span class="tag domain">三方支付</span><span class="title">TWINT 与 Bancontact 支付渠道计划维护</span><span class="new-date">发布 2026-09-23</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_5dded4f22f99977de418d2fe/"><span class="tag domain">三方支付</span><span class="title">Braintree Apple Pay 令牌化服务影响已解决</span><span class="new-date">发布 2026-09-23</span><span class="priority">P4</span></a></div>
