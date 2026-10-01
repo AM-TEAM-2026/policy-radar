@@ -29,13 +29,13 @@
         <summary>时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">6</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">4</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">2</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">4</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">1</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">2</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
     </nav>
   </header>
 <div class="breadcrumb"><a href="/policy-radar/">首页</a> › <a href="/policy-radar/ua/">买量</a> › 事件详情</div>
-<div class="tags"><span class="tag priority">P2</span><span class="tag lifecycle">2026 年 10 月 待生效</span><a class="tag domain" href="/policy-radar/ua/">买量</a></div>
+<div class="tags"><span class="tag priority">P2</span><span class="tag lifecycle">2026 年 10 月 已生效</span><a class="tag domain" href="/policy-radar/ua/">买量</a></div>
 <h1 class="event-title">Display &amp; Video 360 API 与结构化数据文件 2026 年 10 月变更</h1>
 <div class="detail-grid"><div><h2>事实摘要</h2><p>Google 宣布对 Display &amp; Video 360 API 及结构化数据文件进行三项未版本化变更：1) 自 2026-10-01 起，不再支持通过定向排除特定数字内容标签（TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION）；2) 自 2026-10-01 起，不再支持通过定向排除大多数敏感类别（TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION）；3) 自 2026-10-12 起，创建或更新 YouTube 响应式广告时，若父级广告主未分配默认值，则必须提供商家名称和 Logo。</p></div><div><h2>业务影响</h2><p>影响现有 Display &amp; Video 360 API 集成及 Line Item / Ad 结构化数据文件上传：1) 依赖数字内容标签排除定向的广告主将无法继续使用该排除选项，可能影响品牌安全策略与受众覆盖；2) 依赖敏感类别排除定向的广告主将无法继续排除大部分敏感类别，影响内容安全与合规投放；3) YouTube 响应式广告创建/更新流程将因缺少商家名称或 Logo 而失败，影响广告素材上传与投放效率。</p></div><div><h2>需要行动</h2><p>1) 审查现有 Line Item 结构化数据文件中 Digital Content Labels - Exclude、Brand Safety Sensitivity Setting、Brand Safety Custom Settings 列的使用情况，迁移至替代的品牌安全/内容过滤方案；2) 审查 API 中 TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION 与 TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION 的调用逻辑，移除或替换相关定向选项；3) 确保父级广告主已配置默认商家名称和 Logo，或在 Ad 结构化数据文件中为 YouTube 响应式广告补充必填字段，避免 10-12 后上传失败。</p></div><div><h2>建议责任方</h2><p>广告投放与集成开发团队</p></div></div>
 <section class="event-section"><h2>生命周期</h2><div class="milestones version-history"><div class="milestone"><strong>2026-08-27 · 公告</strong><a href="https://ads-developers.googleblog.com/2026/08/october-2026-changes-to-display-video.html" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div></div></section>
