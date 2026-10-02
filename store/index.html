@@ -43,7 +43,7 @@
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/17161464" target="_blank" rel="noopener noreferrer">Google Play Billing Choice Program</a>
     <span aria-hidden="true">·</span>
-<span class="date-fallback">发布时间未明确 / 首次发现 2026-10-01 18:55</span><span class="confirmed-badge">官方确认</span>  </div>
+<span class="date-fallback">发布时间未明确 / 首次发现 2026-10-01</span><span class="confirmed-badge">官方确认</span>  </div>
   <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-09-30 已生效</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_0599cc6fbd1680335f5f1f47/">Google Play 账单选择计划及新体验计划在澳日地区生效</a></h3>
 <p class="event-summary">Google Play 账单选择计划（Billing Choice Program）于2026年9月30日在澳大利亚和日本正式生效。同时，Games Level Up 和 Apps Experience 计划也于同日开放。开发者若提供应用内替代计费系统或引导用户至外部网页及预装支付应用，需集成账单选择 API。</p>  <div class="impact-action">
@@ -52,6 +52,24 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 支付/商业化团队、研发团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://support.google.com/googleplay/android-developer/answer/17161464" target="_blank" rel="noopener noreferrer"><span>Google Play Billing Choice Program</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer">Apple Developer News — App Review</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-01</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <div class="date-strip">
+    <strong><small>截止</small>2027-02-01</strong>
+  </div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_f470410dfc5c7d18877a0368/">Developer ID 证书颁发机构 (Sub-CA) 即将过期及替换指南</a></h3>
+<p class="event-summary">Apple 宣布原 Developer ID Certification Authority (Sub-CA) 将于 2027 年 2 月 1 日过期，届时由该机构签发的证书将停止工作。开发者需检查受影响的证书，并从当前的 Developer ID Certification Authority (G2) 生成替换证书。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>若未及时替换证书并重新签名，使用受影响证书签名的 .pkg 安装包在 2027 年 2 月 1 日后将无法安装，直接影响 Mac 应用的正常分发与更新。</p></section>
+    <section><h4>需要行动</h4><p>检查现有证书是否受影响，生成新的 G2 Sub-CA 证书，并在 2027 年 2 月 1 日前使用新证书重新签名 .pkg 安装包。对于 Mac 应用的未来更新，需使用新证书签名并包含安全时间戳以进行公证。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 开发团队/安全团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer"><span>Apple Developer News — App Review</span><span aria-hidden="true">↗</span></a><a href="https://developer.apple.com/news/?id=w4atic4c" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
 </article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google</span></div>
@@ -781,21 +799,6 @@
     <section><h4>需要行动</h4><p>评估并集成 Play Age Signals API，根据年龄信号调整应用内容、功能和安全设置；关注澳大利亚和加拿大的上线时间，准备全球 rollout。</p></section>
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 产品与合规团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://android-developers.googleblog.com/" target="_blank" rel="noopener noreferrer"><span>Android Developers Blog</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://android-developers.googleblog.com/" target="_blank" rel="noopener noreferrer">Android Developers Blog</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-07-29</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_db5c4bff860125a565f7650c/">Google Play 发布更安全、适龄体验相关政策</a></h3>
-<p class="event-summary">2026年7月29日，Google Play 产品管理副总裁 Paul Feng 发布博文，强调提供安全在线体验和保护用户免受伤害是首要任务，内容涉及在 Google Play 上提供更安全、适龄的体验。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>涉及儿童保护、内容治理及用户安全，可能影响应用的内容分级、年龄限制策略及合规要求，需关注后续具体政策细则。</p></section>
-    <section><h4>需要行动</h4><p>持续跟踪该博文后续链接或政策更新页面，评估是否涉及应用内容分级、年龄验证或儿童保护的具体合规要求，并提前准备应对方案。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 合规与产品团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://android-developers.googleblog.com/" target="_blank" rel="noopener noreferrer"><span>Android Developers Blog</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="开发者平台分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/store/page/2/">2</a><a href="/policy-radar/store/page/3/">3</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
