@@ -39,6 +39,21 @@
 <div class="card-stack">
 <article class="card event-card">
   <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer">Apple Developer News — App Review</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-02</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_17755d00af6608710d5f1252/">macOS 完全磁盘访问权限控制措施更新</a></h3>
+<p class="event-summary">Apple 宣布将对 macOS 的“完全磁盘访问权限”（Full Disk Access）引入额外的控制措施。由于部分开发者滥用该权限导致用户隐私泄露风险增加，且 AI 代理的发展进一步放大了此类风险，Apple 将要求用户在授予应用该权限时必须采取非常明确的操作，以确保用户充分了解风险并做出知情决定。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>依赖“完全磁盘访问权限”的 Mac 应用（如备份、通信、AI 代理等）在获取该权限时将面临更严格的用户授权流程，可能导致授权转化率下降或需要重新设计权限请求交互；同时需确保应用不会滥用该权限访问无关的敏感数据，否则可能面临审核风险。</p></section>
+    <section><h4>需要行动</h4><p>1. 审查应用中“完全磁盘访问权限”的使用场景，确保仅用于核心功能且符合 Apple 隐私规范；2. 评估权限请求交互设计，准备适配未来更严格的明确授权流程；3. 检查应用是否存在过度收集或暴露用户敏感数据（如文件、邮件、浏览历史等）的行为并进行整改。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> Mac 客户端开发团队 / 隐私合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer"><span>Apple Developer News — App Review</span><span aria-hidden="true">↗</span></a><a href="https://developer.apple.com/news/?id=p6zjojqw" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/17161464" target="_blank" rel="noopener noreferrer">Google Play Billing Choice Program</a>
@@ -785,21 +800,6 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> Android 研发 / 商店运营</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://support.google.com/googleplay/android-developer/answer/17068375?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Console Announcements</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://android-developers.googleblog.com/" target="_blank" rel="noopener noreferrer">Android Developers Blog</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-07-29</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026 年 8 月 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_11c9169940b9a1fd2d7bb0d7/">Google Play 将 Age Signals API 全球扩展至所有开发者</a></h3>
-<p class="event-summary">Google Play 宣布将 Age Signals API 从巴西扩展至澳大利亚和加拿大（2026年8月中旬），并于今年晚些时候全球上线。该 API 允许父母通过 Family Link 分享儿童年龄范围，开发者可据此调整应用内安全体验和内容，属于隐私保护工具。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>涉及儿童隐私与内容治理，开发者需集成 Age Signals API 以实现适龄内容分发，影响应用内容策略和安全设置。</p></section>
-    <section><h4>需要行动</h4><p>评估并集成 Play Age Signals API，根据年龄信号调整应用内容、功能和安全设置；关注澳大利亚和加拿大的上线时间，准备全球 rollout。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 产品与合规团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://android-developers.googleblog.com/" target="_blank" rel="noopener noreferrer"><span>Android Developers Blog</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="开发者平台分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/store/page/2/">2</a><a href="/policy-radar/store/page/3/">3</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 </body>
