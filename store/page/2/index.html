@@ -39,6 +39,36 @@
 <div class="card-stack">
 <article class="card event-card">
   <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.apple.com/help/app-store-connect/release-notes/" target="_blank" rel="noopener noreferrer">App Store Connect Release Notes</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026 年 8 月</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P3</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_b31ba4bb868d25fa89b37ed4/">新增 Analytics 推广活动常见问题排查 FAQ</a></h3>
+<p class="event-summary">发布说明新增故障排查 FAQ，覆盖：活动不显示的原因、campaign token 与 provider token 的区别、报告数据缺失、以及 storefront 重定向等常见问题。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>为营销与数据分析团队提供排查指引，有助于快速定位和解决 Analytics 活动数据异常问题。</p></section>
+    <section><h4>需要行动</h4><p>将新增 FAQ 纳入内部知识库，遇到 Analytics 活动数据问题时优先参照排查。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 市场 / 增长 / 数据分析 / 技术支持</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.apple.com/help/app-store-connect/release-notes/" target="_blank" rel="noopener noreferrer"><span>App Store Connect Release Notes</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/17068375?hl=en" target="_blank" rel="noopener noreferrer">Google Play Console Announcements</a>
+    <span aria-hidden="true">·</span>
+<span>发布 ≤2026-07-31</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-08-03 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-refund-protection-chargeback-2026-08-03/">Google Play Refund Protection 与 Chargeback 成本分担</a></h3>
+<p class="event-summary">对 2026-08-03 后下单的订单，开发者承担扣除 Play 服务费后的购买价及金融机构拒付手续费，Google 继续承担服务费；Review Refund API 已可选使用。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>退款与拒付成本从 Google 转移到开发者：2026-08-03 后的订单要承担扣除服务费后的购买价加拒付手续费，高退款率品类的实际到手收入会明显下滑。</p></section>
+    <section><h4>需要行动</h4><p>按历史退款率与拒付率测算新规下的成本增量并更新收入模型；评估接入 Review Refund API 以拦截可疑退款；同步收紧高风险地区与支付方式的风控。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 商店运营</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/answer/17068375?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Console Announcements</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://android-developers.googleblog.com/" target="_blank" rel="noopener noreferrer">Android Developers Blog</a>
@@ -776,36 +806,6 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> iOS 研发 / 隐私与儿童合规 / 法务</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://developer.apple.com/news/?id=f5zj08ey" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://android-developers.googleblog.com/2026/02/the-second-beta-of-android-17.html" target="_blank" rel="noopener noreferrer">Android Developers Blog</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-02-26</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026 年 3 月 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-android-17-beta-2-2026-02-26/">Android 17 Beta 2</a></h3>
-<p class="event-summary">Android 17 Beta 2 引入 Contacts Picker、ACCESS_LOCAL_NETWORK、OTP 三小时延迟保护和 Handoff，并公布 Platform Stability 与季度版本节奏。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>Android 17 的 ACCESS_LOCAL_NETWORK 与 OTP 三小时延迟保护会影响局域网发现和短信验证码类功能；Platform Stability 时间点决定适配窗口。</p></section>
-    <section><h4>需要行动</h4><p>在 Beta 上验证局域网发现、OTP 读取和 Contacts Picker 相关功能；按公布的 Platform Stability 日期倒排适配排期。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> Android 研发 / 商店运营</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://android-developers.googleblog.com/2026/02/the-second-beta-of-android-17.html" target="_blank" rel="noopener noreferrer"><span>Android Developers Blog</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.apple.com/news/?id=gvnljl3f" target="_blank" rel="noopener noreferrer">Apple Developer News</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-02-13</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-app-store-multi-country-tax-mauritius-pricing-2026-02-13/">App Store 调整多国税率与毛里求斯价格</a></h3>
-<p class="event-summary">9 个国家/地区的税率自 2026-01-29 起调整；非毛里求斯基准商店的价格自 2026-02-16 起自动更新。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>影响多个市场的税后收入、价格表与财务对账。</p></section>
-    <section><h4>需要行动</h4><p>分别核对税率变化与毛里求斯价格更新，验证结算结果。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> App Store 定价 / 财务税务 / 区域运营</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.apple.com/news/?id=gvnljl3f" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="开发者平台分页"><a href="/policy-radar/store/">1</a><span class="current" aria-current="page">2</span><a href="/policy-radar/store/page/3/">3</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 </body>
