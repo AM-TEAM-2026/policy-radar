@@ -41,6 +41,111 @@
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
     <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer">Anthropic API Release Notes</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-08</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_2654cebf285b74e559a879ce/">Compliance API支持检索统一Claude体验的聊天记录</a></h3>
+<p class="event-summary">Compliance API聊天端点现支持返回统一Claude体验中的聊天记录（针对Claude Enterprise组织Beta版），可使用现有Compliance Access Key进行检索和删除。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>扩大了企业合规审查的数据范围，支持对统一体验中的聊天、文件和项目进行合规管理，涉及隐私与数据安全合规。</p></section>
+    <section><h4>需要行动</h4><p>Enterprise组织合规管理员可使用现有的Compliance Access Key，通过API检索和删除统一体验中的相关数据。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer"><span>Anthropic API Release Notes</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer">Anthropic API Release Notes</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-07</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_d9c6caef02d6c3ffac27fbf6/">Claude Managed Agents受限网络环境将allowed_hosts应用于Web工具</a></h3>
+<p class="event-summary">在受限网络环境中，allowed_hosts配置现在同样应用于web_search和web_fetch工具。不匹配的域名将被拦截或忽略。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>加强了Agent的网络访问控制和安全边界，防止Agent访问未授权的域名。</p></section>
+    <section><h4>需要行动</h4><p>检查并更新受限网络环境中的allowed_hosts配置，确保包含Agent需要访问的合法域名，避免工具调用报错。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 安全团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer"><span>Anthropic API Release Notes</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer">Anthropic API Release Notes</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-07</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_9c271bb807720f530dd6c1e6/">Claude Managed Agents增强web_fetch工具安全限制以防数据泄露</a></h3>
+<p class="event-summary">在Claude Managed Agents中，web_fetch工具现仅允许获取会话上下文中已出现的URL，以防止数据外泄风险。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>提升了Agent环境的数据安全性，限制了Agent随意抓取外部URL的能力，降低了隐私和数据泄露风险。</p></section>
+    <section><h4>需要行动</h4><p>在开发Agent时，若需Agent抓取特定URL，必须通过user.message事件将该URL作为文本发送，确保其出现在会话上下文中。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 安全团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer"><span>Anthropic API Release Notes</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://status.claude.com/" target="_blank" rel="noopener noreferrer">Claude Status</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-07</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_6cae9812f17bc649ae460cad/">Claude 支出限制错误导致部分组织被暂停问题已解决</a></h3>
+<p class="event-summary">部分组织因达到支出限制（spend limit）被错误暂停，导致 Claude API、Claude.ai 等服务拒绝请求。该问题已于 2026 年 10 月 7 日 21:23 UTC 解决。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>受影响组织的 API 请求被拒绝，导致服务中断和业务流程受阻。</p></section>
+    <section><h4>需要行动</h4><p>确认服务已恢复，检查被错误暂停的组织是否已自动恢复，并监控后续账单和请求状态。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 平台运营/技术支持</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://status.claude.com/" target="_blank" rel="noopener noreferrer"><span>Claude Status</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer">Anthropic API Release Notes</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-07</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_3836765fadfc4bb1f5546cd4/">Claude Max和Team订阅计划新增月度API额度</a></h3>
+<p class="event-summary">Claude Max和Team订阅计划现在包含每月的API额度，用户可按照指南进行领取和使用。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>影响订阅计划的权益内容，为Max和Team用户提供额外的API调用额度，涉及订阅与支付权益的变更。</p></section>
+    <section><h4>需要行动</h4><p>查阅官方指南，了解如何在Max和Team计划中领取和使用新增的月度API额度。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 订阅管理团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer"><span>Anthropic API Release Notes</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://openai.com/news/" target="_blank" rel="noopener noreferrer">OpenAI News</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-07</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_7470f8fd8a2f3730ba4deeff/">OpenAI发布面向青少年的AI学习与规划产品</a></h3>
+<p class="event-summary">OpenAI于2026年10月7日发布新产品，旨在帮助青少年学习、规划并塑造AI的未来。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>涉及青少年（儿童）群体的AI产品使用，可能引发对未成年人保护、儿童隐私及内容安全的合规关注。</p></section>
+    <section><h4>需要行动</h4><p>关注该产品针对青少年群体的具体功能设计、隐私保护及内容过滤机制，评估是否符合未成年人保护相关法规。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 合规/法务部</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://openai.com/news/" target="_blank" rel="noopener noreferrer"><span>OpenAI News</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://openai.com/news/" target="_blank" rel="noopener noreferrer">OpenAI News</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-07</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_051fe48f457ad64ab835ff7c/">OpenAI发布GPT-6 Sol和GPT-6 Luna 2026年10月安全更新</a></h3>
+<p class="event-summary">OpenAI于2026年10月7日发布GPT-6 Sol和GPT-6 Luna模型的安全更新。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>涉及底层AI模型的安全机制更新，可能影响内容治理、账号安全及系统整体安全性。</p></section>
+    <section><h4>需要行动</h4><p>跟踪安全更新的具体技术细节，评估对现有业务接入OpenAI API的安全性和合规性影响，必要时升级安全策略。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 安全/技术部</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://openai.com/news/" target="_blank" rel="noopener noreferrer"><span>OpenAI News</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
+    <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://www.anthropic.com/news" target="_blank" rel="noopener noreferrer">Anthropic Newsroom</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-10-06</span><span class="confirmed-badge">官方确认</span>  </div>
