@@ -29,7 +29,7 @@
         <summary class="active">时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">4</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">1</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a class="active" aria-current="page" href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">2</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">4</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">1</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a class="active" aria-current="page" href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">3</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
     </nav>
@@ -38,6 +38,21 @@
 <header class="page-heading"><h1>三方支付</h1><p>PayPal、Stripe、Adyen、Checkout.com、Paddle 等</p></header>
 <div class="card-stack">
 <article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-09</span><span class="confirmed-badge">官方确认</span>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">2026-10-19 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_2ba6b1c2caf6d7b6ab27670e/">Stripe 发布 TWINT 支付方式计划维护通知</a></h3>
+<p class="event-summary">Stripe 状态页发布通知，TWINT 支付方式将于 2026年10月19日 23:00 UTC 至 10月20日 03:00 UTC 进行计划内维护。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>在维护窗口期间，依赖 TWINT 支付方式的交易可能会出现中断或失败，影响部分用户的支付体验。</p></section>
+    <section><h4>需要行动</h4><p>监控维护期间的支付成功率，必要时在维护时段内引导用户切换至其他可用的支付方式，并提前向相关商户或用户发布维护公告。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付运营团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
     <span aria-hidden="true">·</span>
@@ -772,21 +787,6 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 支付与商户平台运维/支付产品团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://www.paypal-status.com/history/eventdetails/107938" target="_blank" rel="noopener noreferrer"><span>PayPal Status</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Adapty</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://changelog.adapty.io/" target="_blank" rel="noopener noreferrer">Adapty Product Updates</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026 年 8 月</span><span class="confirmed-badge">官方确认</span>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">2026 年 8 月 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_0413f7e6b7f2d3f59ff30124/">Adapty 支持 Apple Retention Messaging API 及新增 Flow &amp; Paywall Builder 模板</a></h3>
-<p class="event-summary">Adapty 于 2026 年 8 月发布更新，新增对 Apple Retention Messaging API 的支持，允许开发者在取消订阅界面发送价值提醒、折扣或套餐切换信息，支持无 SDK 更新配置、设备端预览、AI 本地化及保存率分析。同时推出新的 Flow &amp; Paywall Builder 模板（入职测验、折扣优惠、单屏付费墙），支持无需发版即可上线。此外，新增按需同步 Apple Ads 数据功能。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>提升订阅留存管理能力，优化付费墙和入职流程配置效率，增强 Apple Ads 数据同步灵活性。</p></section>
-    <section><h4>需要行动</h4><p>评估是否启用 Apple Retention Messaging API 以提升订阅留存；测试新模板并考虑替换现有付费墙或入职流程；配置按需同步 Apple Ads 数据以确保数据实时性。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 产品团队、增长团队、开发团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://changelog.adapty.io/" target="_blank" rel="noopener noreferrer"><span>Adapty Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="三方支付分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/thirdpayment/page/2/">2</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 </body>
