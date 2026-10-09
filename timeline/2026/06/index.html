@@ -16,6 +16,8 @@
     @media(max-width:650px){.shell{width:min(100% - 24px,1040px);margin-top:var(--space-1)}.site-header{align-items:flex-start;flex-direction:column}nav{justify-content:flex-start;width:100%;gap:0}nav a{padding:0 var(--space-1)}.card-grid{grid-template-columns:1fr}.card{padding:var(--space-2)}.impact-action{grid-template-columns:1fr}.date-strip strong{width:100%;justify-content:space-between}.card-source-links a{width:100%}.timeline-row{display:block}.timeline-date{width:auto;margin-bottom:var(--space-1)}.new-row{align-items:flex-start;flex-wrap:wrap;gap:var(--space-1)}.new-row .title{flex-basis:70%}.new-date{width:100%;order:3}.source-row{align-items:flex-start;flex-wrap:wrap;gap:var(--space-1)}.source-name{flex-basis:65%}.source-message{width:100%;text-align:left;padding-left:18px}.event-title{font-size:1.375rem}.detail-grid{grid-template-columns:1fr}}
     .nav-timeline{position:relative}.nav-timeline summary{list-style:none;min-height:44px;display:flex;align-items:center;padding:0 var(--space-1);color:var(--muted);font-size:var(--font-caption);font-weight:500;border-radius:8px;cursor:pointer}.nav-timeline summary::-webkit-details-marker{display:none}.nav-timeline summary:hover{background:var(--subtle);color:var(--ink)}.nav-timeline summary.active{color:var(--accent);background:var(--accent-soft)}.nav-menu{position:absolute;z-index:10;right:0;top:calc(100% + 4px);min-width:180px;padding:var(--space-1);display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}.nav-menu a{justify-content:space-between;white-space:nowrap}.nav-badge{min-width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;margin-left:var(--space-1);padding:0 6px;border-radius:999px;background:var(--critical-soft);color:var(--critical);font-size:var(--font-caption);font-variant-numeric:tabular-nums}
     @media(max-width:650px){.nav-timeline{position:static}.nav-menu{position:static;width:100%;min-width:0;margin-bottom:var(--space-1);box-shadow:none}.nav-timeline[open]{width:100%}.nav-menu a{width:100%}}
+    .event-status{display:inline-flex;align-items:center;flex-wrap:wrap;gap:var(--space-1);margin-left:auto;font-size:var(--font-caption)}.event-status[hidden]{display:none}.status-badge,.status-select{min-height:32px;padding:0 var(--space-1);border-radius:8px;font:700 var(--font-caption)/1 "Noto Sans SC",-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}.status-badge{display:inline-flex;align-items:center}.status-select{border:1px solid color-mix(in srgb,var(--ink) 22%,transparent);background:var(--surface);color:var(--ink);box-shadow:0 1px 2px color-mix(in srgb,var(--ink) 8%,transparent);cursor:pointer}.status-select:hover{border-color:var(--accent)}.status-select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.status-unset .status-select{color:var(--muted)}.status-pending .status-badge{background:var(--warning-soft);color:var(--warning)}.status-notified .status-badge{background:var(--success-soft);color:var(--success)}.status-irrelevant .status-badge{background:var(--subtle);color:var(--muted)}.status-dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto;background:var(--muted)}.status-pending .status-dot{background:var(--warning)}.status-notified .status-dot{background:var(--success)}.status-unset .status-dot{background:transparent;box-shadow:inset 0 0 0 1.5px var(--muted)}.status-note{color:var(--muted);font-size:var(--font-caption)}.status-note.stale,.status-note.error{color:var(--critical);font-weight:500}
+    .status-auth{display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-1);color:var(--muted);font-size:var(--font-caption)}.status-auth[hidden],.status-login[hidden]{display:none}.status-auth-button{min-height:44px;padding:0 var(--space-1);border:0;border-radius:8px;background:transparent;color:var(--accent);font-family:inherit;font-size:var(--font-caption);font-weight:500;line-height:1;cursor:pointer}.status-auth-button:hover{background:var(--accent-soft)}.status-auth-button:disabled{color:var(--muted);cursor:wait}.status-auth{position:relative}.status-login{position:absolute;z-index:10;right:0;top:calc(100% + 4px);width:260px;padding:var(--space-2);display:flex;flex-direction:column;align-items:stretch;gap:var(--space-1);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}.status-login .status-auth-button[type=submit]{justify-content:center;background:var(--accent);color:var(--surface)}.status-auth-button.secondary{color:var(--muted)}.status-login input{min-height:40px;width:100%;padding:0 var(--space-1);border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.card,nav a{transition:none}.card:hover{transform:none}}
   </style>
 </head>
@@ -32,7 +34,7 @@
 <a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">4</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">1</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">3</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
-    </nav>
+<div class="status-auth" data-status-auth hidden></div>    </nav>
   </header>
 <div class="breadcrumb"><a href="/policy-radar/">首页</a> › <a href="/policy-radar/timeline/">时间线</a></div>
 <header class="page-heading"><h1>2026-06 月度归档</h1><p>本月共 10 个政策事件。</p></header>
@@ -42,7 +44,7 @@
 <span>发布 2026-06-26</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-06-30 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-06-30 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-billing-choice-program-2026-06-26" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-billing-choice-program-2026-06-26/">Google Play 扩大 Billing Choice Program 市场并调整费率拆分</a></h2>
     <p>自 2026-06-30 起，美国、英国与 EEA 可使用第三方支付和外链支付，同时保留 Google Play Billing；服务费与支付处理费分离，服务费按用户类型分档。</p>
   </div>
@@ -51,7 +53,7 @@
 <span>发布 2026-06-18</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-06-18 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-06-18 已生效</span><div class="event-status" data-event-status data-event-id="evt_0c66c7631d8eedca10394144" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_0c66c7631d8eedca10394144/">巴西 iOS 替代分发、替代支付及核心技术佣金政策生效</a></h2>
     <p>根据与巴西竞争监管机构 CADE 的协议，自 iOS 26.5 起，开发者可在巴西通过替代应用市场分发应用、运营替代应用市场、在 Apple In-App Purchase 之外处理数字商品和服务支付，并涉及核心技术佣金（Core Technology Commission）。Apple Developer Program License Agreement Attachment 12 已修订相应条款。</p>
   </div>
@@ -60,7 +62,7 @@
 <span>发布 2026-06-18</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_d3736e32342a0f9c8ccf968c" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_d3736e32342a0f9c8ccf968c/">巴西 iOS 变更：替代分发、替代支付与 Core Technology Commission（2026-06-18）</a></h2>
     <p>Apple 与巴西竞争监管机构 CADE 达成协议，自 iOS 26.5 起，开发者可在巴西通过替代应用市场分发应用、运营替代应用市场、在 Apple 内购之外处理数字商品与服务的支付等。Apple Developer Program License Agreement Attachment 12 已更新，明确巴西地区替代分发、替代支付、应用外报价及 Core Technology Commission 条款。</p>
   </div>
@@ -69,7 +71,7 @@
 <span>发布 2026-06-17</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Federal Trade Commission</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-ftc-genesis-tech-subscription-case-2026-06-17" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-ftc-genesis-tech-subscription-case-2026-06-17/">FTC 起诉 Genesis Tech 订阅业务体系</a></h2>
     <p>FTC 指控相关企业隐藏自动续费条款、未经授权或重复收费，并设置困难的取消流程。案件涉及 MadMuscles、Harna、Unimeal、Wisey、PDF Guru、PDF Master、Lumi 与 Nebula 等产品。主要风险点包括自动续费披露、扣费授权、重复与附加收费及便捷取消。</p>
   </div>
@@ -78,7 +80,7 @@
 <span>发布 2026-06-11</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_1a2052f4d457d5f334cd4cad" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_1a2052f4d457d5f334cd4cad/">ImageCreator 类将在 iOS 27 等平台弃用</a></h2>
     <p>Apple 宣布 ImageCreator 类将被停用，在 iOS 27、iPadOS 27、macOS 27、visionOS 27 及更高版本中不再工作。该类此前用于通过 Image Playground 框架在应用内以编程方式生成图像。</p>
   </div>
@@ -87,7 +89,7 @@
 <span>发布 2026-06-09</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-apple-developer-agreement-review-guidelines-2026-06-09" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-apple-developer-agreement-review-guidelines-2026-06-09/">Apple 更新开发者协议、AI/ML 条款与儿童安全审核要求</a></h2>
     <p>更新开发者身份与出口合规要求，新增 AI/ML 条款；审核指南补充儿童安全要求，并限制使用 Live Activities 发送营销、钓鱼或骚扰信息。</p>
   </div>
@@ -96,7 +98,7 @@
 <span>发布 2026-06-03</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-texas-app-store-accountability-2026-06-03" data-version="2" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-texas-app-store-accountability-2026-06-03/">Google Play 针对美国多州应用商店法案推出 Play Age Signals API 及相关合规工具</a></h2>
 <span class="tag">2 次更新</span>    <p>Google Play 发布帮助页面，说明美国部分州（如德州 SB 2420）已通过要求应用商店验证用户年龄、获取家长同意并向开发者提供用户年龄信息的法律。德州法案在联邦上诉法院暂停2025年12月初步禁令后已生效。Google Play 计划推出 Play Age Signals API（beta，建议版本 0.0.4）、Play Console 中无需发版即可通知“重大变更”的功能、家长撤销同意的报告，以及为 Play Billing Library 的购买 SKU 添加年龄评级的功能（未来数周内上线）。Google Play 不强制开发者使用该 API，但开发者需自行评估法律适用性并合规。</p>
   </div>
@@ -105,7 +107,7 @@
 <span>发布 2026-06-03</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-06-04 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-06-04 已生效</span><div class="event-status" data-event-status data-event-id="evt_e874d2644882068b29db2005" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_e874d2644882068b29db2005/">德克萨斯州年龄验证与未成年人同意要求生效</a></h2>
     <p>因法院解除对德州 SB 2420 法律的禁令，新 Apple Accounts 在德州须遵守年龄验证要求。开发者须对 18 岁以下用户的下载、Apple In-App Purchases 及应用重大变更获取父母或监护人同意，父母可撤销同意。开发者需通过 Declared Age Range API 获取年龄分类数据，通过 PermissionKit 下的 Significant Change API 处理重大变更，并配置 App Store 服务器通知以接收同意撤销信息。</p>
   </div>
@@ -114,7 +116,7 @@
 <span>发布 2026-06-03</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_d722345bafabae220a376e53" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_d722345bafabae220a376e53/">德州 SB 2420 年龄验证要求生效：新账号需年龄验证与监护人同意</a></h2>
     <p>因法院裁决解除对德州法律 SB 2420 的禁令，德州地区的新 Apple Account 现须遵守该法律引入的应用市场与开发者年龄验证要求：包括年龄验证，以及 18 岁以下未成年人下载、Apple 内购及应用重大变更需父母或监护人同意；父母或监护人可撤销此前对子女应用的同意。</p>
   </div>
@@ -123,11 +125,11 @@
 <span>发布 2026 年 6 月</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-brazil-pix-automatico-2026-06" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-brazil-pix-automatico-2026-06/">Google Play 巴西支持 Pix Automático 订阅支付</a></h2>
     <p>Google Play 开发者月报（2026 年 6 月）说明 Pix Automático 正在巴西 Google Play 上线，支持订阅和一次性商品，开发者无需额外接入工作。月报未给出具体的全量上线日期。</p>
   </div>
 </article></div><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
-</body>
+<script src="/policy-radar/assets/event-status.js" defer></script></body>
 </html>

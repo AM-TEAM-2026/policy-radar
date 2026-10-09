@@ -16,6 +16,8 @@
     @media(max-width:650px){.shell{width:min(100% - 24px,1040px);margin-top:var(--space-1)}.site-header{align-items:flex-start;flex-direction:column}nav{justify-content:flex-start;width:100%;gap:0}nav a{padding:0 var(--space-1)}.card-grid{grid-template-columns:1fr}.card{padding:var(--space-2)}.impact-action{grid-template-columns:1fr}.date-strip strong{width:100%;justify-content:space-between}.card-source-links a{width:100%}.timeline-row{display:block}.timeline-date{width:auto;margin-bottom:var(--space-1)}.new-row{align-items:flex-start;flex-wrap:wrap;gap:var(--space-1)}.new-row .title{flex-basis:70%}.new-date{width:100%;order:3}.source-row{align-items:flex-start;flex-wrap:wrap;gap:var(--space-1)}.source-name{flex-basis:65%}.source-message{width:100%;text-align:left;padding-left:18px}.event-title{font-size:1.375rem}.detail-grid{grid-template-columns:1fr}}
     .nav-timeline{position:relative}.nav-timeline summary{list-style:none;min-height:44px;display:flex;align-items:center;padding:0 var(--space-1);color:var(--muted);font-size:var(--font-caption);font-weight:500;border-radius:8px;cursor:pointer}.nav-timeline summary::-webkit-details-marker{display:none}.nav-timeline summary:hover{background:var(--subtle);color:var(--ink)}.nav-timeline summary.active{color:var(--accent);background:var(--accent-soft)}.nav-menu{position:absolute;z-index:10;right:0;top:calc(100% + 4px);min-width:180px;padding:var(--space-1);display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}.nav-menu a{justify-content:space-between;white-space:nowrap}.nav-badge{min-width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;margin-left:var(--space-1);padding:0 6px;border-radius:999px;background:var(--critical-soft);color:var(--critical);font-size:var(--font-caption);font-variant-numeric:tabular-nums}
     @media(max-width:650px){.nav-timeline{position:static}.nav-menu{position:static;width:100%;min-width:0;margin-bottom:var(--space-1);box-shadow:none}.nav-timeline[open]{width:100%}.nav-menu a{width:100%}}
+    .event-status{display:inline-flex;align-items:center;flex-wrap:wrap;gap:var(--space-1);margin-left:auto;font-size:var(--font-caption)}.event-status[hidden]{display:none}.status-badge,.status-select{min-height:32px;padding:0 var(--space-1);border-radius:8px;font:700 var(--font-caption)/1 "Noto Sans SC",-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}.status-badge{display:inline-flex;align-items:center}.status-select{border:1px solid color-mix(in srgb,var(--ink) 22%,transparent);background:var(--surface);color:var(--ink);box-shadow:0 1px 2px color-mix(in srgb,var(--ink) 8%,transparent);cursor:pointer}.status-select:hover{border-color:var(--accent)}.status-select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.status-unset .status-select{color:var(--muted)}.status-pending .status-badge{background:var(--warning-soft);color:var(--warning)}.status-notified .status-badge{background:var(--success-soft);color:var(--success)}.status-irrelevant .status-badge{background:var(--subtle);color:var(--muted)}.status-dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto;background:var(--muted)}.status-pending .status-dot{background:var(--warning)}.status-notified .status-dot{background:var(--success)}.status-unset .status-dot{background:transparent;box-shadow:inset 0 0 0 1.5px var(--muted)}.status-note{color:var(--muted);font-size:var(--font-caption)}.status-note.stale,.status-note.error{color:var(--critical);font-weight:500}
+    .status-auth{display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-1);color:var(--muted);font-size:var(--font-caption)}.status-auth[hidden],.status-login[hidden]{display:none}.status-auth-button{min-height:44px;padding:0 var(--space-1);border:0;border-radius:8px;background:transparent;color:var(--accent);font-family:inherit;font-size:var(--font-caption);font-weight:500;line-height:1;cursor:pointer}.status-auth-button:hover{background:var(--accent-soft)}.status-auth-button:disabled{color:var(--muted);cursor:wait}.status-auth{position:relative}.status-login{position:absolute;z-index:10;right:0;top:calc(100% + 4px);width:260px;padding:var(--space-2);display:flex;flex-direction:column;align-items:stretch;gap:var(--space-1);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}.status-login .status-auth-button[type=submit]{justify-content:center;background:var(--accent);color:var(--surface)}.status-auth-button.secondary{color:var(--muted)}.status-login input{min-height:40px;width:100%;padding:0 var(--space-1);border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.card,nav a{transition:none}.card:hover{transform:none}}
   </style>
 </head>
@@ -32,7 +34,7 @@
 <a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">4</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">1</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">3</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
-    </nav>
+<div class="status-auth" data-status-auth hidden></div>    </nav>
   </header>
 <div class="breadcrumb"><a href="/policy-radar/">首页</a> › <a href="/policy-radar/timeline/">时间线</a></div>
 <header class="page-heading"><h1>重要平台时间线</h1><p>按发布时间从近到远；发布时间缺失时使用首次发现时间。</p></header>
@@ -49,10 +51,28 @@
 <div class="timeline">
 <article class="timeline-row compact-card">
   <div class="timeline-date">
+<span>发布 2026-07-30</span>  </div>
+  <div class="timeline-content">
+    <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
+    <div class="tags"><span class="tag domain">AI</span><span class="tag priority">P4</span><span class="tag lifecycle">2026-07-30 已生效</span><div class="event-status" data-event-status data-event-id="evt_71b5ff464121fc68f8ce6506" data-version="1" hidden></div></div>
+    <h2><a href="/policy-radar/events/evt_71b5ff464121fc68f8ce6506/">OpenAI API 调整 GPT-5.6 系列模型定价并推出 Fast mode 替代 Priority Processing</a></h2>
+    <p>自 2026 年 7 月 30 日起，GPT-5.6 Luna 价格下降 80%，GPT-5.6 Terra 价格下降 20%。同时推出 Fast mode 替代原有 Priority Processing 服务：GPT-5.6 Sol 在 Fast mode 下速度最高提升 2.5 倍，价格为标准处理的两倍。该变更向后兼容，原有 priority 标记的请求将自动使用 Fast mode。</p>
+  </div>
+</article><article class="timeline-row compact-card">
+  <div class="timeline-date">
+<span>发布 2026-07-29</span>  </div>
+  <div class="timeline-content">
+    <div class="card-platforms"><span class="platform-badge">Google</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026 年 8 月 已生效</span><div class="event-status" data-event-status data-event-id="evt_11c9169940b9a1fd2d7bb0d7" data-version="1" hidden></div></div>
+    <h2><a href="/policy-radar/events/evt_11c9169940b9a1fd2d7bb0d7/">Google Play 将 Age Signals API 全球扩展至所有开发者</a></h2>
+    <p>Google Play 宣布将 Age Signals API 从巴西扩展至澳大利亚和加拿大（2026年8月中旬），并于今年晚些时候全球上线。该 API 允许父母通过 Family Link 分享儿童年龄范围，开发者可据此调整应用内安全体验和内容，属于隐私保护工具。</p>
+  </div>
+</article><article class="timeline-row compact-card">
+  <div class="timeline-date">
 <span>发布 2026-07-29</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Federal Trade Commission</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_ff214e799c16d084235bbbc0" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_ff214e799c16d084235bbbc0/">FTC 提起新诉讼：寻求永久禁令、金钱判决及民事处罚</a></h2>
     <p>FTC 于 2026-07-29 发布一份 Complaint for Permanent Injunction, Monetary Judgment, Civil Penalty Judgment, and Other Relief，属于新立案的执法行动，涉及禁令、金钱判决与民事处罚。</p>
   </div>
@@ -61,7 +81,7 @@
 <span>发布 2026-07-29</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_db5c4bff860125a565f7650c" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_db5c4bff860125a565f7650c/">Google Play 发布更安全、适龄体验相关政策</a></h2>
     <p>2026年7月29日，Google Play 产品管理副总裁 Paul Feng 发布博文，强调提供安全在线体验和保护用户免受伤害是首要任务，内容涉及在 Google Play 上提供更安全、适龄的体验。</p>
   </div>
@@ -70,7 +90,7 @@
 <span>发布 2026-07-29</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">UK Government</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_9fbc2d8ee321583f4545b75b" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_9fbc2d8ee321583f4545b75b/">CMA调查微软订阅计划营销行为</a></h2>
     <p>英国竞争与市场管理局（CMA）于2026年7月29日宣布对微软（Microsoft）就其订阅计划的营销方式展开调查，关注其是否存在误导消费者或违反竞争法的行为。</p>
   </div>
@@ -79,7 +99,7 @@
 <span>发布 2026-07-29</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Federal Trade Commission</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已预告</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已预告</span><div class="event-status" data-event-status data-event-id="evt_36348d1f28f6291f52685ae5" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_36348d1f28f6291f52685ae5/">FTC 与各州联合起诉 Hims &amp; Hers 涉嫌欺骗性及违法隐私行为</a></h2>
     <p>FTC 联合多个州对远程医疗/健康平台 Hims &amp; Hers 采取行动，指控其存在欺骗性及违法的隐私行为。该新闻发布于 2026-07-29，早于监测窗口（2026-08-07 至 2026-08-09），但属于窗口内抓取到的近期执法动态，与应用商店生态中的隐私合规及第三方服务风控直接相关。</p>
   </div>
@@ -88,7 +108,7 @@
 <span>发布 2026-07-29</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">UK Government</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P2</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P2</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_6c751c84d2b8e25b17093fe3" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_6c751c84d2b8e25b17093fe3/">英国 CMA 调查 Microsoft 365 订阅方案变更营销</a></h2>
     <p>英国竞争与市场管理局（CMA）宣布调查 Microsoft Ireland Operations Limited 在 Microsoft 365 Personal 和 Family 订阅方案变更中的消费者沟通。CMA 关注用户在续订前是否获得了清晰的方案与价差信息，以及既有用户是否在未充分理解选择的情况下自动转入包含 Copilot 等新功能、价格更高的方案。案件仍处初步调查阶段，尚未认定 Microsoft 违反消费者保护法。</p>
   </div>
@@ -97,7 +117,7 @@
 <span>发布 2026-07-29</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
-    <div class="tags"><span class="tag domain">三方支付</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">三方支付</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_4e9efb089e3f6fa20aa2bc12" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_4e9efb089e3f6fa20aa2bc12/">Stripe TWINT 计划维护（7 月 29 日）</a></h2>
     <p>Stripe 官方状态页公告，TWINT 将于 2026-07-29 12:00–13:00 UTC（北京时间 20:00–21:00）进行计划维护。Stripe 同时提示，其从支付方式合作方获取的计划维护信息可能不完整、不准确或不是最新状态。</p>
   </div>
@@ -106,7 +126,7 @@
 <span>发布 2026-07-28</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">PayPal</span></div>
-    <div class="tags"><span class="tag domain">三方支付</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">三方支付</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_abe9d0464fa91c247308b097" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_abe9d0464fa91c247308b097/">PayPal EMEA 提现服务降级已恢复</a></h2>
     <p>PayPal 官方状态页显示，生产环境的 Withdrawals 服务在 EMEA 地区出现性能降级；事件自 2026-07-27 10:44 UTC 持续至 2026-07-28 06:45 UTC，随后影响已缓解并关闭。PayPal 表示技术团队仍在确保完全恢复。</p>
   </div>
@@ -115,7 +135,7 @@
 <span>发布 2026-07-27</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026 年 8 月 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026 年 8 月 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-ads-certification-process-social-casino-2026-07-27" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-ads-certification-process-social-casino-2026-07-27/">Google Ads 社交赌场认证支持账户内自助申请</a></h2>
     <p>Google 将允许部分广告主直接在 Google Ads 账户内申请社交赌场游戏（Social Casino Games）认证，自 2026 年 8 月起逐步向全部广告主放量。受影响广告主可通过帮助中心或管理后台新增的 Policy &gt; Account 入口提交申请。页面注明上线期间既有认证与待处理的申请不受影响。公告只写 August 2026 且描述为逐步引入，未给出具体日期，故生效时间按月精度记为 2026-08。</p>
   </div>
@@ -124,7 +144,7 @@
 <span>发布 2026-07-24</span><strong>截止 2026-08-31</strong>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-08-13 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-08-13 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-billing-library-8-upgrade-2026-07-24" data-version="2" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-billing-library-8-upgrade-2026-07-24/">Google Play Billing Library 8 迁移指南更新</a></h2>
 <span class="tag">2 次更新</span>    <p>Google 开发者文档页面《Migrate to Google Play Billing Library 8》于 2026-08-13 更新，release notes 中新增/调整了 Show buy、Enable reconnection、Handle Transactions、Installment Integration 等章节内容，涉及 Google Play Billing Library 8 的迁移指引。</p>
   </div>
@@ -133,7 +153,7 @@
 <span>发布 2026-07-24</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Vungle / Liftoff Monetize</span></div>
-    <div class="tags"><span class="tag domain">广告变现</span><span class="tag priority">P3</span><span class="tag lifecycle">2026-07-24 已生效</span></div>
+    <div class="tags"><span class="tag domain">广告变现</span><span class="tag priority">P3</span><span class="tag lifecycle">2026-07-24 已生效</span><div class="event-status" data-event-status data-event-id="evt_af15d955f48d60affdc221eb" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_af15d955f48d60affdc221eb/">Vungle SDK for Android/Amazon v7.7.7 新增原生广告中 AI 生成内容的披露标签支持</a></h2>
     <p>Vungle SDK for Android/Amazon 发布 v7.7.7 版本（2026-07-24），新增对原生广告中 AI 生成内容的披露标签（disclosure labeling）支持，并包含稳定性改进。</p>
   </div>
@@ -142,7 +162,7 @@
 <span>发布 2026-07-23</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-10-31 待生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-10-31 待生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-play-age-signals-api-0-0-4-beta-2026-07-23" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-play-age-signals-api-0-0-4-beta-2026-07-23/">Play Age Signals API 0.0.4 Beta 上线并公布旧版停服日</a></h2>
     <p>API 0.0.4 Beta 新增巴西年龄信息请求支持；0.0.3 及以下版本自 2026-10-31 起停止支持。</p>
   </div>
@@ -151,7 +171,7 @@
 <span>发布 2026-07-23</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">European Commission</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_206fc539bfa8aadfe562dd8b" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_206fc539bfa8aadfe562dd8b/">欧盟委员会因违反DMA对Google处以8.9亿欧元罚款</a></h2>
     <p>2026年7月23日，欧盟委员会作出两项决定，认定Google违反《数字市场法》(DMA)：一是在Google Search中自我优待其自有服务；二是在Google Play中对商家施加限制，阻止其引导消费者使用其他通常更便宜的购买渠道（steering行为）。</p>
   </div>
@@ -160,7 +180,7 @@
 <span>发布 2026-07-23</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-08-26 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-08-26 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-ads-gambling-global-certification-2026-07-23" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-ads-gambling-global-certification-2026-07-23/">Google Ads 全球赌博与社交赌场认证申请与标准整体修订</a></h2>
     <p>2026 年 8 月 26 日起，Google 修订线上赌博、需认证的线上非赌场游戏以及社交赌场游戏的认证申请表与认证标准，新申请人须使用修订后的表单。前置条件：广告主须持有目标地区的有效本地许可，许可关系不清晰时须提交证明文件。落地页要求：须显著展示年龄警示、成瘾求助资源、条款与条件，页脚须包含持证主体名称、许可证号与隐私政策；运营方须标明自身许可信息，联盟与聚合类站点只能链接到持证主体并在页脚予以确认。移动应用：推广应用的运营方须在持证域名上提供指向官方 App Store 或 Google Play 页面的有效链接，且应用页面须回链已登记域名。申请流程：按国家与认证类型分别申请，单个账户不能同时持有线上赌博认证与社交赌场认证。重新认证：申请信息发生任何实质变更须重新认证，未重新认证将导致账户暂停。适用范围为全球。</p>
   </div>
@@ -169,7 +189,7 @@
 <span>发布 2026-07-23</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P2</span><span class="tag lifecycle">2026-07-22 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P2</span><span class="tag lifecycle">2026-07-22 已生效</span><div class="event-status" data-event-status data-event-id="evt_879933bc3f395350565ac39f" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_879933bc3f395350565ac39f/">Google Play 订阅续订与管理服务故障已恢复</a></h2>
     <p>Google Play 官方状态页显示，Play Subscriptions Renewal and Management 事件始于 2026-07-22 11:06 UTC；官方在 2026-07-23 05:44 UTC 更新称多数用户在管理订阅时遇到错误，并于 2026-07-27 15:23 UTC 恢复、19:22 UTC 发布解决公告，累计持续约 5 天 4 小时。</p>
   </div>
@@ -178,7 +198,7 @@
 <span>发布 2026-07-22</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-10-01 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-10-01 已生效</span><div class="event-status" data-event-status data-event-id="evt_1cd78324d0308572a9bd9263" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_1cd78324d0308572a9bd9263/">美国外部内容链接与替代计费项目交易报告及服务费生效通知</a></h2>
     <p>Google Play 于 2026-07-22 发布通知：自 2026 年起，美国地区加入外部内容链接（external content links）和替代计费（alternative billing）项目的开发者，须自 2026-10-01 起报告交易与成功下载数据，并缴纳相关服务费。</p>
   </div>
@@ -187,7 +207,7 @@
 <span>发布 2026-07-22</span><strong>截止 2026-08-31</strong>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-android-16-target-api-2026-07-22" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-android-16-target-api-2026-07-22/">Google Play 公布 Android 16（API 36）目标版本截止要求</a></h2>
     <p>应用须在 2026-08-31 前面向 Android 16（API 36）或更高版本；逾期无法提交更新，可申请延期至 2026-11-01。</p>
   </div>
@@ -196,7 +216,7 @@
 <span>发布 2026-07-22</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026 年 8 月 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026 年 8 月 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-ads-healthcare-spain-telemedicine-2026-07-22" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-ads-healthcare-spain-telemedicine-2026-07-22/">Google Ads 西班牙医疗政策允许远程医疗推广处方药服务</a></h2>
     <p>Google 将更新西班牙的医疗与药品国家专属政策，允许远程医疗（telemedicine）服务商推广处方药相关服务。服务商须同时取得 LegitScript 医疗商户认证（LegitScript&#39;s Healthcare Merchant Certification Program）以及 Google 自身的认证。页面注明违规不会在无预警情况下立即停号，停号前至少提前 7 天发出警告。公告只写生效于 August 2026，未给出具体日期，故生效时间按月精度记为 2026-08。</p>
   </div>
@@ -205,7 +225,7 @@
 <span>发布 2026-07-22</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">UK Government</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_9ab1cee0ddca99028931d391" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_9ab1cee0ddca99028931d391/">英国CMA发布《不公平合同条款》指南</a></h2>
     <p>英国竞争与市场管理局（CMA）于2026年7月22日发布题为《Unfair contract terms》的指导文件，就消费者合同中可能构成不公平的条款提供监管指引。</p>
   </div>
@@ -214,7 +234,7 @@
 <span>发布 2026-07-22</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026 年 8 月 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026 年 8 月 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-ads-cryptocurrencies-eea-expansion-2026-07-22" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-ads-cryptocurrencies-eea-expansion-2026-07-22/">Google Ads 在冰岛、列支敦士登与挪威开放加密货币广告</a></h2>
     <p>Google 在冰岛、列支敦士登与挪威三个欧洲经济区国家开放加密货币交易所、软件钱包与硬件钱包的广告推广。广告主须取得 MiCA 法规下的加密资产服务提供商（CASP）许可、满足所在国全部法律要求并通过 Google 认证。页面注明违规不会在无预警情况下立即停号，停号前至少提前 7 天发出警告。公告只写生效于 August 2026，未给出具体日期，故生效时间按月精度记为 2026-08。</p>
   </div>
@@ -223,7 +243,7 @@
 <span>发布 2026-07-22</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Federal Trade Commission</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P2</span><span class="tag lifecycle">已预告</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P2</span><span class="tag lifecycle">已预告</span><div class="event-status" data-event-status data-event-id="evt_2545a50831da37d188f887ee" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_2545a50831da37d188f887ee/">FTC 对 Trend Deploy 欺骗性营销行为向消费者退款</a></h2>
     <p>FTC 宣布将向因 Trend Deploy 的欺骗性营销行为而受到损害的消费者退还资金。</p>
   </div>
@@ -232,7 +252,7 @@
 <span>发布 2026-07-22</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
-    <div class="tags"><span class="tag domain">AI</span><span class="tag priority">P4</span><span class="tag lifecycle">2026-07-22 已生效</span></div>
+    <div class="tags"><span class="tag domain">AI</span><span class="tag priority">P4</span><span class="tag lifecycle">2026-07-22 已生效</span><div class="event-status" data-event-status data-event-id="evt_f72f2b4e3b680f14f6e7affa" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_f72f2b4e3b680f14f6e7affa/">OpenAI API 平台新增组织和项目硬性消费限额功能</a></h2>
     <p>OpenAI API 平台为组织和项目新增硬性消费限额（hard spend limits）功能，允许设置月度消费上限。当追踪到的消费达到限额时，受影响的 API 请求将返回 429 错误。同时提供消费提醒功能，在流量中断前进行通知。</p>
   </div>
@@ -241,7 +261,7 @@
 <span>发布 2026-07-21</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-07-21 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-07-21 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-ads-appeals-limits-2026-07-21" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-ads-appeals-limits-2026-07-21/">Google Ads 关闭超过 6 个月的政策决定账户内申诉入口</a></h2>
     <p>自 2026 年 7 月 21 日起，Google Ads 账户内不再提供针对超过 6 个月前作出的政策决定的申诉入口。公告原文为 the option to appeal a policy decision directly from your Google Ads account will not be available for policy decisions made more than 6 months prior。页面未标注适用地区，按上下文为全球生效。</p>
   </div>
@@ -250,7 +270,7 @@
 <span>发布 2026-07-21</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Federal Trade Commission</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P4</span><span class="tag lifecycle">已预告</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P4</span><span class="tag lifecycle">已预告</span><div class="event-status" data-event-status data-event-id="evt_1ac5146a2511b4a242e46b59" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_1ac5146a2511b4a242e46b59/">FTC 永久禁止学生贷款欺诈者从事债务减免和电话营销行业</a></h2>
     <p>FTC 宣布对一名学生贷款欺诈者实施永久禁令，禁止其从事债务减免行业和电话营销活动。</p>
   </div>
@@ -259,7 +279,7 @@
 <span>发布 2026-07-20</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Singapore PDPC</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_1c3ab143cee97367848ba263" data-version="2" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_1c3ab143cee97367848ba263/">新加坡PDPC发布生成式AI中个人数据使用咨询指南</a></h2>
 <span class="tag">2 次更新</span>    <p>新加坡个人数据保护委员会（PDPC）于2026年7月20日发布《生成式AI中个人数据使用咨询指南》（Advisory Guidelines on Use of Personal Data in Generative AI），为组织在生成式人工智能场景中收集、使用和披露个人数据提供合规指引。</p>
   </div>
@@ -268,7 +288,7 @@
 <span>发布 2026-07-20</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Singapore PDPC</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_c3bc333b8bb3f12faf8ddd33" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_c3bc333b8bb3f12faf8ddd33/">新加坡PDPC发布联邦学习指南</a></h2>
     <p>新加坡个人数据保护委员会（PDPC）发布了《联邦学习指南》（Guide on Federated Learning），为组织在采用联邦学习技术时如何遵守个人数据保护义务提供指导。</p>
   </div>
@@ -277,7 +297,7 @@
 <span>发布 2026-07-20</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Singapore PDPC</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_020eef04ed4a183cfa3524b8" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_020eef04ed4a183cfa3524b8/">新加坡PDPC发布ICT系统数据保护实践指南</a></h2>
     <p>新加坡PDPC发布了《ICT系统数据保护实践指南》（Guide to Data Protection Practices for ICT Systems），为组织在ICT系统中实施数据保护措施提供实操指导。</p>
   </div>
@@ -286,7 +306,7 @@
 <span>发布 2026-07-17</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">TechCrunch</span></div>
-    <div class="tags"><span class="tag domain">其他</span><span class="tag priority">P4</span><span class="tag lifecycle">已预告</span></div>
+    <div class="tags"><span class="tag domain">其他</span><span class="tag priority">P4</span><span class="tag lifecycle">已预告</span><div class="event-status" data-event-status data-event-id="evt_legacy-ai-nudify-app-governance-2026-07-17" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-ai-nudify-app-governance-2026-07-17/">Apple 与 Google 被要求清理 AI “nudify”应用</a></h2>
     <p>媒体报道称旧金山市检察机关要求两家平台移除可生成非自愿私密图像的应用，报道中包含 Apple 与 Google 的回应，但平台官方政策页尚未发布对应变更公告。</p>
   </div>
@@ -295,7 +315,7 @@
 <span>发布 2026-07-16</span><strong>截止 2026-08-15</strong>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">已预告</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">已预告</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-ads-app-campaign-image-enhancements-2026-07-16" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-ads-app-campaign-image-enhancements-2026-07-16/">Google Ads App Campaign 图片增强默认开启</a></h2>
     <p>Google Ads 的 creative image enhancements 会在系统判断存在效果机会时，基于广告主现有素材自动生成并投放独立图片；官方帮助页明确该能力对 App Campaign 默认启用。发布日 2026-07-16 与「不参加须在 2026-08-15 前联系 AM 或提交退出表」这两个时间点只见于定向账号邮件，官方公开页面没有标注，不能视为对所有 App Campaign 账户统一生效的公共政策截止日。</p>
   </div>
@@ -304,7 +324,7 @@
 <span>发布 2026-07-15</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-09-30 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-09-30 已生效</span><div class="event-status" data-event-status data-event-id="evt_988501efb1ba169fb53e5ea6" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_988501efb1ba169fb53e5ea6/">Google Play 要求开发者在 Play Console 注册应用以满足验证要求</a></h2>
     <p>Google Play 要求开发者必须在 Play Console 注册应用以满足 Android 开发者验证和 Play Console 要求。未注册的应用将被全球下架。该政策于 2026-07-15 宣布，2026-09-30 生效。</p>
   </div>
@@ -313,7 +333,7 @@
 <span>发布 2026-07-15</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-08-26 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-08-26 已生效</span><div class="event-status" data-event-status data-event-id="evt_b4c6fac08c7a970148d430ef" data-version="2" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_b4c6fac08c7a970148d430ef/">Google Play 扩展年龄限制内容与功能政策至匿名聊天和随机聊天应用</a></h2>
 <span class="tag">2 次更新</span>    <p>Google Play 宣布将年龄限制内容与功能（Age-Restricted Content and Functionality）政策的适用范围扩展至匿名聊天（anonymous chat）和随机聊天（random chat）类应用。</p>
   </div>
@@ -322,7 +342,7 @@
 <span>发布 2026-07-15</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-08-26 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-08-26 已生效</span><div class="event-status" data-event-status data-event-id="evt_6b433e9f825362f6698f373b" data-version="3" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_6b433e9f825362f6698f373b/">Google Play Families Policies 将禁止匿名聊天应用针对儿童</a></h2>
 <span class="tag">3 次更新</span>    <p>Google Play 在 2026 年 7 月政策更新预览中宣布，将扩展其《家庭政策要求》（Families Policy Requirements），明确禁止以匿名聊天或陌生人聊天为主要功能的应用（如聊天轮盘、约会应用、儿童开放式聊天室、匿名应用、“盲聊”应用等）将儿童列为目标受众。该变更将于 2026 年 8 月 26 日生效。</p>
   </div>
@@ -331,7 +351,7 @@
 <span>发布 2026-07-15</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-09-30 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-09-30 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-games-level-up-2026-07-15" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-games-level-up-2026-07-15/">Google Play Games Level Up 计划升级并公布资格申请时间</a></h2>
     <p>符合条件的游戏可申请更低服务费，并需接入 Play Games Services、适配大屏、PC 与手柄；资格申请于 2026-09-30 开放。</p>
   </div>
@@ -340,7 +360,7 @@
 <span>发布 2026-07-15</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-apple-retention-messaging-setup-2026-07-15" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-apple-retention-messaging-setup-2026-07-15/">Apple Retention Messaging 支持四类挽留消息并要求素材先审核</a></h2>
     <p>挽留消息支持纯文字、图文、切换方案及促销优惠；素材只有达到 APPROVED 状态才会展示。</p>
   </div>
@@ -349,7 +369,7 @@
 <span>发布 2026-07-14</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">InMobi</span></div>
-    <div class="tags"><span class="tag domain">广告变现</span><span class="tag priority">P3</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">广告变现</span><span class="tag priority">P3</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_a4a3f9568c5206489de45a53" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_a4a3f9568c5206489de45a53/">InMobi Exchange 支持 Apple SKOverlay</a></h2>
     <p>InMobi Exchange 现支持 Apple 的 SKOverlay，DSP 可控制 App Store 覆盖层的展示时机和方式，在 iOS 广告中直接展示原生 App Store 体验，不打断广告体验。</p>
   </div>
@@ -358,7 +378,7 @@
 <span>发布 2026-07-13</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-09-14 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-09-14 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-ads-gambling-certification-eligibility-2026-07-13" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-ads-gambling-certification-eligibility-2026-07-13/">Google Ads 赌博与游戏认证资格要求扩展至全部类别</a></h2>
     <p>2026 年 9 月 14 日起，Google Ads 赌博与游戏政策把认证要求扩展到全部赌博与游戏类别。所有相关账户须具备良好的政策健康状况（demonstrate good policy health）；经理账户（MCC）若多次被吊销证书，或账户在持证期间多次因赌博违规被标记，将失去申请任何新的线上赌博证书的资格。同时重申域名要求：使用免费子域名的网站不具备认证资格，域名须由该业务主体直接拥有和控制；新增独立条款明确与赌博无关的域名不具备认证资格。页面未限定地区。</p>
   </div>
@@ -367,7 +387,7 @@
 <span>发布 2026-07-13</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-07-13 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-07-13 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-ads-prediction-markets-michigan-new-york-2026-07-13" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-ads-prediction-markets-michigan-new-york-2026-07-13/">Google Ads 禁止密歇根州与纽约州的预测市场广告</a></h2>
     <p>Google 更新美国预测市场政策，自 2026 年 7 月 13 日起禁止在密歇根州（Michigan）与纽约州（New York）投放预测市场及相关产品广告，包括预测市场合约及相关产品的推广。</p>
   </div>
@@ -376,7 +396,7 @@
 <span>发布 2026-07-09</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026 年 9 月 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026 年 9 月 已生效</span><div class="event-status" data-event-status data-event-id="evt_525a34d31c86e19d4c16a8cd" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_525a34d31c86e19d4c16a8cd/">App Store Connect 年龄分级问卷新增社交媒体能力问题</a></h2>
     <p>Apple 在 App Store Connect 的年龄分级问卷中新增关于应用是否具备社交媒体能力的问题。社交媒体能力定义为通过社交信息流或类似发现方式重新分发、放大或互动用户生成内容的能力。该分类与 App Store Connect 中选择的应用类别无关。具备该能力的应用将在 App Store 产品页显示新的“社交媒体”内容描述符；若该能力对 13 岁以下用户禁用，则不会纳入 13 岁以下用户的社交媒体时间限额分类。开发者即日起可填写问卷，自 2026 年 9 月起，提交新应用、更新或进行替代分发公证时必须回答这些问题。</p>
   </div>
@@ -385,7 +405,7 @@
 <span>发布 2026-07-09</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026 年 9 月 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026 年 9 月 已生效</span><div class="event-status" data-event-status data-event-id="evt_e5b3ab1e2c29d67ef2b7fe19" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_e5b3ab1e2c29d67ef2b7fe19/">年龄分级问卷新增社交媒体问题，2026 年 9 月起提交时必须回答</a></h2>
     <p>为配合 iOS 27/iPadOS 27/macOS 27 中新增的 Time Allowances（家长可更灵活地管理孩子在娱乐、游戏、社交媒体等类别中的应用使用时间），App Store Connect 的年龄分级问卷新增关于应用是否具备社交媒体能力的问题。社交媒体能力定义为通过社交信息流或类似发现方式重新分发、放大或与用户生成内容互动的能力。具备该能力的应用将在产品页显示新的 Social Media 内容描述符；若该能力对 13 岁以下用户禁用，则不会纳入 13 岁以下用户的社交媒体 Time Allowance 类别。自 2026 年 9 月起，提交新应用、更新或替代分发公证时必须回答这些问题。</p>
   </div>
@@ -394,7 +414,7 @@
 <span>发布 2026-07-09</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026 年 7 月 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026 年 7 月 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-ads-ai-labeling-requirements-2026-07-09" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-ads-ai-labeling-requirements-2026-07-09/">Google Ads 允许在 AI 生成素材中直接添加 AI 标签</a></h2>
     <p>Google Ads 允许广告主在使用 AI 生成或修改的图片与视频素材中直接添加文字或视觉标签，且该类标签不再视为违反文字覆盖与水印相关规定；由 Google AI 工具生成的部分素材可能被自动加注标签。AI 标签设置在 2026 年 7 月内分批上线 Google Ads、Display &amp; Video 360、Campaign Manager 360、Merchant Center 与 Ads Editor。该更新对应要求在含 AI 生成或编辑素材的广告中作出 AI 披露的监管规定，涉及欧盟、印度与美国纽约州。选举类广告仍须通过原有的合成或数字修改内容声明设置进行披露。公告只写 Starting in July of 2026 与全月分批上线，未给出具体生效日，故生效时间按月精度记为 2026-07。</p>
   </div>
@@ -403,7 +423,7 @@
 <span>发布 2026-07-09</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P2</span><span class="tag lifecycle">2026 年 9 月 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P2</span><span class="tag lifecycle">2026 年 9 月 已生效</span><div class="event-status" data-event-status data-event-id="evt_ca3b727643ed4911d1d62284" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_ca3b727643ed4911d1d62284/">年龄分级问卷新增社交媒体相关问题</a></h2>
     <p>为支持 iOS 27 等新系统中的 Time Allowances 功能，App Store Connect 年龄分级问卷新增关于社交媒体能力的问题。开发者需声明应用是否具备社交媒体功能（如用户生成内容的重新分发、放大或互动）。具备该功能的应用将在产品页面显示新的 Social Media 内容描述符。</p>
   </div>
@@ -412,7 +432,7 @@
 <span>发布 2026-07-08</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-ads-alcohol-policy-article-clarification-2026-07-08" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-ads-alcohol-policy-article-clarification-2026-07-08/">Google Ads 酒精政策帮助中心文章澄清可接受广告格式</a></h2>
     <p>Google 更新酒精政策帮助中心文章，对可接受的广告格式（acceptable ad formats）给出更清晰说明。页面明确该修改不改变政策的执行口径（does not change enforcement of the policy）。公告未给出生效日期、合规截止日或适用地区，故 effectiveAt 留空。</p>
   </div>
@@ -421,7 +441,7 @@
 <span>发布 2026-07-01</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-07-01 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-07-01 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-ads-cryptocurrency-france-dasp-to-casp-2026-07-01" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-ads-cryptocurrency-france-dasp-to-casp-2026-07-01/">Google Ads 法国加密广告资质从 AMF DASP 切换为 MiCA CASP</a></h2>
     <p>自 2026 年 7 月 1 日起，Google 不再接受法国 AMF 的数字资产服务提供商（DASP）注册作为加密货币交易所与钱包广告的资质。相关广告主须改为取得 MiCA（Markets in Crypto-Assets）法规下的加密资产服务提供商（CASP）授权。此变更源于法国自 2025 年 4 月欧盟加密货币政策更新起的过渡期到期。适用地区：法国。</p>
   </div>
@@ -430,7 +450,7 @@
 <span>发布 2026 年 7 月</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-07-28 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-07-28 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-ads-alcohol-country-expansion-2026-07" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-ads-alcohol-country-expansion-2026-07/">Google Ads 酒精政策扩大可推广地区范围</a></h2>
     <p>2026 年 7 月 28 日起，Google Ads 扩大允许推广酒精饮料的地区范围。在新获批地区，广告主可推广至该地区允许的最高酒精度数（ABV）产品以及 0% ABV 产品，须遵守各国 ABV 上限与当地法律，并避免面向未成年人投放。新增地区：博茨瓦纳、布隆迪、巴西、喀麦隆、刚果（布）、克罗地亚、刚果民主共和国、厄瓜多尔（&lt;5%）、斯威士兰、埃塞俄比亚、芬兰、加蓬、冰岛（&lt;2.25%）、科特迪瓦、牙买加、肯尼亚、莱索托、莫桑比克、纳米比亚、卢旺达、塞尔维亚、塞舌尔、塞拉利昂、斯洛文尼亚、韩国、坦桑尼亚、越南（&lt;5.5%）、赞比亚、津巴布韦。公告页顶部只写 Posted July 2026，未给出具体发布日，故发布时间按月精度记为 2026-07。</p>
   </div>
@@ -439,7 +459,7 @@
 <span>发布 2026-06-26</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-06-30 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-06-30 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-billing-choice-program-2026-06-26" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-billing-choice-program-2026-06-26/">Google Play 扩大 Billing Choice Program 市场并调整费率拆分</a></h2>
     <p>自 2026-06-30 起，美国、英国与 EEA 可使用第三方支付和外链支付，同时保留 Google Play Billing；服务费与支付处理费分离，服务费按用户类型分档。</p>
   </div>
@@ -448,7 +468,7 @@
 <span>发布 2026-06-18</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-06-18 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-06-18 已生效</span><div class="event-status" data-event-status data-event-id="evt_0c66c7631d8eedca10394144" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_0c66c7631d8eedca10394144/">巴西 iOS 替代分发、替代支付及核心技术佣金政策生效</a></h2>
     <p>根据与巴西竞争监管机构 CADE 的协议，自 iOS 26.5 起，开发者可在巴西通过替代应用市场分发应用、运营替代应用市场、在 Apple In-App Purchase 之外处理数字商品和服务支付，并涉及核心技术佣金（Core Technology Commission）。Apple Developer Program License Agreement Attachment 12 已修订相应条款。</p>
   </div>
@@ -457,7 +477,7 @@
 <span>发布 2026-06-18</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_d3736e32342a0f9c8ccf968c" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_d3736e32342a0f9c8ccf968c/">巴西 iOS 变更：替代分发、替代支付与 Core Technology Commission（2026-06-18）</a></h2>
     <p>Apple 与巴西竞争监管机构 CADE 达成协议，自 iOS 26.5 起，开发者可在巴西通过替代应用市场分发应用、运营替代应用市场、在 Apple 内购之外处理数字商品与服务的支付等。Apple Developer Program License Agreement Attachment 12 已更新，明确巴西地区替代分发、替代支付、应用外报价及 Core Technology Commission 条款。</p>
   </div>
@@ -466,7 +486,7 @@
 <span>发布 2026-06-17</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Federal Trade Commission</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-ftc-genesis-tech-subscription-case-2026-06-17" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-ftc-genesis-tech-subscription-case-2026-06-17/">FTC 起诉 Genesis Tech 订阅业务体系</a></h2>
     <p>FTC 指控相关企业隐藏自动续费条款、未经授权或重复收费，并设置困难的取消流程。案件涉及 MadMuscles、Harna、Unimeal、Wisey、PDF Guru、PDF Master、Lumi 与 Nebula 等产品。主要风险点包括自动续费披露、扣费授权、重复与附加收费及便捷取消。</p>
   </div>
@@ -475,27 +495,9 @@
 <span>发布 2026-06-11</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_1a2052f4d457d5f334cd4cad" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_1a2052f4d457d5f334cd4cad/">ImageCreator 类将在 iOS 27 等平台弃用</a></h2>
     <p>Apple 宣布 ImageCreator 类将被停用，在 iOS 27、iPadOS 27、macOS 27、visionOS 27 及更高版本中不再工作。该类此前用于通过 Image Playground 框架在应用内以编程方式生成图像。</p>
-  </div>
-</article><article class="timeline-row compact-card">
-  <div class="timeline-date">
-<span>发布 2026-06-09</span>  </div>
-  <div class="timeline-content">
-    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
-    <h2><a href="/policy-radar/events/evt_legacy-apple-developer-agreement-review-guidelines-2026-06-09/">Apple 更新开发者协议、AI/ML 条款与儿童安全审核要求</a></h2>
-    <p>更新开发者身份与出口合规要求，新增 AI/ML 条款；审核指南补充儿童安全要求，并限制使用 Live Activities 发送营销、钓鱼或骚扰信息。</p>
-  </div>
-</article><article class="timeline-row compact-card">
-  <div class="timeline-date">
-<span>发布 2026-06-03</span>  </div>
-  <div class="timeline-content">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span></div>
-    <h2><a href="/policy-radar/events/evt_legacy-google-play-texas-app-store-accountability-2026-06-03/">Google Play 针对美国多州应用商店法案推出 Play Age Signals API 及相关合规工具</a></h2>
-<span class="tag">2 次更新</span>    <p>Google Play 发布帮助页面，说明美国部分州（如德州 SB 2420）已通过要求应用商店验证用户年龄、获取家长同意并向开发者提供用户年龄信息的法律。德州法案在联邦上诉法院暂停2025年12月初步禁令后已生效。Google Play 计划推出 Play Age Signals API（beta，建议版本 0.0.4）、Play Console 中无需发版即可通知“重大变更”的功能、家长撤销同意的报告，以及为 Play Billing Library 的购买 SKU 添加年龄评级的功能（未来数周内上线）。Google Play 不强制开发者使用该 API，但开发者需自行评估法律适用性并合规。</p>
   </div>
 </article></div><nav class="pagination" aria-label="时间线分页"><a href="/policy-radar/timeline/">1</a><a href="/policy-radar/timeline/page/2/">2</a><a href="/policy-radar/timeline/page/3/">3</a><a href="/policy-radar/timeline/page/4/">4</a><span class="current" aria-current="page">5</span><a href="/policy-radar/timeline/page/6/">6</a><a href="/policy-radar/timeline/page/7/">7</a></nav></div>
 <div class="timeline" id="timeline-filter-results" hidden></div>
@@ -810,6 +812,14 @@
     priority.className = "tag priority";
     priority.textContent = event.businessPriority;
     tags.append(priority);
+    // 处理状态位（#298）：由 assets/event-status.js 发现并渲染，无 JS 状态脚本时保持隐藏。
+    const status = document.createElement("div");
+    status.className = "event-status";
+    status.dataset.eventStatus = "";
+    status.dataset.eventId = event.eventId;
+    status.dataset.version = String(event.statusVersion);
+    status.hidden = true;
+    tags.append(status);
     content.append(tags);
     const heading = document.createElement("h2");
     const link = document.createElement("a");
@@ -948,5 +958,5 @@
 </script>
   <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
-</body>
+<script src="/policy-radar/assets/event-status.js" defer></script></body>
 </html>

@@ -16,6 +16,8 @@
     @media(max-width:650px){.shell{width:min(100% - 24px,1040px);margin-top:var(--space-1)}.site-header{align-items:flex-start;flex-direction:column}nav{justify-content:flex-start;width:100%;gap:0}nav a{padding:0 var(--space-1)}.card-grid{grid-template-columns:1fr}.card{padding:var(--space-2)}.impact-action{grid-template-columns:1fr}.date-strip strong{width:100%;justify-content:space-between}.card-source-links a{width:100%}.timeline-row{display:block}.timeline-date{width:auto;margin-bottom:var(--space-1)}.new-row{align-items:flex-start;flex-wrap:wrap;gap:var(--space-1)}.new-row .title{flex-basis:70%}.new-date{width:100%;order:3}.source-row{align-items:flex-start;flex-wrap:wrap;gap:var(--space-1)}.source-name{flex-basis:65%}.source-message{width:100%;text-align:left;padding-left:18px}.event-title{font-size:1.375rem}.detail-grid{grid-template-columns:1fr}}
     .nav-timeline{position:relative}.nav-timeline summary{list-style:none;min-height:44px;display:flex;align-items:center;padding:0 var(--space-1);color:var(--muted);font-size:var(--font-caption);font-weight:500;border-radius:8px;cursor:pointer}.nav-timeline summary::-webkit-details-marker{display:none}.nav-timeline summary:hover{background:var(--subtle);color:var(--ink)}.nav-timeline summary.active{color:var(--accent);background:var(--accent-soft)}.nav-menu{position:absolute;z-index:10;right:0;top:calc(100% + 4px);min-width:180px;padding:var(--space-1);display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}.nav-menu a{justify-content:space-between;white-space:nowrap}.nav-badge{min-width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;margin-left:var(--space-1);padding:0 6px;border-radius:999px;background:var(--critical-soft);color:var(--critical);font-size:var(--font-caption);font-variant-numeric:tabular-nums}
     @media(max-width:650px){.nav-timeline{position:static}.nav-menu{position:static;width:100%;min-width:0;margin-bottom:var(--space-1);box-shadow:none}.nav-timeline[open]{width:100%}.nav-menu a{width:100%}}
+    .event-status{display:inline-flex;align-items:center;flex-wrap:wrap;gap:var(--space-1);margin-left:auto;font-size:var(--font-caption)}.event-status[hidden]{display:none}.status-badge,.status-select{min-height:32px;padding:0 var(--space-1);border-radius:8px;font:700 var(--font-caption)/1 "Noto Sans SC",-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}.status-badge{display:inline-flex;align-items:center}.status-select{border:1px solid color-mix(in srgb,var(--ink) 22%,transparent);background:var(--surface);color:var(--ink);box-shadow:0 1px 2px color-mix(in srgb,var(--ink) 8%,transparent);cursor:pointer}.status-select:hover{border-color:var(--accent)}.status-select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.status-unset .status-select{color:var(--muted)}.status-pending .status-badge{background:var(--warning-soft);color:var(--warning)}.status-notified .status-badge{background:var(--success-soft);color:var(--success)}.status-irrelevant .status-badge{background:var(--subtle);color:var(--muted)}.status-dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto;background:var(--muted)}.status-pending .status-dot{background:var(--warning)}.status-notified .status-dot{background:var(--success)}.status-unset .status-dot{background:transparent;box-shadow:inset 0 0 0 1.5px var(--muted)}.status-note{color:var(--muted);font-size:var(--font-caption)}.status-note.stale,.status-note.error{color:var(--critical);font-weight:500}
+    .status-auth{display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-1);color:var(--muted);font-size:var(--font-caption)}.status-auth[hidden],.status-login[hidden]{display:none}.status-auth-button{min-height:44px;padding:0 var(--space-1);border:0;border-radius:8px;background:transparent;color:var(--accent);font-family:inherit;font-size:var(--font-caption);font-weight:500;line-height:1;cursor:pointer}.status-auth-button:hover{background:var(--accent-soft)}.status-auth-button:disabled{color:var(--muted);cursor:wait}.status-auth{position:relative}.status-login{position:absolute;z-index:10;right:0;top:calc(100% + 4px);width:260px;padding:var(--space-2);display:flex;flex-direction:column;align-items:stretch;gap:var(--space-1);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}.status-login .status-auth-button[type=submit]{justify-content:center;background:var(--accent);color:var(--surface)}.status-auth-button.secondary{color:var(--muted)}.status-login input{min-height:40px;width:100%;padding:0 var(--space-1);border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.card,nav a{transition:none}.card:hover{transform:none}}
   </style>
 </head>
@@ -32,7 +34,7 @@
 <a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">4</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">1</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">3</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
-    </nav>
+<div class="status-auth" data-status-auth hidden></div>    </nav>
   </header>
 <div class="breadcrumb"><a href="/policy-radar/">首页</a> › <a href="/policy-radar/timeline/">时间线</a></div>
 <header class="page-heading"><h1>重要平台时间线</h1><p>按发布时间从近到远；发布时间缺失时使用首次发现时间。</p></header>
@@ -49,10 +51,28 @@
 <div class="timeline">
 <article class="timeline-row compact-card">
   <div class="timeline-date">
+<span>发布 2025-11-19</span>  </div>
+  <div class="timeline-content">
+    <div class="card-platforms"><span class="platform-badge">AppsFlyer</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-appsflyer-agent-hub-open-beta-2025-11-19" data-version="1" hidden></div></div>
+    <h2><a href="/policy-radar/events/evt_legacy-appsflyer-agent-hub-open-beta-2025-11-19/">AppsFlyer Agent Hub Open Beta</a></h2>
+    <p>Agent Hub 进入 Open Beta，允许 AppsFlyer 客户配置 AI agents，并将分析与建议发送到协作流程。</p>
+  </div>
+</article><article class="timeline-row compact-card">
+  <div class="timeline-date">
+<span>发布 2025-11-18</span>  </div>
+  <div class="timeline-content">
+    <div class="card-platforms"><span class="platform-badge">AppsFlyer</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P4</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-appsflyer-2025-fall-release-2025-11-18" data-version="1" hidden></div></div>
+    <h2><a href="/policy-radar/events/evt_legacy-appsflyer-2025-fall-release-2025-11-18/">AppsFlyer 2025 Fall Release 八项产品发布</a></h2>
+    <p>AppsFlyer 发布八项产品，覆盖 Agentic AI、增量衡量、Signal Hub、安全、跨平台旅程、增强归因、My Dashboards 和素材管理。原文发布于 2025-11-18，未明确给出单独生效日或截止日。</p>
+  </div>
+</article><article class="timeline-row compact-card">
+  <div class="timeline-date">
 <span>发布 2025-11-13</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-11-13 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-11-13 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-apple-app-review-guidelines-2025-11-2025-11-13" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-apple-app-review-guidelines-2025-11-2025-11-13/">Apple 2025年11月 App Review Guidelines 更新</a></h2>
     <p>审核指南新增创作者超龄内容识别与年龄限制，删除空白/测试广告条款，澄清贷款、品牌、mini app、加密货币交易所和第三方 AI 数据共享等要求。</p>
   </div>
@@ -61,7 +81,7 @@
 <span>发布 ≤2025-11-05</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-11-05 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-11-05 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-new-york-auto-renewal-prorated-refund-2025-11-05" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-new-york-auto-renewal-prorated-refund-2025-11-05/">Google Play 纽约自动续订法与按比例退款</a></h2>
     <p>纽约州自动续订法要求：符合条件的 Google Play 订阅用户在选择不接受涨价后 14 天内取消的，须提供按比例退款。该条来自团队内部整理记录，尚未在 Google 官方页面找到对应表述。</p>
   </div>
@@ -70,7 +90,7 @@
 <span>发布 2025-10-30</span><strong>截止 2026-07-27</strong>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-01-28 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-01-28 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-termination-appeal-180-days-2025-10-30" data-version="2" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-termination-appeal-180-days-2025-10-30/">Google Play 开发者账号终止申诉期 180 天</a></h2>
 <span class="tag">2 次更新</span>    <p>Google Play 新增“Account termination appeal time limit”页面，明确自2026年1月28日起，开发者须在账号被终止之日起180天内提交申诉，逾期将视为结案且不再受理。对于2026年1月28日之前被终止的账号，提供一次性宽限期，最迟可于2026年7月27日前提交申诉。申诉审核标准不变；若在180天窗口末期提交申诉并被拒，开发者在收到决定后仍自动获得额外30天补充新信息以供复审。</p>
   </div>
@@ -79,7 +99,7 @@
 <span>发布 2025-10-30</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2025-11-17 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2025-11-17 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-apple-price-update-pl-ch-tr-2025-10-30" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-apple-price-update-pl-ch-tr-2025-10-30/">Apple 波兰、瑞士与土耳其 App/IAP 价格更新</a></h2>
     <p>未将波兰、瑞士或土耳其设为基础店面的 App/IAP 自11月17日起调整价格；自动续订与手动管理价格例外。</p>
   </div>
@@ -88,7 +108,7 @@
 <span>发布 ≤2025-10-30</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Unity</span></div>
-    <div class="tags"><span class="tag domain">广告变现</span><span class="tag priority">P3</span><span class="tag lifecycle">2025-10-30 已生效</span></div>
+    <div class="tags"><span class="tag domain">广告变现</span><span class="tag priority">P3</span><span class="tag lifecycle">2025-10-30 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-ad-quality-sdk-separate-integration-2025-10-30" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-ad-quality-sdk-separate-integration-2025-10-30/">Ad Quality SDK 接入方式变化</a></h2>
     <p>ironSource SDK 8.10.0 及以上、MAX SDK 13.0.0 及以上不再自动包含 Ad Quality，需要单独集成。该条来自团队内部整理记录，官方文档页未见同样表述。</p>
   </div>
@@ -97,7 +117,7 @@
 <span>发布 2025-10-23</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">AppsFlyer</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P2</span><span class="tag lifecycle">2025-11-02 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P2</span><span class="tag lifecycle">2025-11-02 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-appsflyer-meta-google-web-report-consolidation-2025-10-23" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-appsflyer-meta-google-web-report-consolidation-2025-10-23/">AppsFlyer Meta Web 与 Google Web 报告合并</a></h2>
     <p>自 2025-11-02 起，metaweb_int 归因报告为 Facebook Ads，googleads_int 报告为 googleadwords_int，并影响面板与原始数据。</p>
   </div>
@@ -106,7 +126,7 @@
 <span>发布 2025-10-22</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">AdMob</span></div>
-    <div class="tags"><span class="tag domain">广告变现</span><span class="tag priority">P2</span><span class="tag lifecycle">2025-10-22 已生效</span></div>
+    <div class="tags"><span class="tag domain">广告变现</span><span class="tag priority">P2</span><span class="tag lifecycle">2025-10-22 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-admob-ios-idfv-rtb-sharing-2025-10-22" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-admob-ios-idfv-rtb-sharing-2025-10-22/">AdMob iOS IDFV 向 RTB 需求方共享</a></h2>
     <p>在允许个性化广告时，AdMob Publisher 可将 iOS IDFV 发送给 Authorized Buyers、Open Bidders 和 SDK Bidders，部分地区除外。</p>
   </div>
@@ -115,7 +135,7 @@
 <span>发布 2025-10-06</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">AdMob</span></div>
-    <div class="tags"><span class="tag domain">广告变现</span><span class="tag priority">P2</span><span class="tag lifecycle">2025-10-06 已生效</span></div>
+    <div class="tags"><span class="tag domain">广告变现</span><span class="tag priority">P2</span><span class="tag lifecycle">2025-10-06 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-admob-gpp-national-v2-2025-10-06" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-admob-gpp-national-v2-2025-10-06/">AdMob 支持 GPP National v2</a></h2>
     <p>AdMob 新增 GPP National v2 字符串支持，同时继续支持 National v1。</p>
   </div>
@@ -124,7 +144,7 @@
 <span>发布 2025-09-25</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Federal Trade Commission</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已预告</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已预告</span><div class="event-status" data-event-status data-event-id="evt_e5738522068892e85beffb21" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_e5738522068892e85beffb21/">FTC 就亚马逊暗模式订阅行为达成 25 亿美元历史性和解</a></h2>
     <p>FTC 宣布与亚马逊就其订阅取消流程中的“暗模式”行为达成 25 亿美元和解，涉及订阅与支付相关合规问题。</p>
   </div>
@@ -133,7 +153,7 @@
 <span>发布 2025-09-23</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-10-08 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-10-08 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-ads-healthcare-medicines-2025-10-2025-09-23" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-ads-healthcare-medicines-2025-10-2025-09-23/">Google Ads Healthcare and Medicines Policy 2025-10 更新</a></h2>
     <p>Google Ads 医疗与药品政策 2025 年 10 月更新，一般健康类广告主需要取得公共健康与安全相关认证。团队内部整理记录把该条误列为 AdMob Publisher 政策，实际属于买量侧的广告政策。</p>
   </div>
@@ -142,7 +162,7 @@
 <span>发布 ≥2025-09-12</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-07-22 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-07-22 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-us-third-party-store-2026-07-22" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-us-third-party-store-2026-07-22/">美国第三方 Android 应用商店与 Play Catalog Access 安排生效</a></h2>
     <p>Google Play 将向符合条件的美国第三方 Android 应用商店提供分发与目录访问能力。未在截止日前选择退出的开发者，其美国区应用商店资料可能被提供给已登记的第三方商店。</p>
   </div>
@@ -151,7 +171,7 @@
 <span>发布 ≤2025-09-04</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">AppsFlyer</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P2</span><span class="tag lifecycle">2025-10-27 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P2</span><span class="tag lifecycle">2025-10-27 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-appsflyer-meta-aem-view-through-2025-10-27" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-appsflyer-meta-aem-view-through-2025-10-27/">AppsFlyer 对 Meta AEM 浏览型与点击型归因的支持</a></h2>
     <p>自 2025-10-27 起，在完成高级数据共享、浏览型归因和概率模型浏览归因配置后，AppsFlyer 自动支持 Meta AEM 的浏览型与点击型归因。该条来自团队内部整理记录，官方帮助中心页面未见同样表述。</p>
   </div>
@@ -160,7 +180,7 @@
 <span>发布 2025-07-25</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Meta</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P2</span><span class="tag lifecycle">2025-10-06 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P2</span><span class="tag lifecycle">2025-10-06 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-meta-eu-political-ads-stop-2025-07-25" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-meta-eu-political-ads-stop-2025-07-25/">Meta 停止在欧盟投放政治、选举和社会议题广告</a></h2>
     <p>Meta 因欧盟 TTPA 要求，自 2025-10-06 起不再允许政治、选举和社会议题广告在欧盟投放。</p>
   </div>
@@ -169,7 +189,7 @@
 <span>发布 2025-07-15</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-one-time-products-model-2025-07-15" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-one-time-products-model-2025-07-15/">Google Play 一次性产品新对象模型与管理工具</a></h2>
     <p>Google Play 将原 in-app products 改称 one-time products，并分离产品、购买选项和优惠，支持买/租、预订、区域定价与促销。</p>
   </div>
@@ -178,7 +198,7 @@
 <span>发布 2025-07-10</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-01-28 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-01-28 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-crypto-exchange-wallet-regions-2025-07-10" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-crypto-exchange-wallet-regions-2025-07-10/">Google Play 加密货币交易所与软件钱包地区合规</a></h2>
     <p>加密货币交易所和托管软件钱包在列明地区分发时必须满足当地注册/许可与 Play 声明要求。</p>
   </div>
@@ -187,7 +207,7 @@
 <span>发布 2025 年 7 月</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">TikTok Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-03-31 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-03-31 已生效</span><div class="event-status" data-event-status data-event-id="evt_cb42535a1815f421c1a4aaf3" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_cb42535a1815f421c1a4aaf3/">TikTok Ads Manager 新应用强制使用 MMP-SAN 集成并停用旧版 MMP 集成</a></h2>
     <p>TikTok Ads Help Center 页面（Last updated: July 2025）说明：自 2025-03-31 起，TikTok 与 MMP 的旧版集成（legacy integration）将停用，所有新应用只能使用 SAN 集成。页面给出新应用接入 TikTok Ads Manager 的 SAN 流程（选择 App 数据源、填写 App Store/Play Store URL、选择 MMP 并勾选 TikTok for Business (SAN)），并列出 Adjust、Airbridge、AppsFlyer、Branch、Kochava、Singular、Tenjin 等 MMP 的配置要点。同时说明若新广告账户无法选择 SAN，通常是因为应用仍绑定在旧广告账户的旧版 MMP 集成下，需在旧账户迁移至 SAN 或在新账户先继续使用旧版并尽快迁移至 SAN。</p>
   </div>
@@ -196,7 +216,7 @@
 <span>发布 ≤2025 年 6 月</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">TikTok Ads</span></div>
-    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-11-01 已生效</span></div>
+    <div class="tags"><span class="tag domain">买量</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-11-01 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-tiktok-monthly-invoicing-overdue-suspension-2025-11-01" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-tiktok-monthly-invoicing-overdue-suspension-2025-11-01/">TikTok 月结账户逾期 7 天停用规则</a></h2>
     <p>TikTok for Business 通知称，自 2025-11-01 起月结账户付款逾期 7 天将立即停用。该条来自团队内部整理的邮件记录，尚未在 TikTok 官方公开页面找到对应表述。</p>
   </div>
@@ -205,7 +225,7 @@
 <span>发布 2025-04-10</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-05-27 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-05-27 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-news-magazine-declaration-2025-04-10" data-version="3" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-news-magazine-declaration-2025-04-10/">Google Play 新闻和杂志应用自我声明</a></h2>
 <span class="tag">3 次更新</span>    <p>所有新闻和杂志应用需在 Play Console 完成更新后的自我声明，未声明的范围内应用会被移除。</p>
   </div>
@@ -214,7 +234,7 @@
 <span>发布 2025-03-31</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Federal Trade Commission</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P2</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P2</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_ecea769c4c0ee91e87434963" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_ecea769c4c0ee91e87434963/">FTC主席就23andMe破产对消费者影响致信</a></h2>
     <p>FTC主席Andrew N. Ferguson就23andMe破产对消费者的影响发布公开信，关注基因数据隐私和消费者权益保护问题。</p>
   </div>
@@ -223,7 +243,7 @@
 <span>发布 2025-02-21</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2025-04-24 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2025-04-24 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-apple-xcode-16-minimum-upload-2025-02-21" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-apple-xcode-16-minimum-upload-2025-02-21/">App Store Connect 上传的 Xcode 16 最低要求</a></h2>
     <p>自2025年4月24日起，上传到 App Store Connect 的 App 必须使用 Xcode 16 或更高版本及相应新 SDK 构建。</p>
   </div>
@@ -232,7 +252,7 @@
 <span>发布 2024-06-17</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Federal Trade Commission</span></div>
-    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已预告</span></div>
+    <div class="tags"><span class="tag domain">监管</span><span class="tag priority">P1</span><span class="tag lifecycle">已预告</span><div class="event-status" data-event-status data-event-id="evt_e144b855132d10a967165e6c" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_e144b855132d10a967165e6c/">FTC 对 Adobe 及其高管采取行动：隐藏费用及阻碍用户取消软件订阅</a></h2>
     <p>FTC 于 2024 年 6 月 17 日发布执法行动，指控 Adobe 及其高管隐藏费用，并阻止消费者轻松取消软件订阅。该案件属于 FTC 针对订阅（Negative Option）和支付 practices 的执法。</p>
   </div>
@@ -241,7 +261,7 @@
 <span>发布 2024-04-03</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-maskware-renamed-riskware-2025-10-30" data-version="2" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-maskware-renamed-riskware-2025-10-30/">Google Play Malware 分类 Maskware 更名为 Riskware</a></h2>
 <span class="tag">2 次更新</span>    <p>Google Play 将 Malware 政策中的 Maskware 分类名称改为 Riskware，以对齐行业术语。</p>
   </div>
@@ -250,7 +270,7 @@
 <span>发布 2023-10-25</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2025-01-22 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2025-01-22 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-photo-video-permission-2023-10-25" data-version="6" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-photo-video-permission-2023-10-25/">Google Play 明确照片和视频权限使用要求</a></h2>
 <span class="tag">6 次更新</span>    <p>仅核心功能需要持续或频繁广泛访问媒体时，才可申请 READ_MEDIA_IMAGES / READ_MEDIA_VIDEO；一次性或偶发选择应改用 Android 系统 photo picker。政策 2023-10-25 引入，执行日两度推迟后定为 2025-01-22，未能按期改造的可在 Play Console 申请延期至 2025-05-28。完整演进见下方版本历史。</p>
   </div>
@@ -259,7 +279,7 @@
 <span>发布 2023-10-25</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2024-10-31 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2024-10-31 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-full-screen-intent-2023-10-25" data-version="2" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-full-screen-intent-2023-10-25/">Google Play 明确全屏通知使用要求</a></h2>
 <span class="tag">2 次更新</span>    <p>自 2023-10-25 公告起，面向 Android 14（API 34）及以上的应用，USE_FULL_SCREEN_INTENT 改为特殊应用访问权限，仅闹钟与电话/视频通话类核心功能可自动获得。2024-07-17 公告追加要求：使用该权限并面向 Android 14+ 的应用必须在 Play Console 完成声明；自 2024-10-31 起，未获批准的应用需在新安装时向用户申请授权，被拒时要优雅降级。</p>
   </div>
@@ -268,7 +288,7 @@
 <span>发布 2023-07-12</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-09-30 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2026-09-30 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-android-developer-verification-package-registration-2026-09-30" data-version="2" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-android-developer-verification-package-registration-2026-09-30/">Android 开发者身份验证与包名注册</a></h2>
 <span class="tag">2 次更新</span>    <p>经验证的开发者须注册要分发至认证 Android 设备的应用包名。</p>
   </div>
@@ -277,7 +297,7 @@
 <span>发布 2023-07-12</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-10-30 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-10-30 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-financial-features-declaration-2025-10-30" data-version="3" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-financial-features-declaration-2025-10-30/">Google Play Financial Features Declaration</a></h2>
 <span class="tag">3 次更新</span>    <p>账号内每个应用都必须完成 Financial Features Declaration，即使没有金融功能；未完成会阻止应用更新。</p>
   </div>
@@ -286,7 +306,7 @@
 <span>发布 2023-07-12</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-03-04 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2026-03-04 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-thailand-loan-disclosure-2026-01-28" data-version="3" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-thailand-loan-disclosure-2026-01-28/">Google Play 泰国个人贷款应用 Listing 披露</a></h2>
 <span class="tag">3 次更新</span>    <p>泰国个人贷款应用须在 Google Play listing 披露贷款服务商、开发者法定实体、最高利率和全部费用。</p>
   </div>
@@ -295,7 +315,7 @@
 <span>发布 2022-07-27</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-eu-health-medical-features-2025-10-30" data-version="3" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-eu-health-medical-features-2025-10-30/">Google Play 面向欧盟的健康与医疗功能说明</a></h2>
 <span class="tag">3 次更新</span>    <p>Google Play 更新健康与医疗功能政策，纳入面向 EU 用户的医疗器械指导和 Medical Device 标签。</p>
   </div>
@@ -304,7 +324,7 @@
 <span>发布 2022-07-27</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-vpn-service-2022-07-27" data-version="2" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-vpn-service-2022-07-27/">Google Play 明确VPN使用要求</a></h2>
 <span class="tag">2 次更新</span>    <p>仅 VPN 核心功能或家长控制、企业管理、安全、网络工具、浏览器、运营商服务等批准场景可用。2022-07-27 公告要求所有应用必须具备可接受的核心功能才能使用 VpnService；2023-07-12 公告补充禁止利用 VpnService 实施广告欺诈。</p>
   </div>
@@ -313,7 +333,7 @@
 <span>发布 2022-07-27</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-exact-alarm-2022-07-27" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-exact-alarm-2022-07-27/">Google Play 明确精确闹钟使用要求</a></h2>
     <p>仅核心功能必须精确定时的闹钟、计时器或日历类应用可自动使用；其他场景应评估是否真的需要 SCHEDULE_EXACT_ALARM。2022-07-27 公告将精确闹钟列为受限权限。</p>
   </div>
@@ -322,7 +342,7 @@
 <span>发布 2022-05-11</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-03-05 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-03-05 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-health-connect-permission-2022-05-11" data-version="5" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-health-connect-permission-2022-05-11/">Google Play 明确Health Connect 权限使用要求</a></h2>
 <span class="tag">5 次更新</span>    <p>仅获准的健康、健身、医疗护理或研究等核心用途可访问 Health Connect 数据，须最小化权限并提供隐私、管理和删除说明。政策 2022-05-11 引入，其后在申请方式、受监管医疗设备准入和健康档案数据保障三个方向多次修订。完整演进见下方版本历史。</p>
   </div>
@@ -331,7 +351,7 @@
 <span>发布 2022-04-06</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-request-install-packages-2022-04-06" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-request-install-packages-2022-04-06/">Google Play 明确安装其他 APK使用要求</a></h2>
     <p>核心功能必须包含发送、接收或用户主动安装应用包；不得用于自更新、静默或未授权安装。2022-04-06 公告引入 Request Install Packages Permission 政策，2023-07-12 公告再次修订。</p>
   </div>
@@ -340,7 +360,7 @@
 <span>发布 2021-07-28</span><strong>截止 2026-01-28</strong>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-10-30 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2025-10-30 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-india-rbi-dla-list-2025-10-30" data-version="2" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-india-rbi-dla-list-2025-10-30/">Google Play 印度个人贷款应用 RBI DLA 名单要求</a></h2>
 <span class="tag">2 次更新</span>    <p>在印度提供个人贷款的应用须持有效牌照并列入 RBI 公布的受监管实体部署的 DLA 名单。</p>
   </div>
@@ -349,7 +369,7 @@
 <span>发布 2021-07-28</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-accessibility-api-2025-10-30" data-version="3" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-accessibility-api-2025-10-30/">Google Play 明确无障碍服务使用要求</a></h2>
 <span class="tag">3 次更新</span>    <p>非残障辅助工具需显著披露、明确同意和 Play Console 声明；不得自主发起、规划和执行操作或决定。</p>
   </div>
@@ -358,7 +378,7 @@
 <span>发布 2021-03-31</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-package-visibility-2021-03-31" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-package-visibility-2021-03-31/">Google Play 明确已安装应用列表使用要求</a></h2>
     <p>仅核心功能需要广泛识别或互操作已安装应用时可用；不得用于广告或分析变现。2021-03-31 公告引入 Package Visibility 政策，对 QUERY_ALL_PACKAGES 权限设立审批流程，并给出 60 天合规期。</p>
   </div>
@@ -367,7 +387,7 @@
 <span>发布 2020-07-08</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">已正式发布</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-all-files-access-2020-07-08" data-version="1" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-all-files-access-2020-07-08/">Google Play 明确全部文件访问使用要求</a></h2>
     <p>仅核心功能必须广泛访问共享存储时可用，并须通过 Play 审核；应优先采用 Storage Access Framework 或 MediaStore。2020-07-08 公告首次对面向 Android R 的应用引入广泛存储访问的申报与审核要求，2021-03-31 公告正式以 All Files Access Permission policy 命名。</p>
   </div>
@@ -376,7 +396,7 @@
 <span>发布 2020-04-16</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2025 年 10 月 已生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P1</span><span class="tag lifecycle">2025 年 10 月 已生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-subscription-disclosure-2025-10-30" data-version="4" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-subscription-disclosure-2025-10-30/">Google Play 订阅重要信息披露澄清</a></h2>
 <span class="tag">4 次更新</span>    <p>订阅促销与购买界面必须明确披露条款、价格、计费周期、自动续订及其他重要信息，并避免欺骗或操纵。</p>
   </div>
@@ -385,7 +405,7 @@
 <span>发布 2018 年 10 月</span>  </div>
   <div class="timeline-content">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2027-01-27 待生效</span></div>
+    <div class="tags"><span class="tag domain">开发者平台</span><span class="tag priority">P0-A</span><span class="tag lifecycle">2027-01-27 待生效</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-call-log-permission-2026-07-15" data-version="3" hidden></div></div>
     <h2><a href="/policy-radar/events/evt_legacy-google-play-call-log-permission-2026-07-15/">Google Play 短信与通话记录权限使用要求</a></h2>
 <span class="tag">3 次更新</span>    <p>SMS and Call Log Permissions 政策把 READ_SMS / READ_CALL_LOG 等权限限定在默认短信、默认电话或 Assistant 处理程序，以及少数经 Google Play 审核批准的例外核心用途。2026-07-15 公告移除了「来电账号验证」这一例外，自 2027-01-27 起该用途不再允许申请 READ_CALL_LOG。完整演进见下方版本历史。</p>
   </div>
@@ -702,6 +722,14 @@
     priority.className = "tag priority";
     priority.textContent = event.businessPriority;
     tags.append(priority);
+    // 处理状态位（#298）：由 assets/event-status.js 发现并渲染，无 JS 状态脚本时保持隐藏。
+    const status = document.createElement("div");
+    status.className = "event-status";
+    status.dataset.eventStatus = "";
+    status.dataset.eventId = event.eventId;
+    status.dataset.version = String(event.statusVersion);
+    status.hidden = true;
+    tags.append(status);
     content.append(tags);
     const heading = document.createElement("h2");
     const link = document.createElement("a");
@@ -840,5 +868,5 @@
 </script>
   <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
-</body>
+<script src="/policy-radar/assets/event-status.js" defer></script></body>
 </html>
