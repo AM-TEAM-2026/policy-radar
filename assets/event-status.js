@@ -87,7 +87,22 @@
         refresh_token: params.get("refresh_token"),
         expires_in: params.get("expires_in")
       }));
+      recordLogin("microsoft");
     }
+  }
+
+  // 登录记录（#310）：邮箱由数据库从凭证里取；失败只少一条日志，不影响登录。
+  function recordLogin(method) {
+    if (!session) return;
+    fetch(API + "/rest/v1/rpc/record_login", {
+      method: "POST",
+      headers: {
+        apikey: KEY,
+        Authorization: "Bearer " + session.access_token,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ p_method: method })
+    }).catch(function () {});
   }
 
   function freshSession() {
@@ -270,8 +285,10 @@
         if (response.ok && data.access_token) {
           passwordInput.value = "";
           saveSession(sessionFrom(data));
+          recordLogin("password");
           renderAuth();
           renderSlots();
+          loadAdminLog();
           return;
         }
         var code = data.error_code || "";
@@ -328,6 +345,7 @@
     authBox.textContent = "";
     if (session) {
       authBox.appendChild(element("span", "status-user", session.email || "已登录"));
+      showAdminLink();
       var logout = element("button", "status-auth-button", "退出");
       logout.type = "button";
       logout.addEventListener("click", function () {
@@ -335,6 +353,7 @@
         saveSession(null);
         renderAuth();
         renderSlots();
+        loadAdminLog();
         fetch(API + "/auth/v1/logout", {
           method: "POST",
           headers: { apikey: KEY, Authorization: "Bearer " + token }
@@ -416,10 +435,147 @@
     authBox.hidden = false;
   }
 
+  // 管理员活动日志（#310）。是否管理员、能不能读到数据，全部由数据库端的 is_team_admin() / admin_activity_log() 判定；
+  // 这里只决定显示什么。页面本身对所有人公开，但非管理员拿不到任何数据。
+  var logBox = document.querySelector("[data-admin-log]");
+  var METHODS = { microsoft: "微软", password: "密码" };
+
+  function rpc(name, body) {
+    return freshSession().then(function (current) {
+      if (!current) throw new Error("auth");
+      return fetch(API + "/rest/v1/rpc/" + name, {
+        method: "POST",
+        headers: {
+          apikey: KEY,
+          Authorization: "Bearer " + current.access_token,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body || {})
+      });
+    }).then(function (response) {
+      if (response.status === 401) throw new Error("auth");
+      if (response.status === 403) throw new Error("denied");
+      if (!response.ok) throw new Error("load");
+      return response.json();
+    });
+  }
+
+  function showAdminLink() {
+    var url = authBox && authBox.dataset.logUrl;
+    if (!url || logBox) return;
+    rpc("is_team_admin").then(function (isAdmin) {
+      if (isAdmin !== true || !session || authBox.querySelector(".status-log-link")) return;
+      var link = element("a", "status-log-link", "活动日志");
+      link.href = url;
+      authBox.insertBefore(link, authBox.firstChild);
+    }).catch(function () {});
+  }
+
+  function formatTime(value) {
+    if (!value) return "—";
+    var date = new Date(value);
+    if (isNaN(date.getTime())) return value;
+    var pad = function (n) { return ("0" + n).slice(-2); };
+    return date.getFullYear() + "-" + pad(date.getMonth() + 1) + "-" + pad(date.getDate())
+      + " " + pad(date.getHours()) + ":" + pad(date.getMinutes());
+  }
+
+  function table(headers, rows) {
+    var wrap = element("div", "admin-log-table");
+    var node = element("table");
+    var head = element("tr");
+    headers.forEach(function (text) { head.appendChild(element("th", "", text)); });
+    node.appendChild(element("thead")).appendChild(head);
+    var body = element("tbody");
+    rows.forEach(function (cells) {
+      var tr = element("tr");
+      cells.forEach(function (cell) {
+        var td = element("td");
+        if (typeof cell === "string") td.textContent = cell;
+        else td.appendChild(cell);
+        tr.appendChild(td);
+      });
+      body.appendChild(tr);
+    });
+    node.appendChild(body);
+    wrap.appendChild(node);
+    return wrap;
+  }
+
+  function section(title, note, content) {
+    var box = element("section", "event-section");
+    box.appendChild(element("h2", "", title));
+    if (note) box.appendChild(element("p", "admin-log-note", note));
+    box.appendChild(content);
+    return box;
+  }
+
+  function loadEventTitles() {
+    return fetch(logBox.dataset.indexUrl).then(function (response) {
+      return response.ok ? response.json() : { events: [] };
+    }).then(function (index) {
+      var titles = {};
+      (index.events || []).forEach(function (event) { titles[event.eventId] = event.title; });
+      return titles;
+    }).catch(function () { return {}; });
+  }
+
+  function renderAdminLog(data, titles) {
+    logBox.textContent = "";
+    var members = data.members || [];
+    logBox.appendChild(section("成员最后登录", "取自登录系统本身，包含本页上线前的登录。", table(
+      ["成员", "最后登录"],
+      members.map(function (row) {
+        return [row.email + (row.is_admin ? "（管理员）" : ""), row.last_sign_in_at ? formatTime(row.last_sign_in_at) : "从未登录"];
+      })
+    )));
+    var logins = data.logins || [];
+    logBox.appendChild(section("最近登录记录", logins.length ? "按时间倒序，最多 200 条。" : "暂无记录：本页上线后的登录才会记在这里。", table(
+      ["时间", "成员", "方式"],
+      logins.map(function (row) { return [formatTime(row.logged_at), row.email, METHODS[row.method] || row.method]; })
+    )));
+    var changes = data.changes || [];
+    logBox.appendChild(section("状态修改记录", changes.length ? "按时间倒序，最多 200 条。" : "暂无记录。", table(
+      ["时间", "成员", "事件", "改动"],
+      changes.map(function (row) {
+        // 站上已没有这条事件（如被合并吸收）时只显示 ID，不给会 404 的链接。
+        var link = element(titles[row.event_id] ? "a" : "span", "", titles[row.event_id] || row.event_id);
+        if (titles[row.event_id]) link.href = logBox.dataset.eventsBase + encodeURIComponent(row.event_id) + "/";
+        var change = (row.previous_status ? (LABELS[row.previous_status] || row.previous_status) : "未标记")
+          + " → " + (LABELS[row.status] || row.status);
+        return [formatTime(row.changed_at), row.changed_by, link, change];
+      })
+    )));
+  }
+
+  function loadAdminLog() {
+    if (!logBox) return;
+    if (!session) {
+      logBox.textContent = "";
+      logBox.appendChild(element("p", "admin-log-note", "请先用右上角「团队登录」以管理员账号登录。"));
+      return;
+    }
+    logBox.textContent = "";
+    logBox.appendChild(element("p", "admin-log-note", "加载中…"));
+    Promise.all([rpc("admin_activity_log", { p_limit: 200 }), loadEventTitles()]).then(function (results) {
+      renderAdminLog(results[0], results[1]);
+    }).catch(function (error) {
+      if (error.message === "auth") {
+        saveSession(null);
+        renderAuth();
+        renderSlots();
+      }
+      logBox.textContent = "";
+      logBox.appendChild(element("p", "admin-log-note", error.message === "denied" ? "仅管理员可见。"
+        : error.message === "auth" ? "登录已失效，请重新登录。" : "日志读取失败，请稍后重试。"));
+    });
+  }
+
   takeSessionFromHash();
   if (!session) session = readSession();
   freshSession().then(function () {
     renderAuth();
+    loadAdminLog();
     return loadStatuses();
   }).then(function () {
     renderSlots();
