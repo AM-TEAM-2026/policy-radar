@@ -57,14 +57,28 @@
     };
   }
 
-  // 邮件登录链接回跳时，凭证在 URL hash 里；读完立即从地址栏抹掉。
+  // 微软登录回跳时，凭证在 URL hash 里，出错时错误信息可能在 hash 或查询串里；读完立即从地址栏抹掉。
+  function oauthErrorText(params) {
+    var detail = (params.get("error_description") || "") + " " + (params.get("error_code") || "");
+    if (/signup|not allowed/i.test(detail)) return "该账号尚未开通，请联系 lexie";
+    if (params.get("error") === "access_denied") return "微软登录未完成（已取消，或需要管理员批准）";
+    return "登录失败，请重试";
+  }
+
   function takeSessionFromHash() {
     var hash = window.location.hash.replace(/^#/, "");
+    var query = new URLSearchParams(window.location.search);
+    if (query.get("error") && query.get("error_description") !== null) {
+      authMessage = oauthErrorText(query);
+      ["error", "error_code", "error_description"].forEach(function (key) { query.delete(key); });
+      var rest = query.toString();
+      window.history.replaceState(null, "", window.location.pathname + (rest ? "?" + rest : "") + window.location.hash);
+    }
     if (!/(^|&)(access_token|error)=/.test(hash)) return;
     var params = new URLSearchParams(hash);
     window.history.replaceState(null, "", window.location.pathname + window.location.search);
     if (params.get("error")) {
-      authMessage = "登录链接无效或已过期，请重新发送";
+      authMessage = oauthErrorText(params);
       return;
     }
     if (params.get("access_token") && params.get("refresh_token")) {
@@ -241,8 +255,7 @@
     });
   }
 
-  // 主登录方式：邮箱 + 密码。账号由 lexie 在 Supabase 后台建，密码私下发给本人；
-  // 不依赖发信，所以同事不必加入 Supabase 组织（decision-log 2026-10-09）。
+  // 备用登录方式：邮箱 + 密码。账号由 lexie 在 Supabase 后台建，密码私下发给本人（decision-log 2026-10-09）。
   function passwordLogin(button, emailInput, passwordInput, note) {
     var email = emailInput.value.trim().toLowerCase();
     if (!email || !passwordInput.value) return;
@@ -275,38 +288,39 @@
     });
   }
 
-  // 备用方式：邮件登录链接。只对 Supabase 组织成员有效（默认发信服务的限制）。
-  function sendLink(button, input, note) {
-    var email = input.value.trim().toLowerCase();
-    if (!email) {
-      note.textContent = "请先填写邮箱";
-      return;
+  // 主登录方式：公司微软账号（Entra ID 单租户，只有 ewp.sg 账号能登录）。
+  // 整页跳转到 Supabase 的 authorize 端点，回跳后由 takeSessionFromHash() 取凭证（decision-log 2026-10-10）。
+  // login_hint 让微软登录页预填这个邮箱；已登录 M365 的浏览器会直接通过、自动跳回。
+  function microsoftLogin(email) {
+    var redirect = window.location.origin + window.location.pathname + window.location.search;
+    window.location.assign(API + "/auth/v1/authorize?provider=azure&scopes=email"
+      + "&login_hint=" + encodeURIComponent(email)
+      + "&redirect_to=" + encodeURIComponent(redirect));
+  }
+
+  // 只记邮箱（不是凭证），下次打开登录框时预填。
+  var EMAIL_STORE = "policyRadarEmail";
+  function rememberedEmail() {
+    try {
+      return window.localStorage.getItem(EMAIL_STORE) || "";
+    } catch (error) {
+      return "";
     }
-    button.disabled = true;
-    note.textContent = "发送中…";
-    var redirect = window.location.origin + window.location.pathname;
-    fetch(API + "/auth/v1/otp?redirect_to=" + encodeURIComponent(redirect), {
-      method: "POST",
-      headers: { apikey: KEY, "Content-Type": "application/json" },
-      body: JSON.stringify({ email: email, create_user: false })
-    }).then(function (response) {
-      if (response.ok) {
-        note.textContent = "登录链接已发送，请到邮箱点击（每小时最多发 2 封）";
-        return;
-      }
-      return response.json().catch(function () { return {}; }).then(function (data) {
-        var code = data.error_code || "";
-        note.textContent = response.status === 429 || code === "over_email_send_rate_limit"
-          ? "发送太频繁，请稍后再试"
-          : code === "otp_disabled" || code === "signup_disabled" || response.status === 422
-            ? "该邮箱不在团队名单"
-            : "发送失败，请稍后再试";
-      });
-    }).catch(function () {
-      note.textContent = "发送失败，请检查网络";
-    }).then(function () {
-      button.disabled = false;
-    });
+  }
+  function rememberEmail(email) {
+    try {
+      window.localStorage.setItem(EMAIL_STORE, email);
+    } catch (error) {
+      // 存不下就下次重新输入。
+    }
+  }
+
+  // 浮层默认右对齐「团队登录」；窄屏下导航换行后会伸出左边缘，打开时按视口夹回 16px 边距内。
+  function placeLoginForm(form) {
+    form.style.right = "";
+    if (form.hidden) return;
+    var overflow = 16 - form.getBoundingClientRect().left;
+    if (overflow > 0) form.style.right = -overflow + "px";
   }
 
   function renderAuth() {
@@ -330,45 +344,74 @@
     } else {
       var toggle = element("button", "status-auth-button", "团队登录");
       toggle.type = "button";
+      // 一个邮箱框 + 一个主按钮。默认「微软登录」；「改用密码登录」只是在同一个框下展开密码框，主按钮随之变为「密码登录」。
       var form = element("form", "status-login");
+      form.noValidate = true;
+      var usePassword = false;
       var input = element("input");
       input.type = "email";
       input.name = "email";
-      input.required = true;
       input.autocomplete = "username";
       input.placeholder = "name@ewp.sg";
-      input.setAttribute("aria-label", "团队邮箱");
+      input.value = rememberedEmail();
+      input.setAttribute("aria-label", "公司邮箱");
       var password = element("input");
       password.type = "password";
       password.name = "password";
-      password.required = true;
       password.autocomplete = "current-password";
       password.placeholder = "密码";
       password.setAttribute("aria-label", "密码");
-      var submit = element("button", "status-auth-button", "登录");
+      password.hidden = true;
+      var submit = element("button", "status-auth-button primary", "微软登录");
       submit.type = "submit";
-      var link = element("button", "status-auth-button secondary", "改用邮件链接");
-      link.type = "button";
+      var mode = element("button", "status-auth-button link", "改用密码登录");
+      mode.type = "button";
       var note = element("span", "status-note", authMessage);
       form.appendChild(input);
       form.appendChild(password);
       form.appendChild(submit);
-      form.appendChild(link);
+      form.appendChild(mode);
       form.appendChild(note);
       form.hidden = !authMessage;
       toggle.addEventListener("click", function () {
         form.hidden = !form.hidden;
-        if (!form.hidden) input.focus();
+        placeLoginForm(form);
+        if (!form.hidden) (input.value ? submit : input).focus();
+      });
+      mode.addEventListener("click", function () {
+        usePassword = !usePassword;
+        password.hidden = !usePassword;
+        submit.textContent = usePassword ? "密码登录" : "微软登录";
+        mode.textContent = usePassword ? "改用微软登录" : "改用密码登录";
+        note.textContent = "";
+        (usePassword && input.value ? password : input).focus();
       });
       form.addEventListener("submit", function (event) {
         event.preventDefault();
-        passwordLogin(submit, input, password, note);
-      });
-      link.addEventListener("click", function () {
-        sendLink(link, input, note);
+        var email = input.value.trim().toLowerCase();
+        if (!/^[^@\s]+@ewp\.sg$/.test(email)) {
+          note.textContent = "请填写 @ewp.sg 公司邮箱";
+          input.focus();
+          return;
+        }
+        rememberEmail(email);
+        if (usePassword) {
+          if (!password.value) {
+            note.textContent = "请填写密码";
+            password.focus();
+            return;
+          }
+          passwordLogin(submit, input, password, note);
+          return;
+        }
+        submit.disabled = true;
+        note.textContent = "正在跳转到微软登录…";
+        microsoftLogin(email);
       });
       authBox.appendChild(toggle);
       authBox.appendChild(form);
+      authBox.hidden = false;
+      placeLoginForm(form);
     }
     authBox.hidden = false;
   }
