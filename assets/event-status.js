@@ -116,13 +116,26 @@
   }
 
   // 从未标记过 → 空值（status 为 ""）。标记之后事件又出了新版本（版本数变了），一律视为待解决。
-  function effective(slot) {
-    var row = statuses[slot.dataset.eventId];
+  function effectiveOf(eventId, version) {
+    var row = statuses[eventId];
     if (!row) return { status: "", stale: false };
-    if (row.version_key !== Number(slot.dataset.version)) {
+    if (row.version_key !== Number(version)) {
       return { status: "pending", stale: row.status !== "pending" };
     }
     return { status: row.status, stale: false };
+  }
+
+  function effective(slot) {
+    return effectiveOf(slot.dataset.eventId, slot.dataset.version);
+  }
+
+  // 供时间线「处理状态」筛选读取：与状态位同一套口径，筛选结果与卡片显示不会不一致。
+  // 状态读取成功后才 ready；读不到时筛选项保持隐藏。
+  var api = { ready: false, effectiveOf: effectiveOf };
+  window.PolicyRadarStatus = api;
+
+  function announce(reason) {
+    document.dispatchEvent(new CustomEvent("policy-radar-status", { detail: { reason: reason } }));
   }
 
   function element(tag, className, text) {
@@ -215,6 +228,7 @@
       allSlots().forEach(function (other) {
         if (other.dataset.eventId === eventId) renderSlot(other);
       });
+      announce("save");
     }).catch(function (error) {
       var text = error.message === "auth" ? "登录已失效，请重新登录"
         : error.message === "denied" ? "保存失败：当前账号不在团队名单"
@@ -367,6 +381,8 @@
   }).then(function () {
     renderSlots();
     watchNewSlots();
+    api.ready = true;
+    announce("load");
   }).catch(function () {
     // 读不到状态时不渲染任何状态位，避免把「未知」显示成「待解决」。
   });
