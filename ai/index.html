@@ -44,6 +44,51 @@
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
     <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer">Anthropic API Release Notes</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-15</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_27b6623b01a056207dec2acc" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_27b6623b01a056207dec2acc/">Compliance API 新增获取用户自定义指令功能</a></h3>
+<p class="event-summary">2026年10月15日，Compliance API 新增支持返回组织成员在 claude.ai 和 Cowork 中保存的自定义指令文本，该功能处于 Claude Enterprise 组织的 Beta 阶段。需使用 Compliance Access Key 和 read:compliance_user_data 权限调用。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>企业合规和隐私管理团队可通过 API 获取并审查员工为 AI 设置的自定义指令，有助于加强内部数据安全和合规审计，但需确保数据收集符合隐私政策。</p></section>
+    <section><h4>需要行动</h4><p>评估是否需要在现有的合规审计流程中集成该 API 端点，并确认数据收集范围是否符合当地隐私法规及企业内部政策。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 合规与隐私团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer"><span>Anthropic API Release Notes</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://www.anthropic.com/news" target="_blank" rel="noopener noreferrer">Anthropic Newsroom</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-15</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_54cb8a107d821a51f76eef06" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_54cb8a107d821a51f76eef06/">Anthropic 发布关于独立评估员的更新公告</a></h3>
+<p class="event-summary">Anthropic 官方新闻室发布了关于独立评估员（independent evaluators）的更新公告，涉及AI模型的安全评估与外部审查机制。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>可能影响公司AI模型的安全评估流程、红队测试标准及内容治理合规要求，需关注外部独立评估的最新动向。</p></section>
+    <section><h4>需要行动</h4><p>关注独立评估员的最新评估标准与结果，确保内部模型安全评估流程与外部独立评估要求保持一致。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> AI安全与合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://www.anthropic.com/news" target="_blank" rel="noopener noreferrer"><span>Anthropic Newsroom</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer">Anthropic API Release Notes</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-15</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_045dee040ccea1661979428a" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_045dee040ccea1661979428a/">Claude Opus 5.5 Fast mode 退出研究预览并调整速率限制</a></h3>
+<p class="event-summary">2026年10月15日，Claude Opus 5.5 的 Fast mode 退出研究预览，无需再申请访问或发送特定 beta header，并在 Azure 托管的 Microsoft Foundry 部署中可用。该模型在 Start、Build 和 Scale 使用层级中新增了默认的 Fast mode 速率限制。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>开发者在使用 Claude Opus 5.5 的 Fast mode 时不再需要配置 beta header，但需注意新引入的默认速率限制可能会对高并发请求产生影响，需根据使用层级调整请求策略。</p></section>
+    <section><h4>需要行动</h4><p>检查现有应用中调用 Claude Opus 5.5 Fast mode 的代码，移除不再需要的 beta header，并评估新速率限制对业务的影响，必要时调整请求策略或申请提升配额。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 研发团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer"><span>Anthropic API Release Notes</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
+    <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://www.anthropic.com/news" target="_blank" rel="noopener noreferrer">Anthropic Newsroom</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-10-14</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_6714f01ad27001d3c966cc8c" data-version="1" hidden></div>  </div>
