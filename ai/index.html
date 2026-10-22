@@ -46,6 +46,66 @@
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer">Anthropic API Release Notes</a>
     <span aria-hidden="true">·</span>
+<span>发布 2026-10-21</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_ba8802f04262b633045c97e7" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_ba8802f04262b633045c97e7/">支持组织级 Web Fetch 与 Web Search 域名限制及开关控制</a></h3>
+<p class="event-summary">组织管理员现可在 Claude Console 中关闭 web fetch 功能，并为 web fetch 和 web search 设置允许或阻止的域名列表。Claude Managed Agents 的相关工具调用将严格遵循这些组织级别的域名限制。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>赋予组织对 AI 代理网络访问行为的精细控制权，有效防止代理抓取或搜索不受信任、违规或敏感的外部域名，强化内容治理与数据安全。</p></section>
+    <section><h4>需要行动</h4><p>登录 Claude Console 评估并配置 web fetch 和 web search 的域名白名单或黑名单，根据业务安全策略决定是否全局关闭 web fetch，并审查现有 Managed Agents 的网络访问配置。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 安全/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer"><span>Anthropic API Release Notes</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://www.anthropic.com/news" target="_blank" rel="noopener noreferrer">Anthropic Newsroom</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-21</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_84208bb9fbfde63071f019b7" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_84208bb9fbfde63071f019b7/">Anthropic 推出 Enterprise Frontier Safeguards (EFS) 企业级隐私与安全方案</a></h3>
+<p class="event-summary">Anthropic 宣布推出 Enterprise Frontier Safeguards (EFS) 方案，该方案结合了零数据保留的隐私保护与检测误用的先进安全措施，数据存储在客户控制的云基础设施中，而非 Anthropic。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>为企业客户提供更高的数据隐私和安全保障，满足严格的数据合规与零数据保留要求，降低数据泄露风险。</p></section>
+    <section><h4>需要行动</h4><p>评估 EFS 方案是否适用于自身企业的数据安全和隐私合规需求，考虑在相关项目中集成或采用该方案。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 安全与合规团队、企业IT架构团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://www.anthropic.com/news" target="_blank" rel="noopener noreferrer"><span>Anthropic Newsroom</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer">Anthropic API Release Notes</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-21</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_44799adb6b707b6d96df209a" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_44799adb6b707b6d96df209a/">API 新增用户资料执法状态字段以支持账号安全管理</a></h3>
+<p class="event-summary">Anthropic 在 API 中为 user profiles 新增 enforcement_status 和 enforcement_actions 字段，允许开发者查看最终客户是否被 Anthropic 限制或封禁，并支持通过 enforcement_status[] 进行过滤。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>开发者能够实时监控最终客户的账号合规与安全状态，及时识别并处理被平台封禁或限制的高风险用户，提升账号安全与内容治理能力。</p></section>
+    <section><h4>需要行动</h4><p>升级 API 版本至 2026-10-21，在用户管理逻辑中集成 enforcement_status 和 enforcement_actions 字段的读取与校验，对受限或封禁用户执行相应的业务拦截或提示。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 研发/安全团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer"><span>Anthropic API Release Notes</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener noreferrer">OpenAI API Changelog</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-21</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_78e47547f95a19408f400977" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_78e47547f95a19408f400977/">OpenAI 平台新增项目服务层级选择与组织限制功能</a></h3>
+<p class="event-summary">OpenAI 平台设置中新增服务层级选择功能，允许为项目指定服务层级；同时组织设置可限制所有项目使用的服务层级。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>组织管理员能够更精细地控制各项目所使用的服务层级，有助于优化成本与资源分配。</p></section>
+    <section><h4>需要行动</h4><p>组织管理员需评估业务需求，在平台设置中为项目配置合适的服务层级或设置组织级别的层级限制。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 账号与订阅管理团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener noreferrer"><span>OpenAI API Changelog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Anthropic</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://docs.anthropic.com/en/release-notes/api" target="_blank" rel="noopener noreferrer">Anthropic API Release Notes</a>
+    <span aria-hidden="true">·</span>
 <span>发布 2026-10-15</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_27b6623b01a056207dec2acc" data-version="1" hidden></div>  </div>
   <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_27b6623b01a056207dec2acc/">Compliance API 新增获取用户自定义指令功能</a></h3>
