@@ -32,7 +32,7 @@
         <summary class="active">时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">5</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">1</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a class="active" aria-current="page" href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">7</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">5</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">1</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a class="active" aria-current="page" href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">8</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
 <div class="status-auth" data-status-auth data-log-url="/policy-radar/log/" hidden></div>    </nav>
@@ -41,6 +41,66 @@
 <header class="page-heading"><h1>三方支付</h1><p>PayPal、Stripe、Adyen、Checkout.com、Paddle 等</p></header>
 <div class="card-stack">
 <article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">FunnelFox</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer">FunnelFox Product Updates</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-26</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_db786d42704bc7be05f86499" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_db786d42704bc7be05f86499/">FunnelFox 增强订阅与支付漏斗分析及数据追踪能力</a></h3>
+<p class="event-summary">FunnelFox 发布更新：1) 取消漏斗现可自适应展示客户订阅详情（如产品名称、价格、续订日期）；2) 新增支付窗口流失事件（如 Apple Pay/Google Pay/PayPal 窗口关闭或报错），以追踪支付流失原因；3) Amplitude 和 Mixpanel 现分步追踪 Solidgate 试用与付费转化事件。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>提升对订阅取消原因和支付环节流失率的洞察力，优化数据分析的颗粒度，帮助减少无追踪的支付流失。</p></section>
+    <section><h4>需要行动</h4><p>在取消漏斗中配置订阅变量展示；利用新事件数据分析支付流失原因；更新数据分析看板以区分试用与付费转化。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 产品与数据分析团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer"><span>FunnelFox Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">FunnelFox</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer">FunnelFox Product Updates</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-26</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_0dfce1bf7799531838f626be" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_0dfce1bf7799531838f626be/">FunnelFox Payments 新增 3DS 强制验证与商户国家配置</a></h3>
+<p class="event-summary">FunnelFox Payments 新增“Always run 3DS”选项，在每次授权前强制进行 3DS 验证（适用于 EEA 和 UK 卡）；同时支持设置商户国家/地区，以优化 Apple Pay/Google Pay 的本地卡方案支持，并影响 SCA 和 3DS 豁免逻辑。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>增强特定区域（EEA/UK）的支付安全性，减少授权后的额外检查；通过本地化路由提升支付成功率并优化强客户认证（SCA）豁免。</p></section>
+    <section><h4>需要行动</h4><p>评估 EEA 和 UK 市场的支付流程，决定是否启用“Always run 3DS”；配置默认或按客户国家覆盖的商户国家/地区设置。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付与技术团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer"><span>FunnelFox Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Adapty</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://status.adapty.io/" target="_blank" rel="noopener noreferrer">Adapty Status</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-26</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_b2876a77d0aa52f0f2c9958a" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">2026-10-27 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_b2876a77d0aa52f0f2c9958a/">Adapty Dashboard 计划维护通知</a></h3>
+<p class="event-summary">Adapty 宣布将于 2026年10月27日 06:00-07:00 UTC 进行 Dashboard 计划维护。期间登录和注册功能将中断最多15分钟，但 Adapty SDK、应用内购买和付费墙等面向用户的服务不受影响。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>开发者在维护窗口内无法访问 Adapty Dashboard 进行登录、注册或后台管理操作，但不影响最终用户的应用内购买和订阅体验。</p></section>
+    <section><h4>需要行动</h4><p>建议开发者避开该维护时间段进行 Dashboard 后台配置或账号管理操作，无需针对应用端进行紧急调整。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 开发者/运营团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://status.adapty.io/" target="_blank" rel="noopener noreferrer"><span>Adapty Status</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Paddle</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.paddle.com/changelog" target="_blank" rel="noopener noreferrer">Paddle Developer Changelog</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-26</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_67efc9f24bc43dd4b6ef4cc9" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_67efc9f24bc43dd4b6ef4cc9/">Paddle 结账页面支持自定义浅色和深色模式样式</a></h3>
+<p class="event-summary">Paddle 发布 1.16.0 版本，新增为内联和托管结账设置独立浅色和深色模式颜色的功能，支持通过 Paddle 仪表板或 API 进行配置。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>开发者能够更灵活地定制结账页面的视觉样式，使其更好地适配应用的浅色和深色主题，提升用户结账体验及品牌一致性。</p></section>
+    <section><h4>需要行动</h4><p>评估现有结账页面的主题适配情况，如需支持深色模式或更新品牌颜色，可通过 Paddle 仪表板或 API 配置新的颜色样式。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 前端开发团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.paddle.com/changelog" target="_blank" rel="noopener noreferrer"><span>Paddle Developer Changelog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">PayPal</span></div>
     <span aria-hidden="true">·</span>
@@ -224,21 +284,6 @@
 <a href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer"><span>FunnelFox Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
 </article><article class="card event-card">
   <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-10-12</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_3a973ed0fd287d0e09a6da2b" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">2026-10-19 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_3a973ed0fd287d0e09a6da2b/">Multibanco 计划维护通知</a></h3>
-<p class="event-summary">Stripe 发布 Multibanco 支付方式的计划维护通知，维护时间为 2026年10月19日 02:00 至 03:30 UTC。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>在维护期间，使用 Multibanco 进行支付的用户可能会遇到服务中断或延迟。</p></section>
-    <section><h4>需要行动</h4><p>建议提前通知用户维护时间，并准备备用支付方案或客服话术以应对可能的支付失败。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 支付运营团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">FunnelFox</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer">FunnelFox Product Updates</a>
@@ -313,6 +358,21 @@
 <p class="event-owner"><strong>建议责任方</strong> 支付运营团队</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（3 次更新）▾</summary><div class="milestones">
 <div class="milestone"><strong>2026-10-12 · TWINT 计划维护 · 公告</strong><span>首次收录：生效日 2026-10-13</span><a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-10-12 · 公告</strong><span>生效日：2026-10-13 → 未标注</span><a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-10-12 · 公告</strong><span>本次无实质变化，仅措辞不同</span><a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
   <div class="card-source-links" aria-label="来源原文">
+<a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-12</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_3a973ed0fd287d0e09a6da2b" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">2026-10-19 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_3a973ed0fd287d0e09a6da2b/">Multibanco 计划维护通知</a></h3>
+<p class="event-summary">Stripe 发布 Multibanco 支付方式的计划维护通知，维护时间为 2026年10月19日 02:00 至 03:30 UTC。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>在维护期间，使用 Multibanco 进行支付的用户可能会遇到服务中断或延迟。</p></section>
+    <section><h4>需要行动</h4><p>建议提前通知用户维护时间，并准备备用支付方案或客服话术以应对可能的支付失败。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付运营团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
 </article><article class="card event-card">
   <div class="event-meta">
@@ -735,66 +795,6 @@
     <section><h4>需要行动</h4><p>在维护窗口期前通过应用内公告提示用户，并准备或引导用户使用备用支付方式。</p></section>
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 支付运营团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">PayPal</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://www.paypal-status.com/history/eventdetails/109944" target="_blank" rel="noopener noreferrer">PayPal Status</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-09-23</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_5dded4f22f99977de418d2fe" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_5dded4f22f99977de418d2fe/">Braintree Apple Pay 令牌化服务影响已解决</a></h3>
-<p class="event-summary">PayPal 状态页面通报 Braintree Apple Pay 令牌化服务（PP-LIVE-109944）受到影响的事件已被检测并解决。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>该事件曾导致 Braintree 的 Apple Pay 令牌化功能异常，可能影响部分用户的 Apple Pay 支付体验，目前服务已恢复正常。</p></section>
-    <section><h4>需要行动</h4><p>确认 Apple Pay 支付链路已恢复正常，持续监控相关支付指标，无需采取额外修复行动。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 支付业务团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://www.paypal-status.com/history/eventdetails/109944" target="_blank" rel="noopener noreferrer"><span>PayPal Status</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-09-22</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_3f209560ecdc66e4fc5dca4a" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_3f209560ecdc66e4fc5dca4a/">Stripe API 调用成功率下降</a></h3>
-<p class="event-summary">Stripe API 在 2026年9月22日 19:13 至 22:19 UTC 期间出现错误率和响应时间升高，影响 API 账户和能力调用成功率，该问题已于 22:47 UTC 解决。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>导致依赖 Stripe API 的支付、订阅或账号相关功能出现短暂中断或延迟，影响开发者及终端用户的支付体验。</p></section>
-    <section><h4>需要行动</h4><p>检查监测窗口内的 API 调用日志，确认是否有失败的支付或账号操作，必要时进行重试或向用户说明情况。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 技术/运维团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Paddle</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.paddle.com/changelog" target="_blank" rel="noopener noreferrer">Paddle Developer Changelog</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-09-22</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_57c8b4af2e3add142bd89333" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_57c8b4af2e3add142bd89333/">Paddle 更新 Reporting Subscriptions API 支持按计划变更过滤订阅报告</a></h3>
-<p class="event-summary">Paddle 更新了 Reporting Subscriptions API，新增按计划的变更（如取消、暂停、恢复或无计划变更）过滤订阅报告的功能。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>开发者能够更精确地筛选和获取特定状态的订阅报告，有助于优化订阅数据分析和状态管理。</p></section>
-    <section><h4>需要行动</h4><p>评估是否需要在现有的订阅报告查询逻辑中集成新的过滤参数，以提升数据分析的效率和准确性。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 研发/数据团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.paddle.com/changelog" target="_blank" rel="noopener noreferrer"><span>Paddle Developer Changelog</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-09-22</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_d73c0cebca302203927aaf61" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_d73c0cebca302203927aaf61/">Swish 支付方式计划维护</a></h3>
-<p class="event-summary">Swish 支付方式将于 2026年11月3日 01:00-04:00 UTC 进行计划维护。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>维护期间 Swish 支付可能不可用，影响使用此方式的用户。</p></section>
-    <section><h4>需要行动</h4><p>关注后续维护进展，必要时在应用内提示用户或提供备用支付方式。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 运营/产品团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="三方支付分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/thirdpayment/page/2/">2</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
