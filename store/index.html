@@ -32,7 +32,7 @@
         <summary class="active">时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a class="active" aria-current="page" href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">5</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">2</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">8</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a class="active" aria-current="page" href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">6</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">2</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">8</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
 <div class="status-auth" data-status-auth data-log-url="/policy-radar/log/" hidden></div>    </nav>
@@ -41,6 +41,171 @@
 <header class="page-heading"><h1>开发者平台</h1><p>Apple Developer、Google Play Console、应用商店审核与政策</p></header>
 <div class="card-stack">
 <article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/16324062" target="_blank" rel="noopener noreferrer">Google Play Policy Summary and Child Pages — Accessibility API</a>
+    <span aria-hidden="true">·</span>
+<span class="date-fallback">发布时间未明确 / 首次发现 2026-10-30 10:36</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_dcf699488c227b0c56f6cdef" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2027-01-27 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_dcf699488c227b0c56f6cdef/">Google Play 发布 Android 17/18 权限及 Accessibility API 等多项政策更新</a></h3>
+<p class="event-summary">Google Play 更新了多项政策：1) 2027年1月27日起，限制Android 17+的位置和联系人权限，使用ACCESS_FINE_LOCATION需提交声明，非核心联系人访问需改用Picker；2) 2027年4月14日起，规范AppFunctions API，禁止欺骗AI代理或绕过安全控制；3) 2027年8月25日起，进一步限制联系人、本地网络、所有文件访问权限，并严格规范Accessibility API的使用与披露。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>涉及位置、联系人、文件存储、本地网络及无障碍服务的应用将面临严格的权限审查和声明要求，AI相关功能需符合防操纵规范，违规可能导致应用被拒审或下架。</p></section>
+    <section><h4>需要行动</h4><p>1. 评估并精简权限使用，非核心功能改用系统Picker或平台Intent；2. 为保留的敏感权限准备Play Console声明；3. 审查AppFunctions和Accessibility API，确保不用于禁止用途，核心辅助工具需设置isAccessibilityTool=true并完善商店披露。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 研发部/合规部</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/answer/16324062" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Summary and Child Pages — Accessibility API</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/9900533" target="_blank" rel="noopener noreferrer">Google Play Policy Summary and Child Pages — Subscriptions</a>
+    <span aria-hidden="true">·</span>
+<span class="date-fallback">发布时间未明确 / 首次发现 2026-10-30 10:36</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_e207f18928fe2995eec82707" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2027-01-27 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_e207f18928fe2995eec82707/">Google Play 更新基于资格的订阅折扣披露要求</a></h3>
+<p class="event-summary">Google Play 宣布将更新订阅政策，要求提供持续基于资格的折扣（如学生计划）的订阅，必须明确披露资格标准、验证流程以及资格到期后的定价和福利变化。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>开发者需要审查其应用内提供基于资格的折扣的订阅产品，确保清晰披露资格要求、验证方式以及资格失效后的价格和权益变化，以符合新规。</p></section>
+    <section><h4>需要行动</h4><p>排查应用中所有涉及基于资格的折扣订阅，补充并完善资格标准、验证流程及资格后定价和福利变化的披露信息，确保在生效日前完成合规。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 开发者/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/answer/9900533" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Summary and Child Pages — Subscriptions</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer">Apple Developer News — App Review</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-29</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_ff0f44c5a282ad3c460c7fc6" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-10-31 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_ff0f44c5a282ad3c460c7fc6/">台湾 App Store 店面标准应用内购买和付费应用交易佣金率下调至 26%</a></h3>
+<p class="event-summary">Apple 宣布自 2026 年 10 月 31 日起，台湾 App Store 店面标准应用内购买和付费应用交易的佣金率将从 30% 下调至 26%。Apple Developer Program 许可协议已进行相应修订，开发者无需在 10 月 31 日前签署更新条款即可享受该费率优惠。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>降低在台湾地区通过标准应用内购买和付费应用产生的交易成本，提升开发者在该地区的净利润率。</p></section>
+    <section><h4>需要行动</h4><p>关注并评估台湾地区业务收益变化，无需在 10 月 31 日前强制签署新条款，但建议后续登录账户接受更新后的 Apple Developer Program 许可协议。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 财务/法务/业务运营</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer"><span>Apple Developer News — App Review</span><span aria-hidden="true">↗</span></a><a href="https://developer.apple.com/news/?id=w9mxlhek" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/community?hl=en&amp;help_center_link=CI-S8gcSJVBvbGljeSBhbm5vdW5jZW1lbnQ6IE9jdG9iZXIgMzAsIDIwMjU" target="_blank" rel="noopener noreferrer">Google Play Policy Summary and Child Pages — Community</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-29</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_f8b5a0c6ab4211fcc9100331" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_f8b5a0c6ab4211fcc9100331/">Google Play 宣布政策更新：新增本地网络权限政策</a></h3>
+<p class="event-summary">2026年10月29日，Google Play 宣布政策变更，新增“本地网络权限”（Local Network Permission）相关政策。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>开发者需关注并遵守新的本地网络权限政策，可能影响涉及本地网络通信的应用合规性。</p></section>
+    <section><h4>需要行动</h4><p>审查应用是否涉及本地网络权限的使用，确保符合 Google Play 最新政策要求，必要时进行整改。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 开发者/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/community?hl=en&amp;help_center_link=CI-S8gcSJVBvbGljeSBhbm5vdW5jZW1lbnQ6IE9jdG9iZXIgMzAsIDIwMjU" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Summary and Child Pages — Community</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">Google Play Policy Deadlines</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-29</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_b49ec4fd06f70f8aab481954" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2027-08-25 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_b49ec4fd06f70f8aab481954/">Google Play 限制本地网络权限并要求提交声明</a></h3>
+<p class="event-summary">Google Play 宣布限制本地网络权限（Local Network Permission），针对目标为 Android 17 (API 37+) 及以上版本的应用，若需使用该权限必须在 Play Console 提交声明。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>影响目标为 Android 17 及以上版本且使用本地网络权限的应用，需提前准备权限声明，否则可能无法上架或更新。</p></section>
+    <section><h4>需要行动</h4><p>评估应用是否使用本地网络权限，若使用且目标为 Android 17+，需在 Play Console 提交权限声明。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 研发/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">Google Play Policy Deadlines</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-29</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_a885f52532c28e366498f4f3" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2027-04-14 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_a885f52532c28e366498f4f3/">Google Play 发布 AppFunctions API 政策合规要求</a></h3>
+<p class="event-summary">Google Play 宣布针对 AppFunctions API 的新政策，要求开发者必须遵守所有现有 Google Play 政策，严禁欺骗或操纵 AI 代理、绕过安全控制或干扰其他应用。该政策于 2026 年 10 月 29 日公布，并将于 2027 年 4 月 14 日生效。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>开发 AppFunctions 的开发者需确保其应用不违反关于 AI 代理、安全控制和干扰其他应用的规定，违规者可能面临应用下架或账号处罚等风险。</p></section>
+    <section><h4>需要行动</h4><p>审查现有的 AppFunctions 实现，确保不包含欺骗或操纵 AI 代理、绕过安全控制或干扰其他应用的行为，并在 2027 年 4 月 14 日前完成合规整改。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 研发团队/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/17105854?hl=en" target="_blank" rel="noopener noreferrer">Google Play Developer Program Policy</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-29</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_a71ab29e78147c1fbd6e2664" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_a71ab29e78147c1fbd6e2664/">Google Play 更新所有文件访问权限政策</a></h3>
+<p class="event-summary">Google Play 更新了所有文件访问权限（All Files Access Permission）政策，规定应用不得代表第三方请求设备存储访问权限，除非与核心功能相关。针对 Android 11 及以上版本，仅在平台 intent 不足时才可请求 MANAGE_EXTERNAL_STORAGE 权限，且必须提交 Play Console 声明。获准权限的应用需提示用户在设置中启用该权限。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>影响需要访问设备存储或请求 MANAGE_EXTERNAL_STORAGE 权限的应用，需重新评估权限请求的必要性及合规性，涉及用户隐私和数据安全。</p></section>
+    <section><h4>需要行动</h4><p>排查应用是否请求了 MANAGE_EXTERNAL_STORAGE 权限。若请求，需确保仅用于核心功能，提交 Play Console 声明说明访问需求，并在应用内明确提示用户前往设置开启“所有文件访问”权限。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 开发团队/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/answer/17105854?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Developer Program Policy</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.apple.com/en-us/100100" target="_blank" rel="noopener noreferrer">Apple Security Releases</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-29</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_83b7e4371824ba56785eb3fe" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_83b7e4371824ba56785eb3fe/">Apple发布Xcode 27.2及macOS Tahoe 26.6安全更新</a></h3>
+<p class="event-summary">Apple于2026年10月29日发布安全更新，涵盖Xcode 27.2以及macOS Tahoe 26.6及后续版本。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>修复了相关软件中的安全漏洞，提升了开发工具与操作系统的安全性，防范潜在的安全威胁。</p></section>
+    <section><h4>需要行动</h4><p>建议开发者更新Xcode至27.2版本，用户更新macOS至26.6或更高版本，以确保开发环境和系统的安全。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 研发团队/IT支持</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.apple.com/en-us/100100" target="_blank" rel="noopener noreferrer"><span>Apple Security Releases</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">Google Play Policy Deadlines</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-29</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_25a2efe9def8fe6e86186f76" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2027-01-27 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_25a2efe9def8fe6e86186f76/">Google Play 更新基于资格的持续折扣订阅政策</a></h3>
+<p class="event-summary">Google Play 宣布，对于提供基于资格的持续折扣（如学生计划）的订阅，开发者必须明确披露资格标准、验证流程以及失去资格后的定价和权益变化。该政策于 2026-10-29 宣布，将于 2027-01-27 生效。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>影响提供基于资格折扣（如学生、特定群体等）订阅的开发者，需要修改订阅详情页或应用内展示，确保清晰披露资格验证和失效后的价格变化，否则可能面临违规下架或处罚风险。</p></section>
+    <section><h4>需要行动</h4><p>审查现有提供资格折扣的订阅产品，确保在应用内或商店详情页清晰披露资格标准、验证流程及资格失效后的定价和权益变化，并在 2027-01-27 前完成合规整改。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 产品/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">Google Play Policy Deadlines</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-29</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_1f17b4828da92c9d7597b466" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2027-08-25 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_1f17b4828da92c9d7597b466/">Google Play 宣布限制“管理联系人”权限的使用</a></h3>
+<p class="event-summary">Google Play 宣布自 2027 年 8 月 25 日起，限制“管理联系人”权限的使用。该权限仅限于系统选择器不足且为核心功能所需的应用，且必须在 Play Console 提交声明。其他应用必须使用范围受限的平台 intent。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>依赖“管理联系人”权限的应用需要重新评估其核心功能需求，若不符合限制条件，需改用平台 intent，否则可能面临下架或合规风险。</p></section>
+    <section><h4>需要行动</h4><p>排查应用是否使用了“管理联系人”权限，评估是否符合核心功能及系统选择器不足的条件；若不符合，需修改代码改用范围受限的平台 intent，并在 Play Console 提交相关声明。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 研发团队/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/announcements/13412212?hl=en" target="_blank" rel="noopener noreferrer">Google Play Console Announcements</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-29</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_cc2f2a1be19d2099b5dfc3cc" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_cc2f2a1be19d2099b5dfc3cc/">Google Play 更新 Local Network 和 Manage Contacts 权限政策</a></h3>
+<p class="event-summary">Google Play 宣布针对 Local Network Permission 和 Manage Contacts Permission 的新政策。对于目标为 Android 17 (API 37+) 或更高版本的应用，使用 Local Network Permission 必须提交 Play Console 声明；Manage Contacts Permission 也仅限于核心功能且系统选择器不足时使用，并需提交声明。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>针对 Android 17 (API 37+) 的应用，若使用 Local Network 或 Manage Contacts 权限，必须满足新的限制条件并提交权限声明，否则可能无法通过审核或更新。</p></section>
+    <section><h4>需要行动</h4><p>排查应用是否使用了 Local Network 和 Manage Contacts 权限。若使用，需评估是否符合核心功能要求，并在 Play Console 中完成权限声明的提交，同时确保应用适配 Android 17 (API 37+) 的相关要求。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 开发团队/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/announcements/13412212?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Console Announcements</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
     <span aria-hidden="true">·</span>
@@ -315,6 +480,21 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 开发团队/安全团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer"><span>Apple Developer News — App Review</span><span aria-hidden="true">↗</span></a><a href="https://developer.apple.com/news/?id=w4atic4c" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/16373081" target="_blank" rel="noopener noreferrer">Google Play Policy Summary and Child Pages — PolicyBytes Hub</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026 年 10 月</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_9cee8409f280e41164b8ff48" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_9cee8409f280e41164b8ff48/">Google Play 2026年10月政策更新</a></h3>
+<p class="event-summary">Google Play 发布了2026年10月的政策更新内容。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>开发者需要关注此次政策更新，以确保其应用符合最新的商店政策要求。</p></section>
+    <section><h4>需要行动</h4><p>查阅2026年10月政策更新的详细条款，评估对现有及未来应用的影响，并落实相应的合规调整。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 合规团队/开发者</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/answer/16373081" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Summary and Child Pages — PolicyBytes Hub</span><span aria-hidden="true">↗</span></a>  </div>
 </article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google</span></div>
@@ -618,190 +798,7 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 游戏客户端/引擎团队、PC 移植团队、QA/兼容性测试团队、产品与发行团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer"><span>Google Play Games Level Up Guidelines</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://status.play.google.com/" target="_blank" rel="noopener noreferrer">Google Play Status Dashboard</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-09-01</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_73d1e4f2020a659cb257abc9" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_73d1e4f2020a659cb257abc9/">Google Play Integrity API 故障（已解决）</a></h3>
-<p class="event-summary">2026-09-01 08:00 UTC 至 12:22 UTC，Play Integrity API 出现故障，官方正在调查并后续更新。严重度 medium，故障编号 orkXYGChgBs8XkzJ6Pyy，状态已解决。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>影响依赖 Play Integrity 的设备与应用完整性校验，可能导致合法用户被误拦截、风控策略失效或安全校验失败。</p></section>
-    <section><h4>需要行动</h4><p>检查故障窗口内 Integrity 校验失败日志，评估误拦截与风控影响；必要时临时放宽校验或回滚拦截；与 Google 确认根因并完善降级与重试策略。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 安全与风控/后端研发</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://status.play.google.com/" target="_blank" rel="noopener noreferrer"><span>Google Play Status Dashboard</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://status.play.google.com/" target="_blank" rel="noopener noreferrer">Google Play Status Dashboard</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-09-01</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_4517e2309c3736d62fca7d30" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_4517e2309c3736d62fca7d30/">Google Play 计费与订阅相关服务故障（已解决）</a></h3>
-<p class="event-summary">2026-09-01 08:54 UTC 至 11:43 UTC，Google Play Billing Purchases、Play Developer Subscriptions and In-App Purchases API、Play Subscriptions Renewal and Management 出现故障，用户可访问但出现错误信息、高延迟或其他异常行为。严重度 medium，故障编号 n5md7YLZQsKV6rFXFXDG，状态已解决。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>影响应用内购买、开发者订阅及订阅续订与管理功能，可能导致交易失败、订阅状态异常、用户投诉及收入损失。</p></section>
-    <section><h4>需要行动</h4><p>核查故障窗口内的交易与订阅状态，补发或回滚异常订单；检查日志与错误码；向受影响用户发布说明；复盘并完善计费链路监控与告警。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 支付与订阅业务方/后端研发/客服</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://status.play.google.com/" target="_blank" rel="noopener noreferrer"><span>Google Play Status Dashboard</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer">Apple Developer News — App Review</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-09-01</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_34426c6c08dbd874a769df44" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_34426c6c08dbd874a769df44/">macOS Rosetta 支持变更：macOS 26.4 起提示更新，macOS 27 为最终支持版本</a></h3>
-<p class="event-summary">Apple 说明 Rosetta 过渡即将结束：macOS 26.4 及更高版本在启动依赖 Rosetta 的应用时会向用户发出系统通知，提示更新到 Apple silicon 原生版本；macOS 27 为最后支持 Rosetta 的版本，此后 Intel-only 应用将无法在 Apple silicon Mac 上运行（部分老旧游戏框架例外）。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>尚未提供 Apple silicon 原生版本的 macOS 应用将面临用户收到系统通知的负面体验，并在 macOS 27 发布后完全无法运行，直接影响分发与留存；涉及订阅、账号、支付等功能的应用需确保在 Apple silicon 上正常运行。</p></section>
-    <section><h4>需要行动</h4><p>1) 立即将 macOS 应用构建为通用二进制（universal binary）或 Apple silicon 原生版本；2) 通过直接触达鼓励用户下载最新原生版本以避免系统通知；3) 在 Apple silicon 设备上充分测试订阅、支付、账号等功能；4) 关注 macOS 26.4 与 macOS 27 的具体发布时间节点。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> macOS 研发、产品运营</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer"><span>Apple Developer News — App Review</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.apple.com/news/?id=w5ngl9k2" target="_blank" rel="noopener noreferrer">Apple Developer News</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-09-01</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_46d7f66ee8bc80a1b7a62297" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_46d7f66ee8bc80a1b7a62297/">Apple 宣布 Rosetta 支持即将结束，要求 macOS 应用迁移至 Apple silicon</a></h3>
-<p class="event-summary">Apple 发布通知称将结束 Rosetta 过渡期。macOS 26.4 起，启动依赖 Rosetta 的应用时用户将收到系统通知提示更新；macOS 27 将是最后一个支持 Rosetta 的版本，此后 Intel-only 应用将无法在 Apple silicon Mac 上运行（依赖 Intel 框架的旧游戏除外）。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>未适配 Apple silicon 的 macOS 应用在 macOS 26.4 起会触发用户端系统通知，影响用户体验与留存；在 macOS 27 发布后将完全无法在 Apple silicon Mac 上运行，导致应用不可用。</p></section>
-    <section><h4>需要行动</h4><p>尽快为 macOS 应用添加 Apple silicon 原生支持，构建并分发 Universal Binary；优化和移植应用到 Apple silicon；对已有原生版本的应用主动联系用户引导下载更新以避免系统通知。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> macOS 应用开发团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.apple.com/news/?id=w5ngl9k2" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer">Apple Developer News — App Review</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-08-27</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_d9a012a9fa64f15a4ccfacd6" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_d9a012a9fa64f15a4ccfacd6/">App Store 应用、App 内购买及订阅的税费与价格更新（2026年8月27日）</a></h3>
-<p class="event-summary">Apple 发布说明称，App Store 支持 43 种货币、覆盖 175 个国家/地区店面。由于税收法规或汇率变化，Apple 可能会调整应用、App 内购买及订阅的价格或开发者收益。调整将基于公开可得的汇率信息（如《华尔街日报》、彭博等）进行，以确保各店面价格保持一致。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>可能影响开发者在各国家/地区的应用、App 内购买及订阅的定价与收益分成；汇率或税率变动将导致实际到账金额或用户支付价格发生变化，进而影响收入预期与定价策略。</p></section>
-    <section><h4>需要行动</h4><p>1) 关注 Apple 后续具体国家/地区的价格或收益调整通知；2) 复核当前在各店面的定价策略，评估汇率与税费变动对毛利影响；3) 必要时调整应用、App 内购买及订阅的本地化定价；4) 在财务与结算流程中纳入汇率与税费波动因素，做好对账与预测。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 产品/商业化/财务/法务合规</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer"><span>Apple Developer News — App Review</span><span aria-hidden="true">↗</span></a><a href="https://developer.apple.com/news/" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer">Apple Developer News — App Review</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-08-27</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_67af27dc745b9d1868ea10ec" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_67af27dc745b9d1868ea10ec/">应用商店、应用内购买及订阅的税费与价格调整</a></h3>
-<p class="event-summary">Apple 宣布因税收法规或汇率变动，可能调整应用、应用内购买及订阅的价格或开发者收益。调整依据公开汇率信息（如华尔街日报、彭博）进行，以保持全球 175 个店面、43 种货币的价格一致性。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>开发者在部分国家/地区的实际收益或用户支付价格可能因汇率或税率变化而波动，影响收入预期与定价策略。</p></section>
-    <section><h4>需要行动</h4><p>关注 App Store Connect 中的收益与价格变动通知，评估对关键市场收入的影响，必要时调整定价档位或本地化营销策略。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 商业化/财务团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer"><span>Apple Developer News — App Review</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer">Apple Developer News — App Review</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-08-27</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_0007ace41d003ffa136896cc" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_0007ace41d003ffa136896cc/">应用、内购与订阅的税收与价格调整（2026-08-27）</a></h3>
-<p class="event-summary">Apple 说明将根据税收法规变化或汇率波动，使用公开可得的汇率信息（如华尔街日报、彭博等）调整应用、内购与订阅的价格或开发者收益，以确保 175 个店面、43 种货币下的价格一致性。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>订阅与内购的实际收益与用户支付价格可能因税收或汇率调整而变化，影响财务核算与定价策略。</p></section>
-    <section><h4>需要行动</h4><p>1) 关注 App Store Connect 中关于价格与收益调整的通知；2) 评估对订阅与内购定价策略及财务预测的影响；3) 必要时调整各店面价格层级以维持目标收益。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 财务、订阅/支付产品、市场运营</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer"><span>Apple Developer News — App Review</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://android-developers.googleblog.com/2026/08/whatsapp-passkeys-secure-sign-in.html" target="_blank" rel="noopener noreferrer">Android Developers Blog</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-08-27</span><div class="event-status" data-event-status data-event-id="evt_dfb10e7794ba1d0ddb8d34fb" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已预告</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_dfb10e7794ba1d0ddb8d34fb/">WhatsApp 采用 Passkeys 实现安全无缝登录，覆盖 10 亿用户</a></h3>
-<p class="event-summary">Android Developers Blog 发布文章介绍 WhatsApp 如何集成 Passkeys（基于 FIDO2/WebAuthn 的无密码认证）以实现更安全、更便捷的登录体验。文章涵盖客户端 Credential Manager API 集成、服务端 WebAuthn 注册与认证流程、多 Passkey 支持、跨设备同步策略，以及针对 Android 版本碎片化和 OEM 差异的错误处理与降级方案。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>该文章为技术实践分享，不涉及应用商店政策、订阅、支付、隐私、儿童、内容治理或账号安全方面的强制性政策变更。对开发者而言，提供了 Passkeys 集成的参考架构和最佳实践，有助于提升应用登录安全性和用户体验，但不产生合规义务。</p></section>
-    <section><h4>需要行动</h4><p>无需强制行动。建议关注 Passkeys 和 Credential Manager API 的技术演进，评估在自有应用中引入无密码认证的可行性，并参考文中错误分类与降级策略优化登录流程。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 应用开发团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://android-developers.googleblog.com/2026/08/whatsapp-passkeys-secure-sign-in.html" target="_blank" rel="noopener noreferrer"><span>Android Developers Blog</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer">Google Play Games Level Up Guidelines</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-08-26</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_b7f4352386ca74ca4aec9528" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2027 年 2 月 待生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_b7f4352386ca74ca4aec9528/">Google Play Level Up 内存指南更新：2027年2月起强制执行内存不良行为阈值</a></h3>
-<p class="event-summary">Google Play 更新了 Level Up 内存指南（LU-MM-GAA），明确自2027年2月起，游戏必须满足动态内存使用（anonymous RSS + swap）、位图使用和代码优化的既定不良行为阈值，方可获得或维持 Level Up 资格。开发者现可在 Android vitals 中监控相关内存指标和不良行为阈值。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>未达标的游戏将失去 Level Up 资格，影响游戏在 Google Play 的曝光、推荐及潜在收入。涉及所有 Android 版本的内存优化要求，需全面排查游戏内存表现。</p></section>
-    <section><h4>需要行动</h4><p>1. 立即在 Android vitals 中监控游戏的动态内存使用、位图使用和代码优化指标；2. 对照公布的内存阈值和不良行为标准进行优化；3. 制定内存优化计划，确保在2027年2月前达标；4. 关注官方发布的内存阈值和执行时间表。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 游戏开发团队/性能优化团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer"><span>Google Play Games Level Up Guidelines</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://android-developers.googleblog.com/2026/08/app-quality-memory-optimization-secure-onboarding.html" target="_blank" rel="noopener noreferrer">Android Developers Blog</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-08-26</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_9074866f267e520c2fb71a4c" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <div class="date-strip">
-    <strong><small>截止</small>2027 年 2 月</strong>
-  </div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_9074866f267e520c2fb71a4c/">Google Play 新增应用内存使用与设备迁移登录体验质量要求</a></h3>
-<p class="event-summary">Google Play 宣布两项新质量要求：1) 针对动态内存使用（Anonymous RSS + Swap）、Bitmap 内存使用及 DEX 代码优化（需至少 25% 的优化、缩减和混淆覆盖率）设定性能阈值；2) 引入 Zero-Tap Sign-In 标准，要求支持登录的应用使用 Android Restore Credentials API 在设备迁移时自动恢复登录状态。2027 年 2 月起执行内存相关阈值，2027 年 4 月起执行 Zero-Tap Sign-In 要求（游戏暂豁免但鼓励使用）。不合规将导致应用可见性和发布能力受限。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>应用若未优化内存使用或未实现 Zero-Tap Sign-In，将在 Google Play 面临可见性降低和发布能力受限的风险；需调整应用架构以满足内存阈值并集成 Restore Credentials API。</p></section>
-    <section><h4>需要行动</h4><p>1) 使用 Play Console 中的 Android vitals 新工具监控动态内存、Bitmap 内存及 DEX 优化指标；2) 确保 DEX 代码优化覆盖率达 25% 以上；3) 集成 Android Restore Credentials API 实现设备迁移时的零点击登录；4) 关注后续诊断工具更新并规划合规时间表。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> Android 开发团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://android-developers.googleblog.com/2026/08/app-quality-memory-optimization-secure-onboarding.html" target="_blank" rel="noopener noreferrer"><span>Android Developers Blog</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer">Google Play Games Level Up Guidelines</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-08-26</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_d446b9730bb2d08de4535133" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_d446b9730bb2d08de4535133/">Google Play Level Up 游戏统计指南更新：Native PC Early Access 豁免</a></h3>
-<p class="event-summary">Google Play 更新了游戏统计指南（LU-GS-GAA）及豁免条款（LU-GS-EAC），新增 Native PC Early Access Program (EAP) 的豁免说明，因 SDK 暂不支持该功能，此豁免仅适用于 Native PC 版本。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>参与 Native PC Early Access 的游戏在 PC 版本上可豁免提交游戏统计，但移动端仍需遵守原有统计要求。</p></section>
-    <section><h4>需要行动</h4><p>1. 确认游戏是否参与 Native PC Early Access Program；2. 如参与，了解 PC 版本的统计豁免范围；3. 确保移动端仍满足至少5项重复性统计的提交要求。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 游戏开发团队/产品团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer"><span>Google Play Games Level Up Guidelines</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer">Google Play Games Level Up Guidelines</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-08-26</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_288d448baa8986947b713b72" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_288d448baa8986947b713b72/">Google Play Level Up 设备形态分布指南更新：XR/TV/Auto 指南延期发布</a></h3>
-<p class="event-summary">Google Play 更新了设备形态分布指南（LU-FF-GAA），说明 XR、TV 和 Auto 的指南和豁免条款将于2026年晚些时候发布。在详情发布前，Google Play 无法审核相关豁免请求。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>计划适配 XR、TV 或 Auto 设备形态的游戏暂时无法获得相关指南和豁免审批，可能影响多端发布计划。</p></section>
-    <section><h4>需要行动</h4><p>1. 关注 Google Play 后续发布的 XR、TV、Auto 指南；2. 在指南发布前暂缓提交相关豁免请求；3. 提前准备多端适配方案，待指南发布后快速响应。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 游戏开发团队/多端适配团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer"><span>Google Play Games Level Up Guidelines</span><span aria-hidden="true">↗</span></a>  </div>
-</article></div><nav class="pagination" aria-label="开发者平台分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/store/page/2/">2</a><a href="/policy-radar/store/page/3/">3</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
+</article></div><nav class="pagination" aria-label="开发者平台分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/store/page/2/">2</a><a href="/policy-radar/store/page/3/">3</a><a href="/policy-radar/store/page/4/">4</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 <script src="/policy-radar/assets/event-status.js" defer></script></body>
 </html>
