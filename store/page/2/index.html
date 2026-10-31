@@ -44,6 +44,21 @@
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
     <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer">Google Play Games Level Up Guidelines</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-03</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_23b5642694751378b624d4bc" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_23b5642694751378b624d4bc/">Google Play Games Level Up Guidelines 更新大屏优化、PC分发、Vulkan及形态分发要求</a></h3>
+<p class="event-summary">Google Play Games Level Up Guidelines 于 2026-09-03 更新，主要变更包括：1) 大屏优化（LU-LS-GAA/GAB/GAC/GAD）：明确使用 insets 避免遮挡系统栏和刘海/挖孔，支持旋转、折叠、多窗口、自由窗口等配置变化且不崩溃/ANR/伪影/触控偏移，保留游戏状态；横屏/竖屏在参考设备及锚点比例（4:3/16:10/21:9 或 3:4/10:16/9:21）需全屏无 letterbox/pillarbox，仅单方向布局游戏在另一方向可 letterbox/pillarbox。2) PC 分发（LU-GPGC-GAA）：新增“作为 Native PC 游戏发布并集成 PC SDK”作为满足分发要求的第二种方式；Native PC 游戏在相关功能上线前暂不要求支持 Sidekick、Cloud Save、Achievements、Game Stats API。3) 精准输入（K&amp;M）：明确键盘或鼠标任一可玩即视为满足 K&amp;M 要求。4) 形态分发（LU-FF-GAA）：2026-09 覆盖 Mobile/Foldables/Tablets；2027-09 覆盖 Android XR/Android TV/Googlebook/Android Auto（不要求在 Play 上分发）。5) Vulkan（LU-VK-GAA）：Unity 2021+ 或 Unreal 4.25+ 必须将 Vulkan 作为主图形 API；使用旧版 Unity/Unreal 或其他引擎也必须使用 Vulkan 或启用 ANGLE；Unity Built-in Render Pipeline 可 opt-in ANGLE，截止 2027-09-30 切换到 Vulkan。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>涉及所有在 Google Play Games 上发布的游戏开发者：需按新的大屏适配要求调整 UI/输入/状态保持；PC 端需评估是否走 Native PC 路径并集成 PC SDK；图形 API 需确保 Vulkan 为主或启用 ANGLE；形态分发节奏调整影响后续 XR/TV/Googlebook/Auto 的覆盖计划。不合规将影响 Level Up 项目加入与在 Google Play Games（含 PC）上的分发与展示。</p></section>
+    <section><h4>需要行动</h4><p>1) 按新 LU-LS 系列要求适配大屏：使用 insets、支持旋转/折叠/多窗口/自由窗口，保持状态；在参考设备及锚点比例全屏渲染。2) 评估并选择 Native PC 路径，集成 Google Play Games on PC SDK（暂不强制 Sidekick/Cloud Save/Achievements/Game Stats）。3) 确认 K&amp;M 输入至少一种可玩。4) 图形 API：Unity 2021+/Unreal 4.25+ 将 Vulkan 设为主 API；旧版或其他引擎使用 Vulkan 或在 manifest 中启用 ANGLE；Unity Built-in RP 使用 ANGLE 的需在 2027-09-30 前完成 Vulkan 切换。5) 关注 2026-09 起的 Mobile/Foldables/Tablets 分发要求，以及 2027-09 的 XR/TV/Googlebook/Auto 覆盖。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 游戏客户端/引擎团队、PC 移植团队、QA/兼容性测试团队、产品与发行团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer"><span>Google Play Games Level Up Guidelines</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://status.play.google.com/" target="_blank" rel="noopener noreferrer">Google Play Status Dashboard</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-09-01</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_73d1e4f2020a659cb257abc9" data-version="1" hidden></div>  </div>
@@ -509,7 +524,7 @@
     <a class="meta-source" href="https://developer.android.com/google/play/age-signals/request-age-signals" target="_blank" rel="noopener noreferrer">Request Age Signals from Google Play</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-07-23</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_legacy-play-age-signals-api-0-0-4-beta-2026-07-23" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-10-31 待生效</span></div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-10-31 已生效</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-play-age-signals-api-0-0-4-beta-2026-07-23/">Play Age Signals API 0.0.4 Beta 上线并公布旧版停服日</a></h3>
 <p class="event-summary">API 0.0.4 Beta 新增巴西年龄信息请求支持；0.0.3 及以下版本自 2026-10-31 起停止支持。</p>  <div class="impact-action">
     <section><h4>业务影响</h4><p>使用旧版 API 的年龄合规链路届时可能失效，巴西业务可使用新增能力。</p></section>
@@ -571,21 +586,6 @@
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">Google Play Policy Deadlines</a>
     <span aria-hidden="true">·</span>
-<span>发布 2026-07-15</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_988501efb1ba169fb53e5ea6" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-09-30 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_988501efb1ba169fb53e5ea6/">Google Play 要求开发者在 Play Console 注册应用以满足验证要求</a></h3>
-<p class="event-summary">Google Play 要求开发者必须在 Play Console 注册应用以满足 Android 开发者验证和 Play Console 要求。未注册的应用将被全球下架。该政策于 2026-07-15 宣布，2026-09-30 生效。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>未注册的应用将面临全球下架风险，影响应用的正常分发和用户安装体验。</p></section>
-    <section><h4>需要行动</h4><p>检查 Play Console 主页，确保所有需要继续分发的应用均已完成注册。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 开发者/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">Google Play Policy Deadlines</a>
-    <span aria-hidden="true">·</span>
 <span>发布 2026-07-15</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_b4c6fac08c7a970148d430ef" data-version="2" hidden></div>  </div>
   <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-08-26 已生效</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_b4c6fac08c7a970148d430ef/">Google Play 扩展年龄限制内容与功能政策至匿名聊天和随机聊天应用</a></h3>
@@ -596,6 +596,21 @@
 <p class="event-owner"><strong>建议责任方</strong> 合规/产品/研发</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（2 次更新）▾</summary><div class="milestones">
 <div class="milestone"><strong>2026-07-15 · Google Play 年龄限制内容政策扩展至匿名聊天和随机聊天应用 · 公告</strong><span>首次收录：生效日 2026-08-26</span><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-26 · 公告</strong><span>生效日：2026-08-26 → 未标注</span><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
   <div class="card-source-links" aria-label="来源原文">
+<a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">Google Play Policy Deadlines</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-07-15</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_988501efb1ba169fb53e5ea6" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-09-30 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_988501efb1ba169fb53e5ea6/">Google Play 要求开发者在 Play Console 注册应用以满足验证要求</a></h3>
+<p class="event-summary">Google Play 要求开发者必须在 Play Console 注册应用以满足 Android 开发者验证和 Play Console 要求。未注册的应用将被全球下架。该政策于 2026-07-15 宣布，2026-09-30 生效。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>未注册的应用将面临全球下架风险，影响应用的正常分发和用户安装体验。</p></section>
+    <section><h4>需要行动</h4><p>检查 Play Console 主页，确保所有需要继续分发的应用均已完成注册。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 开发者/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a>  </div>
 </article><article class="card event-card">
   <div class="event-meta">
@@ -795,21 +810,6 @@
     <section><h4>需要行动</h4><p>1) 集成 Declared Age Range API 获取用户年龄分类；2) 集成 PermissionKit 下的 Significant Change API；3) 配置 App Store 服务器通知以接收同意撤销；4) 在 StoreKit 中使用新的年龄分级属性类型；5) 使用 Apple 沙盒环境测试验证。</p></section>
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 研发 / 法务合规 / 产品</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer"><span>Apple Developer News — App Review</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer">Apple Developer News — App Review</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-06-03</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_d722345bafabae220a376e53" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_d722345bafabae220a376e53/">德州 SB 2420 年龄验证要求生效：新账号需年龄验证与监护人同意</a></h3>
-<p class="event-summary">因法院裁决解除对德州法律 SB 2420 的禁令，德州地区的新 Apple Account 现须遵守该法律引入的应用市场与开发者年龄验证要求：包括年龄验证，以及 18 岁以下未成年人下载、Apple 内购及应用重大变更需父母或监护人同意；父母或监护人可撤销此前对子女应用的同意。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>在德州分发的应用需支持年龄验证与监护人同意流程，涉及儿童保护、账号体系、内购与订阅的合规要求；违反可能面临法律风险。</p></section>
-    <section><h4>需要行动</h4><p>1) 评估应用是否涉及德州用户并需实现年龄验证与监护人同意流程；2) 在下载、内购及应用重大变更环节接入相应的同意与撤销机制；3) 与法务确认合规方案并关注后续监管动态。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 法务/合规、账号/支付研发、美国市场运营</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer"><span>Apple Developer News — App Review</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="开发者平台分页"><a href="/policy-radar/store/">1</a><span class="current" aria-current="page">2</span><a href="/policy-radar/store/page/3/">3</a><a href="/policy-radar/store/page/4/">4</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
