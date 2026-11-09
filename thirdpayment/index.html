@@ -42,6 +42,51 @@
 <div class="card-stack">
 <article class="card event-card">
   <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">FunnelFox</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer">FunnelFox Product Updates</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-11-09</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_e15069e4b2beed767e2da5b9" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_e15069e4b2beed767e2da5b9/">FunnelFox Payments一键支付支持CIT模式及防重复扣款机制</a></h3>
+<p class="event-summary">FunnelFox Payments的一键支付现支持将支付作为客户发起（CIT）而非商户发起（MIT）发送，支持全组织或特定漏斗配置。订单webhook新增one_click对象以显示支付发送方式、扣款方法及3DS结果。使用相同idempotency_key重试的请求不会重复扣款。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>提升一键支付的安全性和合规性（符合3DS要求），降低重复扣款风险，优化支付成功率与用户体验。</p></section>
+    <section><h4>需要行动</h4><p>评估并配置一键支付为CIT模式；更新后端系统以处理webhook中新增的one_click对象。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付/技术团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer"><span>FunnelFox Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">FunnelFox</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer">FunnelFox Product Updates</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-11-09</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_0e5794f3a74b3711199c0c31" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_0e5794f3a74b3711199c0c31/">FunnelFox重构Stripe集成页面并变更新账户连接方式</a></h3>
+<p class="event-summary">FunnelFox重构了Stripe集成页面，显示账户状态及修复方法。新规要求新账户必须通过FunnelFox Stripe App进行连接，不再支持通过API密钥或FunnelFox Billing进行新连接。使用API密钥或Stripe Connect连接的旧账户将标记为“Legacy”，建议迁移至Stripe App。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>影响新商户或新账户接入Stripe支付的方式，旧账户的连接方式虽保留但被标记为遗留状态，可能影响后续维护与功能支持。</p></section>
+    <section><h4>需要行动</h4><p>新账户需改用FunnelFox Stripe App进行连接；建议将旧账户迁移至Stripe App以获取持续支持。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付/技术团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer"><span>FunnelFox Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Paddle</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.paddle.com/changelog" target="_blank" rel="noopener noreferrer">Paddle Developer Changelog</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-11-09</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_5acd6ded986b3b2f01d71f59" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_5acd6ded986b3b2f01d71f59/">Paddle 推出取消流程会话报告以分析订阅取消原因</a></h3>
+<p class="event-summary">Paddle 于 2026年11月9日发布了新的取消流程会话报告（cancellation flow sessions reports），帮助开发者了解客户取消订阅的原因、用户反馈以及取消流程是否成功挽回了订阅。该功能涉及 Reporting 和 Subscriptions API。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>开发者可以利用新报告分析订阅取消的原因和挽回效果，从而优化取消流程，降低订阅流失率。</p></section>
+    <section><h4>需要行动</h4><p>开发者可前往 Paddle 开发者后台或调用相关 Reporting API 获取并分析取消流程会话报告，以优化订阅保留策略。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 产品/运营团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.paddle.com/changelog" target="_blank" rel="noopener noreferrer"><span>Paddle Developer Changelog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
@@ -751,51 +796,6 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 支付业务团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://www.paypal-status.com/history/eventdetails/110012" target="_blank" rel="noopener noreferrer"><span>PayPal Status</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-10-01</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_778a7d32e6307042c4ce89e2" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_778a7d32e6307042c4ce89e2/">TWINT 支付方式计划维护完成</a></h3>
-<p class="event-summary">Stripe 状态页面发布通知，TWINT 支付方式的计划维护已于 2026年10月1日 22:05 UTC 完成。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>维护期间可能短暂影响部分用户通过 TWINT 进行支付的成功率与体验，目前服务已恢复。</p></section>
-    <section><h4>需要行动</h4><p>监控 TWINT 支付通道的交易状态与成功率，确认服务已完全恢复正常，无需额外干预。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 支付运营团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Adapty</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://changelog.adapty.io/" target="_blank" rel="noopener noreferrer">Adapty Product Updates</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026 年 10 月</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_dfec5ae7f2bdc180ba2d839a" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_dfec5ae7f2bdc180ba2d839a/">Adapty 将 Paywalls 合并至 Flows &amp; Paywalls 模块并废弃旧版构建器</a></h3>
-<p class="event-summary">Adapty 宣布将 Paywalls 功能合并至 Flows &amp; Paywalls 模块。旧的 Paywall Builder 和 Onboarding Builder 已于 10 月 1 日废弃，不再支持创建新付费墙，新付费墙需在 Flow &amp; Paywall builder 中创建，旧付费墙可迁移至新构建器。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>使用 Adapty 管理订阅和付费墙的开发者需适应新的后台管理界面，旧版构建器无法创建新付费墙，需手动迁移现有付费墙至新构建器。</p></section>
-    <section><h4>需要行动</h4><p>登录 Adapty 后台，熟悉新的 Flows &amp; Paywalls 界面，并将旧版付费墙迁移至 Flow &amp; Paywall builder。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 产品/研发团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://changelog.adapty.io/" target="_blank" rel="noopener noreferrer"><span>Adapty Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-09-30</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_80558cfb12eb9880da1dacb0" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_80558cfb12eb9880da1dacb0/">Visa交易授权错误</a></h3>
-<p class="event-summary">2026年9月30日00:53 UTC起，由于网络令牌处理问题，部分Visa交易可能遇到较低的授权率。符合条件的支付可以使用卡号回退继续。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>部分Visa交易授权率降低，可能影响支付成功率。</p></section>
-    <section><h4>需要行动</h4><p>无需采取额外行动，符合条件的支付可使用卡号回退。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 支付团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="三方支付分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/thirdpayment/page/2/">2</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/11/">2026-11</a><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 <script src="/policy-radar/assets/event-status.js" defer></script></body>
