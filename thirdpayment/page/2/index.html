@@ -32,7 +32,7 @@
         <summary class="active">时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">1</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">1</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a class="active" aria-current="page" href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">5</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">1</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">1</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a class="active" aria-current="page" href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">7</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
 <div class="status-auth" data-status-auth data-log-url="/policy-radar/log/" hidden></div>    </nav>
@@ -41,6 +41,36 @@
 <header class="page-heading"><h1>三方支付</h1><p>PayPal、Stripe、Adyen、Checkout.com、Paddle 等</p></header>
 <div class="card-stack">
 <article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">FunnelFox</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer">FunnelFox Product Updates</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-05</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_3aab7ac80ae081ce067fad95" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_3aab7ac80ae081ce067fad95/">FunnelFox 支付失败事件新增 Stripe 拒绝原因字段</a></h3>
+<p class="event-summary">FunnelFox 的 purchase_completed_fail 事件现包含 Stripe 支付被拒绝的原因代码，支持 Amplitude、Mixpanel 和 PostHog 接收该数据。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>允许业务在分析工具中按拒绝原因细分支付失败情况，从而更精准地定位客户未完成结账的原因。</p></section>
+    <section><h4>需要行动</h4><p>更新数据分析管道和仪表板，解析并利用新增的 Stripe 拒绝原因字段以优化支付转化分析。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 数据分析团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer"><span>FunnelFox Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-05</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_08c19d768f11f3b751fcae4d" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_08c19d768f11f3b751fcae4d/">TWINT 支付渠道计划维护已完成</a></h3>
+<p class="event-summary">TWINT 支付渠道的计划维护已经结束，服务已恢复正常。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>TWINT 支付功能恢复，相关交易可正常进行，无负面影响。</p></section>
+    <section><h4>需要行动</h4><p>确认服务恢复，无需额外操作，持续监控支付成功率以确保稳定。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付运营团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
     <span aria-hidden="true">·</span>

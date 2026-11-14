@@ -32,7 +32,7 @@
         <summary class="active">时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">1</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">1</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a class="active" aria-current="page" href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">5</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">1</span></a><a href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">1</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a class="active" aria-current="page" href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">7</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
 <div class="status-auth" data-status-auth data-log-url="/policy-radar/log/" hidden></div>    </nav>
@@ -41,6 +41,36 @@
 <header class="page-heading"><h1>三方支付</h1><p>PayPal、Stripe、Adyen、Checkout.com、Paddle 等</p></header>
 <div class="card-stack">
 <article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-11-13</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_aa4ca17d75c172de9cb7036a" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">2026-11-15 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_aa4ca17d75c172de9cb7036a/">Stripe 支付方式（BLIK、TWINT、Multibanco）计划维护通知</a></h3>
+<p class="event-summary">Stripe 状态页面发布通知，BLIK、TWINT 和 Multibanco 等支付方式将在 2026 年 11 月 15 日至 20 日期间进行多次计划维护。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>维护期间，使用 BLIK、TWINT 和 Multibanco 进行支付的用户可能会遇到交易失败或延迟，影响相关地区的收款业务。</p></section>
+    <section><h4>需要行动</h4><p>监控维护期间的支付成功率，必要时在应用内提示用户支付方式暂时不可用，或引导用户使用其他支付方式。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Adapty</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://status.adapty.io/" target="_blank" rel="noopener noreferrer">Adapty Status</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-11-13</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_cca8fb72894bfdc9d74729e0" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">2026-11-16 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_cca8fb72894bfdc9d74729e0/">Adapty发布美国区数据库计划维护公告</a></h3>
+<p class="event-summary">Adapty计划于2026年11月16日09:00至10:00 UTC进行美国区数据库维护。维护期间可能会出现长达2-3分钟的请求拒绝或50X错误，以及短暂的延迟增加。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>可能导致美国区用户在维护窗口内遇到短暂的订阅或支付请求失败及延迟增加，轻微影响支付成功率。</p></section>
+    <section><h4>需要行动</h4><p>监控维护窗口期间的支付和订阅请求成功率，确保客户端具备重试机制，必要时向用户发布维护提示。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付与订阅技术团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://status.adapty.io/" target="_blank" rel="noopener noreferrer"><span>Adapty Status</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">PayPal</span></div>
     <span aria-hidden="true">·</span>
@@ -167,7 +197,7 @@
     <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-11-06</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_58af0ba078bcc9f3e9e78179" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">2026-11-14 待生效</span></div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">2026-11-14 已生效</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_58af0ba078bcc9f3e9e78179/">Stripe 通知 TWINT 支付方式计划内维护</a></h3>
 <p class="event-summary">Stripe 状态页发布通知，TWINT 支付方式将于 2026年11月14日 17:00 UTC 至 11月15日 02:00 UTC 进行计划内维护。</p>  <div class="impact-action">
     <section><h4>业务影响</h4><p>在维护窗口期间，通过 Stripe 使用 TWINT 进行支付的用户可能会遇到支付失败或延迟，影响相关交易的转化率。</p></section>
@@ -765,36 +795,6 @@
     <section><h4>需要行动</h4><p>无需额外行动，确认服务已恢复。</p></section>
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 支付团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">FunnelFox</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer">FunnelFox Product Updates</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-10-05</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_3aab7ac80ae081ce067fad95" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_3aab7ac80ae081ce067fad95/">FunnelFox 支付失败事件新增 Stripe 拒绝原因字段</a></h3>
-<p class="event-summary">FunnelFox 的 purchase_completed_fail 事件现包含 Stripe 支付被拒绝的原因代码，支持 Amplitude、Mixpanel 和 PostHog 接收该数据。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>允许业务在分析工具中按拒绝原因细分支付失败情况，从而更精准地定位客户未完成结账的原因。</p></section>
-    <section><h4>需要行动</h4><p>更新数据分析管道和仪表板，解析并利用新增的 Stripe 拒绝原因字段以优化支付转化分析。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 数据分析团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer"><span>FunnelFox Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-10-05</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_08c19d768f11f3b751fcae4d" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_08c19d768f11f3b751fcae4d/">TWINT 支付渠道计划维护已完成</a></h3>
-<p class="event-summary">TWINT 支付渠道的计划维护已经结束，服务已恢复正常。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>TWINT 支付功能恢复，相关交易可正常进行，无负面影响。</p></section>
-    <section><h4>需要行动</h4><p>确认服务恢复，无需额外操作，持续监控支付成功率以确保稳定。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 支付运营团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="三方支付分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/thirdpayment/page/2/">2</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/11/">2026-11</a><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
