@@ -44,6 +44,36 @@
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
     <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.apple.com/help/app-store-connect/release-notes/" target="_blank" rel="noopener noreferrer">App Store Connect Release Notes</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-11-16</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_5b4fb7d23d3421ac9864b467" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_5b4fb7d23d3421ac9864b467/">App Store Connect 新增 App 合规页面管理 AIGC 及安全评估等文档</a></h3>
+<p class="event-summary">App Store Connect 将 ICP、游戏版号、医疗器械声明等法规和许可证从“App 信息”移至新的“App 合规”页面。开发者现可在该页面直接管理所有合规文档，包括中国大陆地区 AIGC（人工智能生成或合成内容）应用声明及需安全评估的功能声明。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>合规管理入口发生变更，涉及中国大陆 AIGC 及安全评估的开发者需适应新的文档提交和管理页面，若未及时在正确入口更新或提交可能导致应用审核受阻或违规。</p></section>
+    <section><h4>需要行动</h4><p>排查旗下涉及中国大陆 AIGC 或安全评估的应用，确认相关合规文档已准备齐全，并安排相关人员熟悉新的“App 合规”页面操作，确保后续合规申报和更新在正确入口进行。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 合规与法务团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.apple.com/help/app-store-connect/release-notes/" target="_blank" rel="noopener noreferrer"><span>App Store Connect Release Notes</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.apple.com/news/?id=oqng0zjk" target="_blank" rel="noopener noreferrer">Apple Developer News</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-11-16</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_d26541afe750ff74fa88a7f7" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P1</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_d26541afe750ff74fa88a7f7/">macOS 27.3 更新设备控制、数据访问及完全磁盘访问权限策略</a></h3>
+<p class="event-summary">Apple 在 macOS 27.3 beta 2 中更新了设备控制与数据访问（Device Control and Data Access）以及完全磁盘访问（Full Disk Access）API 的权限授予机制。主要变更包括将设备控制与数据访问拆分为“系统与App保护覆盖”和“辅助功能”两个设置，提供单一的应用列表选择授权方式，引导用户仅授予特定应用或文件夹权限，增加数据访问范围的可见性，并新增透明度指示器。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>使用相关 API 的应用在用户引导和权限处理上需要适配新的细粒度权限模型。应用可能面临仅获得有限文件夹或应用访问权限的情况，需确保功能优雅降级。依赖完全磁盘访问或辅助功能的应用可能需要申请特定 entitlements 以维持原有体验。</p></section>
+    <section><h4>需要行动</h4><p>1. 审查并调整应用的用户引导流程，适配新的权限请求和授予机制。2. 确保应用能够优雅处理仅获得有限文件夹或应用访问权限的情况。3. 若应用使用完全磁盘访问进行备份或使用辅助功能设置，需关注并申请相应的 entitlements 以维持新安装用户的原有体验。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> macOS 开发团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.apple.com/news/?id=oqng0zjk" target="_blank" rel="noopener noreferrer"><span>Apple Developer News</span><span aria-hidden="true">↗</span></a><a href="https://developer.apple.com/news/?topic=app-review" target="_blank" rel="noopener noreferrer"><span>Apple Developer News — App Review</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://support.apple.com/en-us/100100" target="_blank" rel="noopener noreferrer">Apple Security Releases</a>
     <span aria-hidden="true">·</span>
 <span>发布 2026-11-13</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_554978061c0d91b1b0c3aa05" data-version="1" hidden></div>  </div>
@@ -768,39 +798,6 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 游戏开发团队/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer"><span>Google Play Games Level Up Guidelines</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/15582165?hl=en" target="_blank" rel="noopener noreferrer">Google Play 美国开发者政策更新</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-09-17</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_dacfc05315373ed9ad3c770f" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <div class="date-strip">
-    <strong><small>截止</small>2026-12-01</strong>
-  </div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_dacfc05315373ed9ad3c770f/">Google Play 明确外部内容链接下载报告及服务费支付截止日</a></h3>
-<p class="event-summary">Google Play 于 2026 年 9 月 17 日通知参与外部内容链接的开发者，需在 2026 年 12 月 1 日前报告成功下载并支付相关服务费。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>涉及外部内容链接的开发者需调整财务与合规流程，确保在截止日期前完成下载报告提交和服务费支付，避免违规风险。</p></section>
-    <section><h4>需要行动</h4><p>排查应用是否涉及外部内容链接，准备下载报告数据，并安排相关服务费的支付，确保在 2026 年 12 月 1 日前完成。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 合规/财务/研发团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/15582165?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play 美国开发者政策更新</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://status.play.google.com/" target="_blank" rel="noopener noreferrer">Google Play Status Dashboard</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-09-16</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_ecf0f2b1412930f29d22ed23" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_ecf0f2b1412930f29d22ed23/">Google Play Billing Purchases 服务故障</a></h3>
-<p class="event-summary">2026年9月16日，Google Play Billing Purchases 服务发生故障，导致受影响用户在访问时遇到错误信息、高延迟或其他意外行为。该故障严重度为 high，已于同日解决。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>导致用户在 Play Billing Purchases 中遇到错误、高延迟等，影响应用内支付和订阅功能的正常使用。</p></section>
-    <section><h4>需要行动</h4><p>监控该故障的后续情况，确认服务已完全恢复，并排查是否有未处理的支付异常或用户投诉。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 支付/订阅业务团队、技术支持团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://status.play.google.com/" target="_blank" rel="noopener noreferrer"><span>Google Play Status Dashboard</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="开发者平台分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/store/page/2/">2</a><a href="/policy-radar/store/page/3/">3</a><a href="/policy-radar/store/page/4/">4</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/11/">2026-11</a><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 <script src="/policy-radar/assets/event-status.js" defer></script></body>
