@@ -42,6 +42,51 @@
 <div class="card-stack">
 <article class="card event-card">
   <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://android-developers.googleblog.com/2026/09/bring-android-game-to-car-screen.html" target="_blank" rel="noopener noreferrer">Android Developers Blog</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-21</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_a94c4a2fcc031fcdcb3d721b" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_a94c4a2fcc031fcdcb3d721b/">Android Auto与Android Automotive OS游戏类别正式GA并开放发布</a></h3>
+<p class="event-summary">Android Auto和Android Automotive OS的游戏类别正式从Beta阶段转为全面可用（GA）。开发者现可通过Google Play的公开测试和生产轨道发布游戏。文章详细说明了适配车机屏幕的技术要求，包括在Manifest中声明游戏类别、支持Android Auto和Automotive OS、处理车辆停放状态（Parked state）以避免驾驶分心，以及支持手柄和自适应屏幕尺寸等。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>为游戏开发者提供了新的分发渠道，允许在车辆停放时向用户分发游戏。同时，车机平台对游戏内容有严格的驾驶安全限制（如行驶中禁止运行和暂停），开发者需确保合规。</p></section>
+    <section><h4>需要行动</h4><p>游戏开发者需按照指南修改应用Manifest，声明游戏类别及车机支持，实现车辆停放状态的处理逻辑（如行驶中停止音频），适配不同屏幕尺寸，并在Google Play Console中启用相关表单因素，通过车机应用质量指南审核后发布。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 游戏开发团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://android-developers.googleblog.com/2026/09/bring-android-game-to-car-screen.html" target="_blank" rel="noopener noreferrer"><span>Android Developers Blog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://android-developers.googleblog.com/" target="_blank" rel="noopener noreferrer">Android Developers Blog</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-18</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_f74afea670c55eb2948917f8" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_f74afea670c55eb2948917f8/">Google发布AndroidX Security State库提供组件级设备安全状态视图</a></h3>
+<p class="event-summary">Google发布了AndroidX Security State 1.1.0和Security State Provider 1.0.0库，提供设备、系统模块和内核的组件级安全补丁状态（DSPL、PSPL、ASPL）查询机制。该库允许应用和MDM解决方案在敏感操作前验证设备安全状态，并支持OEM通过标准化IPC机制暴露更新可用性。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>金融、支付及企业MDM等安全关键型应用可利用新库进行细粒度的设备安全评估。在设备存在待安装的安全更新时，应用可拦截高价值支付或凭证注册等敏感工作流，要求用户先完成设备更新，从而降低因设备漏洞导致的支付和账号安全风险。</p></section>
+    <section><h4>需要行动</h4><p>涉及支付、金融或企业敏感数据的应用开发者应评估并集成AndroidX Security State库，在关键业务流程中增加设备安全状态及待更新状态的检查逻辑；OEM和OTA客户端开发者需集成Security State Provider库以标准化暴露更新状态。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 应用开发者、OEM及OTA客户端开发者</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://android-developers.googleblog.com/" target="_blank" rel="noopener noreferrer"><span>Android Developers Blog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Apple</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.apple.com/help/app-store-connect/release-notes/" target="_blank" rel="noopener noreferrer">App Store Connect Release Notes</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-18</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_88c4951b74f23569e6587acc" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_88c4951b74f23569e6587acc/">TestFlight 支持使用 Xcode 27.1 beta 及 iOS/iPadOS 27.1 beta SDK 提交应用测试</a></h3>
+<p class="event-summary">Apple 发布 TestFlight 更新，开发者现可使用 Xcode 27.1 beta 以及 iOS 27.1 beta 或 iPadOS 27.1 beta SDK 构建的应用，通过 TestFlight 进行内部和外部测试。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>允许开发者提前测试基于最新 beta 版 SDK 构建的应用，有助于在正式版发布前发现和修复兼容性问题，不影响现有已上架应用的正常运行。</p></section>
+    <section><h4>需要行动</h4><p>开发者可根据项目需要，使用 Xcode 27.1 beta 及相应 SDK 构建应用，并通过 TestFlight 分发给内部或外部测试人员进行测试验证。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> iOS/iPadOS 开发团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.apple.com/help/app-store-connect/release-notes/" target="_blank" rel="noopener noreferrer"><span>App Store Connect Release Notes</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer">Google Play Games Level Up Guidelines</a>
@@ -765,53 +810,6 @@
 <div class="milestone"><strong>2026-07-15 · Google Play 年龄限制内容政策扩展至匿名聊天和随机聊天应用 · 公告</strong><span>首次收录：生效日 2026-08-26</span><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-08-26 · 公告</strong><span>生效日：2026-08-26 → 未标注</span><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
   <div class="card-source-links" aria-label="来源原文">
 <a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">Google Play Policy Deadlines</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-07-15</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_988501efb1ba169fb53e5ea6" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-09-30 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_988501efb1ba169fb53e5ea6/">Google Play 要求开发者在 Play Console 注册应用以满足验证要求</a></h3>
-<p class="event-summary">Google Play 要求开发者必须在 Play Console 注册应用以满足 Android 开发者验证和 Play Console 要求。未注册的应用将被全球下架。该政策于 2026-07-15 宣布，2026-09-30 生效。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>未注册的应用将面临全球下架风险，影响应用的正常分发和用户安装体验。</p></section>
-    <section><h4>需要行动</h4><p>检查 Play Console 主页，确保所有需要继续分发的应用均已完成注册。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 开发者/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">Google Play Policy Center — Google Play Families Policies</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-07-15</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_6b433e9f825362f6698f373b" data-version="3" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-08-26 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_6b433e9f825362f6698f373b/">Google Play Families Policies 将禁止匿名聊天应用针对儿童</a></h3>
-<p class="event-summary">Google Play 在 2026 年 7 月政策更新预览中宣布，将扩展其《家庭政策要求》（Families Policy Requirements），明确禁止以匿名聊天或陌生人聊天为主要功能的应用（如聊天轮盘、约会应用、儿童开放式聊天室、匿名应用、“盲聊”应用等）将儿童列为目标受众。该变更将于 2026 年 8 月 26 日生效。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>若应用包含匿名聊天或陌生人聊天功能且目标受众包含儿童，将在生效后面临下架或暂停风险；涉及儿童隐私与内容安全合规，属 P0 级儿童保护政策，影响所有面向家庭/儿童市场的社交或含社交功能应用。</p></section>
-    <section><h4>需要行动</h4><p>1) 排查应用是否包含匿名聊天、陌生人匹配、开放式聊天室等功能；2) 若存在且目标受众含儿童，需在 2026-08-26 前移除相关功能或调整目标受众排除儿童；3) 更新 Play Console 中目标受众与内容分级问卷；4) 确保社交功能具备成人验证机制及在线安全提示；5) 同步法务与合规团队评估 COPPA/GDPR-K 合规。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 产品合规团队 / 应用开发团队</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（3 次更新）▾</summary><div class="milestones">
-<div class="milestone"><strong>2026-07-15 · Google Play Families 政策禁止匿名聊天应用针对儿童 · 公告</strong><span>首次收录：生效日 2026-08-26</span><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-07-21 · 公告</strong><span>本次无实质变化，仅来源与措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-07-23 · 公告</strong><span>本次无实质变化，仅来源与措辞不同</span><a href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
-  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/9893335?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Center — Google Play Families Policies</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/table/12921780?hl=en" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Deadlines</span><span aria-hidden="true">↗</span></a><a href="https://support.google.com/googleplay/android-developer/answer/17122218?hl=en&amp;ref_topic=9877766" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Center — Preview: Google Play Families Policies</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer">Google Play Games Level Up Guidelines</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-07-15</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_legacy-google-play-games-level-up-2026-07-15" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-09-30 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-google-play-games-level-up-2026-07-15/">Google Play Games Level Up 计划升级并公布资格申请时间</a></h3>
-<p class="event-summary">符合条件的游戏可申请更低服务费，并需接入 Play Games Services、适配大屏、PC 与手柄；资格申请于 2026-09-30 开放。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>计划资格会影响服务费与游戏多设备分发能力。</p></section>
-    <section><h4>需要行动</h4><p>对照资格与技术要求评估收益，形成接入和设备适配计划。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 游戏产品 / Android 研发 / 商务与财务</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer"><span>Google Play Games Level Up Guidelines</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="开发者平台分页"><a href="/policy-radar/store/">1</a><span class="current" aria-current="page">2</span><a href="/policy-radar/store/page/3/">3</a><a href="/policy-radar/store/page/4/">4</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/11/">2026-11</a><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 <script src="/policy-radar/assets/event-status.js" defer></script></body>

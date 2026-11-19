@@ -37,7 +37,7 @@
       <a href="/policy-radar/sources/">来源状态</a>
 <div class="status-auth" data-status-auth data-log-url="/policy-radar/log/" hidden></div>    </nav>
   </header>
-<div class="sync">已核实 101/113 个来源 · 最后更新 2026-11-18 20:59 · 新加坡时间 · <span class="warning">12 个来源同步不完整</span></div>
+<div class="sync">已核实 104/114 个来源 · 最后更新 2026-11-19 12:11 · 新加坡时间 · <span class="warning">10 个来源同步不完整</span></div>
 <section><h1 class="section-title">今日必须处理</h1>
 <div class="card-stack"><article class="card event-card danger">
   <div class="event-meta">
@@ -141,6 +141,21 @@
 <section><h1 class="section-title">重大更新</h1>
 <div class="card-stack"><article class="card event-card">
   <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developer.android.com/google/play/age-signals/request-age-signals" target="_blank" rel="noopener noreferrer">Request Age Signals from Google Play</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-11-18</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_53a2de4d1f2cd21e90f0291b" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2026-12-11 待生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_53a2de4d1f2cd21e90f0291b/">Google Play 宣布 Age Signals v0.0.5 全球可用及生效时间</a></h3>
+<p class="event-summary">Google Play 宣布 Age Signals v0.0.5 现已全球可用，开发者可通过该版本在应用内请求用户年龄范围。v0.0.5 将于 2026 年 12 月 11 日起向所有用户返回响应，同时 v0.0.4 将继续在部分选定区域返回响应。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>开发者需要评估并集成 Age Signals v0.0.5 API，以支持新的年龄信号请求和强制年龄共享功能（如 MANDATORY_SHARING），确保在 2026 年 12 月 11 日前完成适配，以符合各地区的年龄相关保护政策。</p></section>
+    <section><h4>需要行动</h4><p>1. 评估并集成 Age Signals v0.0.5 SDK/API。2. 处理新增的 MANDATORY_SHARING 年龄特征。3. 确保在 2026 年 12 月 11 日前完成测试和上线。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 研发团队/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developer.android.com/google/play/age-signals/request-age-signals" target="_blank" rel="noopener noreferrer"><span>Request Age Signals from Google Play</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Apple</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://support.apple.com/en-us/100100" target="_blank" rel="noopener noreferrer">Apple Security Releases</a>
@@ -202,24 +217,9 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 游戏开发团队/性能优化团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://developer.android.com/games/guidelines" target="_blank" rel="noopener noreferrer"><span>Google Play Games Level Up Guidelines</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Google Play</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://support.google.com/googleplay/android-developer/answer/16324062" target="_blank" rel="noopener noreferrer">Google Play Policy Summary and Child Pages — Accessibility API</a>
-    <span aria-hidden="true">·</span>
-<span class="date-fallback">发布时间未明确 / 首次发现 2026-10-30</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_dcf699488c227b0c56f6cdef" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P0-A</span><span class="tag domain">开发者平台</span><span class="tag lifecycle">2027-01-27 待生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_dcf699488c227b0c56f6cdef/">Google Play 发布 Android 17/18 权限及 Accessibility API 等多项政策更新</a></h3>
-<p class="event-summary">Google Play 更新了多项政策：1) 2027年1月27日起，限制Android 17+的位置和联系人权限，使用ACCESS_FINE_LOCATION需提交声明，非核心联系人访问需改用Picker；2) 2027年4月14日起，规范AppFunctions API，禁止欺骗AI代理或绕过安全控制；3) 2027年8月25日起，进一步限制联系人、本地网络、所有文件访问权限，并严格规范Accessibility API的使用与披露。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>涉及位置、联系人、文件存储、本地网络及无障碍服务的应用将面临严格的权限审查和声明要求，AI相关功能需符合防操纵规范，违规可能导致应用被拒审或下架。</p></section>
-    <section><h4>需要行动</h4><p>1. 评估并精简权限使用，非核心功能改用系统Picker或平台Intent；2. 为保留的敏感权限准备Play Console声明；3. 审查AppFunctions和Accessibility API，确保不用于禁止用途，核心辅助工具需设置isAccessibilityTool=true并完善商店披露。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 研发部/合规部</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://support.google.com/googleplay/android-developer/answer/16324062" target="_blank" rel="noopener noreferrer"><span>Google Play Policy Summary and Child Pages — Accessibility API</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div></section>
 <section><h2 class="section-title">本月风险预览</h2><div class="risk-grid">
-<a class="metric" href="/policy-radar/store/"><span>开发者平台</span><strong class="risk-medium">中风险</strong><span>本月发布 11 · 需行动 1</span></a>
+<a class="metric" href="/policy-radar/store/"><span>开发者平台</span><strong class="risk-medium">中风险</strong><span>本月发布 14 · 需行动 1</span></a>
 <a class="metric" href="/policy-radar/ua/"><span>买量</span><strong class="risk-medium">中风险</strong><span>本月发布 4 · 需行动 1</span></a>
 <a class="metric" href="/policy-radar/iaa/"><span>广告变现</span><strong class="risk-low">低风险</strong><span>本月发布 1 · 需行动 0</span></a>
 <a class="metric" href="/policy-radar/thirdpayment/"><span>三方支付</span><strong class="risk-critical">极高风险</strong><span>本月发布 16 · 需行动 8</span></a>
@@ -227,8 +227,10 @@
 <a class="metric" href="/policy-radar/regulatory/"><span>监管</span><strong class="risk-low">低风险</strong><span>本月发布 10 · 需行动 0</span></a>
 <a class="metric" href="/policy-radar/others/"><span>其他</span><strong class="risk-low">低风险</strong><span>本月发布 0 · 需行动 0</span></a>
 </div></section>
-<section><h2 class="section-title">近 7 天新增（共 23 条）</h2>
-<details class="new-day" open><summary><span class="new-day-date">2026-11-18</span><span class="new-day-count">本班 · 3 条</span><span class="new-day-chips"><span class="tag hot">P0-A 1</span><span class="tag">P4 2</span></span></summary>
+<section><h2 class="section-title">近 7 天新增（共 21 条）</h2>
+<details class="new-day" open><summary><span class="new-day-date">2026-11-19</span><span class="new-day-count">本班 · 3 条</span><span class="new-day-chips"><span class="tag hot">P0-A 2</span><span class="tag">P4 1</span></span></summary>
+<div class="new-list"><a class="new-row" href="/policy-radar/events/evt_53a2de4d1f2cd21e90f0291b/"><span class="tag domain">开发者平台</span><span class="title">Google Play 宣布 Age Signals v0.0.5 全球可用及生效时间</span><span class="new-date">发布 2026-11-18</span><span class="priority">P0-A</span></a><a class="new-row" href="/policy-radar/events/evt_e01ae88dfe36a71ec6c3b70d/"><span class="tag domain">开发者平台</span><span class="title">Apple 发布 HomeView Software Version 27.2.1 更新</span><span class="new-date">发布 2026-11-18</span><span class="priority">P0-A</span></a><a class="new-row" href="/policy-radar/events/evt_4d1919a32b4cc35bb27c9c0e/"><span class="tag domain">开发者平台</span><span class="title">Apple 公布 2026 年 App Store Awards 决赛入围名单</span><span class="new-date">发布 2026-11-18</span><span class="priority">P4</span></a></div>
+</details><details class="new-day"><summary><span class="new-day-date">2026-11-18</span><span class="new-day-count">3 条</span><span class="new-day-chips"><span class="tag hot">P0-A 1</span><span class="tag">P4 2</span></span></summary>
 <div class="new-list"><a class="new-row" href="/policy-radar/events/evt_58e7273636fb12c285ee280c/"><span class="tag domain">开发者平台</span><span class="title">多国应用及内购税收与价格调整</span><span class="new-date">发布 2026-11-17</span><span class="priority">P0-A</span></a><a class="new-row" href="/policy-radar/events/evt_1498a335de1f796816eb20a5/"><span class="tag domain">三方支付</span><span class="title">Apple Pay API 错误导致支付失败</span><span class="new-date">发布 2026-11-17</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_2fc422978fd0bb421916abff/"><span class="tag domain">AI</span><span class="title">Anthropic 推出关联计费（Linked billing）Beta 版</span><span class="new-date">发布 2026-11-17</span><span class="priority">P4</span></a></div>
 </details><details class="new-day"><summary><span class="new-day-date">2026-11-17</span><span class="new-day-count">6 条</span><span class="new-day-chips"><span class="tag hot">P0-A 1</span><span class="tag hot">P1 1</span><span class="tag">P2 1</span><span class="tag">P4 3</span></span></summary>
 <div class="new-list"><a class="new-row" href="/policy-radar/events/evt_5b4fb7d23d3421ac9864b467/"><span class="tag domain">开发者平台</span><span class="title">App Store Connect 新增 App 合规页面管理 AIGC 及安全评估等文档</span><span class="new-date">发布 2026-11-16</span><span class="priority">P0-A</span></a><a class="new-row" href="/policy-radar/events/evt_d26541afe750ff74fa88a7f7/"><span class="tag domain">开发者平台</span><span class="title">macOS 27.3 更新设备控制、数据访问及完全磁盘访问权限策略</span><span class="new-date">发布 2026-11-16</span><span class="priority">P1</span></a><a class="new-row" href="/policy-radar/events/evt_885300efc5994c758dd05fe3/"><span class="tag domain">监管</span><span class="title">加州总检察长因网络安全事件起诉OpenAI</span><span class="new-date">发布 2026-11-16</span><span class="priority">P2</span></a><a class="new-row" href="/policy-radar/events/evt_751dacd122b820b37e1426c0/"><span class="tag domain">三方支付</span><span class="title">FunnelFox 支付与订阅功能多项更新</span><span class="new-date">发布 2026-11-16</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_9b64c81913a83b51f9033ac0/"><span class="tag domain">AI</span><span class="title">Claude iOS 应用 Apple 登录故障已解决</span><span class="new-date">发布 2026-11-16</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_3925bb696a791e592f9bbc0a/"><span class="tag domain">AI</span><span class="title">Anthropic 部分模型新增文本水印机制及参数限制说明</span><span class="new-date">发布 2026-11-16</span><span class="priority">P4</span></a></div>
@@ -236,8 +238,6 @@
 <div class="new-list"><a class="new-row" href="/policy-radar/events/evt_25620d7cd30156c8786240aa/"><span class="tag domain">三方支付</span><span class="title">Stripe 多个支付渠道（BLIK等）计划维护通知</span><span class="new-date">发布 2026-11-16</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_75001f264e4712c8e39e66ff/"><span class="tag domain">监管</span><span class="title">澳大利亚eSafety发布社交媒体年龄限制实施指南</span><span class="new-date">发布 2026-11-14</span><span class="priority">P1</span></a><a class="new-row" href="/policy-radar/events/evt_4763e381fdbacba19ce153a4/"><span class="tag domain">AI</span><span class="title">claude.ai 购买与订阅服务异常及恢复监控</span><span class="new-date">发布 2026-11-14</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_554978061c0d91b1b0c3aa05/"><span class="tag domain">开发者平台</span><span class="title">Apple 发布 tvOS 27.2.1 安全更新</span><span class="new-date">发布 2026-11-13</span><span class="priority">P0-A</span></a><a class="new-row" href="/policy-radar/events/evt_aa4ca17d75c172de9cb7036a/"><span class="tag domain">三方支付</span><span class="title">Stripe 支付方式（BLIK、TWINT、Multibanco）计划维护通知</span><span class="new-date">发布 2026-11-13</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_cca8fb72894bfdc9d74729e0/"><span class="tag domain">三方支付</span><span class="title">Adapty发布美国区数据库计划维护公告</span><span class="new-date">发布 2026-11-13</span><span class="priority">P4</span></a></div>
 </details><details class="new-day"><summary><span class="new-day-date">2026-11-13</span><span class="new-day-count">3 条</span><span class="new-day-chips"><span class="tag hot">P0-A 2</span><span class="tag">P4 1</span></span></summary>
 <div class="new-list"><a class="new-row" href="/policy-radar/events/evt_c1559dea6b645f33151044d0/"><span class="tag domain">开发者平台</span><span class="title">App Store Connect 将停止接受新应用或未使用过 ODR 的应用上传 On-Demand Resources</span><span class="new-date">发布 2026-11-12</span><span class="priority">P0-A</span></a><a class="new-row" href="/policy-radar/events/evt_5ec2593cfa522bfbb83ec9d8/"><span class="tag domain">开发者平台</span><span class="title">Apple 发布 HomeView 27.2 安全更新</span><span class="new-date">发布 2026-11-12</span><span class="priority">P0-A</span></a><a class="new-row" href="/policy-radar/events/evt_128f9b039951a6d74b5c3605/"><span class="tag domain">AI</span><span class="title">Anthropic 推出自托管 Claude Managed Agents 服务</span><span class="new-date">发布 2026-11-12</span><span class="priority">P4</span></a></div>
-</details><details class="new-day"><summary><span class="new-day-date">2026-11-12</span><span class="new-day-count">5 条</span><span class="new-day-chips"><span class="tag hot">P1 1</span><span class="tag">P2 2</span><span class="tag">P4 2</span></span></summary>
-<div class="new-list"><a class="new-row" href="/policy-radar/events/evt_38f0310e772214cb98f46a7c/"><span class="tag domain">监管</span><span class="title">新加坡PDPC与CSA发布关于不安全API数据保护风险的联合咨询</span><span class="new-date">发布 2026-11-12</span><span class="priority">P2</span></a><a class="new-row" href="/policy-radar/events/evt_906242dab15a8492efa84248/"><span class="tag domain">三方支付</span><span class="title">PayPal Checkout及多个API受影响事件已解决</span><span class="new-date">发布 2026-11-12</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_9b6f354c55b907dfa82c23ca/"><span class="tag domain">监管</span><span class="title">欧盟提出《数字公平法案》拟规范数字订阅取消与成瘾设计</span><span class="new-date">发布 2026-11-11</span><span class="priority">P2</span></a><a class="new-row" href="/policy-radar/events/evt_ea292e3b3dd882a6046607db/"><span class="tag domain">三方支付</span><span class="title">Paddle 推出通过 API 管理和轮换 API 密钥的功能</span><span class="new-date">发布 2026-11-11</span><span class="priority">P4</span></a><a class="new-row" href="/policy-radar/events/evt_1a784b493f26bfb41ad17f0f/"><span class="tag domain">买量</span><span class="title">Google Ads 不可接受的商业行为政策更新（2026年11月）</span><span class="new-date">发布 2026 年 11 月</span><span class="priority">P1</span></a></div>
 </details></section>
   <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
