@@ -42,6 +42,51 @@
 <div class="card-stack">
 <article class="card event-card">
   <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">FunnelFox</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer">FunnelFox Product Updates</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-11-23</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_dddd3c8b3f149ae2e22504e9" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_dddd3c8b3f149ae2e22504e9/">FunnelFox Billing 支持 CIT 交易模式与结账回退机制</a></h3>
+<p class="event-summary">FunnelFox Billing upsells 现支持选择 CIT（客户发起）或 MIT（商户发起）交易模式，并在支付失败或 3-D Secure 检查失败时提供回退结账弹窗。此外，新增 cit_by_button 模式，允许仅对特定卡网络的 upsell 按钮应用 CIT。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>提升了支付处理的灵活性和合规性（如满足 SCA 要求），有助于降低支付失败率并改善客户结账体验。</p></section>
+    <section><h4>需要行动</h4><p>评估现有 upsell 流程，根据业务需求配置 CIT/MIT 模式及回退结账功能；在特定漏斗中测试 cit_by_button 设置。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付/产品团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer"><span>FunnelFox Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">FunnelFox</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer">FunnelFox Product Updates</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-11-23</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_917cb29493ca4638ef3c2a6d" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_917cb29493ca4638ef3c2a6d/">FunnelFox Payments 推出自动税务计算与合规申报功能</a></h3>
+<p class="event-summary">FunnelFox Payments 现自动计算并收取销售税或 VAT，覆盖结账、续费、upsell 等场景，退款时自动逆转。提供 FunnelFox Tax（自动计算、注册和申报）和 static rates（自定义税率并自行申报）两种模式。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>大幅简化了全球税务合规流程，确保支付金额和账单的税务准确性，降低税务违规风险。</p></section>
+    <section><h4>需要行动</h4><p>配置税务设置，选择 FunnelFox Tax 或 static rates 模式，并决定税费是包含在价格内还是额外收取。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 财务/合规团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer"><span>FunnelFox Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">FunnelFox</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer">FunnelFox Product Updates</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-11-23</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_2f750aa4b8625d831650fb21" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_2f750aa4b8625d831650fb21/">MCP 访问令牌权限扩展至组织内所有可访问项目</a></h3>
+<p class="event-summary">MCP 访问令牌现在覆盖创建者在组织内可访问的所有项目，不再局限于单个项目，与浏览器登录的权限范围保持一致。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>简化了 AI 工具的组织级访问管理，但扩大了单个令牌的权限范围，可能增加越权访问的安全风险。</p></section>
+    <section><h4>需要行动</h4><p>审查 MCP 令牌的发放和使用策略，确保符合最小权限原则，并加强对组织级 API 访问的监控。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 安全/IT团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer"><span>FunnelFox Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
@@ -749,53 +794,6 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 支付产品团队</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://www.checkout.com/newsroom" target="_blank" rel="noopener noreferrer"><span>Checkout.com Newsroom</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-10-09</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_2ba6b1c2caf6d7b6ab27670e" data-version="2" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">2026-10-14 已生效</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_2ba6b1c2caf6d7b6ab27670e/">Stripe宣布Bancontact支付方式将进行计划维护</a></h3>
-<p class="event-summary">Stripe 状态页发布通知，TWINT 支付方式将于 2026年10月19日 23:00 UTC 至 10月20日 03:00 UTC 进行计划内维护。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>在维护窗口期间，使用Bancontact支付方式的交易可能会受到影响或中断，影响相关地区用户的支付体验。</p></section>
-    <section><h4>需要行动</h4><p>监控维护期间的支付成功率，必要时在维护时段内引导用户切换至其他可用的支付方式，并提前向相关商户或用户发布维护公告。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 支付运营团队</p>  <details class="version-history" aria-label="版本历史"><summary>版本历史（2 次更新）▾</summary><div class="milestones">
-<div class="milestone"><strong>2026-10-09 · Stripe 发布 TWINT 支付方式计划维护通知 · 公告</strong><span>首次收录：生效日 2026-10-19</span><a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div><div class="milestone"><strong>2026-10-09 · 公告</strong><span>生效日：2026-10-19 → 2026-10-14（提前 5 天）</span><a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">对应来源 ↗</a></div>  </div></details>
-  <div class="card-source-links" aria-label="来源原文">
-<a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Paddle</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://app.getbeamer.com/loadMoreNews?app_id=RvynHFzq63519&amp;language=EN" target="_blank" rel="noopener noreferrer">Paddle Product Updates</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-10-08</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_5ad8c4bd28c41082762716fd" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_5ad8c4bd28c41082762716fd/">Paddle拒付仪表板新增AI洞察功能</a></h3>
-<p class="event-summary">Paddle在拒付仪表板中新增AI洞察功能，提供拒付率的自然语言总结，并高亮导致拒付的主要产品和国家，洞察数据每月更新。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>帮助商户更直观地分析拒付趋势和原因，识别高风险产品和地区，从而优化支付策略并降低拒付率。</p></section>
-    <section><h4>需要行动</h4><p>登录Paddle仪表板查看拒付数据及AI洞察，根据反馈结果评估并调整相关业务和支付策略。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 支付/财务团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://app.getbeamer.com/loadMoreNews?app_id=RvynHFzq63519&amp;language=EN" target="_blank" rel="noopener noreferrer"><span>Paddle Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-10-07</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_a496e05b9dcd76dac31dad25" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_a496e05b9dcd76dac31dad25/">TWINT与Multibanco支付方式计划维护通知更新</a></h3>
-<p class="event-summary">Stripe状态页面在监测窗口内多次更新TWINT及Multibanco支付方式的计划维护通知，提示在特定时间窗口内进行系统维护。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>在维护期间，使用TWINT和Multibanco进行支付的用户可能会遇到交易失败、延迟或服务不可用的情况，影响部分用户的支付体验。</p></section>
-    <section><h4>需要行动</h4><p>建议在维护时间段内监控相关支付渠道的成功率，必要时在应用内展示维护公告或引导用户使用其他支付方式。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 支付业务团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer"><span>Stripe Status</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="三方支付分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/thirdpayment/page/2/">2</a><a href="/policy-radar/thirdpayment/page/3/">3</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/11/">2026-11</a><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 <script src="/policy-radar/assets/event-status.js" defer></script></body>
