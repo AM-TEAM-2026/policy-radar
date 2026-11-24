@@ -42,6 +42,21 @@
 <div class="card-stack">
 <article class="card event-card">
   <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Checkout.com</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://www.checkout.com/newsroom" target="_blank" rel="noopener noreferrer">Checkout.com Newsroom</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-10-09</span><div class="event-status" data-event-status data-event-id="evt_ac0c76a7749b29c2b469cc74" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已预告</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_ac0c76a7749b29c2b469cc74/">Moomoo 通过 Visa 和 Checkout.com 推出实时存款功能</a></h3>
+<p class="event-summary">Checkout.com 发布商户新闻，宣布 Moomoo 已通过 Visa 和 Checkout.com 推出实时存款功能。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>该功能为 Moomoo 用户提供了实时存款选项，有助于提升资金到账效率和支付体验，展示了 Checkout.com 在实时支付领域的解决方案能力。</p></section>
+    <section><h4>需要行动</h4><p>关注 Moomoo 实时存款功能的上线效果及用户反馈，评估自身业务是否可引入类似的实时支付或存款能力以优化资金流转。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 支付产品团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://www.checkout.com/newsroom" target="_blank" rel="noopener noreferrer"><span>Checkout.com Newsroom</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Stripe</span></div>
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://status.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe Status</a>
@@ -777,21 +792,6 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 产品/增长工程团队（负责 paywall 与 onboarding 构建）</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://changelog.adapty.io/" target="_blank" rel="noopener noreferrer"><span>Adapty Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">FunnelFox</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer">FunnelFox Product Updates</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2026-08-24</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_2eaf744d5a17ed415a70eedb" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">三方支付</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_2eaf744d5a17ed415a70eedb/">FunnelFox 2026年8月24日产品更新：订阅、支付与Webhook多项功能变更</a></h3>
-<p class="event-summary">FunnelFox发布多项更新：1) Meta Purchase Event Mapping将试用事件拆分为独立行（Free trial start/converted, Paid trial start/converted）；新增Disable default events开关可屏蔽非购买事件。2) Solidgate集成新增Limit One Subscription per Email开关，防止同一邮箱重复订阅购买。3) Cancel subscription动作现取消客户在该支付提供商下的所有订阅，而非仅最近一个。4) Stripe checkout新增两种拒绝原因（transaction not allowed, suspected fraud）的导航动作。5) FunnelFox Billing支持Custom charges，可对消耗品按自定义金额扣款。6) Webhook payload新增region_code和postal_code字段。7) Billing webhook新增order.psp_store_id字段标识Adyen处理门店。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>订阅管理、支付防重、事件映射及Webhook数据结构发生变化，可能影响依赖原有取消逻辑、事件上报格式或Webhook解析的集成系统。</p></section>
-    <section><h4>需要行动</h4><p>1) 审查依赖Cancel subscription仅取消单个订阅的自动化流程，确认是否需适配新行为。2) 检查Meta事件映射配置，按需调整试用事件映射。3) 评估Solidgate防重复订阅开关是否启用。4) 更新Webhook解析逻辑以处理新增的region_code、postal_code及psp_store_id字段。5) 如需使用Custom charges，联系Solution manager开通。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 产品/工程团队</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://funnelfox.com/docs/release-notes/changelog" target="_blank" rel="noopener noreferrer"><span>FunnelFox Product Updates</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="三方支付分页"><a href="/policy-radar/thirdpayment/">1</a><span class="current" aria-current="page">2</span><a href="/policy-radar/thirdpayment/page/3/">3</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/11/">2026-11</a><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 <script src="/policy-radar/assets/event-status.js" defer></script></body>

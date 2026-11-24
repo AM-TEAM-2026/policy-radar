@@ -46,6 +46,51 @@
     <span aria-hidden="true">·</span>
     <a class="meta-source" href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener noreferrer">OpenAI API Changelog</a>
     <span aria-hidden="true">·</span>
+<span>发布 2026-09-10</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_2a64357a74ddc8ad72e27c87" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_2a64357a74ddc8ad72e27c87/">GPT-Live 1 正式可用</a></h3>
+<p class="event-summary">GPT-Live 1 在 API 中正式可用（GA），支持构建全双工语音对话，可在后端模型或智能体处理推理和工具时持续进行；支持 Responses 委托或客户端委托连接自有后端；语音会话按每分钟 0.05 美元计费，按秒计费，后端模型和工具使用另行收费。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>提供全双工语音对话能力，适用于实时语音交互场景；明确计费模式，需评估成本影响。</p></section>
+    <section><h4>需要行动</h4><p>评估 GPT-Live 是否适用于语音交互类产品，分析计费模式对成本的影响，制定集成和测试计划。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 产品/研发团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener noreferrer"><span>OpenAI API Changelog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener noreferrer">OpenAI API Changelog</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-10</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_18cca1ca9dbc2a0267d9d780" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_18cca1ca9dbc2a0267d9d780/">OpenAI 支持为项目 API 密钥设置过期日期</a></h3>
+<p class="event-summary">OpenAI 宣布现可在创建项目 API 密钥时设置过期日期；管理员还可在平台设置中于组织或项目级别强制执行最大密钥生命周期，要求新创建的密钥在配置的时限内过期。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>提升 API 密钥的安全性和合规性，有助于密钥轮换管理，降低因长期有效密钥泄露带来的安全风险。</p></section>
+    <section><h4>需要行动</h4><p>审查现有 API 密钥的生命周期策略，根据业务需求配置密钥过期时间，并评估是否需要设置组织或项目级别的最大密钥生命周期限制。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 平台/安全团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener noreferrer"><span>OpenAI API Changelog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener noreferrer">OpenAI API Changelog</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-09-03</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_37e52d04ce2779a44d5b6119" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_37e52d04ce2779a44d5b6119/">OpenAI 发布 GPT-6 Astra 模型及 Responses API 新控制能力</a></h3>
+<p class="event-summary">OpenAI 于 2026-09-03 发布 GPT-6 Astra 模型，支持推理、编码、计算机使用、研究和文档创建。关键迁移变化：不支持 none 推理努力级别；不支持自定义 temperature、top_p 或 logprobs；工具调用需使用 Responses API。同时新增 Responses API 的异步工具调用、中途转向（Mid-turn steering，通过 WebSocket 在响应进行中发送额外指令）以及对话中动态调整推理努力等控制能力。此外，Misalignment monitoring 异步检查代理工作中的潜在问题，可触发安全警报或停止对话以供审查。2026-09-01 起 api.openai.com 连接支持 IPv6。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>本次发布为模型与 API 能力更新，非应用商店政策、订阅、支付、隐私、儿童、内容治理、账号或安全方面的政策变更。对应用商店合规无直接影响，但涉及安全分类器与 Misalignment monitoring 等安全能力增强，属于低优先级技术变更。</p></section>
+    <section><h4>需要行动</h4><p>无需针对应用商店政策采取行动。如使用 OpenAI API 的开发者可评估 GPT-6 Astra 迁移要求（Responses API 迁移、不支持的参数等），但非合规强制事项。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 开发者/技术团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener noreferrer"><span>OpenAI API Changelog</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">OpenAI</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener noreferrer">OpenAI API Changelog</a>
+    <span aria-hidden="true">·</span>
 <span>发布 2026-09-02</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_384b14505fe0de9fe7cd63a4" data-version="1" hidden></div>  </div>
   <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">AI</span><span class="tag lifecycle">已正式发布</span></div>
   <h3><a class="card-title-link" href="/policy-radar/events/evt_384b14505fe0de9fe7cd63a4/">OpenAI API 更新 429/503 错误码以区分流量激增与模型过载</a></h3>
