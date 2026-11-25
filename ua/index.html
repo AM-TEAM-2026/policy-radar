@@ -32,7 +32,7 @@
         <summary class="active">时间线 ▾</summary>
         <div class="nav-menu">
           <a href="/policy-radar/timeline/">全部</a>
-<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">1</span></a><a class="active" aria-current="page" href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">1</span></a><a href="/policy-radar/iaa/"><span>广告变现</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">8</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
+<a href="/policy-radar/store/"><span>开发者平台</span><span class="nav-badge">1</span></a><a class="active" aria-current="page" href="/policy-radar/ua/"><span>买量</span><span class="nav-badge">2</span></a><a href="/policy-radar/iaa/"><span>广告变现</span><span class="nav-badge">1</span></a><a href="/policy-radar/thirdpayment/"><span>三方支付</span><span class="nav-badge">8</span></a><a href="/policy-radar/ai/"><span>AI</span></a><a href="/policy-radar/regulatory/"><span>监管</span></a><a href="/policy-radar/others/"><span>其他</span></a>        </div>
       </details>
       <a href="/policy-radar/sources/">来源状态</a>
 <div class="status-auth" data-status-auth data-log-url="/policy-radar/log/" hidden></div>    </nav>
@@ -41,6 +41,21 @@
 <header class="page-heading"><h1>买量</h1><p>Meta Ads、Google Ads、Apple Ads、AppsFlyer、Adjust 等</p></header>
 <div class="card-stack">
 <article class="card event-card">
+  <div class="event-meta">
+    <div class="card-platforms"><span class="platform-badge">Unity</span></div>
+    <span aria-hidden="true">·</span>
+    <a class="meta-source" href="https://status.unity.com/" target="_blank" rel="noopener noreferrer">Unity Status</a>
+    <span aria-hidden="true">·</span>
+<span>发布 2026-11-24</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_c2b407d6a5804b021582757c" data-version="1" hidden></div>  </div>
+  <div class="card-meta"><span class="tag priority">P3</span><span class="tag domain">买量</span><span class="tag lifecycle">2026-11-25 已生效</span></div>
+  <h3><a class="card-title-link" href="/policy-radar/events/evt_c2b407d6a5804b021582757c/">Unity 计划进行数据库维护影响 IAP 和 Authentication 等服务</a></h3>
+<p class="event-summary">Unity 宣布将于 2026-11-25 07:00 UTC 至 10:00 UTC 进行计划内的数据库维护。在此期间，部分写操作可能会短暂失败。受影响的服务包括 Unity Authentication 和 In-App Purchasing (IAP) 等。</p>  <div class="impact-action">
+    <section><h4>业务影响</h4><p>在维护窗口期间，依赖 Unity Authentication 和 IAP 等服务的应用可能会遇到写操作短暂失败，可能影响用户登录、注册或应用内购买流程。</p></section>
+    <section><h4>需要行动</h4><p>官方表示无需采取额外行动。建议开发者在维护窗口期间监控相关服务的错误率，并确保应用具备适当的重试机制。</p></section>
+  </div>
+<p class="event-owner"><strong>建议责任方</strong> 开发者/运维团队</p>  <div class="card-source-links" aria-label="来源原文">
+<a href="https://status.unity.com/" target="_blank" rel="noopener noreferrer"><span>Unity Status</span><span aria-hidden="true">↗</span></a>  </div>
+</article><article class="card event-card">
   <div class="event-meta">
     <div class="card-platforms"><span class="platform-badge">Unity</span></div>
     <span aria-hidden="true">·</span>
@@ -778,21 +793,6 @@
   </div>
 <p class="event-owner"><strong>建议责任方</strong> 买量投放 / 数据归因</p>  <div class="card-source-links" aria-label="来源原文">
 <a href="https://www.appsflyer.com/product-news/agentic-ai-suite/agent-hub-enters-open-beta-for-all-appsflyer-customers/" target="_blank" rel="noopener noreferrer"><span>AppsFlyer What&#39;s New</span><span aria-hidden="true">↗</span></a>  </div>
-</article><article class="card event-card">
-  <div class="event-meta">
-    <div class="card-platforms"><span class="platform-badge">AppsFlyer</span></div>
-    <span aria-hidden="true">·</span>
-    <a class="meta-source" href="https://www.appsflyer.com/company/newsroom/pr/ai-marketing-cloud-launch/" target="_blank" rel="noopener noreferrer">AppsFlyer What&#39;s New</a>
-    <span aria-hidden="true">·</span>
-<span>发布 2025-11-18</span><span class="confirmed-badge">官方确认</span><div class="event-status" data-event-status data-event-id="evt_legacy-appsflyer-2025-fall-release-2025-11-18" data-version="1" hidden></div>  </div>
-  <div class="card-meta"><span class="tag priority">P4</span><span class="tag domain">买量</span><span class="tag lifecycle">已正式发布</span></div>
-  <h3><a class="card-title-link" href="/policy-radar/events/evt_legacy-appsflyer-2025-fall-release-2025-11-18/">AppsFlyer 2025 Fall Release 八项产品发布</a></h3>
-<p class="event-summary">AppsFlyer 发布八项产品，覆盖 Agentic AI、增量衡量、Signal Hub、安全、跨平台旅程、增强归因、My Dashboards 和素材管理。原文发布于 2025-11-18，未明确给出单独生效日或截止日。</p>  <div class="impact-action">
-    <section><h4>业务影响</h4><p>归因与衡量工具侧的能力扩充，不产生合规义务；Signal Hub 与增强归因可能影响现有归因口径的可比性。</p></section>
-    <section><h4>需要行动</h4><p>评估八项发布中与自家归因链路相关的部分；如启用增强归因或 Signal Hub，先在小流量验证与现有口径的差异再全量。</p></section>
-  </div>
-<p class="event-owner"><strong>建议责任方</strong> 买量投放 / 数据归因</p>  <div class="card-source-links" aria-label="来源原文">
-<a href="https://www.appsflyer.com/company/newsroom/pr/ai-marketing-cloud-launch/" target="_blank" rel="noopener noreferrer"><span>AppsFlyer What&#39;s New</span><span aria-hidden="true">↗</span></a>  </div>
 </article></div><nav class="pagination" aria-label="买量分页"><span class="current" aria-current="page">1</span><a href="/policy-radar/ua/page/2/">2</a></nav><nav class="archives" aria-label="月度归档"><a href="/policy-radar/timeline/2026/11/">2026-11</a><a href="/policy-radar/timeline/2026/10/">2026-10</a><a href="/policy-radar/timeline/2026/09/">2026-09</a><a href="/policy-radar/timeline/2026/08/">2026-08</a><a href="/policy-radar/timeline/2026/07/">2026-07</a><a href="/policy-radar/timeline/2026/06/">2026-06</a><a href="/policy-radar/timeline/2026/05/">2026-05</a><a href="/policy-radar/timeline/2026/04/">2026-04</a><a href="/policy-radar/timeline/2026/03/">2026-03</a><a href="/policy-radar/timeline/2026/02/">2026-02</a><a href="/policy-radar/timeline/2026/01/">2026-01</a><a href="/policy-radar/timeline/2025/12/">2025-12</a><a href="/policy-radar/timeline/2025/11/">2025-11</a><a href="/policy-radar/timeline/2025/10/">2025-10</a><a href="/policy-radar/timeline/2025/09/">2025-09</a><a href="/policy-radar/timeline/2025/07/">2025-07</a><a href="/policy-radar/timeline/2025/06/">2025-06</a><a href="/policy-radar/timeline/2025/04/">2025-04</a><a href="/policy-radar/timeline/2025/03/">2025-03</a><a href="/policy-radar/timeline/2025/02/">2025-02</a><a href="/policy-radar/timeline/2024/06/">2024-06</a><a href="/policy-radar/timeline/2024/04/">2024-04</a><a href="/policy-radar/timeline/2023/10/">2023-10</a><a href="/policy-radar/timeline/2023/07/">2023-07</a><a href="/policy-radar/timeline/2022/07/">2022-07</a><a href="/policy-radar/timeline/2022/05/">2022-05</a><a href="/policy-radar/timeline/2022/04/">2022-04</a><a href="/policy-radar/timeline/2021/07/">2021-07</a><a href="/policy-radar/timeline/2021/03/">2021-03</a><a href="/policy-radar/timeline/2020/07/">2020-07</a><a href="/policy-radar/timeline/2020/04/">2020-04</a><a href="/policy-radar/timeline/2018/10/">2018-10</a></nav>  <footer class="site-footer">© 2026 AM-TEAM-2026 · 保留所有权利 · <a href="/policy-radar/terms/">版权与使用条款</a></footer>
 </main>
 <script src="/policy-radar/assets/event-status.js" defer></script></body>
